@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { createBrowserHistory } from 'history';
 import { Router, Switch, Route, Redirect } from 'react-router';
 import routers from './router';
 
-export default class Routers extends Component {
+const browserHistory = createBrowserHistory();
+
+export default class CustomRouter extends Component {
   render () {
     return (
-      <Router history={null}>
+      <Router history={browserHistory}>
         <Switch>
-          <Redirect exact from="/" to={routers[0].path}/>
-          <Route exact path="/"/>
           {
             routers.map((route, index) => {
               return <Route
@@ -19,6 +20,7 @@ export default class Routers extends Component {
               />;
             })
           }
+          <Redirect exact from="/" to={routers[0].path}/>
         </Switch>
       </Router>
     );

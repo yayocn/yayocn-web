@@ -1,6 +1,4 @@
-import {
-  Gate,
-} from '../view';
+import { Gate } from '../view';
 
 const router = [
   {
