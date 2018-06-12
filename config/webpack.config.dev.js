@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
@@ -212,7 +213,9 @@ module.exports = {
         test: /\.scss$/,
         use: [
           "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
+          "css-loader",
+          // { loader: 'css-loader', options: { modules: true, importLoaders: 1 } }, // translates CSS into CommonJS
+          // 'postcss-loader',
           "sass-loader" // compiles Sass to CSS
         ]
       },
@@ -251,6 +254,9 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new ExtractTextPlugin({
+      filename: `[name]_[contenthash:8].css`,
+    }),
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

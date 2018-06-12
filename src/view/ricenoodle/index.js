@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import PageHeader from '../component/PageHeader';
 import './index.scss';
 
 export default class Ricenoodle extends Component {
   render () {
     return (
-      <header className="p-20 flex justify-content-center align-items-end">
-        Ricenoodle
-      </header>
+      <PageHeader />
     );
   }
 }
