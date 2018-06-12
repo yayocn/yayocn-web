@@ -213,9 +213,9 @@ module.exports = {
         test: /\.scss$/,
         use: [
           "style-loader", // creates style nodes from JS strings
-          "css-loader",
-          // { loader: 'css-loader', options: { modules: true, importLoaders: 1 } }, // translates CSS into CommonJS
-          // 'postcss-loader',
+          // "css-loader",
+          { loader: 'css-loader', options: { modules: true, importLoaders: 1 } }, // translates CSS into CommonJS
+          'postcss-loader',
           "sass-loader" // compiles Sass to CSS
         ]
       },
