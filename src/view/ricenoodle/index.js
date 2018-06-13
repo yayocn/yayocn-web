@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import PageHeader from '../component/PageHeader';
+import React, { Component, Fragment } from 'react';
+import PageWrapper from '../component/PageWrapper';
+import Sidebar from '../component/Sidebar';
 import './index.scss';
+import { menu } from './sidebarMenu';
 
 export default class Ricenoodle extends Component {
   render () {
     return (
-      <PageHeader />
+      <PageWrapper>
+        <Sidebar menu={menu} />
+
+      </PageWrapper>
     );
   }
 }
