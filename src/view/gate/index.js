@@ -28,7 +28,9 @@ export default class Gate extends Component {
 
         <div className="container-fluid">
           <div className="row">
-
+            <div className="col-12">
+              <h1 className="text-center m-20">This is gate page!</h1>
+            </div>
           </div>
         </div>
       </Fragment>

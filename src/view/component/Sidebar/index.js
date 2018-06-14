@@ -1,12 +1,9 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import style from './style.scss';
 
 export default class Sidebar extends Component {
-  constructor (props) {
-    super(props);
-  }
-
   // BEGIN: Util
   //
 
@@ -17,16 +14,15 @@ export default class Sidebar extends Component {
 
   render () {
     const { menu = [] } = this.props;
-    console.log(this)
     return (
       <div className={style.sidebar}>
         <ul>
           {
             menu.map((item, index) => {
-              return <li key={index} className={classnames('text-muted font-16 mb-20', style['sidebar-item'])}>
-                <a href={item.link} className={classnames('block', style['sidebar-item'])}>
+              return <li key={index} className={classnames('text-muted font-16 mb-10', style['sidebar-item'])}>
+                <Link to={item.link} className={classnames('block', style['sidebar-item'])}>
                   {item.title}
-                </a>
+                </Link>
 
                 {
                   item.children && item.children.length > 0 &&
@@ -35,9 +31,9 @@ export default class Sidebar extends Component {
                         {
                           item.children.map((item, index) => {
                             return <li key={index} className={classnames('text-muted font-14 mb-5', style['sidebar-item'])}>
-                              <a href={item.link} className={classnames('block', style['sidebar-item'])}>
+                              <Link to={item.link} className={classnames('block', style['sidebar-item'])}>
                                 {item.title}
-                              </a>
+                              </Link>
                             </li>
                           })
                         }

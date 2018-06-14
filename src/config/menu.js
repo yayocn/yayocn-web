@@ -15,51 +15,56 @@ export const ricenoodle = [
     title: '实用工具',
     icon: '',
     key: 'utilities',
-    link: '/ricenoodle/utiliies',
+    link: '/ricenoodle/utilities',
     children: [
       {
-        title: 'Border',
+        title: 'Background',
         icon: '',
-        link: '/ricenoodle/utiliies/border'
+        link: '/ricenoodle/utilities/background'
       },
-      {
-        title: 'Font',
-        icon: '',
-        link: '/ricenoodle/utiliies/font'
-      },
-      {
-        title: 'Position',
-        icon: '',
-        link: '/ricenoodle/utiliies/position'
-      },
-      {
-        title: 'Text',
-        icon: '',
-        link: '/ricenoodle/utiliies/text'
-      },
+      // {
+      //   title: 'Border',
+      //   icon: '',
+      //   link: '/ricenoodle/utilities/border'
+      // },
+      // {
+      //   title: 'Font',
+      //   icon: '',
+      //   link: '/ricenoodle/utilities/font'
+      // },
+      // {
+      //   title: 'Position',
+      //   icon: '',
+      //   link: '/ricenoodle/utilities/position'
+      // },
+      // {
+      //   title: 'Text',
+      //   icon: '',
+      //   link: '/ricenoodle/utilities/text'
+      // },
     ],
   },
-  {
-    title: '组件',
-    icon: '',
-    key: 'component',
-    link: '/ricenoodle/components',
-    children: [
-      {
-        title: 'Dropdown',
-        icon: '',
-        link: '/ricenoodle/components/dropdown'
-      },
-      {
-        title: 'Alert',
-        icon: '',
-        link: '/ricenoodle/components/alert'
-      },
-      {
-        title: 'Modal',
-        icon: '',
-        link: '/ricenoodle/components/modal'
-      },
-    ],
-  },
+  // {
+  //   title: '组件',
+  //   icon: '',
+  //   key: 'component',
+  //   link: '/ricenoodle/components',
+  //   children: [
+  //     {
+  //       title: 'Dropdown',
+  //       icon: '',
+  //       link: '/ricenoodle/components/dropdown'
+  //     },
+  //     {
+  //       title: 'Alert',
+  //       icon: '',
+  //       link: '/ricenoodle/components/alert'
+  //     },
+  //     {
+  //       title: 'Modal',
+  //       icon: '',
+  //       link: '/ricenoodle/components/modal'
+  //     },
+  //   ],
+  // },
 ];
