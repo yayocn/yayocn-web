@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PageHeader from '../PageHeader';
+import PageBody from '../PageBody';
+import { ricenoodle } from '../../../config/menu';
 
 export default class PageWapper extends Component {
   render () {
@@ -7,7 +9,11 @@ export default class PageWapper extends Component {
     return (
       <Fragment>
         <PageHeader />
-        {children}
+        <PageBody
+          sidebar={ricenoodle}
+        >
+          {children}
+        </PageBody>
       </Fragment>
     );
   }

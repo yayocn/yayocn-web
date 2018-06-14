@@ -1,7 +1,17 @@
+@import "../../../../public/scss/variable";
+
 .sidebar {
   position: fixed;
-  top: 52px;
+  top: $header-height;
   left: 0;
-  width: 240px;
-  padding: 20px;
+  bottom: 0;
+  width: $sidebar-width;
+  padding: $sidebar-padding;
+  box-shadow: 0 0 5px 0 #ddd;
+
+  .sidebar-item {
+    list-style: none;
+
+
+  }
 }

@@ -1,41 +1,41 @@
-export const menu = [
+export const ricenoodle = [
   {
     title: '简介',
     icon: '',
     key: 'introduce',
-    link: '/introduce',
+    link: '/ricenoodle/introduce',
   },
   {
     title: '开始',
     icon: '',
     key: 'start',
-    link: '/start',
+    link: '/ricenoodle/start',
   },
   {
     title: '实用工具',
     icon: '',
     key: 'utilities',
-    link: '/utiliies',
+    link: '/ricenoodle/utiliies',
     children: [
       {
         title: 'Border',
         icon: '',
-        link: '/utiliies/border'
+        link: '/ricenoodle/utiliies/border'
       },
       {
         title: 'Font',
         icon: '',
-        link: '/utiliies/font'
+        link: '/ricenoodle/utiliies/font'
       },
       {
         title: 'Position',
         icon: '',
-        link: '/utiliies/position'
+        link: '/ricenoodle/utiliies/position'
       },
       {
         title: 'Text',
         icon: '',
-        link: '/utiliies/text'
+        link: '/ricenoodle/utiliies/text'
       },
     ],
   },
@@ -43,22 +43,22 @@ export const menu = [
     title: '组件',
     icon: '',
     key: 'component',
-    link: '/components',
+    link: '/ricenoodle/components',
     children: [
       {
         title: 'Dropdown',
         icon: '',
-        link: '/components/dropdown'
+        link: '/ricenoodle/components/dropdown'
       },
       {
         title: 'Alert',
         icon: '',
-        link: '/components/alert'
+        link: '/ricenoodle/components/alert'
       },
       {
         title: 'Modal',
         icon: '',
-        link: '/components/modal'
+        link: '/ricenoodle/components/modal'
       },
     ],
   },
