@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
+import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
 import style from '../style.scss';
 
@@ -12,7 +13,10 @@ export default class Background extends Component {
 
         <div className={classnames(style['util-bg'])}>
           <div className="row mb-10">
-            <div className="col-6"><div className={classnames('bg-primary', style['bg-feature'])}></div></div>
+            <div className="col-6">
+              <div className={classnames('bg-primary', style['bg-feature'])}></div>
+              <Highlight />
+            </div>
             <div className="col-6"><div className={classnames('bg-secondary', style['bg-feature'])}></div></div>
           </div>
 
