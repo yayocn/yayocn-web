@@ -2,7 +2,21 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
+import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
+
+const DATA = [
+  {
+    title: 'Primary',
+    subTitle: '',
+    className: 'bg-primary',
+  },
+  // {
+  //   title: 'Secondary',
+  //   subTitle: '',
+  //   className: 'bg-secondary',
+  // }
+];
 
 export default class Background extends Component {
   render () {
@@ -12,65 +26,28 @@ export default class Background extends Component {
         <p>快速设置背景色。预设 <code>12</code> 种颜色。</p>
 
         <div className={classnames(style['util-bg'])}>
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-primary', style['bg-feature'])}></div>
-              <Highlight>
-                {
-                  `<div class="bg-primary">
+          <div className="row">
+            {
+              DATA.map((item, index) => {
+                return <div className="col-6 mb-10" key={index}>
+                  <h5>{item.title}</h5>
+                  <div className={classnames(common['feature-example'])}>
+                    <div className={classnames(common['example-view'])}>
+                      <div className={classnames(item.className, style['bg-feature'])}></div>
+                    </div>
+                    <div className={classnames(common['example-code'])}>
+                      <Highlight>
+                        {
+                          `<div class="${item.className}">
   ...
 </div>`
-                }
-              </Highlight>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-secondary', style['bg-feature'])}></div>
-            </div>
-          </div>
-
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-success', style['bg-feature'])}></div>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-info', style['bg-feature'])}></div>
-            </div>
-          </div>
-
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-warning', style['bg-feature'])}></div>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-danger', style['bg-feature'])}></div>
-            </div>
-          </div>
-
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-white border', style['bg-feature'])}></div>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-light', style['bg-feature'])}></div>
-            </div>
-          </div>
-
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-muted', style['bg-feature'])}></div>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-dark', style['bg-feature'])}></div>
-            </div>
-          </div>
-
-          <div className="row mb-10">
-            <div className="col-6">
-              <div className={classnames('bg-black', style['bg-feature'])}></div>
-            </div>
-            <div className="col-6">
-              <div className={classnames('bg-transparent border', style['bg-feature'])}></div>
-            </div>
+                        }
+                      </Highlight>
+                    </div>
+                  </div>
+                </div>
+              })
+            }
           </div>
         </div>
       </PageWrapper>
