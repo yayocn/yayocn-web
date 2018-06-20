@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import copyText2Clipboard from 'copy-text-to-clipboard';
 import { hljs } from 'highlight/lib/vendor/highlight.js/highlight';
 import xml from 'highlight/lib/vendor/highlight.js/languages/xml';
 import css from 'highlight/lib/vendor/highlight.js/languages/css';
@@ -20,7 +21,11 @@ export default class Highlighter extends Component {
   }
 
   copyHandler = () => {
+    if (copyText2Clipboard(this.props.children)) {
 
+    } else {
+
+    }
   }
 
   render () {
@@ -34,7 +39,7 @@ export default class Highlighter extends Component {
           </code>
         </pre>
         <textarea className="hidden" defaultValue={this.props.children} ref={ref => { this.code = ref }}></textarea>
-        <button className="btn btn-sm btn-dark pt-absolute" style={{ top: '-1px', right: '-1px',}} onClick={this.copyHandler}>复制</button>
+        <button className="btn btn-sm btn-dark pt-absolute" style={{ top: '-1px', right: '-1px',}} data-container="body" data-toggle="popover" data-placement="top" data-content="已复制" onClick={this.copyHandler}>复制</button>
       </div>
     );
   }
