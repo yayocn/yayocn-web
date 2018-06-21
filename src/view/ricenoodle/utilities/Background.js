@@ -6,16 +6,18 @@ import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
 const DATA = [
-  {
-    title: 'Primary',
-    subTitle: '',
-    className: 'bg-primary',
-  },
-  // {
-  //   title: 'Secondary',
-  //   subTitle: '',
-  //   className: 'bg-secondary',
-  // }
+  { title: 'Primary', subTitle: '', className: 'bg-primary', },
+  { title: 'Secondary', subTitle: '', className: 'bg-secondary', },
+  { title: 'Success', subTitle: '', className: 'bg-success', },
+  { title: 'Info', subTitle: '', className: 'bg-info', },
+  { title: 'Warning', subTitle: '', className: 'bg-warning', },
+  { title: 'Danger', subTitle: '', className: 'bg-danger', },
+  { title: 'White', subTitle: '', className: 'bg-white', },
+  { title: 'Light', subTitle: '', className: 'bg-light', },
+  { title: 'Muted', subTitle: '', className: 'bg-muted', },
+  { title: 'Dark', subTitle: '', className: 'bg-dark', },
+  { title: 'Black', subTitle: '', className: 'bg-black', },
+  { title: 'Transparent', subTitle: '', className: 'bg-transparent', },
 ];
 
 export default class Background extends Component {
@@ -23,7 +25,7 @@ export default class Background extends Component {
     return (
       <PageWrapper>
         <h3>说明</h3>
-        <p>快速设置背景色。预设 <code>12</code> 种颜色。</p>
+        <p>快速设置背景色。预设 <code>12</code> 种背景色。</p>
 
         <div className={classnames(style['util-bg'])}>
           <div className="row">

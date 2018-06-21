@@ -4,7 +4,7 @@ import Navbar from '../Navbar';
 export default class PageHeader extends Component {
   render () {
     return (
-      <header>
+      <header className="pt-fixed pt-top">
         <Navbar />
       </header>
     );
