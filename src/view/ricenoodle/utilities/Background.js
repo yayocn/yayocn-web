@@ -45,7 +45,7 @@ export default class Background extends Component {
     return (
       <PageWrapper>
         <h2>说明</h2>
-        <p>快速设置背景色。</p>
+        <p>使用背景类快速设置背景色。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 

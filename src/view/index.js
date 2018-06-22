@@ -5,6 +5,7 @@ import Start from './ricenoodle/start';
 import Utilities from './ricenoodle/utilities';
 import Background from './ricenoodle/utilities/Background';
 import Border from './ricenoodle/utilities/Border';
+import Flex from './ricenoodle/utilities/Flex';
 
 export {
   Gate,
@@ -14,4 +15,5 @@ export {
   Utilities,
   Background,
   Border,
+  Flex,
 };

@@ -73,7 +73,7 @@ export default class Border extends Component {
     return (
       <PageWrapper>
         <h2>说明</h2>
-        <p>使用边框工具类快速设置元素的边框。包括各种边框的样式，情景色，圆角等，它们之间可以相互组合使用。</p>
+        <p>使用边框类快速设置元素的边框。包括各种边框的样式，情景色，圆角等，它们之间可以相互组合使用。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 

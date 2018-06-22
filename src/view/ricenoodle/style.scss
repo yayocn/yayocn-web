@@ -17,3 +17,23 @@ $border-height: $border-width;
     background-color: lighten(#dee2e6, 9%);
   }
 }
+
+$flex-item-height-base: 32px;
+.util-flex {
+  .flex-item {
+    padding: 10px 50px;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        background-color: rgba(0,0,0, 1/12*(12-$i)+0.1);
+        height: $flex-item-height-base + $i * 12px;
+      }
+    }
+
+    .item-text {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

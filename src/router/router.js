@@ -6,6 +6,7 @@ import {
   Utilities,
   Background,
   Border,
+  Flex,
 } from '../view';
 
 const router = [
@@ -43,6 +44,11 @@ const router = [
     path: '/ricenoodle/utilities/border',
     exact: true,
     component: Border,
+  },
+  {
+    path: '/ricenoodle/utilities/flex',
+    exact: true,
+    component: Flex,
   },
 ];
 
