@@ -5,6 +5,7 @@ import {
   Start,
   Utilities,
   Background,
+  Border,
 } from '../view';
 
 const router = [
@@ -37,6 +38,11 @@ const router = [
     path: '/ricenoodle/utilities/background',
     exact: true,
     component: Background,
+  },
+  {
+    path: '/ricenoodle/utilities/border',
+    exact: true,
+    component: Border,
   },
 ];
 

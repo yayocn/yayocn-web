@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import copyText2Clipboard from 'copy-text-to-clipboard';
 import hljs from 'highlight.js';
@@ -7,7 +7,6 @@ import 'highlight.js/styles/github.css';
 export default class Highlighter extends Component {
   componentDidMount() {
     hljs.highlightBlock(this.pre);
-    console.log(hljs)
   }
 
   copyHandler = () => {
@@ -19,7 +18,7 @@ export default class Highlighter extends Component {
   }
 
   render () {
-    const { className } = this.props;
+    const { className, copyBtn = true } = this.props;
 
     return (
       <div className="pt-relative border">
@@ -28,8 +27,12 @@ export default class Highlighter extends Component {
             {this.props.children}
           </code>
         </pre>
-        <textarea className="hidden" defaultValue={this.props.children}></textarea>
-        <button className="btn btn-sm btn-dark pt-absolute" style={{ top: '-1px', right: '-1px',}} onClick={this.copyHandler}>复制</button>
+        {
+          copyBtn && <Fragment>
+            <textarea className="hidden" defaultValue={this.props.children}></textarea>
+            <button className="btn btn-sm btn-dark pt-absolute" style={{ top: '-1px', right: '-1px',}} onClick={this.copyHandler}>复制</button>
+          </Fragment>
+        }
       </div>
     );
   }

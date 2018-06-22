@@ -22,11 +22,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/background'
       },
-      // {
-      //   title: 'Border',
-      //   icon: '',
-      //   link: '/ricenoodle/utilities/border'
-      // },
+      {
+        title: 'Border',
+        icon: '',
+        link: '/ricenoodle/utilities/border'
+      },
       // {
       //   title: 'Font',
       //   icon: '',

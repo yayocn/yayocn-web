@@ -1,10 +1,19 @@
 // Utilities
 //
 
-$bg-height: 50px;
-
+$bg-height: 100px;
 .util-bg {
   .bg-feature {
     height: $bg-height;
+  }
+}
+
+$border-width: 100px;
+$border-height: $border-width;
+.util-border {
+  .border-feature {
+    width: $border-width;
+    height: $border-height;
+    background-color: lighten(#dee2e6, 9%);
   }
 }
