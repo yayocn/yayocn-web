@@ -66,3 +66,12 @@ $flex-item-height-base: 32px;
     }
   }
 }
+
+
+.util-float {
+  .float-item {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+  }
+}
