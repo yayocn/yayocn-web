@@ -7,6 +7,7 @@ import Background from './ricenoodle/utilities/Background';
 import Border from './ricenoodle/utilities/Border';
 import Flex from './ricenoodle/utilities/Flex';
 import Float from './ricenoodle/utilities/Float';
+import Font from './ricenoodle/utilities/Font';
 
 export {
   Gate,
@@ -18,4 +19,5 @@ export {
   Border,
   Flex,
   Float,
+  Font,
 };

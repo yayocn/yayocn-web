@@ -37,6 +37,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/float'
       },
+      {
+        title: 'Font',
+        icon: '',
+        link: '/ricenoodle/utilities/font'
+      },
       // {
       //   title: 'Font',
       //   icon: '',
