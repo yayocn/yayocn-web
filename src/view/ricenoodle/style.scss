@@ -36,4 +36,33 @@ $flex-item-height-base: 32px;
       color: #fff;
     }
   }
+
+  .aligin-item {
+    height: 150px;
+
+    .flex-item {
+      padding: 10px 50px;
+
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          height: auto;
+          font-size: 16px * (1 + $i);
+        }
+      }
+    }
+  }
+
+  .aligin-content {
+    height: 250px;
+
+    .flex-item {
+      padding: 10px 200px;
+
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          height: $flex-item-height-base + 12px;
+        }
+      }
+    }
+  }
 }
