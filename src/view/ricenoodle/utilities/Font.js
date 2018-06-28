@@ -40,11 +40,11 @@ export default class Font extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<div class="${item.className}"> ... </div>
+        code += `<p class="${item}"> ... </p>
       
 `;
       } else {
-        code += `<div class="${item.className}"> ... </div>`;
+        code += `<p class="${item}"> ... </p>`;
       }
     })
 
@@ -60,28 +60,86 @@ export default class Font extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h3>Size</h3>
-        <p>预设 <code>12</code> 种情景背景色。</p>
-        <div className={classnames(style['util-bg'])}>
+        <p>预设 <code>12px ~ 20px</code> 的固定字体大小。</p>
+        <div className={classnames(style['util-font'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
-                  <div className="row">
-                    {
-                      FONT.size.map((item, index) => {
-                        return (
-                          <div className="col-4 mb-10" key={index} >
-                            <div className={classnames(item.className, style['bg-feature'])}></div>
-                          </div>
-                        );
-                      })
-                    }
-                  </div>
+                  {
+                    FONT.size.map((item, index) => {
+                      return (
+                        <p className={item} key={index} >
+                          This is {item} class font size.
+                        </p>
+                      );
+                    })
+                  }
                 </div>
                 <div className={classnames(common['example-code'])}>
                   <Highlight copyBtn={false}>
                     {
-                      // this.createCode('situation')
+                      this.createCode('size')
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h3>Mutiple</h3>
+        <p>使用 em 作为单位，放大字体的倍数，预设 <code>1x ~ 10x</code>。</p>
+        <div className={classnames(style['util-font'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  {
+                    FONT.multiple.map((item, index) => {
+                      return (
+                        <p className={item} key={index} >
+                          {item}
+                        </p>
+                      );
+                    })
+                  }
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight copyBtn={false}>
+                    {
+                      this.createCode('multiple')
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h3>Weight</h3>
+        <p>快速设置文字的权重。</p>
+        <div className={classnames(style['util-font'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  {
+                    FONT.weight.map((item, index) => {
+                      return (
+                        <p className={item} key={index} >
+                          {item}
+                        </p>
+                      );
+                    })
+                  }
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight copyBtn={false}>
+                    {
+                      this.createCode('weight')
                     }
                   </Highlight>
                 </div>
