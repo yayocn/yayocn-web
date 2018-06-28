@@ -42,16 +42,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/font'
       },
-      // {
-      //   title: 'Font',
-      //   icon: '',
-      //   link: '/ricenoodle/utilities/font'
-      // },
-      // {
-      //   title: 'Position',
-      //   icon: '',
-      //   link: '/ricenoodle/utilities/position'
-      // },
+      {
+        title: 'Position',
+        icon: '',
+        link: '/ricenoodle/utilities/position'
+      },
       // {
       //   title: 'Text',
       //   icon: '',

@@ -8,6 +8,7 @@ import Border from './ricenoodle/utilities/Border';
 import Flex from './ricenoodle/utilities/Flex';
 import Float from './ricenoodle/utilities/Float';
 import Font from './ricenoodle/utilities/Font';
+import Position from './ricenoodle/utilities/Position';
 
 export {
   Gate,
@@ -20,4 +21,5 @@ export {
   Flex,
   Float,
   Font,
+  Position,
 };

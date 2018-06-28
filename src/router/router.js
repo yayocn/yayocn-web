@@ -9,6 +9,7 @@ import {
   Flex,
   Float,
   Font,
+  Position,
 } from '../view';
 
 const router = [
@@ -61,6 +62,11 @@ const router = [
     path: '/ricenoodle/utilities/font',
     exact: true,
     component: Font,
+  },
+  {
+    path: '/ricenoodle/utilities/position',
+    exact: true,
+    component: Position,
   },
 ];
 

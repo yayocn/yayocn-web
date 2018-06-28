@@ -67,11 +67,25 @@ $flex-item-height-base: 32px;
   }
 }
 
-
+$float-item-height: 50px;
 .util-float {
   .float-item {
-    height: 50px;
-    line-height: 50px;
+    height: $float-item-height;
+    line-height: $float-item-height;
     padding: 0 20px;
+  }
+}
+
+$position-wrap-height: 200px;
+$position-item-width: 200px;
+$position-item-height: 100px;
+.util-position {
+  .position-view-wrap {
+    height: $position-wrap-height;
+  }
+
+  .position-item {
+    width: $position-item-width;
+    height: $position-item-height;
   }
 }
