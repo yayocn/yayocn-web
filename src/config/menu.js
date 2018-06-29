@@ -52,6 +52,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/shadow'
       },
+      {
+        title: 'Size',
+        icon: '',
+        link: '/ricenoodle/utilities/size'
+      },
       // {
       //   title: 'Text',
       //   icon: '',

@@ -10,6 +10,7 @@ import Float from './ricenoodle/utilities/Float';
 import Font from './ricenoodle/utilities/Font';
 import Position from './ricenoodle/utilities/Position';
 import Shadow from './ricenoodle/utilities/Shadow';
+import Size from './ricenoodle/utilities/Size';
 
 export {
   Gate,
@@ -24,4 +25,5 @@ export {
   Font,
   Position,
   Shadow,
+  Size,
 };
