@@ -9,6 +9,7 @@ import Flex from './ricenoodle/utilities/Flex';
 import Float from './ricenoodle/utilities/Float';
 import Font from './ricenoodle/utilities/Font';
 import Position from './ricenoodle/utilities/Position';
+import Shadow from './ricenoodle/utilities/Shadow';
 
 export {
   Gate,
@@ -22,4 +23,5 @@ export {
   Float,
   Font,
   Position,
+  Shadow,
 };

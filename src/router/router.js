@@ -10,6 +10,7 @@ import {
   Float,
   Font,
   Position,
+  Shadow,
 } from '../view';
 
 const router = [
@@ -67,6 +68,11 @@ const router = [
     path: '/ricenoodle/utilities/position',
     exact: true,
     component: Position,
+  },
+  {
+    path: '/ricenoodle/utilities/shadow',
+    exact: true,
+    component: Shadow,
   },
 ];
 

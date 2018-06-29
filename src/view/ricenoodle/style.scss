@@ -89,3 +89,10 @@ $position-item-height: 100px;
     height: $position-item-height;
   }
 }
+
+$shadow-feature-height: 100px;
+.util-shadow {
+  .shadow-feature {
+    height: $shadow-feature-height;
+  }
+}

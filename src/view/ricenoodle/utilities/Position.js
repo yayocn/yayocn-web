@@ -26,7 +26,7 @@ const POSITION = {
   ]
 };
 
-export default class Background extends Component {
+export default class Position extends Component {
 
   createCode = (target) => {
     const data = POSITION[target];
