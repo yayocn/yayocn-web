@@ -16,11 +16,13 @@ const POSITION = {
   ],
   position: [
     { title: '水平居中', key: 'hc', subTitle: '', className: 'pt-hc', },
-    { title: '垂直居中', key: 'vc', subTitle: '', className: 'pt-vc', },
-    { title: '水平垂直居中', key: 'center', subTitle: '', className: 'pt-center', },
+    { title: '垂直居中', key: 'vc', subTitle: '', className: 'pt-absolute pt-vc', },
+    { title: '水平垂直居中', key: 'center', subTitle: '', className: 'pt-absolute pt-center', },
     { title: '居于顶部', key: 'top', subTitle: '', className: 'pt-absolute pt-top', },
+    { title: '居于右侧', key: 'right', subTitle: '', className: 'pt-absolute pt-right', },
     { title: '居于底部', key: 'bottom', subTitle: '', className: 'pt-absolute pt-bottom', },
-    { title: '填充', key: 'full', subTitle: '', className: 'pt-full', },
+    { title: '居于左侧', key: 'left', subTitle: '', className: 'pt-absolute pt-left', },
+    { title: '填充', key: 'full', subTitle: '', className: 'pt-absolute pt-full', },
   ]
 };
 
@@ -87,7 +89,7 @@ export default class Background extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>位置</h3>
-        <p>位置快速设置时，<code>position</code> 值始终是 <code>absolute</code> 。</p>
+        <p>位置快速设置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
         <div className={classnames(style['util-position'])}>
           <div className="row">
             <div className="col-12">
