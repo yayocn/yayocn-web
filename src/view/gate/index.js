@@ -15,7 +15,7 @@ export default class Gate extends Component {
             </ul>
           </div>
           <div className={classnames('border', style.logo)}>
-            <p className="pt-center text-center">LOGO</p>
+            <p className="pt-absolute pt-center text-center">LOGO</p>
           </div>
           <div className="nav-left font-2x ml-50">
             <ul className="nav">

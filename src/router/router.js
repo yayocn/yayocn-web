@@ -13,6 +13,7 @@ import {
   Shadow,
   Size,
   Space,
+  Text,
 } from '../view';
 
 const router = [
@@ -85,6 +86,11 @@ const router = [
     path: '/ricenoodle/utilities/space',
     exact: true,
     component: Space,
+  },
+  {
+    path: '/ricenoodle/utilities/text',
+    exact: true,
+    component: Text,
   },
 ];
 

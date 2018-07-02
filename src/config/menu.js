@@ -62,11 +62,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/space'
       },
-      // {
-      //   title: 'Text',
-      //   icon: '',
-      //   link: '/ricenoodle/utilities/text'
-      // },
+      {
+        title: 'Text',
+        icon: '',
+        link: '/ricenoodle/utilities/text'
+      },
     ],
   },
   // {

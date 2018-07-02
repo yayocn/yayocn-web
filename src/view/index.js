@@ -12,6 +12,7 @@ import Position from './ricenoodle/utilities/Position';
 import Shadow from './ricenoodle/utilities/Shadow';
 import Size from './ricenoodle/utilities/Size';
 import Space from './ricenoodle/utilities/Space';
+import Text from './ricenoodle/utilities/Text';
 
 export {
   Gate,
@@ -28,4 +29,5 @@ export {
   Shadow,
   Size,
   Space,
+  Text,
 };
