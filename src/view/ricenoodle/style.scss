@@ -96,3 +96,17 @@ $shadow-feature-height: 100px;
     height: $shadow-feature-height;
   }
 }
+
+$view-item-height: 50px;
+.util-view {
+  .view-item {
+    padding: 14px;
+    height: $view-item-height;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        background-color: rgba(0,0,0, 1/12*(12-$i)+0.1);
+      }
+    }
+  }
+}

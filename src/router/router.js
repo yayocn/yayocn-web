@@ -14,6 +14,7 @@ import {
   Size,
   Space,
   Text,
+  View,
 } from '../view';
 
 const router = [
@@ -91,6 +92,11 @@ const router = [
     path: '/ricenoodle/utilities/text',
     exact: true,
     component: Text,
+  },
+  {
+    path: '/ricenoodle/utilities/view',
+    exact: true,
+    component: View,
   },
 ];
 

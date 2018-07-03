@@ -7,18 +7,18 @@ import style from '../style.scss';
 
 const BACKGROUND = {
   situation: [
-    { title: 'Primary', subTitle: '', className: 'bg-primary', },
-    { title: 'Secondary', subTitle: '', className: 'bg-secondary', },
-    { title: 'Success', subTitle: '', className: 'bg-success', },
-    { title: 'Info', subTitle: '', className: 'bg-info', },
-    { title: 'Warning', subTitle: '', className: 'bg-warning', },
-    { title: 'Danger', subTitle: '', className: 'bg-danger', },
-    { title: 'White', subTitle: '', className: 'bg-white', },
-    { title: 'Light', subTitle: '', className: 'bg-light', },
-    { title: 'Muted', subTitle: '', className: 'bg-muted', },
-    { title: 'Dark', subTitle: '', className: 'bg-dark', },
-    { title: 'Black', subTitle: '', className: 'bg-black', },
-    { title: 'Transparent', subTitle: '', className: 'bg-transparent', },
+    { title: 'Primary', key: '', subTitle: '', className: 'bg-primary', },
+    { title: 'Secondary', key: '', subTitle: '', className: 'bg-secondary', },
+    { title: 'Success', key: '', subTitle: '', className: 'bg-success', },
+    { title: 'Info', key: '', subTitle: '', className: 'bg-info', },
+    { title: 'Warning', key: '', subTitle: '', className: 'bg-warning', },
+    { title: 'Danger', key: '', subTitle: '', className: 'bg-danger', },
+    { title: 'White', key: '', subTitle: '', className: 'bg-white', },
+    { title: 'Light', key: '', subTitle: '', className: 'bg-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'bg-muted', },
+    { title: 'Dark', key: '', subTitle: '', className: 'bg-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'bg-black', },
+    { title: 'Transparent', key: '', subTitle: '', className: 'bg-transparent', },
   ]
 };
 

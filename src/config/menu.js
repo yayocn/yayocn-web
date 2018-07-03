@@ -67,6 +67,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/utilities/text'
       },
+      {
+        title: 'View',
+        icon: '',
+        link: '/ricenoodle/utilities/view'
+      },
     ],
   },
   // {
