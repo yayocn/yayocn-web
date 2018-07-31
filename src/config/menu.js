@@ -74,27 +74,27 @@ export const ricenoodle = [
       },
     ],
   },
-  // {
-  //   title: '组件',
-  //   icon: '',
-  //   key: 'component',
-  //   link: '/ricenoodle/components',
-  //   children: [
-  //     {
-  //       title: 'Dropdown',
-  //       icon: '',
-  //       link: '/ricenoodle/components/dropdown'
-  //     },
-  //     {
-  //       title: 'Alert',
-  //       icon: '',
-  //       link: '/ricenoodle/components/alert'
-  //     },
-  //     {
-  //       title: 'Modal',
-  //       icon: '',
-  //       link: '/ricenoodle/components/modal'
-  //     },
-  //   ],
-  // },
+  {
+    title: '组件',
+    icon: '',
+    key: 'component',
+    link: '/ricenoodle/components',
+    children: [
+      {
+        title: 'Alert',
+        icon: '',
+        link: '/ricenoodle/components/alert'
+      },
+      // {
+      //   title: 'Dropdown',
+      //   icon: '',
+      //   link: '/ricenoodle/components/dropdown'
+      // },
+      // {
+      //   title: 'Modal',
+      //   icon: '',
+      //   link: '/ricenoodle/components/modal'
+      // },
+    ],
+  },
 ];

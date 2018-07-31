@@ -8,27 +8,29 @@ export default class Space extends Component {
 
   createExampleCode = (target) => {
    let code = '';
-   code = `<div class="m-0 p-0">
-  margin: 0;
-  padding: 0;
-</div>
+   code = `.m-0 {
+  margin: 0 !important;   
+}
 
-<div class="mt-1 pt-1">
-  margin-top: 1px;
-  padding-top: 1px;
-</div>
+.mt-0 {
+  margin-top: 0 !important;   
+}
 
-<div class="mh-5 pv-5">
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-</div>
+.mt-1 {
+  margin: 1px !important;   
+}
 
-<div class="mh-auto">
-  margin-left: auto;
-  margin-right: auto;
-</div>`;
+.p-0 {
+  pading: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;   
+}
+
+.pt-1 {
+  padding: 1px !important;   
+}`;
 
    return code;
   }

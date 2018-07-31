@@ -15,6 +15,9 @@ import Space from './ricenoodle/utilities/Space';
 import Text from './ricenoodle/utilities/Text';
 import View from './ricenoodle/utilities/View';
 
+import Components from './ricenoodle/components';
+import Alert from './ricenoodle/components/Alert';
+
 export {
   Gate,
   Ricenoodle,
@@ -32,4 +35,6 @@ export {
   Space,
   Text,
   View,
+  Components,
+  Alert,
 };

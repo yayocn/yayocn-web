@@ -23,11 +23,11 @@ export default class Float extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<div class="${item.className}"></div>
+        code += `<div class="${item.className}"> ... </div>
       
 `;
       } else {
-        code += `<div class="${item.className}"></div>`;
+        code += `<div class="${item.className}"> ... </div>`;
       }
     })
 
