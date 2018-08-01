@@ -42,7 +42,7 @@ const ALERT = {
   ],
 };
 
-export default class Background extends Component {
+export default class Alert extends Component {
 
   createCode = (target) => {
     const data = ALERT[target];
@@ -156,7 +156,7 @@ export default class Background extends Component {
   <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
   <hr>
   <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
- </div>`;
+</div>`;
       }
     })
 
@@ -218,7 +218,7 @@ export default class Background extends Component {
                         return (
                           <div className="col-4 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              A simple {item.title} alert with <a href="javascript:;" class="alert-link">an example link</a>. Give it a click if you like.
+                              A simple {item.title} alert with <a href="" class="alert-link">an example link</a>. Give it a click if you like.
                             </div>
                           </div>
                         );

@@ -17,6 +17,7 @@ import {
   View,
   Components,
   Alert,
+  Badge
 } from '../view';
 
 const router = [
@@ -109,6 +110,11 @@ const router = [
     path: '/ricenoodle/components/alert',
     exact: true,
     component: Alert,
+  },
+  {
+    path: '/ricenoodle/components/badge',
+    exact: true,
+    component: Badge,
   },
 ];
 

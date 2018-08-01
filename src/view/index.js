@@ -17,6 +17,7 @@ import View from './ricenoodle/utilities/View';
 
 import Components from './ricenoodle/components';
 import Alert from './ricenoodle/components/Alert';
+import Badge from './ricenoodle/components/Badge';
 
 export {
   Gate,
@@ -37,4 +38,5 @@ export {
   View,
   Components,
   Alert,
+  Badge,
 };
