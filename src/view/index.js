@@ -18,6 +18,7 @@ import View from './ricenoodle/utilities/View';
 import Components from './ricenoodle/components';
 import Alert from './ricenoodle/components/Alert';
 import Badge from './ricenoodle/components/Badge';
+import Breadcrumb from './ricenoodle/components/Breadcrumb';
 
 export {
   Gate,
@@ -39,4 +40,5 @@ export {
   Components,
   Alert,
   Badge,
+  Breadcrumb
 };

@@ -90,6 +90,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/badge'
       },
+      {
+        title: 'Breadcrumb',
+        icon: '',
+        link: '/ricenoodle/components/breadcrumb'
+      },
       // {
       //   title: 'Dropdown',
       //   icon: '',
