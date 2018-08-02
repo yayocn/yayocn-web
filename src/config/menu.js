@@ -100,6 +100,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/button'
       },
+      {
+        title: 'Button Group',
+        icon: '',
+        link: '/ricenoodle/components/buttonGroup'
+      },
       // {
       //   title: 'Dropdown',
       //   icon: '',

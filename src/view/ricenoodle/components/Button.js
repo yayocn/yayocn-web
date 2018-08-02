@@ -65,23 +65,6 @@ export default class Button extends Component {
     return code;
   }
 
-  createDisabledCode = (target = 'disabled') => {
-    const data = BUTTON[target];
-    let code = ``;
-    const len = data.length;
-    data.forEach((item, index) => {
-      if (index !== len - 1) {
-        code += `<a href="/" class="${item.className}">${item.title}</a>
-
-`;
-      } else {
-        code += `<a href="/" class="${item.className}">${item.title}</a>`;
-      }
-    })
-
-    return code;
-  }
-
   render () {
     return (
       <PageWrapper>

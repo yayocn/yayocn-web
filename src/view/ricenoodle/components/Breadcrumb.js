@@ -37,7 +37,7 @@ export default class Breadcrumb extends Component {
 
         <h3>例子</h3>
         <p>一般为最后一项添加 <code>.active</code> 类，且不需要 <code>&lt;a&gt;</code>。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-breadcrumb'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -68,7 +68,7 @@ export default class Breadcrumb extends Component {
 
         <h3>禁用项</h3>
         <p>添加 <code>.disabled</code> 类设置禁用项，且不需要 <code>&lt;a&gt;</code>。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-breadcrumb'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
