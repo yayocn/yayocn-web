@@ -95,6 +95,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/breadcrumb'
       },
+      {
+        title: 'Button',
+        icon: '',
+        link: '/ricenoodle/components/button'
+      },
       // {
       //   title: 'Dropdown',
       //   icon: '',
