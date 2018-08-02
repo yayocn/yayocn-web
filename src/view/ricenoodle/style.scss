@@ -110,3 +110,10 @@ $view-item-height: 50px;
     }
   }
 }
+
+$card-img-width-1: 286px;
+.util-card {
+  .card-img-1 {
+    width: $card-img-width-1;
+  }
+}
