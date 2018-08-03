@@ -110,6 +110,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/card'
       },
+      {
+        title: 'Carousel',
+        icon: '',
+        link: '/ricenoodle/components/carousel'
+      },
       // {
       //   title: 'Dropdown',
       //   icon: '',

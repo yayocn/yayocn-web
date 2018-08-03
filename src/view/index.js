@@ -22,6 +22,7 @@ import Breadcrumb from './ricenoodle/components/Breadcrumb';
 import Button from './ricenoodle/components/Button';
 import ButtonGroup from './ricenoodle/components/ButtonGroup';
 import Card from './ricenoodle/components/Card';
+import Carousel from './ricenoodle/components/Carousel';
 
 export {
   Gate,
@@ -47,4 +48,5 @@ export {
   Button,
   ButtonGroup,
   Card,
+  Carousel,
 };
