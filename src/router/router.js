@@ -6,6 +6,7 @@ import {
   Utilities,
   Background,
   Border,
+  Close,
   Flex,
   Float,
   Font,
@@ -60,6 +61,11 @@ const router = [
     path: '/ricenoodle/utilities/border',
     exact: true,
     component: Border,
+  },
+  {
+    path: '/ricenoodle/utilities/close',
+    exact: true,
+    component: Close,
   },
   {
     path: '/ricenoodle/utilities/flex',

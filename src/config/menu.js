@@ -28,6 +28,11 @@ export const ricenoodle = [
         link: '/ricenoodle/utilities/border'
       },
       {
+        title: 'Close',
+        icon: '',
+        link: '/ricenoodle/utilities/close'
+      },
+      {
         title: 'Flex',
         icon: '',
         link: '/ricenoodle/utilities/flex'

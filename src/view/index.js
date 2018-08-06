@@ -5,6 +5,7 @@ import Start from './ricenoodle/start';
 import Utilities from './ricenoodle/utilities';
 import Background from './ricenoodle/utilities/Background';
 import Border from './ricenoodle/utilities/Border';
+import Close from './ricenoodle/utilities/Close';
 import Flex from './ricenoodle/utilities/Flex';
 import Float from './ricenoodle/utilities/Float';
 import Font from './ricenoodle/utilities/Font';
@@ -32,6 +33,7 @@ export {
   Utilities,
   Background,
   Border,
+  Close,
   Flex,
   Float,
   Font,
