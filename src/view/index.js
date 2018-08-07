@@ -28,6 +28,7 @@ import Button from './ricenoodle/components/Button';
 import ButtonGroup from './ricenoodle/components/ButtonGroup';
 import Card from './ricenoodle/components/Card';
 import Carousel from './ricenoodle/components/Carousel';
+import Divider from './ricenoodle/components/Divider';
 
 export {
   Gate,
@@ -57,4 +58,5 @@ export {
   ButtonGroup,
   Card,
   Carousel,
+  Divider,
 };

@@ -26,6 +26,7 @@ import {
   ButtonGroup,
   Card,
   Carousel,
+  Divider,
 } from '../view';
 
 const router = [
@@ -163,6 +164,11 @@ const router = [
     path: '/ricenoodle/components/carousel',
     exact: true,
     component: Carousel,
+  },
+  {
+    path: '/ricenoodle/components/divider',
+    exact: true,
+    component: Divider,
   },
 ];
 
