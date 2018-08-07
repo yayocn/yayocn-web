@@ -2,6 +2,10 @@ import Gate from './gate';
 import Ricenoodle from './ricenoodle';
 import Introduce from './ricenoodle/introduce';
 import Start from './ricenoodle/start';
+
+import Improve from './ricenoodle/improve';
+import Code from './ricenoodle/improve/Code';
+
 import Utilities from './ricenoodle/utilities';
 import Background from './ricenoodle/utilities/Background';
 import Border from './ricenoodle/utilities/Border';
@@ -30,6 +34,8 @@ export {
   Ricenoodle,
   Introduce,
   Start,
+  Improve,
+  Code,
   Utilities,
   Background,
   Border,

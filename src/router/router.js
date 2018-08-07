@@ -3,6 +3,8 @@ import {
   Ricenoodle,
   Introduce,
   Start,
+  Improve,
+  Code,
   Utilities,
   Background,
   Border,
@@ -46,6 +48,16 @@ const router = [
     path: '/ricenoodle/start',
     exact: true,
     component: Start,
+  },
+  {
+    path: '/ricenoodle/improve',
+    exact: true,
+    component: Improve,
+  },
+  {
+    path: '/ricenoodle/improve/code',
+    exact: true,
+    component: Code,
   },
   {
     path: '/ricenoodle/utilities',

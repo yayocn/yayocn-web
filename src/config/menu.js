@@ -12,6 +12,19 @@ export const ricenoodle = [
     link: '/ricenoodle/start',
   },
   {
+    title: '样式增强',
+    icon: '',
+    key: 'improve',
+    link: '/ricenoodle/improve',
+    children: [
+      {
+        title: 'Code',
+        icon: '',
+        link: '/ricenoodle/improve/code'
+      },
+    ],
+  },
+  {
     title: '实用工具',
     icon: '',
     key: 'utilities',

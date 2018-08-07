@@ -5,23 +5,6 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const CLOSE = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'bg-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'bg-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'bg-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'bg-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'bg-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'bg-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'bg-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'bg-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'bg-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'bg-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'bg-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'bg-transparent', },
-  ]
-};
-
 export default class Close extends Component {
 
   createCode = () => {
