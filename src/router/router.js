@@ -28,6 +28,7 @@ import {
   Carousel,
   Divider,
   Dot,
+  Dropdown,
 } from '../view';
 
 const router = [
@@ -175,6 +176,11 @@ const router = [
     path: '/ricenoodle/components/dot',
     exact: true,
     component: Dot,
+  },
+  {
+    path: '/ricenoodle/components/dropdown',
+    exact: true,
+    component: Dropdown,
   },
 ];
 

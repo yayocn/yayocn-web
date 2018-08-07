@@ -143,11 +143,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/dot'
       },
-      // {
-      //   title: 'Dropdown',
-      //   icon: '',
-      //   link: '/ricenoodle/components/dropdown'
-      // },
+      {
+        title: 'Dropdown',
+        icon: '',
+        link: '/ricenoodle/components/dropdown'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',

@@ -242,7 +242,7 @@ export default class Alert extends Component {
         <h3>Dismissing</h3>
         <p>实现 <code>alert</code> 的销毁。你需要：</p>
         <ul className="ph-30">
-          <li>引进 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
+          <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
           <li>额外添加 <code>.alert-dismissible</code> 类。</li>
           <li>如果想要动画效果，再额外添加 <code>.fade .show</code> 类。</li>
           <li>添加一个属性包含了 <code>class="close" data-dismiss="alert"</code> 的销毁按钮。</li>
