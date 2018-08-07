@@ -30,6 +30,7 @@ import Card from './ricenoodle/components/Card';
 import Carousel from './ricenoodle/components/Carousel';
 import Divider from './ricenoodle/components/Divider';
 import Dot from './ricenoodle/components/Dot';
+import Dropdown from './ricenoodle/components/Dropdown';
 
 export {
   Gate,
@@ -61,4 +62,5 @@ export {
   Carousel,
   Divider,
   Dot,
+  Dropdown,
 };
