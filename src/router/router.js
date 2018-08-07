@@ -27,6 +27,7 @@ import {
   Card,
   Carousel,
   Divider,
+  Dot,
 } from '../view';
 
 const router = [
@@ -169,6 +170,11 @@ const router = [
     path: '/ricenoodle/components/divider',
     exact: true,
     component: Divider,
+  },
+  {
+    path: '/ricenoodle/components/dot',
+    exact: true,
+    component: Dot,
   },
 ];
 
