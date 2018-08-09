@@ -22,6 +22,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/improve/code'
       },
+      {
+        title: 'Element',
+        icon: '',
+        link: '/ricenoodle/improve/element'
+      },
     ],
   },
   {

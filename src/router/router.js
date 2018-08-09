@@ -5,6 +5,7 @@ import {
   Start,
   Improve,
   Code,
+  Element,
   Utilities,
   Background,
   Border,
@@ -61,6 +62,11 @@ const router = [
     path: '/ricenoodle/improve/code',
     exact: true,
     component: Code,
+  },
+  {
+    path: '/ricenoodle/improve/element',
+    exact: true,
+    component: Element,
   },
   {
     path: '/ricenoodle/utilities',

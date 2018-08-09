@@ -5,6 +5,7 @@ import Start from './ricenoodle/start';
 
 import Improve from './ricenoodle/improve';
 import Code from './ricenoodle/improve/Code';
+import Element from './ricenoodle/improve/Element';
 
 import Utilities from './ricenoodle/utilities';
 import Background from './ricenoodle/utilities/Background';
@@ -39,6 +40,7 @@ export {
   Start,
   Improve,
   Code,
+  Element,
   Utilities,
   Background,
   Border,
