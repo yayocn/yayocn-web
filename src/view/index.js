@@ -32,37 +32,14 @@ import Carousel from './ricenoodle/components/Carousel';
 import Divider from './ricenoodle/components/Divider';
 import Dot from './ricenoodle/components/Dot';
 import Dropdown from './ricenoodle/components/Dropdown';
+import Elf from './ricenoodle/components/Elf';
 
 export {
   Gate,
   Ricenoodle,
   Introduce,
   Start,
-  Improve,
-  Code,
-  Element,
-  Utilities,
-  Background,
-  Border,
-  Close,
-  Flex,
-  Float,
-  Font,
-  Position,
-  Shadow,
-  Size,
-  Space,
-  Text,
-  View,
-  Components,
-  Alert,
-  Badge,
-  Breadcrumb,
-  Button,
-  ButtonGroup,
-  Card,
-  Carousel,
-  Divider,
-  Dot,
-  Dropdown,
+  Improve, Code, Element,
+  Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
+  Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown, Elf,
 };

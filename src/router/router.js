@@ -30,6 +30,7 @@ import {
   Divider,
   Dot,
   Dropdown,
+  Elf,
 } from '../view';
 
 const router = [
@@ -187,6 +188,11 @@ const router = [
     path: '/ricenoodle/components/dropdown',
     exact: true,
     component: Dropdown,
+  },
+  {
+    path: '/ricenoodle/components/elf',
+    exact: true,
+    component: Elf,
   },
 ];
 
