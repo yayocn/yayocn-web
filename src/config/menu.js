@@ -158,6 +158,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/elf'
       },
+      {
+        title: 'Form',
+        icon: '',
+        link: '/ricenoodle/components/form'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',
