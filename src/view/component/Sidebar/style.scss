@@ -8,6 +8,7 @@
   width: $sidebar-width;
   padding: $sidebar-padding;
   box-shadow: 0 0 5px 0 #ddd;
+  overflow: auto;
 
   .sidebar-item {
     list-style: none;

@@ -64,7 +64,7 @@ export default class Breadcrumb extends Component {
                       {
                         ELF.situation.map((item, index) => {
                           return (
-                            <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})}>
+                            <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})} key={index}>
                               <span className={classnames(item.className, style['elf-feature'])} key={index} >
                                 {item.title}
                               </span>
