@@ -32,6 +32,7 @@ import {
   Dropdown,
   Elf,
   Form,
+  Grid,
 } from '../view';
 
 const router = [
@@ -199,6 +200,11 @@ const router = [
     path: '/ricenoodle/components/form',
     exact: true,
     component: Form,
+  },
+  {
+    path: '/ricenoodle/components/grid',
+    exact: true,
+    component: Grid,
   },
 ];
 
