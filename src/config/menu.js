@@ -27,6 +27,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/improve/element'
       },
+      {
+        title: 'Image',
+        icon: '',
+        link: '/ricenoodle/improve/image'
+      },
     ],
   },
   {

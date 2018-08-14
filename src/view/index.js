@@ -6,6 +6,7 @@ import Start from './ricenoodle/start';
 import Improve from './ricenoodle/improve';
 import Code from './ricenoodle/improve/Code';
 import Element from './ricenoodle/improve/Element';
+import Image from './ricenoodle/improve/Image';
 
 import Utilities from './ricenoodle/utilities';
 import Background from './ricenoodle/utilities/Background';
@@ -41,7 +42,7 @@ export {
   Ricenoodle,
   Introduce,
   Start,
-  Improve, Code, Element,
+  Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
   Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown, Elf, Form, Grid,
 };

@@ -6,6 +6,7 @@ import {
   Improve,
   Code,
   Element,
+  Image,
   Utilities,
   Background,
   Border,
@@ -70,6 +71,11 @@ const router = [
     path: '/ricenoodle/improve/element',
     exact: true,
     component: Element,
+  },
+  {
+    path: '/ricenoodle/improve/image',
+    exact: true,
+    component: Image,
   },
   {
     path: '/ricenoodle/utilities',
