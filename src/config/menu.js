@@ -183,6 +183,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/jumbotron'
       },
+      {
+        title: 'List Group',
+        icon: '',
+        link: '/ricenoodle/components/listGroup'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',
