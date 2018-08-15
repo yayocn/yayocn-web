@@ -173,6 +173,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/grid'
       },
+      {
+        title: 'Input Group',
+        icon: '',
+        link: '/ricenoodle/components/inputGroup'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',

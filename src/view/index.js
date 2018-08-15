@@ -36,6 +36,7 @@ import Dropdown from './ricenoodle/components/Dropdown';
 import Elf from './ricenoodle/components/Elf';
 import Form from './ricenoodle/components/Form';
 import Grid from './ricenoodle/components/Grid';
+import InputGroup from './ricenoodle/components/InputGroup';
 
 export {
   Gate,
@@ -44,5 +45,5 @@ export {
   Start,
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
-  Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown, Elf, Form, Grid,
+  Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown, Elf, Form, Grid, InputGroup,
 };

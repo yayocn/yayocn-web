@@ -34,6 +34,7 @@ import {
   Elf,
   Form,
   Grid,
+  InputGroup,
 } from '../view';
 
 const router = [
@@ -211,6 +212,11 @@ const router = [
     path: '/ricenoodle/components/grid',
     exact: true,
     component: Grid,
+  },
+  {
+    path: '/ricenoodle/components/inputGroup',
+    exact: true,
+    component: InputGroup,
   },
 ];
 
