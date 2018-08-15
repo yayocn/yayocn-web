@@ -35,6 +35,7 @@ import {
   Form,
   Grid,
   InputGroup,
+  Jumbotron,
 } from '../view';
 
 const router = [
@@ -217,6 +218,11 @@ const router = [
     path: '/ricenoodle/components/inputGroup',
     exact: true,
     component: InputGroup,
+  },
+  {
+    path: '/ricenoodle/components/jumbotron',
+    exact: true,
+    component: Jumbotron,
   },
 ];
 

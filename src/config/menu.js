@@ -178,6 +178,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/inputGroup'
       },
+      {
+        title: 'Jumbotron',
+        icon: '',
+        link: '/ricenoodle/components/jumbotron'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',
