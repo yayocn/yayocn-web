@@ -188,6 +188,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/listGroup'
       },
+      {
+        title: 'Loader',
+        icon: '',
+        link: '/ricenoodle/components/loader'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',
