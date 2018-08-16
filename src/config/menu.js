@@ -203,6 +203,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/media'
       },
+      {
+        title: 'Modal',
+        icon: '',
+        link: '/ricenoodle/components/modal'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',

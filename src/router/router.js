@@ -40,6 +40,7 @@ import {
   Loader,
   Mark,
   Media,
+  Modal,
 } from '../view';
 
 const router = [
@@ -247,6 +248,11 @@ const router = [
     path: '/ricenoodle/components/media',
     exact: true,
     component: Media,
+  },
+  {
+    path: '/ricenoodle/components/modal',
+    exact: true,
+    component: Modal,
   },
 ];
 
