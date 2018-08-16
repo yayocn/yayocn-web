@@ -39,6 +39,7 @@ import {
   ListGroup,
   Loader,
   Mark,
+  Media,
 } from '../view';
 
 const router = [
@@ -241,6 +242,11 @@ const router = [
     path: '/ricenoodle/components/mark',
     exact: true,
     component: Mark,
+  },
+  {
+    path: '/ricenoodle/components/media',
+    exact: true,
+    component: Media,
   },
 ];
 

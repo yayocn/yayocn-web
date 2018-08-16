@@ -41,6 +41,7 @@ import Jumbotron from './ricenoodle/components/Jumbotron';
 import ListGroup from './ricenoodle/components/ListGroup';
 import Loader from './ricenoodle/components/Loader';
 import Mark from './ricenoodle/components/Mark';
+import Media from './ricenoodle/components/Media';
 
 export {
   Gate,
@@ -50,5 +51,5 @@ export {
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
   Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown,
-  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark,
+  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media,
 };

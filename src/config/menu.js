@@ -198,6 +198,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/mark'
       },
+      {
+        title: 'Media',
+        icon: '',
+        link: '/ricenoodle/components/media'
+      },
       // {
       //   title: 'Modal',
       //   icon: '',
