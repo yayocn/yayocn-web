@@ -38,6 +38,7 @@ import {
   Jumbotron,
   ListGroup,
   Loader,
+  Mark,
 } from '../view';
 
 const router = [
@@ -235,6 +236,11 @@ const router = [
     path: '/ricenoodle/components/loader',
     exact: true,
     component: Loader,
+  },
+  {
+    path: '/ricenoodle/components/mark',
+    exact: true,
+    component: Mark,
   },
 ];
 

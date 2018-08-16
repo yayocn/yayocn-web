@@ -90,7 +90,7 @@ export default class Loader extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h3>Bar</h3>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -128,7 +128,7 @@ export default class Loader extends Component {
         </div>
 
         <h4 className="mt-20">情景</h4>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -164,7 +164,7 @@ export default class Loader extends Component {
         </div>
 
         <h4 className="mt-20">尺寸</h4>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -202,7 +202,7 @@ export default class Loader extends Component {
         <div className="divider divider-lg"></div>
 
         <h3>Roll</h3>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -240,7 +240,7 @@ export default class Loader extends Component {
         </div>
 
         <h4 className="mt-20">情景</h4>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -276,7 +276,7 @@ export default class Loader extends Component {
         </div>
 
         <h4 className="mt-20">尺寸</h4>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
