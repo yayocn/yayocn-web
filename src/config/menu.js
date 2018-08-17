@@ -238,6 +238,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/scrollspy'
       },
+      {
+        title: 'Table',
+        icon: '',
+        link: '/ricenoodle/components/table'
+      },
     ],
   },
 ];
