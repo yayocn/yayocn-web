@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const DROPDOWN = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'btn', },
@@ -276,9 +279,9 @@ export default class Dropdown extends Component {
                                 Dropdown
                               </button>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                               </div>
                             </div>
                           );
@@ -317,9 +320,9 @@ export default class Dropdown extends Component {
                                 Dropdown
                               </button>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                               </div>
                             </div>
                           );
@@ -356,10 +359,10 @@ export default class Dropdown extends Component {
                           <span className="sr-only">Dropdown</span>
                         </button>
                         <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
-                          <a className="dropdown-item" href="#">Separated link</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Separated link</a>
                         </div>
                       </div>
                     </div>
@@ -396,9 +399,9 @@ export default class Dropdown extends Component {
                                   Dropdown
                                 </button>
                                 <div className="dropdown-menu">
-                                  <a className="dropdown-item" href="#">Action</a>
-                                  <a className="dropdown-item" href="#">Another action</a>
-                                  <a className="dropdown-item" href="#">Something else here</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                                 </div>
                               </div>
                             );
@@ -439,9 +442,9 @@ export default class Dropdown extends Component {
                                   {item.title}
                                 </button>
                                 <div className="dropdown-menu">
-                                  <a className="dropdown-item" href="#">Action</a>
-                                  <a className="dropdown-item" href="#">Another action</a>
-                                  <a className="dropdown-item" href="#">Something else here</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                  <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                                 </div>
                               </div>
                             );
@@ -477,9 +480,9 @@ export default class Dropdown extends Component {
                     <div className="col-12">
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
-                          <a className="dropdown-item active" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item active" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>
@@ -507,9 +510,9 @@ export default class Dropdown extends Component {
                     <div className="col-12">
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item disabled" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>
@@ -540,9 +543,9 @@ export default class Dropdown extends Component {
                           Right-aligned menu
                         </button>
                         <div className="dropdown-menu dropdown-menu-right">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>
@@ -571,9 +574,9 @@ export default class Dropdown extends Component {
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
                           <h3 class="dropdown-header">Dropdown header</h3>
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item disabled" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>
@@ -601,10 +604,10 @@ export default class Dropdown extends Component {
                     <div className="col-12">
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item disabled" href="#">Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
                           <div className="divider divider-sm"></div>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>
@@ -679,8 +682,8 @@ export default class Dropdown extends Component {
                             <button type="submit" className="btn btn-primary">Sign in</button>
                           </form>
                           <div className="dropdown-divider"></div>
-                          <a className="dropdown-item" href="#">New around here? Sign up</a>
-                          <a className="dropdown-item" href="#">Forgot password?</a>
+                          <a className="dropdown-item" href={ANCHOR}>New around here? Sign up</a>
+                          <a className="dropdown-item" href={ANCHOR}>Forgot password?</a>
                         </div>
                       </div>
                     </div>
@@ -711,9 +714,9 @@ export default class Dropdown extends Component {
                           data-offset
                         </button>
                         <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <a className="dropdown-item" href={ANCHOR}>Action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                          <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                         </div>
                       </div>
                     </div>

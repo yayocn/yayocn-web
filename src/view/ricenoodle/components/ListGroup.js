@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const LISTGROUP = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'list-group', },
@@ -65,9 +68,9 @@ export default class ListGroup extends Component {
 
   createAnchorCode = () => {
     let code = ` <ul class="list-group">
-  <li class="list-group-item"><a href="javascript:;">百度</a></li>
-  <li class="list-group-item"><a href="javascript:;">阿里</a></li>
-  <li class="list-group-item"><a href="javascript:;">腾讯</a></li>
+  <li class="list-group-item"><a href="#">百度</a></li>
+  <li class="list-group-item"><a href="#">阿里</a></li>
+  <li class="list-group-item"><a href="#">腾讯</a></li>
 </ul>`;
 
     return code;
@@ -295,9 +298,9 @@ export default class ListGroup extends Component {
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group">
-                        <li className="list-group-item"><a href="#">百度</a></li>
-                        <li className="list-group-item"><a href="#">阿里</a></li>
-                        <li className="list-group-item"><a href="#">腾讯</a></li>
+                        <li className="list-group-item"><a href={ANCHOR}>百度</a></li>
+                        <li className="list-group-item"><a href={ANCHOR}>阿里</a></li>
+                        <li className="list-group-item"><a href={ANCHOR}>腾讯</a></li>
                       </ul>
                     </div>
                   </div>

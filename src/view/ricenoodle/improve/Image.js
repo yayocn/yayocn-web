@@ -122,7 +122,7 @@ export default class Image extends Component {
                   <div className="row">
                     <div className="col-4">
                       <figure className="figure">
-                        <img className="figure-img img-fluid" src={img3}/>
+                        <img className="figure-img img-fluid" src={img3} alt="some text."/>
                         <figcaption className="figure-caption">A caption for the above image.</figcaption>
                       </figure>
                     </div>

@@ -5,22 +5,8 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const PAGINATION = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'pagination pagination-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'pagination pagination-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'pagination pagination-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'pagination pagination-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'pagination pagination-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'pagination pagination-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'pagination pagination-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'pagination pagination-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'pagination pagination-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'pagination pagination-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'pagination pagination-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'pagination pagination-transparent text-muted', },
-  ],
-};
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
 
 export default class Pagination extends Component {
 
@@ -105,7 +91,7 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav id="navbar-example2" className="navbar navbar-light bg-light">
-                        <a className="navbar-brand" href="#">Navbar</a>
+                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
                         <ul className="nav nav-pills">
                           <li className="nav-item">
                             <a className="nav-link active" href="#fat">@fat</a>
@@ -114,7 +100,7 @@ export default class Pagination extends Component {
                             <a className="nav-link" href="#mdo">@mdo</a>
                           </li>
                           <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={ANCHOR}>Dropdown</a>
                             <div className="dropdown-menu">
                               <a className="dropdown-item" href="#one">one</a>
                               <a className="dropdown-item" href="#two">two</a>
@@ -202,7 +188,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>事件</h3>
-        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/scrollspy/#usage" target="_blank" rel="noopener noreferer">Bootstrap Scrollspy</a> 。</p>
+        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/scrollspy/#usage" target="_blank" rel="noopener noreferrer">Bootstrap Scrollspy</a> 。</p>
       </PageWrapper>
     );
   }

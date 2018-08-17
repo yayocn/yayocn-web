@@ -5,23 +5,6 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss';
 import style from '../style.scss';
 
-const GRID = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'grid grid-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'grid grid-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'grid grid-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'grid grid-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'grid grid-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'grid grid-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'grid grid-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'grid grid-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'grid grid-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'grid grid-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'grid grid-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'grid grid-transparent text-muted', },
-  ],
-};
-
 export default class Grid extends Component {
 
   createDefaultCode = () => {

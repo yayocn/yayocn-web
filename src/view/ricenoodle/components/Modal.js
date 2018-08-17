@@ -5,23 +5,6 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const MODAL = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'modal modal-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'modal modal-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'modal modal-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'modal modal-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'modal modal-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'modal modal-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'modal modal-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'modal modal-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'modal modal-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'modal modal-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'modal modal-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'modal modal-transparent text-muted', },
-  ],
-};
-
 export default class Modal extends Component {
 
   createContentCode = () => {

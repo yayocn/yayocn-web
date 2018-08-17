@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const PANINATION = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'pagination', },
@@ -38,12 +41,12 @@ export default class Pagination extends Component {
       if (index !== len - 1) {
         code += `<nav>
   <ul class="${item.className}">
-    <li class="active"><a href="javascript:;">&laquo;</a></li>
-    <li><a href="javascript:;">1</a></li>
-    <li class="disabled"><a href="javascript:;">2</a></li>
-    <li><a href="javascript:;">3</a></li>
-    <li><a href="javascript:;">4</a></li>
-    <li><a href="javascript:;">&raquo;</a></li>
+    <li class="active"><a href=#>&laquo;</a></li>
+    <li><a href=#>1</a></li>
+    <li class="disabled"><a href=#>2</a></li>
+    <li><a href=#>3</a></li>
+    <li><a href=#>4</a></li>
+    <li><a href=#>&raquo;</a></li>
   </ul>
 </nav>
       
@@ -51,12 +54,12 @@ export default class Pagination extends Component {
       } else {
         code += `<nav>
   <ul class="${item.className}">
-    <li class="active"><a href="javascript:;">&laquo;</a></li>
-    <li><a href="javascript:;">1</a></li>
-    <li class="disabled"><a href="javascript:;">2</a></li>
-    <li><a href="javascript:;">3</a></li>
-    <li><a href="javascript:;">4</a></li>
-    <li><a href="javascript:;">&raquo;</a></li>
+    <li class="active"><a href=#>&laquo;</a></li>
+    <li><a href=#>1</a></li>
+    <li class="disabled"><a href=#>2</a></li>
+    <li><a href=#>3</a></li>
+    <li><a href=#>4</a></li>
+    <li><a href=#>&raquo;</a></li>
   </ul>
 </nav>`;
       }
@@ -83,12 +86,12 @@ export default class Pagination extends Component {
                     <div className="col-12">
                       <nav>
                         <ul className="pagination">
-                          <li className="active"><a href="javascript:;">&laquo;</a></li>
-                          <li><a href="javascript:;">1</a></li>
-                          <li className="disabled"><a href="javascript:;">2</a></li>
-                          <li><a href="javascript:;">3</a></li>
-                          <li><a href="javascript:;">4</a></li>
-                          <li><a href="javascript:;">&raquo;</a></li>
+                          <li className="active"><a href={ANCHOR}>&laquo;</a></li>
+                          <li><a href={ANCHOR}>1</a></li>
+                          <li className="disabled"><a href={ANCHOR}>2</a></li>
+                          <li><a href={ANCHOR}>3</a></li>
+                          <li><a href={ANCHOR}>4</a></li>
+                          <li><a href={ANCHOR}>&raquo;</a></li>
                         </ul>
                       </nav>
                     </div>
@@ -118,12 +121,12 @@ export default class Pagination extends Component {
                     <div className="col-12">
                       <nav>
                         <ul class="pagination pagination-border">
-                          <li class="active"><a href="javascript:;">&laquo;</a></li>
-                          <li><a href="javascript:;">1</a></li>
-                          <li className="disabled"><a href="javascript:;">2</a></li>
-                          <li><a href="javascript:;">3</a></li>
-                          <li><a href="javascript:;">4</a></li>
-                          <li><a href="javascript:;">&raquo;</a></li>
+                          <li class="active"><a href={ANCHOR}>&laquo;</a></li>
+                          <li><a href={ANCHOR}>1</a></li>
+                          <li className="disabled"><a href={ANCHOR}>2</a></li>
+                          <li><a href={ANCHOR}>3</a></li>
+                          <li><a href={ANCHOR}>4</a></li>
+                          <li><a href={ANCHOR}>&raquo;</a></li>
                         </ul>
                       </nav>
                     </div>
@@ -156,12 +159,12 @@ export default class Pagination extends Component {
                           return (
                             <nav>
                               <ul className={classnames(item.className)} key={index}>
-                                <li className="active"><a href="javascript:;">&laquo;</a></li>
-                                <li><a href="javascript:;">1</a></li>
-                                <li className="disabled"><a href="javascript:;">2</a></li>
-                                <li><a href="javascript:;">3</a></li>
-                                <li><a href="javascript:;">4</a></li>
-                                <li><a href="javascript:;">&raquo;</a></li>
+                                <li className="active"><a href={ANCHOR}>&laquo;</a></li>
+                                <li><a href={ANCHOR}>1</a></li>
+                                <li className="disabled"><a href={ANCHOR}>2</a></li>
+                                <li><a href={ANCHOR}>3</a></li>
+                                <li><a href={ANCHOR}>4</a></li>
+                                <li><a href={ANCHOR}>&raquo;</a></li>
                               </ul>
                             </nav> 
                           )
@@ -197,12 +200,12 @@ export default class Pagination extends Component {
                           return (
                             <nav>
                               <ul className={classnames(item.className)} key={index}>
-                                <li className="active"><a href="javascript:;">&laquo;</a></li>
-                                <li><a href="javascript:;">1</a></li>
-                                <li className="disabled"><a href="javascript:;">2</a></li>
-                                <li><a href="javascript:;">3</a></li>
-                                <li><a href="javascript:;">4</a></li>
-                                <li><a href="javascript:;">&raquo;</a></li>
+                                <li className="active"><a href={ANCHOR}>&laquo;</a></li>
+                                <li><a href={ANCHOR}>1</a></li>
+                                <li className="disabled"><a href={ANCHOR}>2</a></li>
+                                <li><a href={ANCHOR}>3</a></li>
+                                <li><a href={ANCHOR}>4</a></li>
+                                <li><a href={ANCHOR}>&raquo;</a></li>
                               </ul>
                             </nav>
                           )

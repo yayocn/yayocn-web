@@ -5,22 +5,8 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const NAV = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'badge badge-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'badge badge-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'badge badge-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'badge badge-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'badge badge-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'badge badge-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'badge badge-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'badge badge-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'badge badge-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'badge badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-transparent text-muted', },
-  ],
-};
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
 
 export default class Nav extends Component {
 
@@ -188,16 +174,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -227,10 +213,10 @@ export default class Nav extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav">
-                        <a className="nav-link active" href="#">Active</a>
-                        <a className="nav-link" href="#">Link</a>
-                        <a className="nav-link" href="#">Link</a>
-                        <a className="nav-link disabled" href="#">Disabled</a>
+                        <a className="nav-link active" href={ANCHOR}>Active</a>
+                        <a className="nav-link" href={ANCHOR}>Link</a>
+                        <a className="nav-link" href={ANCHOR}>Link</a>
+                        <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                       </nav>
                     </div>
                   </div>
@@ -261,31 +247,31 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav justify-content-center">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
 
                       <ul className="nav justify-content-end mt-20">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -316,10 +302,10 @@ export default class Nav extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav flex-column">
-                        <a className="nav-link active" href="#">Active</a>
-                        <a className="nav-link" href="#">Link</a>
-                        <a className="nav-link" href="#">Link</a>
-                        <a className="nav-link disabled" href="#">Disabled</a>
+                        <a className="nav-link active" href={ANCHOR}>Active</a>
+                        <a className="nav-link" href={ANCHOR}>Link</a>
+                        <a className="nav-link" href={ANCHOR}>Link</a>
+                        <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                       </nav>
                     </div>
                   </div>
@@ -349,16 +335,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-pills">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -389,16 +375,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-pills nav-fill">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Longer nav link</a>
+                          <a className="nav-link" href={ANCHOR}>Longer nav link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -474,23 +460,23 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-tabs">
                         <li className="nav-item">
-                          <a className="nav-link active" href="#">Active</a>
+                          <a className="nav-link active" href={ANCHOR}>Active</a>
                         </li>
                         <li className="nav-item dropdown">
-                          <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                          <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={ANCHOR} role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                           <div className="dropdown-menu">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
-                            <a className="dropdown-item" href="#">Something else here</a>
+                            <a className="dropdown-item" href={ANCHOR}>Action</a>
+                            <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                            <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
+                            <a className="dropdown-item" href={ANCHOR}>Separated link</a>
                           </div>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href="#">Link</a>
+                          <a className="nav-link" href={ANCHOR}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href="#">Disabled</a>
+                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                         </li>
                       </ul>
                     </div>

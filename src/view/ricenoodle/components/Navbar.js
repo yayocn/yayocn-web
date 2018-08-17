@@ -5,22 +5,8 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const NAVBAR = {
-  situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'badge badge-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'badge badge-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'badge badge-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'badge badge-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'badge badge-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'badge badge-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'badge badge-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'badge badge-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'badge badge-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'badge badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-transparent text-muted', },
-  ],
-};
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
 
 export default class Navbar extends Component {
 
@@ -114,7 +100,7 @@ export default class Navbar extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href="#">Navbar</a>
+                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -122,24 +108,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href="#">Home</a>
+                              <a className="nav-link" href={ANCHOR}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="#">Link</a>
+                              <a className="nav-link" href={ANCHOR}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href="#">Disabled</a>
+                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">
@@ -175,7 +161,7 @@ export default class Navbar extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href="#">Navbar</a>
+                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -183,24 +169,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href="#">Home</a>
+                              <a className="nav-link" href={ANCHOR}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="#">Link</a>
+                              <a className="nav-link" href={ANCHOR}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href="#">Disabled</a>
+                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">
@@ -211,7 +197,7 @@ export default class Navbar extends Component {
                       </nav>
 
                       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-20">
-                        <a className="navbar-brand" href="#">Navbar</a>
+                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -219,24 +205,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href="#">Home</a>
+                              <a className="nav-link" href={ANCHOR}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="#">Link</a>
+                              <a className="nav-link" href={ANCHOR}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href="#">Disabled</a>
+                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">

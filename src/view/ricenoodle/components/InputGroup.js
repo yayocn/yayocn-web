@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const INPUTGROUP = {
   default: [
     { title: 'Default', key: 'default', subTitle: '', className: 'input-group', btnClass: 'btn btn-default', },
@@ -279,9 +282,9 @@ export default class InputGroup extends Component {
                               Dropdown
                             </button>
                             <div className="dropdown-menu">
-                              <a className="dropdown-item" href="#">Action</a>
-                              <a className="dropdown-item disabled" href="#">Another action</a>
-                              <a className="dropdown-item" href="#">Something else here</a>
+                              <a className="dropdown-item" href={ANCHOR}>Action</a>
+                              <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
+                              <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                             </div>
                           </div>
                         </div>

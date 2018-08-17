@@ -69,8 +69,8 @@ export default class Pagination extends Component {
 
         <h3>准备工作</h3>
         <ul className="p-30">
-          <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferer">Popper.js</a> 进行定位。
-            你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferer">popper.min.js</a>，以便弹出窗口工作！</li>
+          <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a> 进行定位。
+            你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferrer">popper.min.js</a>，以便弹出窗口工作！</li>
           <li>Popover 需要依赖 <a href="/ricenoodle/components/tooltip">tooltip</a> 组件。</li>
         </ul>
 
@@ -231,7 +231,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>事件</h3>
-        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferer">Bootstrap popover</a> 。</p>
+        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a> 。</p>
       </PageWrapper>
     );
   }
