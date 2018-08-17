@@ -223,6 +223,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/pagination'
       },
+      {
+        title: 'Popover',
+        icon: '',
+        link: '/ricenoodle/components/popover'
+      },
     ],
   },
 ];

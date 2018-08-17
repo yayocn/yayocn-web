@@ -37,5 +37,14 @@
     <script src="%PUBLIC_URL%/plugin/ricenoodle/js/jquery.min.js"></script>
     <script src="%PUBLIC_URL%/plugin/ricenoodle/js/popper.min.js"></script>
     <script src="%PUBLIC_URL%/plugin/ricenoodle/js/ricenoodle.min.js"></script>
+    <script>
+      $(function () {
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
   </body>
 </html>
