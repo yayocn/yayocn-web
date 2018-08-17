@@ -43,6 +43,7 @@ import Loader from './ricenoodle/components/Loader';
 import Mark from './ricenoodle/components/Mark';
 import Media from './ricenoodle/components/Media';
 import Modal from './ricenoodle/components/Modal';
+import Nav from './ricenoodle/components/Nav';
 
 export {
   Gate,
@@ -52,5 +53,5 @@ export {
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
   Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown,
-  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media, Modal,
+  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media, Modal, Nav,
 };
