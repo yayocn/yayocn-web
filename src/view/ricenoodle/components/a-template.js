@@ -5,27 +5,27 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const BREADCRUMB = {
+const PAGINATION = {
   situation: [
-    { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'badge badge-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'badge badge-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'badge badge-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'badge badge-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'badge badge-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'badge badge-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'badge badge-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'badge badge-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'badge badge-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'badge badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-transparent text-muted', },
+    { title: 'Primary', key: '', subTitle: '', className: 'pagination pagination-primary', },
+    { title: 'Secondary', key: '', subTitle: '', className: 'pagination pagination-secondary', },
+    { title: 'Success', key: '', subTitle: '', className: 'pagination pagination-success', },
+    { title: 'Info', key: '', subTitle: '', className: 'pagination pagination-info', },
+    { title: 'Warning', key: '', subTitle: '', className: 'pagination pagination-warning', },
+    { title: 'Danger', key: '', subTitle: '', className: 'pagination pagination-danger', },
+    { title: 'White', key: '', subTitle: '', className: 'pagination pagination-white', },
+    { title: 'Light', key: '', subTitle: '', className: 'pagination pagination-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'pagination pagination-muted', },
+    { title: 'Dark', key: '', subTitle: '', className: 'pagination pagination-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'pagination pagination-black', },
+    { title: 'Transparent', key: '', subTitle: '', className: 'pagination pagination-transparent text-muted', },
   ],
 };
 
-export default class Breadcrumb extends Component {
+export default class Pagination extends Component {
 
   createCode = (target) => {
-    const data = BREADCRUMB[target];
+    const data = PAGINATION[target];
     let code = ``;
     const len = data.length;
     data.forEach((item, index) => {
@@ -51,7 +51,7 @@ export default class Breadcrumb extends Component {
 
         <h3>情景色</h3>
         <p>预设 <code>12</code> 种情景色。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -59,10 +59,10 @@ export default class Breadcrumb extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        BREADCRUMB.situation.map((item, index) => {
+                        PAGINATION.situation.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <span className={classnames(item.className, style['badge-feature'])}>
+                              <span className={classnames(item.className, style['pagination-feature'])}>
                                 {item.title}
                               </span>
                             </div>

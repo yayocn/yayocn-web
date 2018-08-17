@@ -43,6 +43,7 @@ import {
   Modal,
   Nav,
   Navbar,
+  Pagination,
 } from '../view';
 
 const router = [
@@ -265,6 +266,11 @@ const router = [
     path: '/ricenoodle/components/navbar',
     exact: true,
     component: Navbar,
+  },
+  {
+    path: '/ricenoodle/components/pagination',
+    exact: true,
+    component: Pagination,
   },
 ];
 

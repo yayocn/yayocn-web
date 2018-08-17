@@ -218,6 +218,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/navbar'
       },
+      {
+        title: 'Pagination',
+        icon: '',
+        link: '/ricenoodle/components/pagination'
+      },
     ],
   },
 ];
