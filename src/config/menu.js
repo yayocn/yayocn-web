@@ -213,11 +213,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/nav'
       },
-      // {
-      //   title: 'Modal',
-      //   icon: '',
-      //   link: '/ricenoodle/components/modal'
-      // },
+      {
+        title: 'Navbar',
+        icon: '',
+        link: '/ricenoodle/components/navbar'
+      },
     ],
   },
 ];
