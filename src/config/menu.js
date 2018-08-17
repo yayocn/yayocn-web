@@ -228,6 +228,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/popover'
       },
+      {
+        title: 'Progress',
+        icon: '',
+        link: '/ricenoodle/components/progress'
+      },
     ],
   },
 ];

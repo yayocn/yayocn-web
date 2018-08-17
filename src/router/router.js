@@ -45,6 +45,7 @@ import {
   Navbar,
   Pagination,
   Popover,
+  Progress,
 } from '../view';
 
 const router = [
@@ -277,6 +278,11 @@ const router = [
     path: '/ricenoodle/components/popover',
     exact: true,
     component: Popover,
+  },
+  {
+    path: '/ricenoodle/components/progress',
+    exact: true,
+    component: Progress,
   },
 ];
 
