@@ -6,6 +6,10 @@ import 'highlight.js/styles/github.css';
 
 export default class Highlighter extends Component {
   componentDidMount() {
+    hljs.configure({
+      languages: ['xml', 'javascript', 'css']
+    });
+
     hljs.highlightBlock(this.pre);
   }
 
@@ -23,7 +27,7 @@ export default class Highlighter extends Component {
     return (
       <div className="pt-relative border">
         <pre className={classnames('p-20 m-0', className)} ref={ref => { this.pre = ref }}>
-          <code className="html border-0 bg-transparent">
+          <code>
             {this.props.children}
           </code>
         </pre>
