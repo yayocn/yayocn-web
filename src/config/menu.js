@@ -233,6 +233,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/progress'
       },
+      {
+        title: 'Scrollspy',
+        icon: '',
+        link: '/ricenoodle/components/scrollspy'
+      },
     ],
   },
 ];

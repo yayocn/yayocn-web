@@ -46,6 +46,7 @@ import {
   Pagination,
   Popover,
   Progress,
+  Scrollspy,
 } from '../view';
 
 const router = [
@@ -283,6 +284,11 @@ const router = [
     path: '/ricenoodle/components/progress',
     exact: true,
     component: Progress,
+  },
+  {
+    path: '/ricenoodle/components/scrollspy',
+    exact: true,
+    component: Scrollspy,
   },
 ];
 
