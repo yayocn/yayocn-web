@@ -48,6 +48,7 @@ import {
   Progress,
   Scrollspy,
   Table,
+  Tooltip,
 } from '../view';
 
 const router = [
@@ -295,6 +296,11 @@ const router = [
     path: '/ricenoodle/components/table',
     exact: true,
     component: Table,
+  },
+  {
+    path: '/ricenoodle/components/tooltip',
+    exact: true,
+    component: Tooltip,
   },
 ];
 

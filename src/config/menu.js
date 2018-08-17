@@ -243,6 +243,11 @@ export const ricenoodle = [
         icon: '',
         link: '/ricenoodle/components/table'
       },
+      {
+        title: 'Tooltip',
+        icon: '',
+        link: '/ricenoodle/components/tooltip'
+      },
     ],
   },
 ];

@@ -50,6 +50,7 @@ import Popover from './ricenoodle/components/Popover';
 import Progress from './ricenoodle/components/Progress';
 import Scrollspy from './ricenoodle/components/Scrollspy';
 import Table from './ricenoodle/components/Table';
+import Tooltip from './ricenoodle/components/Tooltip';
 
 export {
   Gate,
@@ -59,5 +60,5 @@ export {
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
   Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown,
-  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media, Modal, Nav, Navbar, Pagination, Popover, Progress, Scrollspy, Table,
+  Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media, Modal, Nav, Navbar, Pagination, Popover, Progress, Scrollspy, Table, Tooltip,
 };

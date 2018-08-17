@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-const POPOVER = {
+const TOOLTIP = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'btn btn-primary', placement: 'right'},
   ],
@@ -17,44 +17,29 @@ const POPOVER = {
   ],
 };
 
-export default class Pagination extends Component {
+export default class Tooltip extends Component {
 
   createCode = (target) => {
-    const data = POPOVER[target];
+    const data = TOOLTIP[target];
     let code = ``;
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<button type="button" 
-        class="${item.className}" 
-        data-container="body" 
-        data-placement="${item.placement}" 
-        data-toggle="popover" 
-        title="Popover title" 
-        data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        code += `<button type="button"
+        class="${item.className}"
+        data-toggle="tooltip"
+        data-placement="${item.placement}"
+        title="Tooltip">Tooltip</button>
       
 `;
       } else {
-        code += `<button type="button" 
-        class="${item.className}" 
-        data-container="body" 
-        data-placement="${item.placement}" 
-        data-toggle="popover" 
-        title="Popover title" 
-        data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>`;
+        code += `<button type="button"
+        class="${item.className}"
+        data-toggle="tooltip"
+        data-placement="${item.placement}"
+        title="Tooltip">Tooltip</button>`;
       }
     })
-
-    return code;
-  }
-
-  createDismissCode = () => {
-    let code = `<button type="button"
-        class="btn btn-primary"
-        data-trigger="focus"
-        data-toggle="popover"
-        title="Dismissible popover"
-        data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>`;
 
     return code;
   }
@@ -69,9 +54,8 @@ export default class Pagination extends Component {
 
         <h3>准备工作</h3>
         <ul className="p-30">
-          <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferer">Popper.js</a> 进行定位。
+          <li>Tooltip 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferer">Popper.js</a> 进行定位。
             你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferer">popper.min.js</a>，以便弹出窗口工作！</li>
-          <li>Popover 需要依赖 <a href="/ricenoodle/components/tooltip">tooltip</a> 组件。</li>
         </ul>
 
         <h4 className="mt-20">全局设置</h4>
@@ -86,32 +70,7 @@ export default class Pagination extends Component {
                   <Highlight>
                     {
                       `$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-`
-                    }
-                  </Highlight>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h4 className="mt-20">使用 <code>container</code> 参数</h4>
-        <div className={classnames(style['util-pagination'])}>
-          <div className="row">
-            <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
-
-                </div>
-                <div className={classnames(common['example-code'])}>
-                  <Highlight>
-                    {
-                      `$(function () {
-  $('.example-popover').popover({
-    container: 'body'
-  })
+  $('[data-toggle="tooltip"]').tooltip()
 })
 `
                     }
@@ -133,15 +92,13 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        POPOVER.default.map((item, index) => {
+                        TOOLTIP.default.map((item, index) => {
                           return (
                             <button type="button"
-                                    class={item.className}
-                                    data-container="body"
+                                    className={item.className}
+                                    data-toggle="tooltip"
                                     data-placement={item.placement}
-                                    data-toggle="popover"
-                                    title="Popover title"
-                                    data-content="And here's some amazing content. It's very engaging. Right?" key={index}>Click to toggle popover</button>
+                                    title="Tooltip" key={index}>Tooltip</button>
                           )
                         })
                       }
@@ -171,15 +128,13 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        POPOVER.direction.map((item, index) => {
+                        TOOLTIP.direction.map((item, index) => {
                           return (
                             <button type="button"
-                                    class={classnames(item.className, 'mr-10')}
-                                    data-container="body"
+                                    className={classnames(item.className, 'mr-10')}
+                                    data-toggle="tooltip"
                                     data-placement={item.placement}
-                                    data-toggle="popover"
-                                    title="Popover title"
-                                    data-content="And here's some amazing content. It's very engaging. Right?" key={index}>{item.title}</button>
+                                    title="Tooltip" key={index}>Tooltip</button>
                           )
                         })
                       }
@@ -199,39 +154,8 @@ export default class Pagination extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-
-        <h3>失去焦点消失</h3>
-        <div className={classnames(style['util-pagination'])}>
-          <div className="row">
-            <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
-                  <div className="row">
-                    <div className="col-12">
-                      <button type="button"
-                              className="btn btn-primary"
-                              data-trigger="focus"
-                              data-toggle="popover"
-                              title="Dismissible popover"
-                              data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>
-                    </div>
-                  </div>
-                </div>
-                <div className={classnames(common['example-code'])}>
-                  <Highlight>
-                    {
-                      this.createDismissCode()
-                    }
-                  </Highlight>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="divider divider-lg"></div>
         <h3>事件</h3>
-        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferer">Bootstrap popover</a> 。</p>
+        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/tooltips/#usage" target="_blank" rel="noopener noreferer">Bootstrap tooltip</a> 。</p>
       </PageWrapper>
     );
   }
