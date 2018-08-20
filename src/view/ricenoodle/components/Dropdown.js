@@ -29,10 +29,10 @@ const DROPDOWN = {
     { title: 'Huge', key: '', subTitle: '', className: 'btn btn-hg btn-secondary', },
   ],
   position: [
-    { title: 'Top', key: '', subTitle: '', className: 'dropdown dropup', },
-    { title: 'Right', key: '', subTitle: '', className: 'dropdown dropright', },
-    { title: 'Down', key: '', subTitle: '', className: 'dropdown', },
-    { title: 'Left', key: '', subTitle: '', className: 'dropdown dropleft', },
+    { title: 'Dropup', key: '', subTitle: '', className: 'dropup btn-group', },
+    { title: 'Dropright', key: '', subTitle: '', className: 'dropright btn-group', },
+    { title: 'Dropdown', key: '', subTitle: '', className: 'dropdown btn-group', },
+    { title: 'Dropleft', key: '', subTitle: '', className: 'dropleft btn-group', },
   ],
 };
 
@@ -113,7 +113,7 @@ export default class Dropdown extends Component {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-    Dropdown
+    ${item.title}
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item">Action</a>
@@ -126,12 +126,12 @@ export default class Dropdown extends Component {
       } else {
         code += `<div class="${item.className}">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-    Dropdown
+    ${item.title}
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item">Action</a>
+    <a class="dropdown-item">Another action</a>
+    <a class="dropdown-item">Something else here</a>
   </div>
 </div>`;
       }
@@ -425,15 +425,15 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>位置</h3>
-        <p>通过添加 <code>.dropup .dropright .dropleft</code> 类设置 <code>.dropdown-menu</code> 的位置。</p>
+        <p>通过添加 <code>.dropup .dropright .dropdown .dropleft</code> 类设置菜单的位置。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-12">
-                      <div className="flex align-items-end">
+                    <div className="col-12 pt-relative" style={{ height: '200px'}}>
+                      <div className="pt-absolute pt-center text-center">
                         {
                           DROPDOWN.position.map((item, index) => {
                             return (
@@ -442,9 +442,9 @@ export default class Dropdown extends Component {
                                   {item.title}
                                 </button>
                                 <div className="dropdown-menu">
-                                  <a className="dropdown-item" href={ANCHOR}>Action</a>
-                                  <a className="dropdown-item" href={ANCHOR}>Another action</a>
-                                  <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                                  <a className="dropdown-item">Action</a>
+                                  <a className="dropdown-item">Another action</a>
+                                  <a className="dropdown-item">Something else here</a>
                                 </div>
                               </div>
                             );
@@ -573,7 +573,7 @@ export default class Dropdown extends Component {
                     <div className="col-12">
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
-                          <h3 class="dropdown-header">Dropdown header</h3>
+                          <h3 className="dropdown-header">Dropdown header</h3>
                           <a className="dropdown-item" href={ANCHOR}>Action</a>
                           <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
                           <a className="dropdown-item" href={ANCHOR}>Something else here</a>
@@ -666,16 +666,16 @@ export default class Dropdown extends Component {
                         <div className="dropdown-menu block pt-relative">
                           <form className="ph-20 pv-15">
                             <div className="form-group">
-                              <label for="exampleDropdownFormEmail1">Email address</label>
+                              <label htmlFor="exampleDropdownFormEmail1">Email address</label>
                               <input type="email" className="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com"/>
                             </div>
                             <div className="form-group">
-                              <label for="exampleDropdownFormPassword1">Password</label>
+                              <label htmlFor="exampleDropdownFormPassword1">Password</label>
                               <input type="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password"/>
                             </div>
                             <div className="checkbox checkbox-primary">
                               <input type="checkbox"id="dropdownCheck" />
-                                <label className="form-check-label" for="dropdownCheck">
+                                <label className="form-check-label" htmlFor="dropdownCheck">
                                   Remember me
                                 </label>
                             </div>

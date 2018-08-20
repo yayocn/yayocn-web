@@ -7,13 +7,13 @@ import style from '../style.scss';
 
 const POPOVER = {
   default: [
-    { title: 'Default', key: '', subTitle: '', className: 'btn btn-primary', placement: 'right'},
+    { title: 'Default', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'right'},
   ],
   direction: [
-    { title: 'Top', key: '', subTitle: '', className: 'btn btn-primary', placement: 'top'},
-    { title: 'Right', key: '', subTitle: '', className: 'btn btn-primary', placement: 'right'},
-    { title: 'Bottom', key: '', subTitle: '', className: 'btn btn-primary', placement: 'bottom'},
-    { title: 'Left', key: '', subTitle: '', className: 'btn btn-primary', placement: 'left'},
+    { title: 'Popover on top', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'top'},
+    { title: 'Popover on right', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'right'},
+    { title: 'Popover on bottom', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'bottom'},
+    { title: 'Popover on left', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'left'},
   ],
 };
 
@@ -50,7 +50,7 @@ export default class Pagination extends Component {
 
   createDismissCode = () => {
     let code = `<button type="button"
-        class="btn btn-primary"
+        class="btn btn-secondary"
         data-trigger="focus"
         data-toggle="popover"
         title="Dismissible popover"
@@ -136,7 +136,7 @@ export default class Pagination extends Component {
                         POPOVER.default.map((item, index) => {
                           return (
                             <button type="button"
-                                    class={item.className}
+                                    className={item.className}
                                     data-container="body"
                                     data-placement={item.placement}
                                     data-toggle="popover"
@@ -169,20 +169,22 @@ export default class Pagination extends Component {
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-12">
-                      {
-                        POPOVER.direction.map((item, index) => {
-                          return (
-                            <button type="button"
-                                    class={classnames(item.className, 'mr-10')}
-                                    data-container="body"
-                                    data-placement={item.placement}
-                                    data-toggle="popover"
-                                    title="Popover title"
-                                    data-content="And here's some amazing content. It's very engaging. Right?" key={index}>{item.title}</button>
-                          )
-                        })
-                      }
+                    <div className="col-12 pt-relative" style={{ height: '200px'}}>
+                      <div className="pt-absolute pt-center text-center">
+                        {
+                          POPOVER.direction.map((item, index) => {
+                            return (
+                              <button type="button"
+                                      className={classnames(item.className, 'mr-10')}
+                                      data-container="body"
+                                      data-placement={item.placement}
+                                      data-toggle="popover"
+                                      title="Popover title"
+                                      data-content="And here's some amazing content. It's very engaging. Right?" key={index}>{item.title}</button>
+                            )
+                          })
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -209,7 +211,7 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       <button type="button"
-                              className="btn btn-primary"
+                              className="btn btn-secondary"
                               data-trigger="focus"
                               data-toggle="popover"
                               title="Dismissible popover"
@@ -231,7 +233,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>事件</h3>
-        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a> 。</p>
+        <p>参考<a className="btn btn-link" href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a> 。</p>
       </PageWrapper>
     );
   }
