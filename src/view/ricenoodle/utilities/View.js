@@ -61,7 +61,7 @@ export default class View extends Component {
     return code;
   }
 
-  createHiddenCode = () => {
+  createVisibleCode = () => {
     let code = ``;
     code += `<div class="visible"> ... </div>
 <div class="invisible"> ... </div>`
