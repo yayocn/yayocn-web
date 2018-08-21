@@ -6,18 +6,18 @@ import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
 const ELEMENT = {
-  h: [
+  head: [
     { title: 'h1', key: 'h1', subTitle: '', className: 'h1', },
     { title: 'h2', key: 'h1', subTitle: '', className: 'h2', },
+    { title: 'h2', key: 'h1', subTitle: '', className: 'h2', },
     { title: 'h3', key: 'h1', subTitle: '', className: 'h3', },
-    { title: 'h4', key: 'h1', subTitle: '', className: 'h4', },
     { title: 'h5', key: 'h1', subTitle: '', className: 'h5', },
     { title: 'h6', key: 'h1', subTitle: '', className: 'h6', },
   ]
 };
 
 export default class Element extends Component {
-  createHeadingCode = (target = 'h') => {
+  createHeadingCode = (target = 'head') => {
     const data = ELEMENT[target];
     let code = ``;
     const len = data.length;
@@ -36,9 +36,9 @@ export default class Element extends Component {
 
   createHrCode = () => {
     let code = ``;
-    code = `<h1>This is header 1</h1>
+    code = `<h1>沁园春 · 雪</h1>
 <hr />
-<p>This is some text</p>`;
+<p>北国风光，千里冰封，万里雪飘。望长城内外，惟余莽莽；大河上下，顿失滔滔。山舞银蛇，原驰蜡象，欲与天公试比高。须晴日，看红装素裹，分外妖娆。</p>`;
 
     return code;
   }
@@ -46,7 +46,7 @@ export default class Element extends Component {
   createAddressCode = () => {
     let code = ``;
     code = `<address>
-  <strong>Yayocn, Inc.</strong><br/>
+  <strong>Yayo, Co., Ltd.</strong><br/>
   999 3th Street, TianFu<br/>
   ChengDu, SiChuan<br/>
   <abbr title="Phone">P:</abbr> (123) 456-7890
@@ -76,23 +76,21 @@ export default class Element extends Component {
   createDlCode = () => {
     let code = ``;
     code = `<dl class="row">
-  <dt class="col-lg-2 col-3">Description lists</dt>
-  <dd class="col-lg-10 col-9">A description list is perfect for defining terms.</dd>
+  <dt class="col-lg-2 col-3">北京</dt>
+  <dd class="col-lg-10 col-9">北京，简称“京”，是中华人民共和国的首都。</dd>
 
-  <dt class="col-lg-2 col-3">Euismod</dt>
+  <dt class="col-lg-2 col-3">上海</dt>
   <dd class="col-lg-10 col-9">
-    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-    <p>Donec id elit non mi porta gravida at eget metus.</p>
+    简称“沪”或“申”，是中国共产党的诞生地。
   </dd>
 
-  <dt class="col-lg-2 col-3">Malesuada porta</dt>
-  <dd class="col-lg-10 col-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-
-  <dt class="col-lg-2 col-3">Nesting</dt>
+  <dt class="col-lg-2 col-3">四川</dt>
   <dd class="col-lg-10 col-9">
     <dl class="row">
-      <dt class="col-sm-4">Nested definition list</dt>
-      <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+      <dt class="col-lg-2 col-3">成都</dt>
+      <dd class="col-lg-10 col-9">成都，简称蓉，别称蓉城、锦城，是四川省省会。</dd>
+      <dt class="col-lg-2 col-3">绵阳</dt>
+      <dd class="col-lg-10">自汉高祖二年（前201年），西汉设置涪县以来，绵阳市已有2200多年建城史，历来为州郡治所，后因城址位于绵山之南而得名“绵阳”。</dd>
     </dl>
   </dd>
 </dl>`;
@@ -103,9 +101,11 @@ export default class Element extends Component {
   createListInlineCode = () => {
     let code = ``;
     code = `<ul class="list-inline">
-  <li>Lorem ipsum</li>
-  <li>Phasellus iaculis</li>
-  <li>Nulla volutpat</li>
+  <li>北京</li>
+  <li>上海</li>
+  <li>广州</li>
+  <li>深圳</li>
+  <li>成都</li>
 </ul>`;
 
     return code;
@@ -114,9 +114,11 @@ export default class Element extends Component {
   createListBareCode = () => {
     let code = ``;
     code = `<ol class="list-bare">
-  <li>Lorem ipsum</li>
-  <li>Phasellus iaculis</li>
-  <li>Nulla volutpat</li>
+  <li>北京</li>
+  <li>上海</li>
+  <li>广州</li>
+  <li>深圳</li>
+  <li>成都</li>
 </ol>`;
 
     return code;
@@ -125,13 +127,13 @@ export default class Element extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>元素样式增强。</p>
+        <h1>元素样式增强 <code>Element</code></h1>
+        <p className="font-2x font-100">Ricenoodle 为部分元素的样式进行了更改和增强。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>Headings</h3>
-        <p>可以直接使用 <code>&lt;h&gt;</code> 元素，也可以使用 <code>.h1 ~ .h6</code> css类。</p>
+        <h2>Headings</h2>
+        <p>重置所有标题元素。删除了它们的顶部外边距，底部有 <code>7.5px</code> 的下边距。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -140,7 +142,7 @@ export default class Element extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        ELEMENT.h.map((item, index) => {
+                        ELEMENT.head.map((item, index) => {
                           return (
                             <p className={item.className} key={index}>{item.title}. Ricenoodle heading</p>
                           )
@@ -162,8 +164,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Horizontal rule</h3>
-        <p>也可以使用 <code>.divider</code></p>
+        <h2>水平分割线</h2>
+        <p>重置了 <code>&lt;hr/&gt;</code> 元素，上下均有 <code>15px</code> 的外边距。也可以使用 <a href="/ricenoodle/components/divider">Divider</a> 代替。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -171,9 +173,9 @@ export default class Element extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-12">
-                      <h1>This is header 1</h1>
+                      <h3>沁园春 · 雪</h3>
                       <hr />
-                      <p>This is some text</p>
+                      <p>北国风光，千里冰封，万里雪飘。<br/>望长城内外，惟余莽莽；大河上下，顿失滔滔。<br/>山舞银蛇，原驰蜡象，欲与天公试比高。<br/>须晴日，看红装素裹，分外妖娆。</p>
                     </div>
                   </div>
                 </div>
@@ -190,8 +192,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Small</h3>
-        <p>字体大小为父元素的 <code>60%</code>;</p>
+        <h2>&lt;small&gt; 元素</h2>
+        <p>设置字体大小为父元素的 <code>60%</code>。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -199,13 +201,13 @@ export default class Element extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-12">
-                      <h1>h1. Ricenoodle heading. <small>small text.</small></h1>
+                      <h3>牛顿第一定律：<small>任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。</small></h3>
                     </div>
                   </div>
                 </div>
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
-                    &lt;h1>h1. Ricenoodle heading. &lt;small>small text.&lt;/small>&lt;/h1>
+                    &lt;h1&gt;牛顿第一定律：&lt;small&gt;任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。&lt;/small&gt;&lt;/h1&gt;
                   </Highlight>
                 </div>
               </div>
@@ -214,7 +216,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Mark</h3>
+        <h2>&lt;mark&gt; 元素</h2>
+        <p>垂直方向和水平方向分别有 <code>2px 3px</code> 的内边距，设置背景颜色为 <code>#ffff00</code>。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -237,7 +240,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>地址</h3>
+        <h2>&lt;address&gt; 元素</h2>
+        <p>重置地址元素。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -246,7 +250,7 @@ export default class Element extends Component {
                   <div className="row">
                     <div className="col-12">
                       <address>
-                        <strong>Yayocn, Inc.</strong><br/>
+                        <strong>Yayo, Co., Ltd.</strong><br/>
                         999 3th Street, TianFu<br/>
                         ChengDu, SiChuan<br/>
                         <abbr title="Phone">P:</abbr> (123) 456-7890
@@ -267,7 +271,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>引用</h3>
+        <h2>&lt;blockquote&gt; 元素</h2>
+        <p>重置引用元素的样式。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -294,7 +299,7 @@ export default class Element extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">右侧引用</h4>
+        <h3 className="mt-20">右侧引用</h3>
         <p>添加 <code>.blockquote-right</code>，使引用居于右侧。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
@@ -323,7 +328,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Definition list</h3>
+        <h2>&lt;dl&gt; 元素</h2>
+        <p>重置定义列表样式。结合 <a href="/ricenoodle/components/grid">栅格系统</a> 可以轻松制作说明表格。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -332,23 +338,21 @@ export default class Element extends Component {
                   <div className="row">
                     <div className="col-12">
                       <dl className="row">
-                        <dt className="col-lg-2 col-3">Description lists</dt>
-                        <dd className="col-lg-10 col-9">A description list is perfect for defining terms.</dd>
+                        <dt className="col-lg-2 col-3">北京</dt>
+                        <dd className="col-lg-10 col-9">北京，简称“京”，是中华人民共和国的首都。</dd>
 
-                        <dt className="col-lg-2 col-3">Euismod</dt>
+                        <dt className="col-lg-2 col-3">上海</dt>
                         <dd className="col-lg-10 col-9">
-                          <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                          <p>Donec id elit non mi porta gravida at eget metus.</p>
+                          简称“沪”或“申”，是中国共产党的诞生地。
                         </dd>
 
-                        <dt className="col-lg-2 col-3">Malesuada porta</dt>
-                        <dd className="col-lg-10 col-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-
-                        <dt className="col-lg-2 col-3">Nesting</dt>
+                        <dt className="col-lg-2 col-3">四川</dt>
                         <dd className="col-lg-10 col-9">
                           <dl className="row">
-                            <dt className="col-sm-4">Nested definition list</dt>
-                            <dd className="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+                            <dt className="col-lg-2 col-3">成都</dt>
+                            <dd className="col-lg-10 col-9">成都，简称蓉，别称蓉城、锦城，是四川省省会。</dd>
+                            <dt className="col-lg-2 col-3">绵阳</dt>
+                            <dd className="col-lg-10">自汉高祖二年（前201年），西汉设置涪县以来，绵阳市已有2200多年建城史，历来为州郡治所，后因城址位于绵山之南而得名“绵阳”。</dd>
                           </dl>
                         </dd>
                       </dl>
@@ -368,8 +372,8 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Size dead</h3>
-        <p>针对 <code>&lt;textarea&gt;</code> ，使其不能变换尺寸。</p>
+        <h2>禁止缩放</h2>
+        <p>针对 <code>&lt;textarea&gt;</code> 元素，使其不能变换尺寸。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -377,7 +381,8 @@ export default class Element extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-12">
-                      <textarea className="size-dead" name="" id="" cols="30" rows="10"></textarea>
+                      <textarea className="size-dead" name="" id="" cols="50" rows="5"></textarea>
+                      <textarea className="ml-10" name="" id="" cols="50" rows="5"></textarea>
                     </div>
                   </div>
                 </div>
@@ -392,9 +397,12 @@ export default class Element extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>List</h3>
+        <h2>列表</h2>
+        <p>所有列表： <code>&lt;ul&gt;</code>，<code>&lt;ol&gt;</code> 和 <code>&lt;dl&gt;</code>， 已删除其上外边距，下外边距设置为 <code>1rem</code>。
+          嵌套使用时，没有下外边距。</p>
 
-        <h4 className="mt-20">List inline</h4>
+        <h3 className="mt-20">内联列表</h3>
+        <p>列表的所有项展示在同一行。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
             <div className="col-12">
@@ -403,9 +411,11 @@ export default class Element extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ul className="list-inline">
-                        <li>Lorem ipsum</li>
-                        <li>Phasellus iaculis</li>
-                        <li>Nulla volutpat</li>
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>广州</li>
+                        <li>深圳</li>
+                        <li>成都</li>
                       </ul>
                     </div>
                   </div>
@@ -422,7 +432,7 @@ export default class Element extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">List bare</h4>
+        <h3 className="mt-20">无样式列表</h3>
         <p>清除 <code>ul, ol</code> 的 <code>list-style</code>。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
@@ -432,9 +442,11 @@ export default class Element extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ol className="list-bare">
-                        <li>Lorem ipsum</li>
-                        <li>Phasellus iaculis</li>
-                        <li>Nulla volutpat</li>
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>广州</li>
+                        <li>深圳</li>
+                        <li>成都</li>
                       </ol>
                     </div>
                   </div>

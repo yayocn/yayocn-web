@@ -31,11 +31,11 @@ export default class Image extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<img class="${item.className}" src="" alt=""/>
+        code += `<img class="${item.className}" src="#" alt="..." />
       
 `;
       } else {
-        code += `<img class="${item.className}" src="" alt=""/>`;
+        code += `<img class="${item.className}" src="#" alt="..." />`;
       }
     });
 
@@ -44,8 +44,8 @@ export default class Image extends Component {
 
   createFigureCode = () => {
     let code = `<figure class="figure">
-  <img class="figure-img img-fluid" src=""/>
-  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  <img class="figure-img img-fluid" src="#" />
+  <figcaption class="figure-caption">两只猫咪，两只猫咪，跑得快，跑得快。</figcaption>
 </figure>`;
 
     return code;
@@ -54,19 +54,20 @@ export default class Image extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>用于选择图像到响应行为的文档和示例（因此它们永远不会变得比它们的父元素更大）并且通过类添加轻量级样式。</p>
+        <h1>图片 <code>Image</code></h1>
+        <p className="font-2x font-100">为图片添加轻量类，统一图片的样式，增加响应式图片，使其不会超过父元素。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>响应式</h3>
+        <h2>响应式</h2>
+        <p>图像通过 <code>.img-fluid</code> 进行响应，最大宽度：<code>100%</code>。</p>
         <div className={classnames(style['util-image'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-12">
                       <img src={img1} alt="" className="img-fluid"/>
                     </div>
                   </div>
@@ -85,7 +86,7 @@ export default class Image extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>缩略图</h3>
+        <h2>缩略图</h2>
         <p>在 <code>.img-fluid</code> 的基础上，增加了一些样式，比如边框和内边距。</p>
         <div className={classnames(style['util-image'])}>
           <div className="row">
@@ -93,7 +94,7 @@ export default class Image extends Component {
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-12">
                       <img src={img2} alt="" className="img-thumbnail"/>
                     </div>
                   </div>
@@ -112,18 +113,18 @@ export default class Image extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>图片说明</h3>
-        <p><code>figure</code>，对图片和说明信息进行组合。</p>
+        <h2>&lt;figure&gt; 元素</h2>
+        <p><code>&lt;figure&gt;</code>元素结合了图片和图片说明。</p>
         <div className={classnames(style['util-image'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-12">
                       <figure className="figure">
                         <img className="figure-img img-fluid" src={img3} alt="some text."/>
-                        <figcaption className="figure-caption">A caption for the above image.</figcaption>
+                        <figcaption className="figure-caption">两只猫咪，两只猫咪，跑得快，跑得快。</figcaption>
                       </figure>
                     </div>
                   </div>
@@ -142,7 +143,7 @@ export default class Image extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>扩展</h3>
+        <h2>扩展</h2>
         <p>结合其他的类对图片进行增强，例如 <code>.border-round</code>。</p>
         <div className={classnames(style['util-image'])}>
           <div className="row">

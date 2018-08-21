@@ -34,11 +34,11 @@ export default class Code extends Component {
     return (
       <PageWrapper>
         <h1>编码 <code>Code</code></h1>
-        <h4>为编码类标签预设样式。</h4>
+        <p className="font-2x font-100">为内联元素和编码块元素预设样式。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>内联代码</h2>
+        <h2>内联编码</h2>
         <p>使用 <code>&lt;code&gt;</code> 元素包装的编码，请务必用 <code>&amp;lt; &amp;gt;</code> 转义尖括号。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">
@@ -64,8 +64,8 @@ export default class Code extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>代码块</h2>
-        <p>将 <code>&lt;pre&gt;</code> 用于多行代码。 再次确保在代码中转义任何尖括号以进行正确渲染。</p>
+        <h2>编码块</h2>
+        <p>将 <code>&lt;pre&gt;</code> 用于多行代码的显示， 确保在代码中转义所有的尖括号以进行正确渲染。</p>
         <p>您可以选择添加 <code>.pre-scrollable</code> 类，它将设置最大高度为 <code>340px</code> 并提供 <code>y</code> 轴滚动条。</p>
         <div className={classnames(style['util-code'])}>
           <div className="row">

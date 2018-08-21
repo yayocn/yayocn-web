@@ -536,15 +536,11 @@ dd {
   list-style: none;
 }
 
-/* line 164, ../scss/_element.scss */
-.list-inline {
-  margin-left: -5px;
-}
-/* line 167, ../scss/_element.scss */
+/* line 166, ../scss/_element.scss */
 .list-inline > li {
   display: inline-block;
 }
-/* line 170, ../scss/_element.scss */
+/* line 169, ../scss/_element.scss */
 .list-inline > li:not(:last-child) {
   margin-right: 5px;
 }
