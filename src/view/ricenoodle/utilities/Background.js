@@ -6,7 +6,7 @@ import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
 const BACKGROUND = {
-  situation: [
+  theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'bg-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'bg-secondary', },
     { title: 'Success', key: '', subTitle: '', className: 'bg-success', },
@@ -44,13 +44,13 @@ export default class Background extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用背景类快速设置背景色。</p>
+        <h2>背景 <code>Background</code></h2>
+        <p>使用背景工具类快速设置元素的背景颜色。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>情景背景色</h3>
-        <p>预设 <code>12</code> 种情景背景色。</p>
+        <h3>主题</h3>
+        <p>背景工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames(style['util-bg'])}>
           <div className="row">
             <div className="col-12">
@@ -58,9 +58,10 @@ export default class Background extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     {
-                      BACKGROUND.situation.map((item, index) => {
+                      BACKGROUND.theme.map((item, index) => {
                         return (
                           <div className="col-4 mb-10" key={index} >
+                            <h5>{item.title}</h5>
                             <div className={classnames(item.className, style['bg-feature'])}></div>
                           </div>
                         );
@@ -71,7 +72,7 @@ export default class Background extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight copyBtn={false}>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
