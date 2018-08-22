@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// exlint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const BUTTONGROUP = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'btn-group', },
@@ -34,17 +37,17 @@ export default class ButtonGroup extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <button type="button" class="btn btn-default">Button</button>
-  <button type="button" class="btn btn-default">Button</button>
-  <button type="button" class="btn btn-default">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
 </div>
       
 `;
       } else {
         code += `<div class="${item.className}">
-  <button type="button" class="btn btn-default">Button</button>
-  <button type="button" class="btn btn-default">Button</button>
-  <button type="button" class="btn btn-default">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
 </div>`;
       }
     })
@@ -57,16 +60,16 @@ export default class ButtonGroup extends Component {
     let code = ``;
     data.forEach((item, index) => {
       code += `<div class="${item.className}">
-  <button type="button" class="btn btn-default">Button</button>
-  <button type="button" class="btn btn-default">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
   <div class="dropdown">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
       Dropdown
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/">Action</a>
-      <a class="dropdown-item" href="/">Another action</a>
-      <a class="dropdown-item" href="/">Something else here</a>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
     </div>
   </div>
 </div>`;
@@ -78,12 +81,12 @@ export default class ButtonGroup extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用按钮组将一系列按钮组合起来。</p>
+        <h1>按钮组 <code>Button group</code></h1>
+        <p className="font-2x font-100">使用按钮组将一系列按钮组合在一条线上。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-button-group'])}>
           <div className="row">
             <div className="col-12">
@@ -96,9 +99,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -120,7 +123,8 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Size</h3>
+        <h2>尺寸</h2>
+        <p>不要将按钮大小调整类应用于组中的每个按钮，只需将 <code>.btn-group-*</code> 添加到每个组。</p>
         <div className={classnames(style['util-button-group'])}>
           <div className="row">
             <div className="col-12">
@@ -133,9 +137,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -157,7 +161,8 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Block</h3>
+        <h2>按钮组块</h2>
+        <p>按钮组块将占满父元素的宽度。</p>
         <div className={classnames(style['util-button-group'])}>
           <div className="row">
             <div className="col-12">
@@ -170,9 +175,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="w-50 mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -194,7 +199,7 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Dropdown</h3>
+        <h2>嵌套下拉框</h2>
         <div className={classnames(style['util-button-group'])}>
           <div className="row">
             <div className="col-12">
@@ -207,16 +212,16 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
                                 <div class="dropdown">
-                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                                     Dropdown
                                   </button>
                                   <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/">Action</a>
-                                    <a class="dropdown-item" href="/">Another action</a>
-                                    <a class="dropdown-item" href="/">Something else here</a>
+                                    <a class="dropdown-item" href={ANCHOR}>Action</a>
+                                    <a class="dropdown-item" href={ANCHOR}>Another action</a>
+                                    <a class="dropdown-item" href={ANCHOR}>Something else here</a>
                                   </div>
                                 </div>
                               </div>
@@ -240,7 +245,8 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Vertival</h3>
+        <h2>垂直按钮组</h2>
+        <p>使一组按钮垂直堆叠而不是水平堆叠。 此处不支持拆分按钮下拉菜单。</p>
         <div className={classnames(style['util-button-group'])}>
           <div className="row">
             <div className="col-12">
@@ -253,9 +259,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
-                                <button type="button" class="btn btn-default">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" class="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
