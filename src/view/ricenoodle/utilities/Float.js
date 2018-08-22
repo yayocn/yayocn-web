@@ -37,12 +37,13 @@ export default class Float extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用浮动类快速设置或者取消浮动属性。</p>
+        <h1>浮动 <code>Float</code></h1>
+        <p className="font-2x font-100">使用浮动类，在任何元素上切换浮动。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>设置浮动</h3>
+        <h2>设置浮动</h2>
+        <p>通过浮动类切换浮动。</p>
         <div className={classnames(style['util-float'])}>
           <div className="row">
             <div className="col-12">
@@ -57,7 +58,7 @@ export default class Float extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('additive')
                     }
@@ -70,21 +71,21 @@ export default class Float extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>清除浮动</h3>
-        <p><code>.clearfix</code> 可以单独使用，使浮动元素不影响到其他排版正常的元素；也可以作用于浮动元素的父元素，使父元素的高度不会塌陷（如<mark>设置浮动</mark>的例子所示）。</p>
+        <h2>清除浮动</h2>
+        <p><code>.clearfix</code> 可以单独使用，使浮动元素不影响到其他排版正常的元素；也可以作用于浮动元素的父元素，使父元素的高度不会塌陷。</p>
         <div className={classnames(style['util-float'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="clearfix bg-light">
-                    <div className={classnames('fl bg-dark text-white', style['float-item'])}>左浮动元素</div>
+                    <div className={classnames('fl bg-dark text-white', style['float-item'])}>浮动元素</div>
                     <div className="clearfix"></div>
-                    <div className={classnames('fl bg-muted text-white', style['float-item'])}>被 .clearfix 隔开的紧邻上一个浮动元素的左浮动元素</div>
+                    <div className={classnames('fl bg-muted text-white', style['float-item'])}>被 .clearfix 隔开的紧邻上一个浮动元素的浮动元素</div>
                   </div>
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('subtractive')
                     }
