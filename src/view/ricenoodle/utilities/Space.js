@@ -38,31 +38,27 @@ export default class Space extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>Ricenoodle 包含各种速记响应边距和填充实用类，以修改元素的外观。</p>
+        <h1>间距 <code>Space</code></h1>
+        <p className="font-2x font-100">Ricenoodle 包含各种快速响应边距和填充实用类，以修改元素的外观。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>生效</h3>
-        <p>为元素指定 <code>margin</code> 或 <code>padding</code>。 包括对单个属性，所有属性以及垂直和水平属性的支持。 默认单位是 <code>px</code>。</p>
-
-        <div className="divider divider-lg"></div>
-        <h3>格式</h3>
+        <h2>格式</h2>
         <p><code>[property][side]-[size]</code></p>
 
-        <h4><code>property</code></h4>
+        <h3><code>property</code></h3>
         <div className={classnames(common['feature-example'])}>
           <div className={classnames(common['example-view'])}>
             <div className="ph-30">
               <ul className="mb-0">
-                <li><code>m</code> : 指 <code>margin</code></li>
-                <li><code>p</code> : 指 <code>padding</code></li>
+                <li><code>m</code> : <code>margin</code></li>
+                <li><code>p</code> : <code>padding</code></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h4 className="mt-10"><code>side</code></h4>
+        <h3 className="mt-10"><code>side</code></h3>
         <div className={classnames(common['feature-example'])}>
           <div className={classnames(common['example-view'])}>
             <div className="ph-30">
@@ -72,14 +68,14 @@ export default class Space extends Component {
                 <li><code>r</code> : 指 <code>right</code>，对应 <code>margin-right</code> 或 <code>padding-right</code></li>
                 <li><code>b</code> : 指 <code>bottom</code>，对应 <code>margin-bottom</code> 或 <code>padding-bottom</code></li>
                 <li><code>l</code> : 指 <code>left</code>，对应 <code>margin-left</code> 或 <code>padding-left</code></li>
-                <li><code>h</code> : 指水平方向，对应 <code>margin-left && margin-right</code> 或 <code>padding-left && padding-right</code></li>
-                <li><code>v</code> : 指垂直方向，对应 <code>margin-top && margin-bottom</code> 或 <code>padding-top && padding-bottom</code></li>
+                <li><code>h</code> : 指水平方向，对应 <code>margin-left & margin-right</code> 或 <code>padding-left & padding-right</code></li>
+                <li><code>v</code> : 指垂直方向，对应 <code>margin-top & margin-bottom</code> 或 <code>padding-top & padding-bottom</code></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <h4 className="mt-10"><code>size</code></h4>
+        <h3 className="mt-10"><code>size</code></h3>
         <div className={classnames(common['feature-example'])}>
           <div className={classnames(common['example-view'])}>
             <div className="ph-30">
@@ -90,7 +86,8 @@ export default class Space extends Component {
           </div>
         </div>
 
-        <h4 className="mt-10">Example</h4>
+        <div className="divider divider-lg"></div>
+        <h2 className="mt-10">实例</h2>
         <div className={classnames(common['feature-example'])}>
           <div className={classnames('mt-0', common['example-code'])}>
             <Highlight>
