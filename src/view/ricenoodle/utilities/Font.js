@@ -54,13 +54,15 @@ export default class Font extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用字体类快速设置文本的大小，权重。</p>
+        <h1>字体 <code>Font</code></h1>
+        <p className="font-2x font-100">使用字体类快速设置文本的尺寸，权重等。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>Size</h3>
-        <p>预设 <code>12px ~ 20px</code> 的固定字体大小。</p>
+        <h2>尺寸</h2>
+        <p>Ricenoodle 提供了 <code>12px ~ 20px</code> 的固定字体尺寸，和基于父元素 <code>1 ~ 10</code> 倍的字体尺寸。</p>
+
+        <h3 className="mt-20">固定尺寸</h3>
         <div className={classnames(style['util-font'])}>
           <div className="row">
             <div className="col-12">
@@ -77,7 +79,7 @@ export default class Font extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('size')
                     }
@@ -88,18 +90,18 @@ export default class Font extends Component {
           </div>
         </div>
 
-        <div className="divider divider-lg"></div>
-        <h3>Mutiple</h3>
-        <p>使用 em 作为单位，放大字体的倍数，预设 <code>1x ~ 10x</code>。</p>
+        <h3 className="mt-20">成倍尺寸</h3>
+        <p>使用 em 作为单位，基于父元素放大字体，Ricenoodle 提供了 <code>1x ~ 10x</code>。</p>
         <div className={classnames(style['util-font'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
+                  <h6>以下实例是以 <code>14px</code> 作为基准。</h6>
                   {
                     FONT.multiple.map((item, index) => {
                       return (
-                        <p className={item} key={index} >
+                        <p className={classnames(item, 'mv-0')} key={index} >
                           {item}
                         </p>
                       );
@@ -107,7 +109,7 @@ export default class Font extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('multiple')
                     }
@@ -119,8 +121,8 @@ export default class Font extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Weight</h3>
-        <p>快速设置文字的权重。</p>
+        <h2>权重</h2>
+        <p>使用权重类快速设置文字的权重。</p>
         <div className={classnames(style['util-font'])}>
           <div className="row">
             <div className="col-12">
@@ -137,7 +139,7 @@ export default class Font extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('weight')
                     }
