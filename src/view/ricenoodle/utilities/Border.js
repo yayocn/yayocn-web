@@ -84,15 +84,15 @@ export default class Border extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>边框 <code>Border</code></h2>
-        <p>使用边框工具类快速设置元素的边框和边框半径的样式。 非常适合图像，按钮或任何其他元素。</p>
+        <h1>边框 <code>Border</code></h1>
+        <p className="font-2x font-100">使用边框工具类快速设置元素的边框和边框半径的样式。 非常适合图像，按钮或任何其他元素。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>边框</h3>
+        <h2>边框</h2>
         <p>添加或者删除元素的边框，可以针对所有的边或者针对某一边。</p>
 
-        <h4>添加</h4>
+        <h3>添加</h3>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
@@ -107,7 +107,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('additive')
                     }
@@ -118,7 +118,7 @@ export default class Border extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">删除</h4>
+        <h3 className="mt-20">删除</h3>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
@@ -133,7 +133,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('subtractive')
                     }
@@ -146,7 +146,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>主题</h3>
+        <h2>主题</h2>
         <p>边框工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
@@ -165,7 +165,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('theme')
                     }
@@ -178,7 +178,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>半径</h3>
+        <h2>半径</h2>
         <p>为元素添加半径类，设置元素的角半径。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
@@ -194,7 +194,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('round')
                     }
@@ -207,7 +207,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>边框风格</h3>
+        <h2>边框风格</h2>
         <p>为元素添加边框风格类，设置边框的风格。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
@@ -226,7 +226,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('style')
                     }
@@ -239,7 +239,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>边框宽度</h3>
+        <h2>边框宽度</h2>
         <p>为元素添加边框宽度类，设置边框的宽度。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
@@ -258,7 +258,7 @@ export default class Border extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('weight')
                     }

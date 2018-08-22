@@ -8,15 +8,15 @@ import { find } from 'lodash';
 
 const FLEX = {
   direction: [
-    { title: 'Row', key: 'row', subTitle: '', className: 'flex flex-row', },
-    { title: 'Row reverse', key:'rowReverse', subTitle: '', className: 'flex flex-row-reverse', },
-    { title: 'Column', key:'column', subTitle: '', className: 'flex flex-column', },
-    { title: 'Column reverse', key:'columnReverse', subTitle: '', className: 'flex flex-column-reverse', },
+    { title: '水平向右', key: 'row', subTitle: '', className: 'flex flex-row', },
+    { title: '水平向左', key:'rowReverse', subTitle: '', className: 'flex flex-row-reverse', },
+    { title: '垂直向下', key:'column', subTitle: '', className: 'flex flex-column', },
+    { title: '垂直向上', key:'columnReverse', subTitle: '', className: 'flex flex-column-reverse', },
   ],
   wrap: [
-    { title: 'Nowrap', key: 'nowrap', subTitle: '', className: 'flex flex-nowrap', },
-    { title: 'Wrap', key:'wrap', subTitle: '', className: 'flex flex-wrap', },
-    { title: 'Wrap reverse', key:'wrapReverse', subTitle: '', className: 'flex flex-wrap-reverse', },
+    { title: '不换行', key: 'nowrap', subTitle: '', className: 'flex flex-nowrap', },
+    { title: '换行', key:'wrap', subTitle: '', className: 'flex flex-wrap', },
+    { title: '换行反转', key:'wrapReverse', subTitle: '', className: 'flex flex-wrap-reverse', },
   ],
   justifyContent: [
     { title: 'Start', key: 'start', subTitle: '', className: 'flex justify-content-start', },
@@ -91,17 +91,22 @@ export default class Flex extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用Flex类快速设置 <code>display: flex / inline-flex</code> 的元素。结合 <code>.flex 或 .flex-inline</code> 使用。</p>
-        <div className="alert alert-info">
-          <p>主轴：<code>flex-direction: row | row-reverse</code>，主轴为 <code>X</code> 轴；<code>flex-direction: column | column-reverse</code>，主轴为 <code>Y</code> 轴。</p>
-          <p className="mb-0">交叉轴：<code>flex-direction: row | row-reverse</code>，交叉轴为 <code>Y</code> 轴；<code>flex-direction: column | column-reverse</code>，交叉轴为 <code>X</code> 轴。</p>
+        <h1>弹性布局 <code>Flex</code></h1>
+        <p className="font-2x font-100">使用全套响应式弹性布局类快速管理网格列，导航，组件等的布局，对齐和大小调整。 对于更复杂的实现，可能需要自定义 CSS。</p>
+        <div className="alert alert-warning">
+          <dl className="row mb-0">
+            <dt className="col-lg-2 col-md-3 col-4">主轴，交叉轴</dt>
+            <dd className="col-lg-10 col-md-9 col-8">
+              <p className="mt-0">当 <code>flex-direction: row | row-reverse</code> 时，主轴为 <code>X</code> 轴，交叉轴为 <code>Y</code> 轴。</p>
+              <p className="mb-0">当 <code>flex-direction: column | column-reverse</code>，主轴为 <code>Y</code> 轴，交叉轴为 <code>X</code> 轴。</p>
+            </dd>
+          </dl>
         </div>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>方向</h3>
-        <p><code>flex-direction</code> 属性决定主轴的方向（即项目的排列方向）。</p>
+        <h2>方向</h2>
+        <p>使用方向类在Flex容器中设置主轴的方向。在大多数情况下，可以省略水平类（<code>.flex-row</code>），因为浏览器默认为行。 但是，也可能会遇到需要显式设置此值的情况（如响应式布局）。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
             <div className="col-12">
@@ -109,7 +114,7 @@ export default class Flex extends Component {
                 FLEX.direction.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-10">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className={item.className}>
@@ -141,16 +146,17 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>换行</h3>
-        <p>默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code> 属性定义，如果一条轴线排不下，如何换行。</p>
+        <h2>换行</h2>
+        <p>更改Flex项目在Flex容器中的换行方式。选择不换行（浏览器默认设置）<code>.flex-nowrap</code>，换行 <code>.flex-wrap</code>，
+          或换行反转 <code>.flex-wrap-reverse</code>。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
-            <div className="col-12">
+            <div className="col-8">
               {
                 FLEX.wrap.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-10">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className={item.className}>
@@ -182,8 +188,8 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>主轴对齐</h3>
-        <p><code>justify-content</code> 属性定义了项目在主轴上的对齐方式。</p>
+        <h2>主轴对齐</h2>
+        <p>在弹性布局容器上使用主轴对齐类来更改主轴上的flex项目的对齐方式。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
             <div className="col-12">
@@ -191,7 +197,7 @@ export default class Flex extends Component {
                 FLEX.justifyContent.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className={item.className}>
@@ -223,8 +229,8 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>交叉轴对齐</h3>
-        <p><code>align-items</code> 属性定义项目在交叉轴上如何对齐。</p>
+        <h2>交叉轴对齐</h2>
+        <p>在弹性布局容器上使用交叉轴对齐类来更改交叉轴上的flex项的对齐方式。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
             <div className="col-12">
@@ -232,7 +238,7 @@ export default class Flex extends Component {
                 FLEX.alignItems.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle
@@ -268,8 +274,8 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>多轴对齐</h3>
-        <p><code>align-content</code> 属性定义了多根轴线的对齐方式，需要和 <code>.flex-wrap</code> 配合使用。如果项目只有一根轴线，该属性不起作用。</p>
+        <h2>多轴对齐</h2>
+        <p>使用弹性布局容器上的多轴对齐类将flex项目在十字轴上对齐。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
             <div className="col-12">
@@ -277,7 +283,7 @@ export default class Flex extends Component {
                 FLEX.alignContent.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle
@@ -313,8 +319,8 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>特殊对齐</h3>
-        <p><code>align-self</code> 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 <code>align-items</code> 属性。默认值为 <code>auto</code>，表示继承父元素的 <code>align-items</code> 属性，如果没有父元素，则等同于 <code>stretch</code>。</p>
+        <h2>特殊对齐</h2>
+        <p>在弹性布局项目上使用特殊对齐类可以单独更改它们在十字轴上的对齐方式。</p>
         <div className={classnames(style['util-flex'])}>
           <div className="row">
             <div className="col-12">
@@ -322,7 +328,7 @@ export default class Flex extends Component {
                 FLEX.alignSelf.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle

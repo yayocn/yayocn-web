@@ -8,29 +8,23 @@ import style from '../style.scss';
 export default class Close extends Component {
 
   createCode = () => {
-    let code = ``;
-    code = `<div class="close">&times;</div>`
-
-    return code;
+    return `<span class="close">&times;</span>`;
   }
 
   createBtnCode = () => {
-    let code = ``;
-    code = `<button type="button" class="close">&times;</button>`
-
-    return code;
+    return `<button type="button" class="close">&times;</button>`;
   }
 
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>Close Icon。</p>
+        <h1>关闭图标 <code>Close icon</code></h1>
+        <p className="font-2x font-100">使用通用关闭图标来消除模态框和警报框等内容。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>图标</h3>
-        <p></p>
+        <h2>图标</h2>
+        <p>关闭图标默认是右浮动。</p>
         <div className={classnames(style['util-bg'])}>
           <div className="row">
             <div className="col-12">
@@ -38,12 +32,12 @@ export default class Close extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-12">
-                      <div className="close fl">&times;</div>
+                      <span className="close fl">&times;</span>
                     </div>
                   </div>
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode()
                     }
@@ -55,8 +49,7 @@ export default class Close extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>按钮</h3>
-        <p></p>
+        <h2>按钮</h2>
         <div className={classnames(style['util-bg'])}>
           <div className="row">
             <div className="col-12">
@@ -71,7 +64,7 @@ export default class Close extends Component {
                   </div>
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createBtnCode()
                     }

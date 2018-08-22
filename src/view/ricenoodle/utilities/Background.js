@@ -44,12 +44,12 @@ export default class Background extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>背景 <code>Background</code></h2>
-        <p>使用背景工具类快速设置元素的背景颜色。</p>
+        <h1>背景 <code>Background</code></h1>
+        <p className="font-2x font-100">使用背景工具类快速设置元素的背景颜色。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>主题</h3>
+        <h2>主题</h2>
         <p>背景工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames(style['util-bg'])}>
           <div className="row">
@@ -70,7 +70,7 @@ export default class Background extends Component {
                   </div>
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('theme')
                     }

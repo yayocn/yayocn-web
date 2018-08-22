@@ -51,7 +51,7 @@ export const ricenoodle = [
         link: '/ricenoodle/utilities/border'
       },
       {
-        title: 'Close',
+        title: 'Close icon',
         icon: '',
         link: '/ricenoodle/utilities/close'
       },
