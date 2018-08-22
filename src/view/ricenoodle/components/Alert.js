@@ -5,6 +5,9 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 const ALERT = {
   situation: [
     { title: 'Primary', key: '', subTitle: '', className: 'alert alert-primary', },
@@ -18,7 +21,6 @@ const ALERT = {
     { title: 'Muted', key: '', subTitle: '', className: 'alert alert-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'alert alert-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'alert alert-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'alert alert-transparent', },
   ],
   linkColor: [
     { title: 'Primary', key: '', subTitle: '', className: 'alert alert-primary', },
@@ -32,10 +34,9 @@ const ALERT = {
     { title: 'Muted', key: '', subTitle: '', className: 'alert alert-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'alert alert-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'alert alert-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'alert alert-transparent', },
   ],
   dismissing: [
-    { title: 'Dismissing', key: '', subTitle: '', className: 'alert alert-primary alert-dismissible fade show', },
+    { title: 'Dismissing', key: '', subTitle: '', className: 'alert alert-success alert-dismissible fade show', },
   ],
   additional: [
     { title: 'Additional', key: '', subTitle: '', className: 'alert alert-success', },
@@ -68,13 +69,13 @@ export default class Alert extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  'A simple ${item.title} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.'
+  大江东去，浪淘尽，<a href="#" class="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
 </div>
       
 `;
       } else {
         code += `<div class="${item.className}">
-  'A simple ${item.title} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.'
+  大江东去，浪淘尽，<a href="#" class="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
 </div>`;
       }
     })
@@ -89,7 +90,7 @@ export default class Alert extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
   <button type="button" class="close" data-dismiss="alert">
     <span>&times;</span>
   </button>
@@ -98,7 +99,7 @@ export default class Alert extends Component {
 `;
       } else {
         code += `<div class="${item.className}">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
   <button type="button" class="close" data-dismiss="alert">
     <span>&times;</span>
   </button>
@@ -116,7 +117,7 @@ export default class Alert extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
   <button type="button" class="close" data-dismiss="alert">
     <span class="mark-close"></span>
   </button>
@@ -125,7 +126,7 @@ export default class Alert extends Component {
 `;
       } else {
         code += `<div class="${item.className}">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
   <button type="button" class="close" data-dismiss="alert">
     <span class="mark-close"></span>
   </button>
@@ -143,19 +144,19 @@ export default class Alert extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <h3 class="alert-heading">江城子 . 密州出猎</h3>
+  <p>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。 为报倾城随太守，亲射虎，看孙郎。 酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？ 会挽雕弓如满月，西北望，射天狼。</p>
+  <hr/>
+  <p>《江城子·密州出猎》是宋代文学家苏轼于密州知州任上所作的一首词。此词表达了强国抗敌的政治主张，抒写了渴望报效朝廷的壮志豪情。</p>
 </div>
       
 `;
       } else {
         code += `<div class="${item.className}">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <h3 class="alert-heading">江城子 . 密州出猎</h3>
+  <p>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。 为报倾城随太守，亲射虎，看孙郎。 酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？ 会挽雕弓如满月，西北望，射天狼。</p>
+  <hr/>
+  <p>《江城子·密州出猎》是宋代文学家苏轼于密州知州任上所作的一首词。此词表达了强国抗敌的政治主张，抒写了渴望报效朝廷的壮志豪情。</p>
 </div>`;
       }
     })
@@ -166,13 +167,13 @@ export default class Alert extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用背景类快速设置背景色。</p>
+        <h1>警告框 <code>Alert</code></h1>
+        <p className="font-2x font-100">使用少量可用且灵活的警报消息为用户操作提供上下文反馈消息。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>情景背景色</h3>
-        <p>预设 <code>12</code> 种情景背景色。</p>
+        <h2>主题</h2>
+        <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
         <div className={classnames(style['util-alert'])}>
           <div className="row">
             <div className="col-12">
@@ -182,9 +183,9 @@ export default class Alert extends Component {
                     {
                       ALERT.situation.map((item, index) => {
                         return (
-                          <div className="col-4 mb-10" key={index} >
+                          <div className="col-lg-6 col-12" key={index} >
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              A simple {item.title} alert. Give it a click if you like.
+                              莫听穿林打叶声，何妨吟啸且徐行。 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
                             </div>
                           </div>
                         );
@@ -205,7 +206,7 @@ export default class Alert extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Link Color</h3>
+        <h2>锚点</h2>
         <p>使用 <code>.alert-link</code> 类快速设置 <code>alert</code> 中的锚点样式。</p>
         <div className={classnames(style['util-alert'])}>
           <div className="row">
@@ -216,9 +217,9 @@ export default class Alert extends Component {
                     {
                       ALERT.linkColor.map((item, index) => {
                         return (
-                          <div className="col-4 mb-10" key={index}>
+                          <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              A simple {item.title} alert with <a href="" class="alert-link">an example link</a>. Give it a click if you like.
+                              大江东去，浪淘尽，<a href={ANCHOR} className="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
                             </div>
                           </div>
                         );
@@ -239,8 +240,8 @@ export default class Alert extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Dismissing</h3>
-        <p>实现 <code>alert</code> 的销毁。你需要：</p>
+        <h2>可关闭的警告框</h2>
+        <p>要实现 <code>alert</code> 的销毁，需要：</p>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
           <li>额外添加 <code>.alert-dismissible</code> 类。</li>
@@ -248,7 +249,7 @@ export default class Alert extends Component {
           <li>添加一个属性包含了 <code>class="close" data-dismiss="alert"</code> 的销毁按钮。</li>
         </ul>
 
-        <h4>使用 <code>&amp;time;</code></h4>
+        <h3 className="mt-20">使用 <code>&amp;time;</code></h3>
         <div className={classnames(style['util-alert'])}>
           <div className="row">
             <div className="col-12">
@@ -258,9 +259,9 @@ export default class Alert extends Component {
                     {
                       ALERT.dismissing.map((item, index) => {
                         return (
-                          <div className="col-6 mb-10" key={index}>
+                          <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                              羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
                               <button type="button" class="close" data-dismiss="alert">
                                 <span>&times;</span>
                               </button>
@@ -283,7 +284,7 @@ export default class Alert extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">使用 <code>.mark-close</code></h4>
+        <h3 className="mt-20">使用 <code>.mark-close</code></h3>
         <div className={classnames(style['util-alert'])}>
           <div className="row">
             <div className="col-12">
@@ -293,9 +294,9 @@ export default class Alert extends Component {
                     {
                       ALERT.dismissing.map((item, index) => {
                         return (
-                          <div className="col-6 mb-10" key={index}>
+                          <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                              羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
                               <button type="button" class="close" data-dismiss="alert">
                                 <span className="mark-close"></span>
                               </button>
@@ -318,11 +319,12 @@ export default class Alert extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">事件</h4>
-        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/alerts/#javascript-behavior" target="_blank" rel="noopener noreferrer">Bootstrap</a></p>
+        <h3 className="mt-20">事件</h3>
+        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/alerts/#javascript-behavior" target="_blank" rel="noopener noreferrer">Bootstrap alert</a>。</p>
 
         <div className="divider divider-lg"></div>
-        <h3>Additional</h3>
+        <h2>附加内容</h2>
+        <p>警告框还可以包含其他HTML元素，如标题，段落和分隔符。</p>
         <div className={classnames(style['util-alert'])}>
           <div className="row">
             <div className="col-12">
@@ -332,12 +334,12 @@ export default class Alert extends Component {
                     {
                       ALERT.additional.map((item, index) => {
                         return (
-                          <div className="col-6 mb-10" key={index}>
+                          <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              <h4 class="alert-heading">Well done!</h4>
-                              <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                              <h3 class="alert-heading">江城子 . 密州出猎</h3>
+                              <p>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。 为报倾城随太守，亲射虎，看孙郎。 酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？ 会挽雕弓如满月，西北望，射天狼。</p>
                               <hr/>
-                              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                              <p>《江城子·密州出猎》是宋代文学家苏轼于密州知州任上所作的一首词。此词表达了强国抗敌的政治主张，抒写了渴望报效朝廷的壮志豪情。</p>
                             </div>
                           </div>
                         );
