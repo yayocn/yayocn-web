@@ -61,19 +61,20 @@ export default class Position extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用 <code>position</code> 类快速设置元素定位。</p>
+        <h1>定位 <code>Position</code></h1>
+        <p className="font-2x font-100">使用定位类快速配置元素的位置。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>类型</h3>
-        <p>预设 <code>static, relative, absolute, fixed, sticky</code> 几种类型。</p>
+        <h2>种类</h2>
+        <p>Ricenoodle 提供了 <code>static, relative, absolute, fixed, sticky</code> 几种类型。</p>
+        <p className="alert alert-warning"><code>sticky</code>需要注意浏览器以及版本。</p>
         <div className={classnames(style['util-position'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
-                  <p className="alert-info p-10"><code>sticky</code>需要注意浏览器以及版本。</p>
+
                 </div>
                 <div className={classnames(common['example-code'])}>
                   <Highlight copyBtn={false}>
@@ -88,8 +89,8 @@ export default class Position extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>位置</h3>
-        <p>位置快速设置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
+        <h2>位置</h2>
+        <p>快速设置位置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
         <div className={classnames(style['util-position'])}>
           <div className="row">
             <div className="col-12">
@@ -97,7 +98,7 @@ export default class Position extends Component {
                 POSITION.position.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className={classnames('bg-light pt-relative', style['position-view-wrap'])}>
