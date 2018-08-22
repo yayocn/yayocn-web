@@ -5,8 +5,10 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
 const BADGE = {
-  situation: [
+  theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'badge badge-secondary', },
     { title: 'Success', key: '', subTitle: '', className: 'badge badge-success', },
@@ -18,7 +20,6 @@ const BADGE = {
     { title: 'Muted', key: '', subTitle: '', className: 'badge badge-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'badge badge-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'badge badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-transparent text-muted', },
   ],
   link: [
     { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
@@ -32,7 +33,6 @@ const BADGE = {
     { title: 'Muted', key: '', subTitle: '', className: 'badge badge-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'badge badge-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'badge badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-transparent text-muted', },
   ],
   pill: [
     { title: 'Primary', key: '', subTitle: '', className: 'badge badge-pill badge-primary', },
@@ -46,7 +46,6 @@ const BADGE = {
     { title: 'Muted', key: '', subTitle: '', className: 'badge badge-pill badge-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'badge badge-pill badge-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'badge badge-pill badge-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'badge badge-pill badge-transparent text-muted', },
   ],
 };
 
@@ -75,7 +74,7 @@ export default class Badge extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<a href="/" class="${item.className}">${item.title}</a>
+        code += `<a href="#" class="${item.className}">${item.title}</a>
       
 `;
       } else {
@@ -89,13 +88,13 @@ export default class Badge extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>标签组件。</p>
+        <h1>便签 <code>Badge</code></h1>
+        <p className="font-2x font-100">便签组件可以用来计数或者包裹标签。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>情景色</h3>
-        <p>预设 <code>12</code> 种情景色。</p>
+        <h2>主题</h2>
+        <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
         <div className={classnames(style['util-badge'])}>
           <div className="row">
             <div className="col-12">
@@ -104,7 +103,7 @@ export default class Badge extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        BADGE.situation.map((item, index) => {
+                        BADGE.theme.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
                               <span className={classnames(item.className, style['badge-feature'])}>
@@ -120,7 +119,7 @@ export default class Badge extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
@@ -130,7 +129,7 @@ export default class Badge extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Link</h3>
+        <h2>锚点</h2>
         <p>在 <code>&lt;a&gt;</code> 上使用 <code>badge</code>。</p>
         <div className={classnames(style['util-badge'])}>
           <div className="row">
@@ -143,7 +142,7 @@ export default class Badge extends Component {
                         BADGE.link.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index}>
-                              <a href="" className={classnames(item.className, style['badge-feature'])}>
+                              <a href={ANCHOR} className={classnames(item.className, style['badge-feature'])}>
                                 {item.title}
                               </a>
                             </div>
@@ -166,10 +165,9 @@ export default class Badge extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Pill</h3>
-        <p>胶囊样式。使用 <code>.badge-pill</code> 设置。</p>
-        <p className="text-info">也可以使用 <code>.border-round-circle</code>。</p>
-        
+        <h2>胶囊</h2>
+        <p>使用 <code>.badge-pill</code> 类使便签显示成胶囊样式。也可以使用 <code>.border-round-circle</code>。</p>
+
         <div className={classnames(style['util-badge'])}>
           <div className="row">
             <div className="col-12">

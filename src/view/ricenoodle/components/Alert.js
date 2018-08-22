@@ -9,7 +9,7 @@ import style from '../style.scss';
 const ANCHOR = 'javascript:;';
 
 const ALERT = {
-  situation: [
+  theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'alert alert-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'alert alert-secondary', },
     { title: 'Success', key: '', subTitle: '', className: 'alert alert-success', },
@@ -181,7 +181,7 @@ export default class Alert extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     {
-                      ALERT.situation.map((item, index) => {
+                      ALERT.theme.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12" key={index} >
                             <div className={classnames(item.className, style['alert-feature'])}>
@@ -196,7 +196,7 @@ export default class Alert extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
