@@ -22,11 +22,11 @@ const SIZE = {
     { title: 'auto', key: '', subTitle: '', className: 'h-auto', },
   ],
   max: [
-    { title: 'Width', key: 'width', subTitle: '', className: 'mw-100', },
-    { title: 'Height', key: 'height', subTitle: '', className: 'mh-100', },
+    { title: '最大宽度', key: 'width', subTitle: '', className: 'mw-100', },
+    { title: '最大高度', key: 'height', subTitle: '', className: 'mh-100', },
   ],
   full: [
-    { title: '', key: '', subTitle: '', className: 'h-full-window', },
+    { title: '填充', key: '', subTitle: '', className: 'h-full-window', },
   ]
 };
 
@@ -63,12 +63,12 @@ export default class Size extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>设置 <code>block</code> 元素的宽度和高度。</p>
+        <h1>元素尺寸 <code>Size</code></h1>
+        <p className="font-2x font-100">使用元素尺寸类轻松设置元素的宽和高（相对于其父元素）。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>Width</h3>
+        <h2>宽度</h2>
         <p>设置元素的宽度。</p>
         <div className={classnames(style['util-size'])}>
           <div className="row">
@@ -78,7 +78,7 @@ export default class Size extends Component {
                   {
                     SIZE.width.map((item, index) => {
                       return (
-                        <div className={classnames('bg-light p-15', item.className)} key={index}>
+                        <div className={classnames('bg-dark text-white border p-15', item.className)} key={index}>
                           {item.title}
                         </div>
                       );
@@ -98,7 +98,7 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Height</h3>
+        <h2>高度</h2>
         <p>设置元素的高度。</p>
         <div className={classnames(style['util-size'])}>
           <div className="row">
@@ -132,7 +132,7 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Max-</h3>
+        <h2>最大宽高</h2>
         <p>设置元素的最大宽度和高度。</p>
         <div className={classnames(style['util-size'])}>
           <div className="row">
@@ -141,7 +141,7 @@ export default class Size extends Component {
                 SIZE.max.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className="bg-light">
@@ -167,8 +167,8 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Full</h3>
-        <p>取当前窗口的高度，设置给元素。</p>
+        <h2>视口高度</h2>
+        <p>将当前窗口的高度设置为元素高度。</p>
         <div className={classnames(style['util-size'])}>
           <div className="row">
             <div className="col-12">
@@ -179,7 +179,7 @@ export default class Size extends Component {
                       return (
                         <div className="bg-light" key={index}>
                           <div className={classnames('bg-dark text-white p-15 w-50 pt-relative', item.className)}>
-                            <p className="text-center pt-absolute pt-center font-3x">元素高度始终和窗口高度保持一致。</p>
+                            <p className="text-center pt-absolute pt-center font-3x">元素高度始终和视口高度保持一致。</p>
                           </div>
                         </div>
                       );
