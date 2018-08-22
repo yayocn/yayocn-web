@@ -6,7 +6,7 @@ import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
 const TEXT = {
-  situation: [
+  theme: [
     { title: 'Primary', subTitle: '', className: 'text-primary', },
     { title: 'Secondary', subTitle: '', className: 'text-secondary', },
     { title: 'Success', subTitle: '', className: 'text-success', },
@@ -18,7 +18,6 @@ const TEXT = {
     { title: 'Muted', subTitle: '', className: 'text-muted', },
     { title: 'Dark', subTitle: '', className: 'text-dark', },
     { title: 'Black', subTitle: '', className: 'text-black', },
-    { title: 'Transparent', subTitle: '', className: 'text-transparent', },
   ],
   alignment: [
     { title: 'Left', key: 'left', subTitle: '水调歌头', className: 'text-left', },
@@ -65,32 +64,32 @@ export default class Text extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p><code>Text</code> 类可以快速设置文字的颜色，对齐方式，换行方式等。</p>
+        <h1>文本 <code>Text</code></h1>
+        <p className="font-2x font-100"><code>Text</code> 类可以快速设置文字的颜色，对齐方式，换行方式等。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>情景色</h3>
-        <p>预设 <code>12</code> 种情景色。</p>
+        <h2>主题</h2>
         <div className={classnames(style['util-text'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   {
-                    TEXT.situation.map((item, index) => {
+                    TEXT.theme.map((item, index) => {
                       return (
-                        <div className={classnames('mb-10')} key={index} >
-                          {item.title}<p className={item.className}>李白乘舟将欲行，忽闻岸上踏歌声。<a className={classnames(item.className)}>桃花潭水深千尺，不及汪伦送我情。</a></p>
+                        <div className={classnames('p-5', {'bg-dark text-white': item.title === 'White'})} key={index} >
+                          <h6>{item.title}</h6>
+                          <p className={item.className}>李白乘舟将欲行，忽闻岸上踏歌声。<a className={classnames(item.className)}>桃花潭水深千尺，不及汪伦送我情。</a></p>
                         </div>
                       );
                     })
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
@@ -100,7 +99,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>对齐</h3>
+        <h2>对齐</h2>
         <div className={classnames(style['util-text'])}>
           <div className="row">
             <div className="col-12">
@@ -117,7 +116,7 @@ export default class Text extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('alignment')
                     }
@@ -129,7 +128,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Wrap</h3>
+        <h2>换行</h2>
         <div className={classnames(style['util-text'])}>
           <div className="row">
             <div className="col-12">
@@ -146,7 +145,7 @@ export default class Text extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('wrap')
                     }
@@ -158,7 +157,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>变形</h3>
+        <h2>变形</h2>
         <div className={classnames(style['util-text'])}>
           <div className="row">
             <div className="col-12">
@@ -175,7 +174,7 @@ export default class Text extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('transform')
                     }
@@ -187,7 +186,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>字体</h3>
+        <h2>字体</h2>
         <div className={classnames(style['util-text'])}>
           <div className="row">
             <div className="col-12">
@@ -204,7 +203,7 @@ export default class Text extends Component {
                   }
                 </div>
                 <div className={classnames(common['example-code'])}>
-                  <Highlight copyBtn={false}>
+                  <Highlight>
                     {
                       this.createCode('font')
                     }
