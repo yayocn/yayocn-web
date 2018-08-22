@@ -14,13 +14,13 @@ const BORDER = {
     { title: 'Left', subTitle: '', className: 'border-left', },
   ],
   subtractive: [
-    { title: 'All', subTitle: '', className: 'border-0', },
-    { title: 'Top', subTitle: '', className: 'border-top-0', },
-    { title: 'Right', subTitle: '', className: 'border-right-0', },
-    { title: 'Bottom', subTitle: '', className: 'border-bottom-0', },
-    { title: 'Left', subTitle: '', className: 'border-left-0', },
+    { title: 'All', subTitle: '', className: 'border border-0', },
+    { title: 'Top', subTitle: '', className: 'border border-top-0', },
+    { title: 'Right', subTitle: '', className: 'border border-right-0', },
+    { title: 'Bottom', subTitle: '', className: 'border border-bottom-0', },
+    { title: 'Left', subTitle: '', className: 'border border-left-0', },
   ],
-  situation: [
+  theme: [
     { title: 'Primary', subTitle: '', className: 'border border-primary', },
     { title: 'Secondary', subTitle: '', className: 'border border-secondary', },
     { title: 'Success', subTitle: '', className: 'border border-success', },
@@ -44,9 +44,21 @@ const BORDER = {
     { title: '', subTitle: '', className: 'border border-round-left', },
   ],
   style: [
-    { title: 'Solid', subTitle: '', className: 'border-solid', },
-    { title: 'Dashed', subTitle: '', className: 'border-dash', },
-    { title: 'Dotted', subTitle: '', className: 'border-dot', },
+    { title: 'Solid', subTitle: '', className: 'border border-solid', },
+    { title: 'Dashed', subTitle: '', className: 'border border-dash', },
+    { title: 'Dotted', subTitle: '', className: 'border border-dot', },
+  ],
+  weight: [
+    { title: '1px', subTitle: '', className: 'border border-1', },
+    { title: '2px', subTitle: '', className: 'border border-2', },
+    { title: '3px', subTitle: '', className: 'border border-3', },
+    { title: '4px', subTitle: '', className: 'border border-4', },
+    { title: '5px', subTitle: '', className: 'border border-5', },
+    { title: '6px', subTitle: '', className: 'border border-6', },
+    { title: '7px', subTitle: '', className: 'border border-7', },
+    { title: '8px', subTitle: '', className: 'border border-8', },
+    { title: '9px', subTitle: '', className: 'border border-9', },
+    { title: '10px', subTitle: '', className: 'border border-10', },
   ]
 }
 
@@ -72,13 +84,13 @@ export default class Border extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用边框类快速设置元素的边框。包括各种边框的样式，情景色，圆角等，它们之间可以相互组合使用。</p>
+        <h2>边框 <code>Border</code></h2>
+        <p>使用边框工具类快速设置元素的边框和边框半径的样式。 非常适合图像，按钮或任何其他元素。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>添加和移除</h3>
-        <p>增加或者移除元素的边框，可以针对所有的边或者针对某一边。默认颜色是 <code>#dee2e6</code>.</p>
+        <h3>边框</h3>
+        <p>添加或者删除元素的边框，可以针对所有的边或者针对某一边。</p>
 
         <h4>添加</h4>
         <div className={classnames(style['util-border'])}>
@@ -106,7 +118,7 @@ export default class Border extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">移除</h4>
+        <h4 className="mt-20">删除</h4>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
@@ -115,7 +127,7 @@ export default class Border extends Component {
                   {
                     BORDER.subtractive.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('border border-muted mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
+                        <div key={index} className={classnames('border mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
                       );
                     })
                   }
@@ -134,17 +146,20 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>情景色</h3>
-        <p>预设 <code>12</code> 种情景色。</p>
+        <h3>主题</h3>
+        <p>边框工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   {
-                    BORDER.situation.map((item, index) => {
+                    BORDER.theme.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('border mb-10 mr-10 block-inline', style['border-feature'], item.className)}></div>
+                        <div className="mb-10 mr-10 block-inline" key={index}>
+                          <h6>{item.title}</h6>
+                          <div className={classnames(style['border-feature'], item.className)}></div>
+                        </div>
                       );
                     })
                   }
@@ -152,7 +167,7 @@ export default class Border extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight copyBtn={false}>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
@@ -163,8 +178,8 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>圆角</h3>
-        <p>默认 <code>0.25rem</code>。</p>
+        <h3>半径</h3>
+        <p>为元素添加半径类，设置元素的角半径。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
@@ -173,7 +188,7 @@ export default class Border extends Component {
                   {
                     BORDER.round.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('border border-muted mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
+                        <div key={index} className={classnames('mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
                       );
                     })
                   }
@@ -192,8 +207,8 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>样式</h3>
-        <p>预设了 <code>3</code> 种样式。</p>
+        <h3>边框风格</h3>
+        <p>为元素添加边框风格类，设置边框的风格。</p>
         <div className={classnames(style['util-border'])}>
           <div className="row">
             <div className="col-12">
@@ -202,7 +217,10 @@ export default class Border extends Component {
                   {
                     BORDER.style.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('border-muted mb-10 mr-10 block-inline', style['border-feature'], item.className)}></div>
+                        <div key={index} className="mb-10 mr-10 block-inline">
+                          <h6>{item.title}</h6>
+                          <div className={classnames(style['border-feature'], item.className)}></div>
+                        </div>
                       );
                     })
                   }
@@ -211,6 +229,38 @@ export default class Border extends Component {
                   <Highlight copyBtn={false}>
                     {
                       this.createCode('style')
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+
+        <h3>边框宽度</h3>
+        <p>为元素添加边框宽度类，设置边框的宽度。</p>
+        <div className={classnames(style['util-border'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  {
+                    BORDER.weight.map((item, index) => {
+                      return (
+                        <div key={index} className="mb-10 mr-10 block-inline">
+                          <h6>{item.title}</h6>
+                          <div className={classnames(style['border-feature'], item.className)}></div>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight copyBtn={false}>
+                    {
+                      this.createCode('weight')
                     }
                   </Highlight>
                 </div>

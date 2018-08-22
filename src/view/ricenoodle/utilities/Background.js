@@ -61,7 +61,7 @@ export default class Background extends Component {
                       BACKGROUND.theme.map((item, index) => {
                         return (
                           <div className="col-4 mb-10" key={index} >
-                            <h5>{item.title}</h5>
+                            <h6>{item.title}</h6>
                             <div className={classnames(item.className, style['bg-feature'])}></div>
                           </div>
                         );

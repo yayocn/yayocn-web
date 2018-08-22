@@ -414,171 +414,191 @@ output {
   border-left: 1px solid #dee2e6 !important;
 }
 
+/* line 10, ../scss/utilities/_border.scss */
+.border-0 {
+  border: 0 !important;
+}
+
+/* line 11, ../scss/utilities/_border.scss */
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+/* line 12, ../scss/utilities/_border.scss */
+.border-right-0 {
+  border-right: 0 !important;
+}
+
 /* line 13, ../scss/utilities/_border.scss */
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+/* line 14, ../scss/utilities/_border.scss */
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+/* line 19, ../scss/utilities/_border.scss */
 .border-primary {
   border-color: #007bff !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-secondary {
   border-color: #375A7F !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-success {
   border-color: #2EC6A0 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-info {
   border-color: #14adea !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-warning {
   border-color: #ffc107 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-danger {
   border-color: #dc3545 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-white {
   border-color: #fff !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-light {
   border-color: #dee2e6 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-muted {
   border-color: #6c757d !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-dark {
   border-color: #212529 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-black {
   border-color: #000 !important;
 }
 
-/* line 13, ../scss/utilities/_border.scss */
+/* line 19, ../scss/utilities/_border.scss */
 .border-transparent {
   border-color: transparent !important;
 }
 
-/* line 18, ../scss/utilities/_border.scss */
+/* line 24, ../scss/utilities/_border.scss */
 .border-round-0 {
   border-radius: 0 !important;
 }
 
-/* line 19, ../scss/utilities/_border.scss */
+/* line 25, ../scss/utilities/_border.scss */
 .border-round-circle {
   border-radius: 625rem !important;
 }
 
-/* line 20, ../scss/utilities/_border.scss */
+/* line 26, ../scss/utilities/_border.scss */
 .border-round {
   border-radius: 0.25rem !important;
 }
 
-/* line 21, ../scss/utilities/_border.scss */
+/* line 27, ../scss/utilities/_border.scss */
 .border-round-top {
   border-top-left-radius: 0.25rem !important;
   border-top-right-radius: 0.25rem !important;
 }
 
-/* line 25, ../scss/utilities/_border.scss */
+/* line 31, ../scss/utilities/_border.scss */
 .border-round-right {
   border-top-right-radius: 0.25rem !important;
   border-bottom-right-radius: 0.25rem !important;
 }
 
-/* line 29, ../scss/utilities/_border.scss */
+/* line 35, ../scss/utilities/_border.scss */
 .border-round-bottom {
   border-bottom-right-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important;
 }
 
-/* line 33, ../scss/utilities/_border.scss */
+/* line 39, ../scss/utilities/_border.scss */
 .border-round-left {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important;
 }
 
-/* line 47, ../scss/utilities/_border.scss */
+/* line 53, ../scss/utilities/_border.scss */
 .border-dot {
   border-style: dotted !important;
 }
 
-/* line 47, ../scss/utilities/_border.scss */
+/* line 53, ../scss/utilities/_border.scss */
 .border-dash {
   border-style: dashed !important;
 }
 
-/* line 47, ../scss/utilities/_border.scss */
+/* line 53, ../scss/utilities/_border.scss */
 .border-solid {
   border-style: solid !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
-.border-0 {
-  border-width: 0px !important;
-}
-
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-1 {
   border-width: 1px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-2 {
   border-width: 2px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-3 {
   border-width: 3px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-4 {
   border-width: 4px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-5 {
   border-width: 5px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-6 {
   border-width: 6px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-7 {
   border-width: 7px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-8 {
   border-width: 8px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-9 {
   border-width: 9px !important;
 }
 
-/* line 54, ../scss/utilities/_border.scss */
+/* line 60, ../scss/utilities/_border.scss */
 .border-10 {
   border-width: 10px !important;
 }
