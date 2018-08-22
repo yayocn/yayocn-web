@@ -8,8 +8,8 @@ import { find } from 'lodash';
 
 const SHADOW = {
   visibility: [
-    { title: 'Display', key: 'shadow', subTitle: '', className: 'shadow', },
-    { title: 'Hidden', key: 'noneShadow', subTitle: '', className: 'shadow-none', },
+    { title: '添加', key: 'shadow', subTitle: '', className: 'shadow', },
+    { title: '刪除', key: 'noneShadow', subTitle: '', className: 'shadow-none', },
   ],
   size: [
     { title: 'Small', key: 'smallShadow', subTitle: '', className: 'shadow shadow-sm', },
@@ -33,13 +33,12 @@ export default class Shadow extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用阴影类快速设置元素阴影。</p>
+        <h1>阴影 <code>Shadow</code></h1>
+        <p className="font-2x font-100">使用阴影类添加或者刪除元素阴影。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>显示</h3>
-        <p>设置和取消阴影。</p>
+        <h2>阴影</h2>
         <div className={classnames(style['util-shadow'])}>
           <div className="row">
             <div className="col-12">
@@ -47,7 +46,7 @@ export default class Shadow extends Component {
                 SHADOW.visibility.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className="row">
@@ -73,7 +72,7 @@ export default class Shadow extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>尺寸</h3>
+        <h2>尺寸</h2>
         <p>设置阴影尺寸。</p>
         <div className={classnames(style['util-shadow'])}>
           <div className="row">
@@ -82,7 +81,7 @@ export default class Shadow extends Component {
                 SHADOW.size.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h4 className="mt-10">{item.title}</h4>
+                      <h3 className="mt-20">{item.title}</h3>
                       <div className={classnames(common['feature-example'])}>
                         <div className={classnames(common['example-view'])}>
                           <div className="row">
