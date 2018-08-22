@@ -30,12 +30,12 @@ export default class Breadcrumb extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>标签组件。</p>
+        <h1>面包屑导航 <code>Breadcrumb</code></h1>
+        <p className="font-2x font-100">指示当前页面在导航层次结构中的位置，该位置通过 CSS 自动添加分隔符。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>例子</h3>
+        <h2>实例</h2>
         <p>一般为最后一项添加 <code>.active</code> 类，且不需要 <code>&lt;a&gt;</code>。</p>
         <div className={classnames(style['util-breadcrumb'])}>
           <div className="row">
@@ -66,7 +66,7 @@ export default class Breadcrumb extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>禁用项</h3>
+        <h2>禁用项</h2>
         <p>添加 <code>.disabled</code> 类设置禁用项，且不需要 <code>&lt;a&gt;</code>。</p>
         <div className={classnames(style['util-breadcrumb'])}>
           <div className="row">
