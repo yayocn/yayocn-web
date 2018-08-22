@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss'
 import style from '../style.scss';
 
-// exlint-disable-next-line
+// eslint-disable-next-line
 const ANCHOR = 'javascript:;';
 
 const BUTTONGROUP = {
@@ -99,9 +99,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -137,9 +137,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -175,9 +175,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="w-50 mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );
@@ -212,16 +212,16 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <div class="dropdown">
-                                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <div className="dropdown">
+                                  <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
                                     Dropdown
                                   </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href={ANCHOR}>Action</a>
-                                    <a class="dropdown-item" href={ANCHOR}>Another action</a>
-                                    <a class="dropdown-item" href={ANCHOR}>Something else here</a>
+                                  <div className="dropdown-menu">
+                                    <a className="dropdown-item" href={ANCHOR}>Action</a>
+                                    <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                    <a className="dropdown-item" href={ANCHOR}>Something else here</a>
                                   </div>
                                 </div>
                               </div>
@@ -259,9 +259,9 @@ export default class ButtonGroup extends Component {
                           return (
                             <div className="mb-10" key={index} >
                               <div className={classnames(item.className, style['button-group-feature'])}>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
-                                <button type="button" class="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
+                                <button type="button" className="btn btn-secondary">Button</button>
                               </div>
                             </div>
                           );

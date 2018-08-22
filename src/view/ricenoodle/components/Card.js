@@ -4,7 +4,9 @@ import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
 import common from '../../../../public/scss/common.scss';
 import style from '../style.scss';
-
+import cardImg from '../../../../public/image/slide2.jpg';
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
 const CARD = {
   default: [
     { title: 'Primary', key: '', subTitle: '', className: 'card', },
@@ -15,7 +17,7 @@ const CARD = {
   headFoot: [
     { title: 'Header and Footer', key: '', subTitle: '', className: 'card', },
   ],
-  situation: [
+  theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'card text-white bg-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'card text-white bg-secondary', },
     { title: 'Success', key: '', subTitle: '', className: 'card text-white bg-success', },
@@ -27,7 +29,6 @@ const CARD = {
     { title: 'Muted', key: '', subTitle: '', className: 'card text-white bg-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'card text-white bg-dark', },
     { title: 'Black', key: '', subTitle: '', className: 'card text-white bg-black', },
-    { title: 'Transparent', key: '', subTitle: '', className: 'card text-dark bg-transparent', },
   ],
   deck: [
     { title: 'Equal width and height', key: '', subTitle: '', className: 'card-deck', },
@@ -45,12 +46,12 @@ export default class Card extends Component {
   createCode = () => {
     let code = ``;
     code = `<div class="card">
-  <img class="card-img-top" src="/" alt="">
+  <img class="card-img-top img-fluid" src="#" alt="" />
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h5 class="card-subtitle text-muted">Card subtitle</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">满江红</h5>
+    <h5 class="card-subtitle text-muted">岳飞</h5>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+    <a href="#" class="btn btn-secondary">了解更多</a>
   </div>
 </div>`;
 
@@ -60,9 +61,9 @@ export default class Card extends Component {
   createImgCode = () => {
     let code = ``;
     code = `<div class="card">
-  <img class="card-img-top" src="/" alt="">
+  <img class="card-img-top img-fluid" src="#" alt="">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
   </div>
 </div>`;
 
@@ -73,9 +74,9 @@ export default class Card extends Component {
     let code = ``;
     code = `<div class="card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" class="card-link">Go somewhere</a>
+    <h5 class="card-title">满江红</h5>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+    <a href="#" class="card-link">了解更多</a>
   </div>
 </div>`;
 
@@ -86,15 +87,15 @@ export default class Card extends Component {
     let code = ``;
     code = `<div class="card">
   <div class="card-header">
-    Header
+    诗词鉴赏
   </div>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">满江红</h5>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+    <a href="#" class="btn btn-secondary">了解更多</a>
   </div>
   <div class="card-footer text-muted">
-    Footer
+    《唐诗宋词》
   </div>
 </div>`;
 
@@ -109,11 +110,11 @@ export default class Card extends Component {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
   <div class="card-header">
-    Header
+    诗词鉴赏
   </div>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">满江红</h5>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
   </div>
 </div>
       
@@ -121,11 +122,11 @@ export default class Card extends Component {
       } else {
         code += `<div class="${item.className}">
   <div class="card-header">
-    Header
+    诗词鉴赏
   </div>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">满江红</h5>
+    <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
   </div>
 </div>`;
       }
@@ -138,33 +139,29 @@ export default class Card extends Component {
     let code = ``;
     code = `<div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural
-        lead-in to additional content. This content is a little bit longer.
-       
-        ...
-       
-        whatever how long.
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">岳飞 怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。
       </p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">岳飞 怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
 </div>`;
@@ -176,33 +173,34 @@ export default class Card extends Component {
     let code = ``;
     code = `<div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">岳飞</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">岳飞</small>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/" alt="Card image cap">
+    <img class="card-img-top img-fluid" src="#" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text"></p>
+      <p class="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">岳飞</small>
     </div>
   </div>
 </div>`;
@@ -215,61 +213,63 @@ export default class Card extends Component {
     code = `<div class="card-columns">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title that wraps to a new line</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
     </div>
   </div>
   <div class="card p-3">
     <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          岳飞
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
   <div class="card bg-primary text-white text-center p-3">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
       <footer class="blockquote-footer">
         <small>
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          岳飞
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card text-center">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
   <div class="card">
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
-          Someone famous in <cite title="Source Title">Source Title</cite>
+          岳飞
         </small>
       </footer>
     </blockquote>
   </div>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">满江红</h5>
+      <p class="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+      <p class="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
+      <p class="card-text"><small class="text-muted">岳飞</small></p>
     </div>
   </div>
 </div>`;
@@ -280,13 +280,14 @@ export default class Card extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p></p>
+        <h1>卡片 <code>Card</code></h1>
+        <p className="font-2x font-100">Ricenoodle 的卡片提供灵活且可扩展的内容容器，具有多种变体和选项。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
-        <p></p>
+        <h2>实例</h2>
+        <p>卡片采用尽可能少的标记和样式构建，但仍然能够提供大量的控制和定制。 它们采用弹性盒子构建，可轻松对齐并与其他组件完美混合。
+          默认情况下它们没有边距，因此请根据需要使用 <a href="/ricenoodle/utilities/space">Space</a>。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -295,15 +296,14 @@ export default class Card extends Component {
                   <div className="row">
                     <div className="col-12">
                       <div className={classnames(style['card-img-1'], 'card')}>
-                        <img className="card-img-top"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        <img className="card-img-top img-fluid"
+                             src={cardImg}
                              alt="card"/>
                         <div className="card-body">
-                          <h5 className="card-title">Card title</h5>
-                          <h6 className="card-subtitle text-muted">Card subtitle</h6>
-                          <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
-                          <a href="/" className="btn btn-primary">Go somewhere</a>
+                          <h5 className="card-title">满江红</h5>
+                          <h6 className="card-subtitle text-muted">岳飞</h6>
+                          <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                          <a href={ANCHOR} className="btn btn-secondary">了解更多</a>
                         </div>
                       </div>
                     </div>
@@ -323,8 +323,9 @@ export default class Card extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>图片</h3>
-        <p></p>
+        <h2>图片</h2>
+        <p><code>.card-img-top img-fluid</code> 将图像放在卡片的顶部。 使用 <code>.card-text</code> 可以将文本添加到卡中。
+          <code>.card-text</code> 中的文本也可以使用标准HTML标记进行样式设置。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -333,12 +334,11 @@ export default class Card extends Component {
                   <div className="row">
                     <div className="col-12">
                       <div className={classnames(style['card-img-1'], 'card')}>
-                        <img className="card-img-top"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        <img className="card-img-top img-fluid"
+                             src={cardImg}
                              alt="card"/>
                         <div className="card-body">
-                          <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
+                          <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
                         </div>
                       </div>
                     </div>
@@ -357,8 +357,8 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Link</h3>
-        <p></p>
+        <h2>锚点</h2>
+        <p>通过添加 <code>.card-link</code> 到 <code>&lt;a&gt;</code> 元素，添加链接并将它们彼此相邻放置。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -368,10 +368,9 @@ export default class Card extends Component {
                     <div className="col-12">
                       <div className={classnames(style['card-img-1'], 'card')}>
                         <div className="card-body">
-                          <h5 className="card-title">Card title</h5>
-                          <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
-                          <a href="/" className="card-link">Go somewhere</a>
+                          <h5 className="card-title">满江红</h5>
+                          <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                          <a href={ANCHOR} className="card-link">了解更多</a>
                         </div>
                       </div>
                     </div>
@@ -390,8 +389,8 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Header and Footer</h3>
-        <p></p>
+        <h2>头部和底部</h2>
+        <p>在卡中添加可选的页眉和页脚。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -401,16 +400,15 @@ export default class Card extends Component {
                     <div className="col-12">
                       <div className={classnames(style['card-img-1'], 'card')}>
                         <div className="card-header">
-                          Header
+                          诗词鉴赏
                         </div>
                         <div className="card-body">
-                          <h5 className="card-title">Card title</h5>
-                          <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
-                          <a href="/" className="btn btn-primary">Go somewhere</a>
+                          <h5 className="card-title">满江红</h5>
+                          <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                          <a href={ANCHOR} className="btn btn-secondary">了解更多</a>
                         </div>
                         <div className="card-footer text-muted">
-                          Footer
+                          《唐诗宋词》
                         </div>
                       </div>
                     </div>
@@ -429,8 +427,8 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Style</h3>
-        <p></p>
+        <h2>主题</h2>
+        <p>通过 <a href="/ricenoodle/utilities/background">Background</a>，<a href="/ricenoodle/utilities/text">Text</a>，<a href="/ricenoodle/utilities/border">Border</a>  等工具类的组合，形成主题。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -438,16 +436,15 @@ export default class Card extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     {
-                      CARD.situation.map((item, index) => {
+                      CARD.theme.map((item, index) => {
                         return <div className="col-lg-3 col-md-4 col-sm-2 col-1 mb-10" key={index}>
                           <div className={classnames(item.className)}>
                             <div className="card-header">
-                              Header
+                              诗词鉴赏
                             </div>
                             <div className="card-body">
-                              <h5 className="card-title">Card title</h5>
-                              <p className="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p>
+                              <h5 className="card-title">满江红</h5>
+                              <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
                             </div>
                           </div>
                         </div>;
@@ -458,7 +455,7 @@ export default class Card extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createSituationCode('situation')
+                      this.createSituationCode('theme')
                     }
                   </Highlight>
                 </div>
@@ -468,8 +465,70 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>等宽等高</h3>
-        <p></p>
+        <h2>卡片组</h2>
+        <p>使用卡片组将卡片呈现为具有相等宽度和高度列的单个附加元素。卡片组用的弹性布局，实现均匀的尺寸。</p>
+        <div className={classnames(style['util-card'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  <div className="row">
+                    <div className="col-lg-9 col-12">
+                      {
+                        CARD.group.map((item, index) => {
+                          return <div className={classnames(item.className)} key={index}>
+                            <div className="card">
+                              <img className="card-img-top img-fluid" src={cardImg} alt="Card cap"/>
+                              <div className="card-body">
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                              </div>
+                              <div className="card-footer">
+                                <small className="text-muted">岳飞</small>
+                              </div>
+                            </div>
+                            <div className="card">
+                              <img className="card-img-top img-fluid" src={cardImg} alt="Card cap"/>
+                              <div className="card-body">
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                              </div>
+                              <div className="card-footer">
+                                <small className="text-muted">岳飞</small>
+                              </div>
+                            </div>
+                            <div className="card">
+                              <img className="card-img-top img-fluid" src={cardImg} alt="Card cap"/>
+                              <div className="card-body">
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
+                              </div>
+                              <div className="card-footer">
+                                <small className="text-muted">岳飞</small>
+                              </div>
+                            </div>
+                          </div>
+                        })
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight>
+                    {
+                      this.createGroupCode()
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2>分开的卡片组</h2>
+        <p>显示一组相同宽度和高度的卡片，它们之间没有相互连接。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -481,51 +540,40 @@ export default class Card extends Component {
                         CARD.deck.map((item, index) => {
                           return <div className={classnames(item.className)} key={index}>
                             <div className="card">
-                              <img className="card-img-top"
-                                   src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                              <img className="card-img-top img-fluid"
+                                   src={cardImg}
                                    alt=""/>
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is a longer card with supporting text below as a natural
-                                  lead-in to additional content. This content is a little bit longer.
-                                  <br/>
-                                  <br/>
-                                  <br/>
-                                  <br/>
-                                  <br/>
-                                  <br/>
-                                  whatever how long.
-                                </p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
                                 <p className="card-text">
-                                  <small className="text-muted">Last updated 3 mins ago</small>
+                                  <small className="text-muted">岳飞</small>
                                 </p>
                               </div>
                             </div>
                             <div className="card">
-                              <img className="card-img-top"
-                                   src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                              <img className="card-img-top img-fluid"
+                                   src={cardImg}
 
                                    alt=""/>
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has supporting text below as a natural lead-in to
-                                  additional content.</p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
                                 <p className="card-text">
-                                  <small className="text-muted">Last updated 3 mins ago</small>
+                                  <small className="text-muted">岳飞</small>
                                 </p>
                               </div>
                             </div>
                             <div className="card">
-                              <img className="card-img-top"
-                                   src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                              <img className="card-img-top img-fluid"
+                                   src={cardImg}
                                    alt=""/>
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is a wider card with supporting text below as a natural
-                                  lead-in to additional content. This card has even longer content than the first to show
-                                  that equal height action.</p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
                                 <p className="card-text">
-                                  <small className="text-muted">Last updated 3 mins ago</small>
+                                  <small className="text-muted">岳飞</small>
                                 </p>
                               </div>
                             </div>
@@ -548,69 +596,9 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Card Group</h3>
-        <p></p>
-        <div className={classnames(style['util-card'])}>
-          <div className="row">
-            <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
-                  <div className="row">
-                    <div className="col-lg-9 col-12">
-                      {
-                        CARD.group.map((item, index) => {
-                          return <div className={classnames(item.className)} key={index}>
-                            <div className="card">
-                              <img className="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card cap"/>
-                              <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              </div>
-                              <div className="card-footer">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                              </div>
-                            </div>
-                            <div className="card">
-                              <img className="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card cap"/>
-                              <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                              </div>
-                              <div className="card-footer">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                              </div>
-                            </div>
-                            <div className="card">
-                              <img className="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_162fc2e17bc%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_162fc2e17bc%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.18333435058594%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card cap"/>
-                              <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                              </div>
-                              <div className="card-footer">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                              </div>
-                            </div>
-                          </div>
-                        })
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className={classnames(common['example-code'])}>
-                  <Highlight>
-                    {
-                      this.createGroupCode()
-                    }
-                  </Highlight>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="divider divider-lg"></div>
-        <h3>Card Columns</h3>
-        <p></p>
+        <h2>自动分列的卡片组</h2>
+        <p>通过将卡片包装在 <code>.card-columns</code> 中，可以将卡片组织成类似砖墙的列。卡片使用CSS列属性而不是弹性盒子，以便更容易对齐。 卡从上到下，从左到右排序。</p>
+        <p>重点！卡列的数目可能会有所不同。 为了防止卡片跨列，我们必须将它们设置为显示：<code>inline-block</code>。</p>
         <div className={classnames(style['util-card'])}>
           <div className="row">
             <div className="col-12">
@@ -623,61 +611,63 @@ export default class Card extends Component {
                           return <div className={classnames(item.className)} key={index}>
                             <div className="card">
                               <div className="card-body">
-                                <h5 className="card-title">Card title that wraps to a new line</h5>
-                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
                               </div>
                             </div>
                             <div className="card p-3">
                               <blockquote className="blockquote mb-0 card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
                                 <footer className="blockquote-footer">
                                   <small className="text-muted">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                    岳飞
                                   </small>
                                 </footer>
                               </blockquote>
                             </div>
                             <div className="card">
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text"><small className="text-muted">岳飞</small></p>
                               </div>
                             </div>
                             <div className="card bg-primary text-white text-center p-3">
                               <blockquote className="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                                <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
                                 <footer className="blockquote-footer">
                                   <small>
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                    岳飞
                                   </small>
                                 </footer>
                               </blockquote>
                             </div>
                             <div className="card text-center">
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text"><small className="text-muted">岳飞</small></p>
                               </div>
                             </div>
                             <div className="card">
                             </div>
                             <div className="card p-3 text-right">
                               <blockquote className="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <p>靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
                                 <footer className="blockquote-footer">
                                   <small className="text-muted">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                    岳飞
                                   </small>
                                 </footer>
                               </blockquote>
                             </div>
                             <div className="card">
                               <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                <h5 className="card-title">满江红</h5>
+                                <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
+                                <p className="card-text">靖康耻，犹未雪。臣子恨，何时灭！ 驾长车，踏破贺兰山缺。 壮志饥餐胡虏肉，笑谈渴饮匈奴血。 待从头，收拾旧山河，朝天阙。</p>
+                                <p className="card-text"><small className="text-muted">岳飞</small></p>
                               </div>
                             </div>
                           </div>
