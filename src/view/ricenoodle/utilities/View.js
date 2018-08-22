@@ -71,12 +71,12 @@ export default class View extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p><code>View</code> 类可以快速设置元素的 <code>display | visibility | opacity</code> 属性。</p>
+        <h1>视图 <code>View</code></h1>
+        <p className="font-2x font-1000"><code>View</code> 类可以快速设置元素的 <code>display | visibility | opacity</code> 等属性。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>显示类型</h3>
+        <h2>显示类型</h2>
         <p>通过设置 <code>display</code> 属性来控制显示的类型。</p>
         <div className={classnames(style['util-view'])}>
           <div className="row">
@@ -107,7 +107,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Hidden</h3>
+        <h2>Hidden</h2>
         <p>通过添加 <code>hidden</code> 属性或者 <code>.hidden</code> 类来控制隐藏元素，此时元素没有高度和宽度。</p>
         <div className={classnames(style['util-view'])}>
           <div className="row">
@@ -126,7 +126,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Visibility</h3>
+        <h2>Visibility</h2>
         <p>通过添加 <code>.visible | .invisible</code> 类来控制隐藏元素，此时元素有高度和宽度，效果和 <code>.opacity-10 | .opacity-0</code> 一样。</p>
         <div className={classnames(style['util-view'])}>
           <div className="row">
@@ -156,7 +156,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>不透明度</h3>
+        <h2>不透明度</h2>
         <p>通过添加 <code>.opacity-[x]</code> 类来控制元素的不透明度。</p>
         <div className={classnames(style['util-view'])}>
           <div className="row">
