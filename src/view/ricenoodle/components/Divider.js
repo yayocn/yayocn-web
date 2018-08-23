@@ -16,6 +16,19 @@ const DIVIDER = {
   weight: [
     { title: 'Divider', key: '', subTitle: '', className: 'divider divider-bold', },
   ],
+  theme: [
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-primary', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-secondary', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-success', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-info', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-warning', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-danger', },
+    { title: '', key: 'white', subTitle: '', className: 'divider divider-bold border-white bg-dark', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-light', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-muted', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-dark', },
+    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-black', },
+  ]
 };
 
 export default class Divider extends Component {
@@ -65,7 +78,7 @@ export default class Divider extends Component {
                       {
                         DIVIDER.default.map((item, index) => {
                           return (
-                            <div className="" key={index} >
+                            <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
                               <div className={classnames(item.className, style['divider-feature'])}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
@@ -101,7 +114,7 @@ export default class Divider extends Component {
                       {
                         DIVIDER.size.map((item, index) => {
                           return (
-                            <div className="" key={index} >
+                            <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
                               <div className={classnames(item.className, style['divider-feature'])}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
@@ -137,7 +150,7 @@ export default class Divider extends Component {
                       {
                         DIVIDER.weight.map((item, index) => {
                           return (
-                            <div className="" key={index} >
+                            <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
                               <div className={classnames(item.className, style['divider-feature'])}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
@@ -152,6 +165,42 @@ export default class Divider extends Component {
                   <Highlight>
                     {
                       this.createCode('weight')
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2>主题</h2>
+        <p>结合 <a href="/ricenoodle/utilities/border">Border theme</a> ，可以生成多重主题颜色。</p>
+        <div className={classnames(style['util-divider'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  <div className="row">
+                    <div className="col-12">
+                      {
+                        DIVIDER.theme.map((item, index) => {
+                          return (
+                            <div className={classnames("ph-20 border mb-10", {'text-white bg-dark': item.key === 'white'})} key={index} >
+                              <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
+                              <div className={classnames(item.className, style['divider-feature'])}></div>
+                              <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
+                            </div>
+                          );
+                        })
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight>
+                    {
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
