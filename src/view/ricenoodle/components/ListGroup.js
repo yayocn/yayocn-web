@@ -117,13 +117,13 @@ export default class ListGroup extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>最基本的列表组是一个无序列表，其中包含列表项和正确的类。 使用后面的选项或根据需要使用您自己的CSS构建它。</p>
+        <h1>列表组 <code>List group</code></h1>
+        <p className="font-2x font-100">列表组是用于显示一系列内容的灵活且功能强大的组件。 修改并扩展它们以支持其中的任何内容。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
-        <p>预设 <code>12</code> 种情景色。</p>
+        <h2>实例</h2>
+        <p>最基本的列表组是一个无序列表，其中包含列表项和正确的类。 使用后面的选项或根据需要使用您自己的CSS构建它。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -158,7 +158,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h4 className="mt-20">Active</h4>
+        <h3 className="mt-20">激活</h3>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -187,7 +187,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h4 className="mt-20">Disabled</h4>
+        <h3 className="mt-20">禁用</h3>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -216,8 +216,8 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Flush</h3>
-        <p>添加 <code>.list-group-flush</code> 以删除一些边框，以在父容器中边对边呈现列表组项。</p>
+        <h2>无外边框</h2>
+        <p>添加 <code>.list-group-flush</code> 以删除最外层边框，以在父容器中边对边呈现列表组项。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -252,7 +252,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>无边框</h3>
+        <h2>无边框</h2>
         <p>添加 <code>.list-group-noborder</code> 以删除所有边框。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
@@ -288,7 +288,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>链接</h3>
+        <h2>链接</h2>
         <p>在 <code>.list-group-item</code> 中使用 <code>&lt;a&gt;</code> 标签。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
@@ -318,7 +318,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>情景</h3>
+        <h2>情景</h2>
         <p>使用情景类为列表设置不同的主题。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">
@@ -352,7 +352,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>内容</h3>
+        <h2>内容</h2>
         <p>添加 <code>.list-group-item-heading .list-group-item-text</code> 等类为标题和主内容设置样式。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">

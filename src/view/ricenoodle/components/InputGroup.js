@@ -120,7 +120,7 @@ export default class InputGroup extends Component {
     return (
       <PageWrapper>
         <h1>输入框组 <code>Input group</code></h1>
-        <p>通过在文本输入，自定义选择和自定义文件输入的任一侧添加文本，按钮或按钮组，轻松扩展表单控件。</p>
+        <p className="font-2x font-100">通过在文本输入，自定义选择和自定义文件输入的任一侧添加文本，按钮或按钮组，轻松扩展表单控件。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 

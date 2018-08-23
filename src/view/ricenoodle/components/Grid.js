@@ -80,7 +80,7 @@ export default class Grid extends Component {
     return (
       <PageWrapper>
         <h1>栅格系统 <code>Grid</code></h1>
-        <p>栅格系统对于布局尤其是响应式来说至关重要，它随着屏幕或者窗口视口的大小自动调整。</p>
+        <p className="font-2x font-100">栅格系统对于布局尤其是响应式来说至关重要，它随着屏幕或者窗口视口的大小自动调整。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 

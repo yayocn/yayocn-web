@@ -69,7 +69,7 @@ export default class Jumbotron extends Component {
     return (
       <PageWrapper>
         <h1>大屏幕 <code>Jumbotron</code></h1>
-        <p>轻巧，灵活的大屏幕组件，用于展示醒目的内容。</p>
+        <p className="font-2x font-100">轻巧，灵活的大屏幕组件，用于展示醒目的内容。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
