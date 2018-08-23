@@ -9,7 +9,7 @@ const LOADER = {
   bar: [
     { title: 'Primary', key: '', subTitle: '', className: 'loader loader-win-bar', wrapClass: 'bg-dark'},
   ],
-  barSituation: [
+  barTheme: [
     { title: 'Primary', key: '', subTitle: '', className: 'loader loader-win-bar loader-primary', wrapClass: ''},
     { title: 'Secondary', key: '', subTitle: '', className: 'loader loader-win-bar loader-secondary', wrapClass: ''},
     { title: 'Success', key: '', subTitle: '', className: 'loader loader-win-bar loader-success', wrapClass: ''},
@@ -84,12 +84,12 @@ export default class Loader extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>用来显示加载状态，显示为 <code>windows10</code> 的 加载样式。</p>
+        <h1>加载 <code>Loader</code></h1>
+        <p className="font-2x font-100">用来显示加载状态，显示为 <code>windows10</code> 的加载样式。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>Bar</h3>
+        <h2>Bar</h2>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
@@ -127,7 +127,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">情景</h4>
+        <h3 className="mt-20">情景</h3>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
@@ -135,7 +135,7 @@ export default class Loader extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     {
-                      LOADER.barSituation.map((item, index) => {
+                      LOADER.barTheme.map((item, index) => {
                         return (
                           <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-3 col-md-6 col-12")} key={index}>
                             <div className={item.className}>
@@ -154,7 +154,7 @@ export default class Loader extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createCode('barSituation')
+                      this.createCode('barTheme')
                     }
                   </Highlight>
                 </div>
@@ -163,7 +163,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">尺寸</h4>
+        <h3 className="mt-20">尺寸</h3>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
@@ -201,7 +201,7 @@ export default class Loader extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>Roll</h3>
+        <h2>Roll</h2>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
@@ -239,7 +239,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">情景</h4>
+        <h3 className="mt-20">主题</h3>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
@@ -275,7 +275,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">尺寸</h4>
+        <h3 className="mt-20">尺寸</h3>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">
