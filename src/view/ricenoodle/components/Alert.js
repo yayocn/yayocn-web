@@ -262,7 +262,7 @@ export default class Alert extends Component {
                           <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
                               羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
-                              <button type="button" class="close" data-dismiss="alert">
+                              <button type="button" className="close" data-dismiss="alert">
                                 <span>&times;</span>
                               </button>
                             </div>
@@ -297,7 +297,7 @@ export default class Alert extends Component {
                           <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
                               羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
-                              <button type="button" class="close" data-dismiss="alert">
+                              <button type="button" className="close" data-dismiss="alert">
                                 <span className="mark-close"></span>
                               </button>
                             </div>
@@ -336,7 +336,7 @@ export default class Alert extends Component {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, style['alert-feature'])}>
-                              <h3 class="alert-heading">江城子 . 密州出猎</h3>
+                              <h3 className="alert-heading">江城子 . 密州出猎</h3>
                               <p>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。 为报倾城随太守，亲射虎，看孙郎。 酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？ 会挽雕弓如满月，西北望，射天狼。</p>
                               <hr/>
                               <p>《江城子·密州出猎》是宋代文学家苏轼于密州知州任上所作的一首词。此词表达了强国抗敌的政治主张，抒写了渴望报效朝廷的壮志豪情。</p>

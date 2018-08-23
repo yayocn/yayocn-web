@@ -12,7 +12,7 @@ const DROPDOWN = {
   default: [
     { title: 'Default', key: '', subTitle: '', className: 'btn', },
   ],
-  situation: [
+  theme: [
     { title: 'Default', key: '', subTitle: '', className: 'btn', },
     { title: 'Primary', key: 'primary', subTitle: '', className: 'btn btn-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'btn btn-secondary', },
@@ -20,7 +20,11 @@ const DROPDOWN = {
     { title: 'Info', key: '', subTitle: '', className: 'btn btn-info', },
     { title: 'Warning', key: '', subTitle: '', className: 'btn btn-warning', },
     { title: 'Danger', key: '', subTitle: '', className: 'btn btn-danger', },
+    { title: 'White', key: '', subTitle: '', className: 'btn btn-white', },
+    { title: 'Light', key: '', subTitle: '', className: 'btn btn-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'btn btn-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'btn btn-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'btn btn-black', },
   ],
   size: [
     { title: 'Small', key: 'primary', subTitle: '', className: 'btn btn-sm btn-secondary', },
@@ -172,7 +176,7 @@ export default class Dropdown extends Component {
 
   createHeaderCode = () => {
     let code = `<div class="dropdown-menu">
-  <h3 class="dropdown-header">Dropdown header</h3>
+  <h2 class="dropdown-header">Dropdown header</h2>
   <a class="dropdown-item" href="#">Action</a>
   <a class="dropdown-item" href="#">Another action</a>
   <a class="dropdown-item" href="#">Something else here</a>
@@ -203,26 +207,26 @@ export default class Dropdown extends Component {
 
   createFormCode = () => {
     let code = `<div class="dropdown-menu">
-  <form class="ph-20 pv-15">
+  <form className="ph-20 pv-15">
     <div class="form-group">
-      <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+      <label htmlFor="exampleDropdownFormEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com"/>
     </div>
     <div class="form-group">
-      <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      <label htmlFor="exampleDropdownFormPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password"/>
     </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-      <label class="form-check-label" for="dropdownCheck">
-        Remember me
-      </label>
+    <div class="checkbox checkbox-secondary">
+      <input type="checkbox"id="dropdownCheck" />
+        <label class="form-check-label" htmlFor="dropdownCheck">
+          Remember me
+        </label>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-secondary">Sign in</button>
   </form>
   <div class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">New around here? Sign up</a>
-  <a class="dropdown-item" href="#">Forgot password?</a>
+  <a class="dropdown-item" href=#"">Forgot password?</a>
 </div>`;
 
     return code;
@@ -246,13 +250,13 @@ export default class Dropdown extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用下拉插件切换上下文叠加以显示链接列表等。</p>
+        <h1>下拉菜单 <code>Dropdown</code></h1>
+        <p className="font-2x font-100">使用 Ricenoodle 下拉插件切换上下文叠加以显示链接列表等。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>依赖</h3>
-        <p>使用 <code>dropdown</code> 组件，你需要：</p>
+        <h2>准备工作</h2>
+        <p>使用下拉菜单组件，你需要：</p>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code>。</li>
           <li>引入 <code>popper.js</code>。</li>
@@ -262,7 +266,7 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <p>下拉菜单由控制按钮和菜单列表两部分组成。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
@@ -303,7 +307,7 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Button</h3>
+        <h2>主题</h2>
         <p>可以结合 <a href="/ricenoodle/button">Button</a> 对 toggle button 进行设置。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
@@ -313,7 +317,7 @@ export default class Dropdown extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        DROPDOWN.situation.map((item, index) => {
+                        DROPDOWN.theme.map((item, index) => {
                           return(
                             <div className="dropdown block-inline mr-5" key={index}>
                               <button className={classnames(item.className, 'dropdown-toggle')} type="button" data-toggle="dropdown">
@@ -344,8 +348,8 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Group</h3>
-        <p>可以通过 <code>.btn-group</code> 将 <code>button</code> 和 <code>dropdown</code> 组合使用。</p>
+        <h2>组合</h2>
+        <p>可以通过 <code>.btn-group</code> 将按钮和下拉菜单组合使用。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -381,8 +385,8 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>尺寸</h3>
-        <p>通过设置 <code>button</code> 的css类控制dropdown的尺寸。</p>
+        <h2>尺寸</h2>
+        <p>通过设置 <code>.dropdown-toggle</code> 来控制下拉菜单的尺寸。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -424,8 +428,8 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>位置</h3>
-        <p>通过添加 <code>.dropup .dropright .dropdown .dropleft</code> 类设置菜单的位置。</p>
+        <h2>位置</h2>
+        <p>通过添加 <code>.dropup | .dropright | .dropdown | .dropleft</code> 类设置菜单的位置。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -467,10 +471,9 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Menu</h3>
-        <p></p>
-
-        <h4 className="mt-20">Active</h4>
+        <h2>菜单</h2>
+        <h3 className="mt-20">激活状态</h3>
+        <p>在<code>.dropdown-item</code> 上添加 <code>.active</code> 激活该项。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -500,7 +503,8 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Disabled</h4>
+        <h3 className="mt-20">禁用状态</h3>
+        <p>在<code>.dropdown-item</code> 上添加 <code>.disabled</code> 激活该项。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -530,7 +534,8 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Alignment</h4>
+        <h3 className="mt-20">对齐</h3>
+        <p>下拉菜单默认是左对齐，添加 <code>.dropdown-menu-right</code> 设置为右对齐。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -563,7 +568,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Header</h4>
+        <h3 className="mt-20">子标题</h3>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -573,7 +578,7 @@ export default class Dropdown extends Component {
                     <div className="col-12">
                       <div className="pt-relative">
                         <div className="dropdown-menu block pt-relative">
-                          <h3 className="dropdown-header">Dropdown header</h3>
+                          <h2 className="dropdown-header">Dropdown header</h2>
                           <a className="dropdown-item" href={ANCHOR}>Action</a>
                           <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
                           <a className="dropdown-item" href={ANCHOR}>Something else here</a>
@@ -594,7 +599,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Divider</h4>
+        <h3 className="mt-20">分割线</h3>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -625,7 +630,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Text</h4>
+        <h3 className="mt-20">文本内容</h3>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -654,7 +659,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Form</h4>
+        <h3 className="mt-20">表单</h3>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -673,13 +678,13 @@ export default class Dropdown extends Component {
                               <label htmlFor="exampleDropdownFormPassword1">Password</label>
                               <input type="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password"/>
                             </div>
-                            <div className="checkbox checkbox-primary">
+                            <div className="checkbox checkbox-secondary">
                               <input type="checkbox"id="dropdownCheck" />
                                 <label className="form-check-label" htmlFor="dropdownCheck">
                                   Remember me
                                 </label>
                             </div>
-                            <button type="submit" className="btn btn-primary">Sign in</button>
+                            <button type="submit" className="btn btn-secondary">Sign in</button>
                           </form>
                           <div className="dropdown-divider"></div>
                           <a className="dropdown-item" href={ANCHOR}>New around here? Sign up</a>
@@ -701,7 +706,8 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Offset</h4>
+        <h3 className="mt-20">偏移</h3>
+        <p>通过设置 <code>.data-offset</code> 设置菜单相对于 <code>.dropdown-toggle</code> 的偏移位置。</p>
         <div className={classnames(style['util-dropdown'])}>
           <div className="row">
             <div className="col-12">
@@ -710,7 +716,7 @@ export default class Dropdown extends Component {
                   <div className="row">
                     <div className="col-12">
                       <div className="dropdown">
-                        <button type="button" className="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                        <button type="button" className="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" data-offset="10,20">
                           data-offset
                         </button>
                         <div className="dropdown-menu">
@@ -735,8 +741,8 @@ export default class Dropdown extends Component {
         </div>
         
         <div className="divider divider-lg"></div>
-        <h3>事件</h3>
-        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/dropdowns/#usage" target="_blank" rel="noopener noreferrer">Bootstrap dropdown</a></p>
+        <h2>事件</h2>
+        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/dropdowns/#usage" target="_blank" rel="noopener noreferrer">Bootstrap dropdown</a>。</p>
       </PageWrapper>
     );
   }

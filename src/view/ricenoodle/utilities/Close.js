@@ -57,7 +57,7 @@ export default class Close extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-12">
-                      <button type="button" class="close fl">
+                      <button type="button" className="close fl">
                         &times;
                       </button>
                     </div>
