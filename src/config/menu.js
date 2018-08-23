@@ -144,6 +144,11 @@ export const ricenoodle = [
         link: '/ricenoodle/components/carousel'
       },
       {
+        title: 'Collapse',
+        icon: '',
+        link: '/ricenoodle/components/collapse'
+      },
+      {
         title: 'Divider',
         icon: '',
         link: '/ricenoodle/components/divider'

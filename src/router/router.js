@@ -28,6 +28,7 @@ import {
   ButtonGroup,
   Card,
   Carousel,
+  Collapse,
   Divider,
   Dot,
   Dropdown,
@@ -196,6 +197,11 @@ const router = [
     path: '/ricenoodle/components/carousel',
     exact: true,
     component: Carousel,
+  },
+  {
+    path: '/ricenoodle/components/collapse',
+    exact: true,
+    component: Collapse,
   },
   {
     path: '/ricenoodle/components/divider',

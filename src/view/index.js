@@ -30,6 +30,7 @@ import Button from './ricenoodle/components/Button';
 import ButtonGroup from './ricenoodle/components/ButtonGroup';
 import Card from './ricenoodle/components/Card';
 import Carousel from './ricenoodle/components/Carousel';
+import Collapse from './ricenoodle/components/Collapse';
 import Divider from './ricenoodle/components/Divider';
 import Dot from './ricenoodle/components/Dot';
 import Dropdown from './ricenoodle/components/Dropdown';
@@ -59,6 +60,6 @@ export {
   Start,
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
-  Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Divider, Dot, Dropdown,
+  Components, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel, Collapse, Divider, Dot, Dropdown,
   Elf, Form, Grid, InputGroup, Jumbotron, ListGroup, Loader, Mark, Media, Modal, Nav, Navbar, Pagination, Popover, Progress, Scrollspy, Table, Tooltip,
 };
