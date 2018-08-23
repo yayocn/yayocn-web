@@ -20,14 +20,18 @@ const PANINATION = {
     { title: 'Default', key: '', subTitle: '', className: 'pagination pagination-border', },
     { title: 'Large', key: '', subTitle: '', className: 'pagination pagination-border pagination-lg', },
   ],
-  situation: [
+  theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'pagination pagination-border pagination-primary', },
     { title: 'Secondary', key: '', subTitle: '', className: 'pagination pagination-border pagination-secondary', },
     { title: 'Success', key: '', subTitle: '', className: 'pagination pagination-border pagination-success', },
     { title: 'Info', key: '', subTitle: '', className: 'pagination pagination-border pagination-info', },
     { title: 'Warning', key: '', subTitle: '', className: 'pagination pagination-border pagination-warning', },
     { title: 'Danger', key: '', subTitle: '', className: 'pagination pagination-border pagination-danger', },
+    { title: 'White', key: 'white', subTitle: '', className: 'pagination pagination-border pagination-white', },
+    { title: 'Light', key: '', subTitle: '', className: 'pagination pagination-border pagination-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'pagination pagination-border pagination-muted', },
     { title: 'Dark', key: '', subTitle: '', className: 'pagination pagination-border pagination-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'pagination pagination-border pagination-black', },
   ],
 };
 
@@ -71,12 +75,12 @@ export default class Pagination extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>在多个页面中存在用于显示分页。</p>
+        <h1>分页 <code>Pagination</code></h1>
+        <p className="font-2x font-100">对多条数据进行分页。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -111,7 +115,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>带边框的分页</h3>
+        <h2>带边框的分页</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -120,8 +124,8 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav>
-                        <ul class="pagination pagination-border">
-                          <li class="active"><a href={ANCHOR}>&laquo;</a></li>
+                        <ul className="pagination pagination-border">
+                          <li className="active"><a href={ANCHOR}>&laquo;</a></li>
                           <li><a href={ANCHOR}>1</a></li>
                           <li className="disabled"><a href={ANCHOR}>2</a></li>
                           <li><a href={ANCHOR}>3</a></li>
@@ -146,7 +150,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>尺寸</h3>
+        <h2>尺寸</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -157,7 +161,7 @@ export default class Pagination extends Component {
                       {
                         PANINATION.size.map((item, index) => {
                           return (
-                            <nav>
+                            <nav key={index}>
                               <ul className={classnames(item.className)} key={index}>
                                 <li className="active"><a href={ANCHOR}>&laquo;</a></li>
                                 <li><a href={ANCHOR}>1</a></li>
@@ -187,7 +191,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>主题</h3>
+        <h2>主题</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -196,18 +200,20 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       {
-                        PANINATION.situation.map((item, index) => {
+                        PANINATION.theme.map((item, index) => {
                           return (
-                            <nav>
-                              <ul className={classnames(item.className)} key={index}>
-                                <li className="active"><a href={ANCHOR}>&laquo;</a></li>
-                                <li><a href={ANCHOR}>1</a></li>
-                                <li className="disabled"><a href={ANCHOR}>2</a></li>
-                                <li><a href={ANCHOR}>3</a></li>
-                                <li><a href={ANCHOR}>4</a></li>
-                                <li><a href={ANCHOR}>&raquo;</a></li>
-                              </ul>
-                            </nav>
+                            <div key={index} className={classnames('ph-20', {'bg-dark': item.key === 'white'})}>
+                              <nav>
+                                <ul className={classnames(item.className)}>
+                                  <li className="active"><a href={ANCHOR}>&laquo;</a></li>
+                                  <li><a href={ANCHOR}>1</a></li>
+                                  <li className="disabled"><a href={ANCHOR}>2</a></li>
+                                  <li><a href={ANCHOR}>3</a></li>
+                                  <li><a href={ANCHOR}>4</a></li>
+                                  <li><a href={ANCHOR}>&raquo;</a></li>
+                                </ul>
+                              </nav>
+                            </div>
                           )
                         })
                       }
@@ -217,7 +223,7 @@ export default class Pagination extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
