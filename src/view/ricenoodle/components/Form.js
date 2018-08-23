@@ -12,7 +12,7 @@ const FORM = {
     { title: 'Large', key: '', subTitle: '', className: 'form-control form-control-lg', },
     { title: 'Huge', key: '', subTitle: '', className: 'form-control form-control-hg', },
   ],
-  formControlSituation: [
+  formControlTheme: [
     { title: 'Success', key: '', subTitle: '', className: 'form-control form-control-success', },
     { title: 'Warning', key: '', subTitle: '', className: 'form-control form-control-warning', },
     { title: 'Error', key: '', subTitle: '', className: 'form-control form-control-error', },
@@ -31,6 +31,10 @@ const FORM = {
     { title: 'Info', key: '', subTitle: '', className: 'checkbox checkbox-info', },
     { title: 'Warning', key: '', subTitle: '', className: 'checkbox checkbox-warning', },
     { title: 'Danger', key: '', subTitle: '', className: 'checkbox checkbox-danger', },
+    { title: 'Light', key: '', subTitle: '', className: 'checkbox checkbox-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'checkbox checkbox-muted', },
+    { title: 'Dark', key: '', subTitle: '', className: 'checkbox checkbox-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'checkbox checkbox-black', },
   ],
   checkboxInline: [
     { title: 'Default', key: '', subTitle: '', className: 'checkbox inline', },
@@ -40,6 +44,10 @@ const FORM = {
     { title: 'Info', key: '', subTitle: '', className: 'checkbox checkbox-info inline', },
     { title: 'Warning', key: '', subTitle: '', className: 'checkbox checkbox-warning inline', },
     { title: 'Danger', key: '', subTitle: '', className: 'checkbox checkbox-danger inline', },
+    { title: 'Light', key: '', subTitle: '', className: 'checkbox checkbox-light inline', },
+    { title: 'Muted', key: '', subTitle: '', className: 'checkbox checkbox-muted inline', },
+    { title: 'Dark', key: '', subTitle: '', className: 'checkbox checkbox-dark inline', },
+    { title: 'Black', key: '', subTitle: '', className: 'checkbox checkbox-black inline', },
   ],
   checkboxDisabled: [
     { title: 'Default', key: '', subTitle: '', className: 'checkbox disabled', },
@@ -51,6 +59,10 @@ const FORM = {
     { title: 'Info', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-info', },
     { title: 'Warning', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-warning', },
     { title: 'Danger', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-danger', },
+    { title: 'Light', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-muted', },
+    { title: 'Dark', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-dark', },
+    { title: 'black', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-black', },
   ],
   checkboxSwitchSize: [
     { title: 'Default', key: '', subTitle: '', className: 'checkbox-switch checkbox-switch-sm', },
@@ -68,6 +80,10 @@ const FORM = {
     { title: 'Info', key: '', subTitle: '', className: 'radio radio-info', },
     { title: 'Warning', key: '', subTitle: '', className: 'radio radio-warning', },
     { title: 'Danger', key: '', subTitle: '', className: 'radio radio-danger', },
+    { title: 'Light', key: '', subTitle: '', className: 'radio radio-light', },
+    { title: 'Muted', key: '', subTitle: '', className: 'radio radio-muted', },
+    { title: 'Dark', key: '', subTitle: '', className: 'radio radio-dark', },
+    { title: 'Black', key: '', subTitle: '', className: 'radio radio-black', },
   ],
   radioInline: [
     { title: 'Default', key: '', subTitle: '', className: 'radio inline', },
@@ -77,6 +93,10 @@ const FORM = {
     { title: 'Info', key: '', subTitle: '', className: 'radio radio-info inline', },
     { title: 'Warning', key: '', subTitle: '', className: 'radio radio-warning inline', },
     { title: 'Danger', key: '', subTitle: '', className: 'radio radio-danger inline', },
+    { title: 'Light', key: '', subTitle: '', className: 'radio radio-light inline', },
+    { title: 'Muted', key: '', subTitle: '', className: 'radio radio-muted inline', },
+    { title: 'Dark', key: '', subTitle: '', className: 'radio radio-dark inline', },
+    { title: 'Black', key: '', subTitle: '', className: 'radio radio-black inline', },
   ],
   radioDisabled: [
     { title: 'Default', key: '', subTitle: '', className: 'radio disabled', },
@@ -167,7 +187,7 @@ export default class Form extends Component {
     return code;
   }
 
-  createFormControlSituationCode = (target = 'formControlSituation') => {
+  createFormControlSituationCode = (target = 'formControlTheme') => {
     const data = FORM[target];
     let code = ``;
     const len = data.length;
@@ -191,15 +211,19 @@ export default class Form extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <label>${item.title}</label>
-  <input type="text" class="form-control" placeholder="${item.title}"/>
+  <label class="col-3 form-control-label">${item.title}</label>
+  <div class="col-9">
+    <input type="text" class="form-control" placeholder="${item.title}"/>
+  </div>
 </div>
       
 `;
       } else {
         code += `<div class="${item.className}">
-  <label>${item.title}</label>
-  <input type="text" class="form-control" placeholder="${item.title}"/>
+  <label class="col-3 form-control-label">${item.title}</label>
+  <div class="col-9">
+    <input type="text" class="form-control" placeholder="${item.title}"/>
+  </div>
 </div>`;
       }
     })
@@ -318,12 +342,12 @@ export default class Form extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>表单组件。</p>
+        <h1>表单 <code>Form</code></h1>
+        <p className="font-2x font-100">用于创建各种表单的表单控件样式。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -363,7 +387,10 @@ export default class Form extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>Form control</h3>
+        <h2>用户输入</h2>
+        <p>重置 <code>&lt;input&gt; &lt;select&gt; &lt;textarea&gt;</code> 等元素的样式。</p>
+
+        <h3><code>.form-control</code></h3>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -417,7 +444,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">尺寸</h4>
+        <h3 className="mt-20">尺寸</h3>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -447,7 +474,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">情景</h4>
+        <h3 className="mt-20">输入状态</h3>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -456,7 +483,7 @@ export default class Form extends Component {
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
-                        FORM.formControlSituation.map((item, index) => {
+                        FORM.formControlTheme.map((item, index) => {
                           return (
                             <input type="text" className={classnames(item.className, 'mb-10')} placeholder={item.title} key={index}/>
                           );
@@ -477,7 +504,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">禁用</h4>
+        <h3 className="mt-20">禁用</h3>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -500,7 +527,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Form group</h3>
+        <h2>表单组</h2>
         <p>使用 <code>.form-group-*</code> 时, 会对子节点中的 <code>.form-control</code> 进行预设。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -535,8 +562,8 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Checkbox</h3>
-        <p><code>.checkbox</code> 对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
+        <h2>复选框</h2>
+        <p>复选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -569,7 +596,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Inline checkbox</h4>
+        <h3 className="mt-20">行内复选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -603,8 +630,8 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Checkbox disabled</h4>
-        <p></p>
+        <h3 className="mt-20">禁用状态</h3>
+        <p>额外添加 <code>.disabled</code> 类。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -637,8 +664,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Checkbox switch</h4>
-        <p>开关。</p>
+        <h3 className="mt-20">开关</h3>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -671,7 +697,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Checkbox switch size</h4>
+        <h3 className="mt-20">尺寸</h3>
         <p>开关尺寸。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -707,8 +733,8 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Checkbox switch disbaled</h4>
-        <p>禁用开关。</p>
+        <h3 className="mt-20">开关禁用</h3>
+        <p>额外添加 <code>.disabled</code> 类。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -744,8 +770,8 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Radio</h3>
-        <p><code>.radio</code> 对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
+        <h2>单选框</h2>
+        <p>单选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -778,7 +804,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Inline radio</h4>
+        <h3 className="mt-20">行内单选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -812,8 +838,8 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">Radio disabled</h4>
-        <p></p>
+        <h3 className="mt-20">单选框禁用</h3>
+        <p>添加 <code>.disabled</code> 类。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -847,8 +873,8 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Form file</h3>
-        <p><code>.checkbox</code> 对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
+        <h2>文件上传</h2>
+        <p>文件上传对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
             <div className="col-12">
@@ -860,8 +886,8 @@ export default class Form extends Component {
                         FORM.file.map((item, index) => {
                           return (
                             <div className={classnames(item.className)} key={index}>
-                              <input type="file" class="form-control" name="upload"/>
-                              <label class="file-surface">点击上传</label>
+                              <input type="file" className="form-control" name="upload"/>
+                              <label className="file-surface">点击上传</label>
                             </div>
                           );
                         })
@@ -882,7 +908,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>水平表单</h3>
+        <h2>水平表单</h2>
         <p>结合 <code>.form-hz</code> 和 <code>.form-group</code> 使用，创建水平排列的表单。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -928,7 +954,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>行表单</h3>
+        <h2>行表单</h2>
         <p>使用<code>.form-inline</code>，创建行表单。</p>
         <div className={classnames(style['util-form'])}>
           <div className="row">
@@ -941,16 +967,16 @@ export default class Form extends Component {
                         FORM.inline.map((item, index) => {
                           return (
                             <form className={classnames(item.className)} key={index}>
-                              <div class="form-group">
+                              <div className="form-group">
                                 <label className="form-control-label mr-5">User Name</label>
-                                <input type="text" class="form-control" placeholder="user name"/>
+                                <input type="text" className="form-control" placeholder="user name"/>
                               </div>
 
-                              <div class="form-group">
+                              <div className="form-group">
                                 <label className="form-control-label mr-5">Password</label>
-                                <input type="password" class="form-control" placeholder="password"/>
+                                <input type="password" className="form-control" placeholder="password"/>
                               </div>
-                              <button class="btn btn-default" type="button">submit</button>
+                              <button className="btn btn-default" type="button">submit</button>
                             </form>
                           );
                         })
