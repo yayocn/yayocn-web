@@ -79,12 +79,12 @@ export default class Grid extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
+        <h1>栅格系统 <code>Grid</code></h1>
         <p>栅格系统对于布局尤其是响应式来说至关重要，它随着屏幕或者窗口视口的大小自动调整。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>简介</h3>
+        <h2>简介</h2>
         <p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。 下面就介绍一下 YY UI 栅格系统的工作原理：</p>
         <ol className="mh-15 ph-20">
           <li>“行（row）”必须包含在 <code>.container</code>（固定宽度）或 <code>.container-full</code>（100%
@@ -102,7 +102,7 @@ export default class Grid extends Component {
         </ol>
 
         <div className="divider divider-lg"></div>
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-grid'])}>
           <div className="row">
             <div className="col-12">
@@ -133,7 +133,7 @@ export default class Grid extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>参数</h3>
+        <h2>参数</h2>
         <div className={classnames(style['util-grid'])}>
           <div className="row">
             <div className="col-12">
@@ -182,19 +182,19 @@ export default class Grid extends Component {
                 </tr>
                 <tr>
                   <th className="text-nowrap" scope="row">列数</th>
-                  <td colspan="5">12</td>
+                  <td colSpan="5">12</td>
                 </tr>
                 <tr>
                   <th className="text-nowrap" scope="row">间隙宽度</th>
-                  <td colspan="5">30px (每列15p)</td>
+                  <td colSpan="5">30px (每列15p)</td>
                 </tr>
                 <tr>
                   <th className="text-nowrap" scope="row">可嵌套</th>
-                  <td colspan="5">是</td>
+                  <td colSpan="5">是</td>
                 </tr>
                 <tr>
                   <th className="text-nowrap" scope="row">可排序</th>
-                  <td colspan="5">是</td>
+                  <td colSpan="5">是</td>
                 </tr>
                 </tbody>
               </table>
@@ -203,7 +203,7 @@ export default class Grid extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>Flex</h3>
+        <h2>弹性布局</h2>
         <p><code>Grid</code> 是用的 <code>flex</code> 进行布局，因此，很多 <a href="/ricenoodle/utilities/flex">Flex</a> 的类都可以配合使用。</p>
 
         <h4 className="mt-20">居中</h4>
@@ -235,8 +235,8 @@ export default class Grid extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>无缝</h3>
-        <p>每一列的左右都有 <code>15px</code> 的间隔，使用 <code>.no-gutters</code> 可以去掉这些间隔。</p>
+        <h2>删除列内边距</h2>
+        <p>每一列的左右都有 <code>15px</code> 的间隔，在 <code>.row</code> 上添加 <code>.no-gutters</code> 可以去掉这些间隔。</p>
 
         <div className={classnames(style['util-grid'])}>
           <div className="row">
@@ -267,7 +267,7 @@ export default class Grid extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>排序</h3>
+        <h2>排序</h2>
         <p>使用 <code>.order-</code> 类来控制内容的可视顺序。 这些类是响应式的，因此您可以通过断点设置顺序（例如，。order-1.order-md-2）。 包括在所有五个网格层中支持1到12。</p>
 
         <div className={classnames(style['util-grid'])}>
@@ -308,7 +308,7 @@ export default class Grid extends Component {
         <p>此外，提供了 <code>.order-first .order-last</code>。</p>
 
         <div className="divider divider-lg"></div>
-        <h3>偏移量</h3>
+        <h2>偏移量</h2>
         <p>您可以通过两种方式偏移网格列：响应式 <code>.offset-</code> 网格类或者 <a href="/ricenoodle/utilities/space">Space</a>。 网格类的大小可以匹配列，而边距对于偏移宽度可变的快速布局更有用。</p>
         <p>使用 <code>.offset-md-*</code> 类向右移动列。 这些类将列的左边距增加 <code>*</code> 列。 例如，<code>.offset-md-4</code> 在四列上移动 <code>.col-md-4</code>。</p>
 
