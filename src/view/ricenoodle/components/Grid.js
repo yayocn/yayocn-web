@@ -206,7 +206,7 @@ export default class Grid extends Component {
         <h2>弹性布局</h2>
         <p><code>Grid</code> 是用的 <code>flex</code> 进行布局，因此，很多 <a href="/ricenoodle/utilities/flex">Flex</a> 的类都可以配合使用。</p>
 
-        <h4 className="mt-20">居中</h4>
+        <h3 className="mt-20">居中</h3>
         <div className={classnames(style['util-grid'])}>
           <div className="row">
             <div className="col-12">

@@ -12,14 +12,18 @@ const INPUTGROUP = {
   default: [
     { title: 'Default', key: 'default', subTitle: '', className: 'input-group', btnClass: 'btn btn-default', },
   ],
-  situation: [
+  theme: [
     { title: 'Primary', key: 'primary', subTitle: '', className: 'input-group input-group-primary', btnClass: 'btn btn-primary', },
     { title: 'Secondary', key: 'secondary', subTitle: '', className: 'input-group input-group-secondary', btnClass: 'btn btn-secondary', },
     { title: 'Success', key: 'success', subTitle: '', className: 'input-group input-group-success', btnClass: 'btn btn-success', },
     { title: 'Info', key: 'info', subTitle: '', className: 'input-group input-group-info', btnClass: 'btn btn-info', },
     { title: 'Warning', key: 'warning', subTitle: '', className: 'input-group input-group-warning', btnClass: 'btn btn-warning', },
     { title: 'Danger', key: 'danger', subTitle: '', className: 'input-group input-group-danger', btnClass: 'btn btn-danger', },
+    { title: 'White', key: 'white', subTitle: '', className: 'input-group input-group-white', btnClass: 'btn btn-white', },
+    { title: 'Light', key: 'light', subTitle: '', className: 'input-group input-group-light', btnClass: 'btn btn-light', },
+    { title: 'Muted', key: 'muted', subTitle: '', className: 'input-group input-group-muted', btnClass: 'btn btn-muted', },
     { title: 'Dark', key: 'dark', subTitle: '', className: 'input-group input-group-dark', btnClass: 'btn btn-dark', },
+    { title: 'Black', key: 'black', subTitle: '', className: 'input-group input-group-black', btnClass: 'btn btn-black', },
   ],
   size: [
     { title: 'Small', key: '', subTitle: '', className: 'input-group input-group-sm', btnClass: 'btn btn-default', },
@@ -115,12 +119,13 @@ export default class InputGroup extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
+        <h1>输入框组 <code>Input group</code></h1>
         <p>通过在文本输入，自定义选择和自定义文件输入的任一侧添加文本，按钮或按钮组，轻松扩展表单控件。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
+        <p>在输入框的两侧放置一个附加组件或按钮。 请记住将 <code>&lt;label&gt;</code> 元素放在输入框组之外。</p>
         <div className={classnames(style['util-inputgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -157,7 +162,8 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>情境</h3>
+        <h2>主题</h2>
+        <p>Ricenoodle 提供了 <code>11</code> 种主题颜色。</p>
         <div className={classnames(style['util-inputgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -166,13 +172,15 @@ export default class InputGroup extends Component {
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       {
-                        INPUTGROUP.situation.map((item, index) => {
+                        INPUTGROUP.theme.map((item, index) => {
                           return (
-                            <div className={classnames(item.className, 'mb-20')} key={index}>
-                              <span className="input-group-addon">$</span>
-                              <input type="text" className="form-control"/>
-                              <div className="input-group-btn">
-                                <button type="button" className={item.btnClass}>confirm</button>
+                            <div className={classnames('p-10', {'bg-dark': item.key ==='white'})} key={index}>
+                              <div className={classnames(item.className)}>
+                                <span className="input-group-addon">$</span>
+                                <input type="text" className="form-control"/>
+                                <div className="input-group-btn">
+                                  <button type="button" className={item.btnClass}>confirm</button>
+                                </div>
                               </div>
                             </div>
                           );
@@ -184,7 +192,7 @@ export default class InputGroup extends Component {
                 <div className={classnames(common['example-code'])}>
                   <Highlight>
                     {
-                      this.createCode('situation')
+                      this.createCode('theme')
                     }
                   </Highlight>
                 </div>
@@ -194,7 +202,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>尺寸</h3>
+        <h2>尺寸</h2>
         <div className={classnames(style['util-inputgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -231,7 +239,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>边框</h3>
+        <h2>边框</h2>
         <div className={classnames(style['util-inputgroup'])}>
           <div className="row">
             <div className="col-12">
@@ -267,7 +275,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>下拉框</h3>
+        <h2>下拉框</h2>
         <div className={classnames(style['util-inputgroup'])}>
           <div className="row">
             <div className="col-12">
