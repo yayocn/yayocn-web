@@ -23,27 +23,25 @@ export default class Jumbotron extends Component {
     data.forEach((item, index) => {
       if (index !== len - 1) {
         code += `<div class="${item.className}">
-  <h1>Hello World!</h1>
+  <h1>永遇乐·京口北固亭怀古</h1>
   <p>
-    周五晚上，为了显示出自己有别于2008年北京奥运会盛大开幕式的独具一格的一面，2012年伦敦奥运会开幕式罕见地将现场观众和现代科技融为一体，由真人元素构成了一面超大屏幕。
+    千古江山，英雄无觅，孙仲谋处。 舞榭歌台，风流总被，雨打风吹去。 斜阳草树，寻常巷陌，人道寄奴曾住。 想当年，金戈铁马，气吞万里如虎。 <br>
+    元嘉草草，封狼居胥，赢得仓皇北顾。 四十三年，望中犹记，烽火扬州路。 可堪回首，佛狸祠下，一片神鸦社鼓。 凭谁问，廉颇老矣，尚能饭否？
   </p>
   <hr/>
-
-  <p>2012，伦敦见！</p>
-  <button type="button" class="btn btn-primary btn-hg">了解更多</button>
+  <button type="button" class="btn btn-secondary btn-hg">了解更多</button>
 </div>
       
 `;
       } else {
         code += `<div class="${item.className}">
-  <h1>Hello World!</h1>
+  <h1>永遇乐·京口北固亭怀古</h1>
   <p>
-    周五晚上，为了显示出自己有别于2008年北京奥运会盛大开幕式的独具一格的一面，2012年伦敦奥运会开幕式罕见地将现场观众和现代科技融为一体，由真人元素构成了一面超大屏幕。
+    千古江山，英雄无觅，孙仲谋处。 舞榭歌台，风流总被，雨打风吹去。 斜阳草树，寻常巷陌，人道寄奴曾住。 想当年，金戈铁马，气吞万里如虎。 <br>
+    元嘉草草，封狼居胥，赢得仓皇北顾。 四十三年，望中犹记，烽火扬州路。 可堪回首，佛狸祠下，一片神鸦社鼓。 凭谁问，廉颇老矣，尚能饭否？
   </p>
   <hr/>
-
-  <p>2012，伦敦见！</p>
-  <button type="button" class="btn btn-primary btn-hg">了解更多</button>
+  <button type="button" class="btn btn-secondary btn-hg">了解更多</button>
 </div>`;
       }
     })
@@ -54,14 +52,13 @@ export default class Jumbotron extends Component {
   createResponsiveCode = (target) => {
     let code = `<div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1>Hello World!</h1>
+    <h1>永遇乐·京口北固亭怀古</h1>
     <p>
-      周五晚上，为了显示出自己有别于2008年北京奥运会盛大开幕式的独具一格的一面，2012年伦敦奥运会开幕式罕见地将现场观众和现代科技融为一体，由真人元素构成了一面超大屏幕。
+      千古江山，英雄无觅，孙仲谋处。 舞榭歌台，风流总被，雨打风吹去。 斜阳草树，寻常巷陌，人道寄奴曾住。 想当年，金戈铁马，气吞万里如虎。 <br> 
+      元嘉草草，封狼居胥，赢得仓皇北顾。 四十三年，望中犹记，烽火扬州路。 可堪回首，佛狸祠下，一片神鸦社鼓。 凭谁问，廉颇老矣，尚能饭否？
     </p>
     <hr/>
-
-    <p>2012，伦敦见！</p>
-    <button type="button" class="btn btn-primary btn-hg">了解更多</button>
+    <button type="button" class="btn btn-secondary btn-hg">了解更多</button>
   </div>
 </div>`;
 
@@ -71,13 +68,13 @@ export default class Jumbotron extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>轻巧，灵活的组件，用于展示醒目的内容。</p>
+        <h1>大屏幕 <code>Jumbotron</code></h1>
+        <p>轻巧，灵活的大屏幕组件，用于展示醒目的内容。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
-        <div className={classnames(style['util-badge'])}>
+        <h2>实例</h2>
+        <div className={classnames(style['util-jumbotron'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -88,14 +85,13 @@ export default class Jumbotron extends Component {
                         JUMBOTRON.default.map((item, index) => {
                           return (
                             <div className={item.className} key={index}>
-                              <h1>Hello World!</h1>
+                              <h1>永遇乐·京口北固亭怀古</h1>
                               <p>
-                                周五晚上，为了显示出自己有别于2008年北京奥运会盛大开幕式的独具一格的一面，2012年伦敦奥运会开幕式罕见地将现场观众和现代科技融为一体，由真人元素构成了一面超大屏幕。
+                                千古江山，英雄无觅，孙仲谋处。 舞榭歌台，风流总被，雨打风吹去。 斜阳草树，寻常巷陌，人道寄奴曾住。 想当年，金戈铁马，气吞万里如虎。 <br/>
+                                元嘉草草，封狼居胥，赢得仓皇北顾。 四十三年，望中犹记，烽火扬州路。 可堪回首，佛狸祠下，一片神鸦社鼓。 凭谁问，廉颇老矣，尚能饭否？
                               </p>
                               <hr/>
-
-                              <p>2012，伦敦见！</p>
-                              <button type="button" className="btn btn-primary btn-hg">了解更多</button>
+                              <button type="button" className="btn btn-secondary btn-hg">了解更多</button>
                             </div>
                           );
                         })
@@ -117,9 +113,9 @@ export default class Jumbotron extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>响应式</h3>
+        <h2>响应式</h2>
         <p>添加了 <code>.jumbotron-fluid</code> 后，就可以在组件内部使用栅格系统了。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames(style['util-jumbotron'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
@@ -131,14 +127,13 @@ export default class Jumbotron extends Component {
                           return (
                             <div className={item.className} key={index}>
                               <div className="container">
-                                <h1>Hello World!</h1>
+                                <h1>永遇乐·京口北固亭怀古</h1>
                                 <p>
-                                  周五晚上，为了显示出自己有别于2008年北京奥运会盛大开幕式的独具一格的一面，2012年伦敦奥运会开幕式罕见地将现场观众和现代科技融为一体，由真人元素构成了一面超大屏幕。
+                                  千古江山，英雄无觅，孙仲谋处。 舞榭歌台，风流总被，雨打风吹去。 斜阳草树，寻常巷陌，人道寄奴曾住。 想当年，金戈铁马，气吞万里如虎。<br/>
+                                  元嘉草草，封狼居胥，赢得仓皇北顾。 四十三年，望中犹记，烽火扬州路。 可堪回首，佛狸祠下，一片神鸦社鼓。 凭谁问，廉颇老矣，尚能饭否？
                                 </p>
                                 <hr/>
-
-                                <p>2012，伦敦见！</p>
-                                <button type="button" className="btn btn-primary btn-hg">了解更多</button>
+                                <button type="button" className="btn btn-secondary btn-hg">了解更多</button>
                               </div>
                             </div>
                           );
