@@ -181,7 +181,7 @@ export default class Progress extends Component {
                         PROGRESS.striped.map((item, index) => {
                           return (
                             <div className={classnames(item.className, 'mb-10')} key={index} >
-                              <div class="progress-value" style={{ width: item.width }}>{item.width}</div>
+                              <div className="progress-value" style={{ width: item.width }}>{item.width}</div>
                             </div>
                           );
                         })
@@ -215,7 +215,7 @@ export default class Progress extends Component {
                         PROGRESS.animated.map((item, index) => {
                           return (
                             <div className={classnames(item.className, 'mb-10')} key={index} >
-                              <div class="progress-value" style={{ width: item.width }}>{item.width}</div>
+                              <div className="progress-value" style={{ width: item.width }}>{item.width}</div>
                             </div>
                           );
                         })
