@@ -30,8 +30,8 @@ export default class Pagination extends Component {
         data-container="body" 
         data-placement="${item.placement}" 
         data-toggle="popover" 
-        title="Popover title" 
-        data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        title="浪淘沙令·伊吕两衰翁" 
+        data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。">点击弹出/隐藏弹出框</button>
       
 `;
       } else {
@@ -40,8 +40,8 @@ export default class Pagination extends Component {
         data-container="body" 
         data-placement="${item.placement}" 
         data-toggle="popover" 
-        title="Popover title" 
-        data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>`;
+        title="浪淘沙令·伊吕两衰翁" 
+        data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。">点击弹出/隐藏弹出框</button>`;
       }
     })
 
@@ -53,8 +53,8 @@ export default class Pagination extends Component {
         class="btn btn-secondary"
         data-trigger="focus"
         data-toggle="popover"
-        title="Dismissible popover"
-        data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>`;
+        title="失去焦点消失"
+        data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。">失去焦点消失</button>`;
 
     return code;
   }
@@ -62,19 +62,18 @@ export default class Pagination extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>当你点击一个元素时，显示一个提示框。</p>
+        <h1>弹出框 <code>Popover</code></h1>
+        <p className="font-2x font-100">为任意元素添加一小块浮层。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>准备工作</h3>
-        <ul className="p-30">
+        <h2>准备工作</h2>
+        <ul className="ph-30">
           <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a> 进行定位。
             你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferrer">popper.min.js</a>，以便弹出窗口工作！</li>
-          <li>Popover 需要依赖 <a href="/ricenoodle/components/tooltip">tooltip</a> 组件。</li>
         </ul>
 
-        <h4 className="mt-20">全局设置</h4>
+        <h3 className="mt-20">全局设置</h3>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -97,7 +96,7 @@ export default class Pagination extends Component {
           </div>
         </div>
 
-        <h4 className="mt-20">使用 <code>container</code> 参数</h4>
+        <h3 className="mt-20">使用 <code>container</code> 参数</h3>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -124,7 +123,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -140,8 +139,8 @@ export default class Pagination extends Component {
                                     data-container="body"
                                     data-placement={item.placement}
                                     data-toggle="popover"
-                                    title="Popover title"
-                                    data-content="And here's some amazing content. It's very engaging. Right?" key={index}>Click to toggle popover</button>
+                                    title="浪淘沙令·伊吕两衰翁"
+                                    data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。" key={index}>点击弹出/隐藏弹出框</button>
                           )
                         })
                       }
@@ -162,14 +161,14 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>方向</h3>
+        <h2>方向</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-12 pt-relative" style={{ height: '200px'}}>
+                    <div className="col-12 pt-relative" style={{ height: '300px'}}>
                       <div className="pt-absolute pt-center text-center">
                         {
                           POPOVER.direction.map((item, index) => {
@@ -179,8 +178,8 @@ export default class Pagination extends Component {
                                       data-container="body"
                                       data-placement={item.placement}
                                       data-toggle="popover"
-                                      title="Popover title"
-                                      data-content="And here's some amazing content. It's very engaging. Right?" key={index}>{item.title}</button>
+                                      title="浪淘沙令·伊吕两衰翁"
+                                      data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。" key={index}>{item.title}</button>
                             )
                           })
                         }
@@ -202,7 +201,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>失去焦点消失</h3>
+        <h2>失去焦点消失</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -214,8 +213,8 @@ export default class Pagination extends Component {
                               className="btn btn-secondary"
                               data-trigger="focus"
                               data-toggle="popover"
-                              title="Dismissible popover"
-                              data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>
+                              title="失去焦点消失"
+                              data-content="伊吕两衰翁，历遍穷通。一为钓叟一耕佣。 若使当时身不遇，老了英雄。 汤武偶相逢，风虎云龙。兴王只在笑谈中。 直至如今千载后，谁与争功。">失去焦点消失</button>
                     </div>
                   </div>
                 </div>
@@ -232,8 +231,8 @@ export default class Pagination extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>事件</h3>
-        <p>参考<a className="btn btn-link" href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a> 。</p>
+        <h2>事件</h2>
+        <p>参考<a className="btn btn-link" href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a>。</p>
       </PageWrapper>
     );
   }
