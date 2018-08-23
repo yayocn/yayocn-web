@@ -42,12 +42,12 @@ export default class Mark extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>使用的是 <code>html</code> 的转义字符。</p>
+        <h1>标记 <code>Mark</code></h1>
+        <p className="font-2x font-100">常用的 <code>html</code> 的转义字符。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>Close</h3>
+        <h2><code>mark-close</code></h2>
         <div className={classnames(style['util-mark'])}>
           <div className="row">
             <div className="col-12">
@@ -79,7 +79,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>OK</h3>
+        <h2><code>mark-ok</code></h2>
         <div className={classnames(style['util-mark'])}>
           <div className="row">
             <div className="col-12">
@@ -111,7 +111,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>Arrow Left 2</h3>
+        <h2><code>mark-arrow-left2</code></h2>
         <div className={classnames(style['util-mark'])}>
           <div className="row">
             <div className="col-12">
@@ -143,7 +143,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>Arrow Right 2</h3>
+        <h2><code>mark-arrow-right2</code></h2>
         <div className={classnames(style['util-mark'])}>
           <div className="row">
             <div className="col-12">
