@@ -11,42 +11,42 @@ import imgSlide3 from '../../../../public/image/slide3.jpg';
 
 export default class Carousel extends Component {
 
-  createCode = () => {
+  createCode = (className = '') => {
     let code = ``;
-    code = `<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    code = `<div id="carouselExample" className="carousel slide ${className}" data-ride="carousel">
+  <ol className="carousel-indicators">
+    <li data-target="#carouselExample" data-slide-to="0" className="active"></li>
+    <li data-target="#carouselExample" data-slide-to="1"></li>
+    <li data-target="#carouselExample" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="/" alt="First slide"/>
-      <div class="carousel-caption d-none d-md-block">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="img-fluid" src="" alt="First slide"/>
+      <div className="carousel-caption">
         <h5>First slide label</h5>
         <p>First slide label</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/" alt="Second slide"/>
-      <div class="carousel-caption d-none d-md-block">
+    <div className="carousel-item">
+      <img className="img-fluid" src="" alt="Second slide"/>
+      <div className="carousel-caption">
         <h5>Second slide label</h5>
         <p>Second slide label</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/" alt="Third slide"/>
-      <div class="carousel-caption d-none d-md-block">
+    <div className="carousel-item">
+      <img className="img-fluid" src="" alt="Third slide"/>
+      <div className="carousel-caption">
         <h5>Third slide label</h5>
         <p>Third slide label</p>
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <a className="carousel-control-prev" href="#carouselExample" data-slide="prev">
+    <span className="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <a className="carousel-control-next" href="#carouselExample" data-slide="next">
+    <span className="carousel-control-next-icon"></span>
   </a>
 </div>`;
 
@@ -56,13 +56,19 @@ export default class Carousel extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>轮播组件。</p>
+        <h1>轮播图 <code>Carousel</code></h1>
+        <p className="font-2x font-100">幻灯片组件，用于循环播放元素图像或文本幻灯片。</p>
 
         <div className="divider divider-bold divider-lg"></div>
+        <h2>准备工作</h2>
+        <ul className="ph-30">
+          <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
+        </ul>
 
-        <h3>实例</h3>
-        <p></p>
+        <div className="divider divider-lg"></div>
+        <h2>实例</h2>
+        <p>轮播图不会自动标准化幻灯片尺寸。 因此，可能需要使用其他类或自定义样式来适当调整内容大小。</p>
+        <p>轮播图中除了主体 <code>.carousel-inner</code> 外，其他部分都可以自定义。虽然轮播支持 <code>prev | next </code> 控件和指示器，但它们并未明确要求。 根据需要添加和自定义。</p>
         <div className={classnames(style['util-badge'])}>
           <div className="row">
             <div className="col-12">
@@ -70,42 +76,42 @@ export default class Carousel extends Component {
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
                     <div className="col-lg-8 col-12">
-                      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                      <div id="carouselExample1" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          <li data-target="#carouselExample1" data-slide-to="0" className="active"></li>
+                          <li data-target="#carouselExample1" data-slide-to="1"></li>
+                          <li data-target="#carouselExample1" data-slide-to="2"></li>
                         </ol>
                         <div className="carousel-inner">
                           <div className="carousel-item active">
-                            <img className="d-block w-100" src={imgSlide1} alt="First slide"/>
-                            <div className="carousel-caption d-none d-md-block">
+                            <img className="img-fluid" src={imgSlide1} alt="First slide"/>
+                            <div className="carousel-caption">
                               <h5>First slide label</h5>
                               <p>First slide label</p>
                             </div>
                           </div>
                           <div className="carousel-item">
-                            <img className="d-block w-100" src={imgSlide2} alt="Second slide"/>
-                            <div className="carousel-caption d-none d-md-block">
+                            <img className="img-fluid" src={imgSlide2} alt="Second slide"/>
+                            <div className="carousel-caption">
                               <h5>Second slide label</h5>
                               <p>Second slide label</p>
                             </div>
                           </div>
                           <div className="carousel-item">
-                            <img className="d-block w-100" src={imgSlide3} alt="Third slide"/>
-                            <div className="carousel-caption d-none d-md-block">
+                            <img className="img-fluid" src={imgSlide3} alt="Third slide"/>
+                            <div className="carousel-caption">
                               <h5>Third slide label</h5>
                               <p>Third slide label</p>
                             </div>
                           </div>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                        <a className="carousel-control-prev" href="#carouselExample1"
                            data-slide="prev">
-                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="carousel-control-prev-icon"></span>
                         </a>
-                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                        <a className="carousel-control-next" href="#carouselExample1"
                            data-slide="next">
-                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="carousel-control-next-icon"></span>
                         </a>
                       </div>
                     </div>
@@ -124,8 +130,71 @@ export default class Carousel extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
+        <h2>淡入淡出</h2>
+        <p>将 <code>.carousel-fade</code> 添加到轮播图中，以使用淡入淡出过渡方式。</p>
+        <div className={classnames(style['util-badge'])}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames(common['feature-example'])}>
+                <div className={classnames(common['example-view'])}>
+                  <div className="row">
+                    <div className="col-lg-8 col-12">
+                      <div id="carouselExample2" className="carousel slide carousel-fade" data-ride="carousel">
+                        <ol className="carousel-indicators">
+                          <li data-target="#carouselExample2" data-slide-to="0" className="active"></li>
+                          <li data-target="#carouselExample2" data-slide-to="1"></li>
+                          <li data-target="#carouselExample2" data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                          <div className="carousel-item active">
+                            <img className="img-fluid" src={imgSlide1} alt="First slide"/>
+                            <div className="carousel-caption">
+                              <h5>First slide label</h5>
+                              <p>First slide label</p>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <img className="img-fluid" src={imgSlide2} alt="Second slide"/>
+                            <div className="carousel-caption">
+                              <h5>Second slide label</h5>
+                              <p>Second slide label</p>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <img className="img-fluid" src={imgSlide3} alt="Third slide"/>
+                            <div className="carousel-caption">
+                              <h5>Third slide label</h5>
+                              <p>Third slide label</p>
+                            </div>
+                          </div>
+                        </div>
+                        <a className="carousel-control-prev" href="#carouselExample2"
+                           data-slide="prev">
+                          <span className="carousel-control-prev-icon"></span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExample2"
+                           data-slide="next">
+                          <span className="carousel-control-next-icon"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={classnames(common['example-code'])}>
+                  <Highlight>
+                    {
+                      this.createCode('carousel-fade')
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
         <h4>事件</h4>
-        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/carousel/#usage" target="_blank" rel="noopener noreferrer">Bootstrap</a></p>
+        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/carousel/#usage" target="_blank" rel="noopener noreferrer">Bootstrap carousel</a></p>
       </PageWrapper>
     );
   }
