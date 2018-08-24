@@ -7,13 +7,13 @@ import style from '../style.scss';
 
 const TOOLTIP = {
   default: [
-    { title: 'Default', key: '', subTitle: '', className: 'btn btn-primary', placement: 'right'},
+    { title: 'Default', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'right'},
   ],
   direction: [
-    { title: 'Top', key: '', subTitle: '', className: 'btn btn-primary', placement: 'top'},
-    { title: 'Right', key: '', subTitle: '', className: 'btn btn-primary', placement: 'right'},
-    { title: 'Bottom', key: '', subTitle: '', className: 'btn btn-primary', placement: 'bottom'},
-    { title: 'Left', key: '', subTitle: '', className: 'btn btn-primary', placement: 'left'},
+    { title: 'Top', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'top'},
+    { title: 'Right', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'right'},
+    { title: 'Bottom', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'bottom'},
+    { title: 'Left', key: '', subTitle: '', className: 'btn btn-secondary', placement: 'left'},
   ],
 };
 
@@ -47,18 +47,19 @@ export default class Tooltip extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>当你点击一个元素时，显示一个提示框。</p>
+        <h1>提示框 <code>Tooltip</code></h1>
+        <p className="font-2x font-100">采用 CSS3 制作动画，用 <code>data-</code> 存储相关数据。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>准备工作</h3>
-        <ul className="p-30">
+        <h2>前奏</h2>
+        <ul className="ph-30">
           <li>Tooltip 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a> 进行定位。
             你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferrer">popper.min.js</a>，以便弹出窗口工作！</li>
+          <li>出于性能原因，工具提示是可配置的，因此必须自己初始化它们。</li>
         </ul>
 
-        <h4 className="mt-20">全局设置</h4>
+        <h3 className="mt-20">初始化</h3>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -83,7 +84,7 @@ export default class Tooltip extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
@@ -119,25 +120,27 @@ export default class Tooltip extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>方向</h3>
+        <h2>位置</h2>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
               <div className={classnames(common['feature-example'])}>
                 <div className={classnames(common['example-view'])}>
                   <div className="row">
-                    <div className="col-12">
-                      {
-                        TOOLTIP.direction.map((item, index) => {
-                          return (
-                            <button type="button"
-                                    className={classnames(item.className, 'mr-10')}
-                                    data-toggle="tooltip"
-                                    data-placement={item.placement}
-                                    title="Tooltip" key={index}>Tooltip</button>
-                          )
-                        })
-                      }
+                    <div className="col-12 pt-relative" style={{ height: '100px'}}>
+                      <div className="pt-absolute pt-center text-center">
+                        {
+                          TOOLTIP.direction.map((item, index) => {
+                            return (
+                              <button type="button"
+                                      className={classnames(item.className, 'mr-10')}
+                                      data-toggle="tooltip"
+                                      data-placement={item.placement}
+                                      title="Tooltip" key={index}>Tooltip</button>
+                            )
+                          })
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -154,8 +157,8 @@ export default class Tooltip extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>事件</h3>
-        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/tooltips/#usage" target="_blank" rel="noopener noreferrer">Bootstrap tooltip</a> 。</p>
+        <h2>事件</h2>
+        <p>参考<a href="https://getbootstrap.com/docs/4.1/components/tooltips/#usage" target="_blank" rel="noopener noreferrer">Bootstrap tooltip</a>。</p>
       </PageWrapper>
     );
   }

@@ -255,7 +255,7 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>准备工作</h2>
+        <h2>前奏</h2>
         <p>使用下拉菜单组件，你需要：</p>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code>。</li>

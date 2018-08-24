@@ -60,7 +60,7 @@ export default class Carousel extends Component {
         <p className="font-2x font-100">幻灯片组件，用于循环播放元素图像或文本幻灯片。</p>
 
         <div className="divider divider-bold divider-lg"></div>
-        <h2>准备工作</h2>
+        <h2>前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
         </ul>

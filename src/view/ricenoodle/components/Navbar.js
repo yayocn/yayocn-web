@@ -74,8 +74,8 @@ export default class Navbar extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>准备工作</h2>
-        <ul className="p-30">
+        <h2>前奏</h2>
+        <ul className="ph-30">
           <li>导航栏需要使用 <code>.navbar-expand [-sm | -md | -lg | -xl]</code> 包装 <code>.navbar</code> 以进行响应式折叠和颜色方案类。</li>
           <li>导航栏默认使流布局，将其放在 <code>.container .container-fluid</code> 中限制其宽度。</li>
           <li>使用我们的 <a href="/ricenoodle/utilities/space">Space</a> 和 <a href="/ricenoodle/utilities/flex">Flex</a> 来控制导航栏中的间距和对齐。</li>

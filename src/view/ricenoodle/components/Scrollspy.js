@@ -81,7 +81,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>准备工作</h2>
+        <h2>前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
           <li>Scrollspy 需要在 <code>position: relative;</code> 的环境下工作，因此在监听元素上添加 <code>.pt-relative</code> 类，通常是 <code>&lt;body&gt;</code> 元素。</li>

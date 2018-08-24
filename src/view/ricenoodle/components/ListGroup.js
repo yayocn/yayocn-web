@@ -318,7 +318,7 @@ export default class ListGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>情景</h2>
+        <h2>主题</h2>
         <p>使用情景类为列表设置不同的主题。</p>
         <div className={classnames(style['util-listgroup'])}>
           <div className="row">

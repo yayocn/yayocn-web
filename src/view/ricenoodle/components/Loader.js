@@ -127,7 +127,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">情景</h3>
+        <h3 className="mt-20">主题</h3>
         <div className={classnames(style['util-loader'])}>
           <div className="row">
             <div className="col-12">

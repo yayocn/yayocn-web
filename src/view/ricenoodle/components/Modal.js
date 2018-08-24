@@ -65,8 +65,8 @@ export default class Modal extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>准备工作</h2>
-        <ul className="p-30">
+        <h2>前奏</h2>
+        <ul className="ph-30">
           <li>模态使用HTML，CSS和JavaScript构建。 它们位于文档对象的顶层，会从 <code>&lt;body&gt;</code> 中删除滚动，以便模式内容滚动。</li>
           <li>单击模态遮罩层将自动关闭模态。</li>
           <li>一次只支持一个模态窗口，不支持嵌套模式（同一时刻只存在一个模态框）。<span className="text-danger">嵌套模式是很糟糕的体验，一旦使用，坑无止境！</span></li>

@@ -67,13 +67,14 @@ export default class Pagination extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>准备工作</h2>
+        <h2>前奏</h2>
         <ul className="ph-30">
           <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a> 进行定位。
             你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferrer">popper.min.js</a>，以便弹出窗口工作！</li>
+          <li>出于性能原因，工具提示是可配置的，因此必须自己初始化它们。</li>
         </ul>
 
-        <h3 className="mt-20">全局设置</h3>
+        <h3 className="mt-20">初始化</h3>
         <div className={classnames(style['util-pagination'])}>
           <div className="row">
             <div className="col-12">
