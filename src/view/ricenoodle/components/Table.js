@@ -24,7 +24,7 @@ const TABLE = {
   dark: [
     { title: 'Primary', key: '', subTitle: '', className: 'table table-dark table-hover', },
   ],
-  situation: [
+  theme: [
     { title: 'Active', key: '', subTitle: '', className: 'table table-hover', rowClass: 'row-active' },
     { title: 'Primary', key: '', subTitle: '', className: 'table table-hover', rowClass: 'row-primary' },
     { title: 'Secondary', key: '', subTitle: '', className: 'table table-hover', rowClass: 'row-secondary' },
@@ -88,7 +88,7 @@ export default class Table extends Component {
     return code;
   }
 
-  createSituationCode = (target = 'situation') => {
+  createSituationCode = (target = 'theme') => {
     const data = TABLE[target];
     let code = ``;
     const len = data.length;
@@ -108,12 +108,13 @@ export default class Table extends Component {
   render () {
     return (
       <PageWrapper>
-        <h2>说明</h2>
-        <p>标签组件。</p>
+        <h1>表格 <code>Table</code></h1>
+        <p className="font-2x font-100">表格适用于数据的展示。</p>
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h3>实例</h3>
+        <h2>实例</h2>
+        <p>为表格添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。</p>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -183,7 +184,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>紧凑型表格</h3>
+        <h2>紧凑型表格</h2>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -253,7 +254,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>条纹表格</h3>
+        <h2>条纹表格</h2>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -323,7 +324,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>带边框的表格</h3>
+        <h2>带边框的表格</h2>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -393,7 +394,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>Hover</h3>
+        <h2>Hover</h2>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -463,7 +464,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>暗色表格</h3>
+        <h2>暗色表格</h2>
         <div className={classnames(style['util-table'])}>
           <div className="row">
             <div className="col-12">
@@ -533,7 +534,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h3>行状态</h3>
+        <h2>行状态</h2>
         <p>在 <code>&lt;tr&gt;</code> 上添加 <code>.row- [active | primary | ...]</code> 等类设置行状态。</p>
         <div className={classnames(style['util-table'])}>
           <div className="row">
@@ -556,7 +557,7 @@ export default class Table extends Component {
                         </thead>
                         <tbody>
                         {
-                          TABLE.situation.map((item, index) => {
+                          TABLE.theme.map((item, index) => {
                             return (
                               <tr className={item.rowClass} key={index}>
                                 <th scope="row" className={classnames({'text-dark': item.key === 'light' || item.key === 'white'})}>First</th>
