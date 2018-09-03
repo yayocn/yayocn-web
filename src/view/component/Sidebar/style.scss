@@ -5,14 +5,36 @@
   top: $header-height;
   left: 0;
   bottom: 0;
+  padding-top: $sidebar-padding;
+  padding-bottom: $sidebar-padding;
   width: $sidebar-width;
-  padding: $sidebar-padding;
   box-shadow: 0 0 5px 0 #ddd;
   overflow: auto;
 
   .sidebar-item {
     list-style: none;
 
+    &:active,
+    &.active {
+      background-color: lighten($cyan, 55%);
+      border-right: solid 3px $cyan;
+    }
 
+    small {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark;
+
+    &:hover {
+      color: $cyan;
+
+      code {
+        color: $cyan;
+      }
+    }
   }
 }

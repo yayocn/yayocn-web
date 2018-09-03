@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Introduce from './introduce';
+import Start from './start';
 
 export default class Ricenoodle extends Component {
   render () {
     return (
-      <Introduce />
+      <Start />
     );
   }
 }

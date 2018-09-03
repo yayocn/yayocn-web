@@ -18,29 +18,27 @@ export default class Sidebar extends Component {
       <div className={style.sidebar}>
         <ul>
           {
-            menu.map((item, index) => {
-              return <li key={index} className={classnames('text-muted font-16 mb-10', style['sidebar-item'])}>
-                <Link to={item.link} className={classnames('block', style['sidebar-item'])}>
-                  {item.title}
-                </Link>
-
-                {
-                  item.children && item.children.length > 0 &&
+            menu.map((item) => {
+              if (item.children && item.children.length > 0) {
+                return <li key={item.key} className={classnames(style['sidebar-submenu'])}>
+                  <Link to={item.link} className={classnames('block pv-10 ph-30', style['sidebar-item'])} dangerouslySetInnerHTML={{__html: item.title}}></Link>
                     <Fragment>
-                      <ul className="pl-20 pv-10">
+                      <ul>
                         {
-                          item.children.map((item, index) => {
-                            return <li key={index} className={classnames('text-muted font-14 mb-5', style['sidebar-item'])}>
-                              <Link to={item.link} className={classnames('block', style['sidebar-item'])}>
-                                {item.title}
-                              </Link>
+                          item.children.map((submenu) => {
+                            return <li key={submenu.key} className={classnames(style['sidebar-item'])}>
+                              <Link to={submenu.link} className={classnames('block pv-10 ph-50 font-12')} dangerouslySetInnerHTML={{__html: submenu.title}}></Link>
                             </li>
                           })
                         }
                       </ul>
                     </Fragment>
-                }
-              </li>
+                </li>
+              } else {
+                return <li key={item.key} className={classnames(style['sidebar-item'])}>
+                  <Link to={item.link} className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></Link>
+                </li>
+              }
             })
           }
         </ul>

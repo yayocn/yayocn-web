@@ -1,6 +1,5 @@
 import Gate from './gate';
 import Ricenoodle from './ricenoodle';
-import Introduce from './ricenoodle/introduce';
 import Start from './ricenoodle/start';
 
 import Improve from './ricenoodle/improve';
@@ -56,7 +55,6 @@ import Tooltip from './ricenoodle/components/Tooltip';
 export {
   Gate,
   Ricenoodle,
-  Introduce,
   Start,
   Improve, Code, Element, Image,
   Utilities, Background, Border, Close, Flex, Float, Font, Position, Shadow, Size, Space, Text, View,
