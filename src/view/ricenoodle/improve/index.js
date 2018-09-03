@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
+import { ricenoodle } from '../../../config/menu';
+
+const thumbnails = ricenoodle.find((value) => value.key === 'improve').children;
 
 export default class Improve extends Component {
   render () {
@@ -10,6 +13,30 @@ export default class Improve extends Component {
           <p className="font-2x font-100">
             在这一部分，Ricenoodle 重置了一些常用元素的样式，并额外添加了一些针对性很强的 CSS 类。
           </p>
+        </div>
+
+        <div className="divider divider-lg divider-bold"></div>
+
+        <h2></h2>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="card-group">
+              {
+                thumbnails.map((item) => {
+                  return (
+                    <div class="card" key={item.key}>
+                      <div class="card-header">
+                        {item.title}
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">{item.info}</p>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
         </div>
       </PageWrapper>
     );

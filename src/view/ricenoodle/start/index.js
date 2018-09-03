@@ -10,7 +10,7 @@ export default class Improve extends Component {
       <PageWrapper>
         <h1>开始 <code>Getting start</code></h1>
         <p className="font-2x font-100">
-          开始使用 Ricenoodle。
+          Ricenoodle，快而美的轻量级前端框架。
         </p>
 
         <div className="divider divider-lg divider-bold"></div>
@@ -66,6 +66,12 @@ export default class Improve extends Component {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="divider divider-lg divider-bold"></div>
+        <div className="text-muted mt-20">
+          <p>Designed by @kelp and built by @yayo. Wellcome to feedback at github, and we will make it better.</p>
+          <p>当前版本 <a href="https://github.com/yayocn/ricenoodle" class="text-web">v1.0.2</a></p>
         </div>
       </PageWrapper>
     );

@@ -57,7 +57,7 @@ export default class Carousel extends Component {
     return (
       <PageWrapper>
         <h1>轮播图 <code>Carousel</code></h1>
-        <p className="font-2x font-100">幻灯片组件，用于循环播放元素图像或文本幻灯片。</p>
+        <p className="font-2x font-100">轮播图组件，用于循环播放元素图像或文本幻灯片。</p>
 
         <div className="divider divider-bold divider-lg"></div>
         <h2>前奏</h2>

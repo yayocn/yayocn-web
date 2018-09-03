@@ -1,7 +1,6 @@
 import {
   Gate,
   Ricenoodle,
-  Introduce,
   Start,
   Improve,
   Code,
@@ -62,11 +61,6 @@ const router = [
     path: '/ricenoodle',
     exact: true,
     component: Ricenoodle,
-  },
-  {
-    path: '/ricenoodle/introduce',
-    exact: true,
-    component: Introduce,
   },
   {
     path: '/ricenoodle/start',
