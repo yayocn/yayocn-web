@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -92,11 +92,11 @@ export default class Navbar extends Component {
           <li><code>.navbar-text</code> 用于垂直居中的文本字符串。</li>
           <li><code>.collapse.navbar-collapse</code> 通过父断点对导航栏内容进行分组和隐藏。</li>
         </ul>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-navbar')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -137,7 +137,7 @@ export default class Navbar extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -153,11 +153,11 @@ export default class Navbar extends Component {
 
         <h2>主题</h2>
         <p>主题分 <code>.nav-light</code> 和 <code>.nav-dark</code>, 在此基础上添加 <code>.bg- [ primary | secondary | ...]</code>。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-navbar')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -234,7 +234,7 @@ export default class Navbar extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -250,11 +250,11 @@ export default class Navbar extends Component {
 
         <h2>展开</h2>
         <p>有时您希望使用折叠插件触发页面上其他位置的隐藏内容。 因为我们的插件适用于 <code>id</code> 和数据目标匹配，所以很容易完成！</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-navbar')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="collapse" id="navbarToggleExternalContent">
@@ -271,7 +271,7 @@ export default class Navbar extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createExtendCode()

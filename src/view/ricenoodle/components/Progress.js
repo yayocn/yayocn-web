@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const PROGRESS = {
   default: [
@@ -69,11 +69,11 @@ export default class Progress extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -88,7 +88,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -104,11 +104,11 @@ export default class Progress extends Component {
 
         <h2>进度</h2>
         <p>使用 <code>&lt;progress&gt;</code> 不同显示进度百分比，没有动画效果，在不同浏览器的效果也不一致，不推荐使用。</p>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -121,7 +121,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     &lt;progress value="10" max="100">&lt;/progress>
                   </Highlight>
@@ -134,11 +134,11 @@ export default class Progress extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>主题</h2>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -155,7 +155,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -170,11 +170,11 @@ export default class Progress extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>条纹</h2>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -189,7 +189,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('striped')
@@ -204,11 +204,11 @@ export default class Progress extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>动画</h2>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -223,7 +223,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('animated')
@@ -238,11 +238,11 @@ export default class Progress extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>分段</h2>
-        <div className={classnames(style['util-progress'])}>
+        <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="progress progress-striped progress-animated border-light">
@@ -253,7 +253,7 @@ export default class Progress extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     &lt;div class="progress progress-striped progress-animated border-light"&gt; <br/>
                     &nbsp;&nbsp;&lt;div class="progress-value bg-primary" style="width: 20%"&gt;&lt;/div&gt; <br/>

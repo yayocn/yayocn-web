@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -174,17 +174,17 @@ export default class Alert extends Component {
 
         <h2>主题</h2>
         <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
-        <div className={classnames(style['util-alert'])}>
+        <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       ALERT.theme.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12" key={index} >
-                            <div className={classnames(item.className, style['alert-feature'])}>
+                            <div className={classnames(item.className, 'alert-feature')}>
                               莫听穿林打叶声，何妨吟啸且徐行。 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
                             </div>
                           </div>
@@ -193,7 +193,7 @@ export default class Alert extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -208,17 +208,17 @@ export default class Alert extends Component {
         <div className="divider divider-lg"></div>
         <h2>锚点</h2>
         <p>使用 <code>.alert-link</code> 类快速设置 <code>alert</code> 中的锚点样式。</p>
-        <div className={classnames(style['util-alert'])}>
+        <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       ALERT.linkColor.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
-                            <div className={classnames(item.className, style['alert-feature'])}>
+                            <div className={classnames(item.className, 'alert-feature')}>
                               大江东去，浪淘尽，<a href={ANCHOR} className="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
                             </div>
                           </div>
@@ -227,7 +227,7 @@ export default class Alert extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createLinkColorCode()
@@ -250,17 +250,17 @@ export default class Alert extends Component {
         </ul>
 
         <h3 className="mt-20">使用 <code>&amp;time;</code></h3>
-        <div className={classnames(style['util-alert'])}>
+        <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       ALERT.dismissing.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
-                            <div className={classnames(item.className, style['alert-feature'])}>
+                            <div className={classnames(item.className, 'alert-feature')}>
                               羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
                               <button type="button" className="close" data-dismiss="alert">
                                 <span>&times;</span>
@@ -272,7 +272,7 @@ export default class Alert extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDismissingCode()
@@ -285,17 +285,17 @@ export default class Alert extends Component {
         </div>
 
         <h3 className="mt-20">使用 <code>.mark-close</code></h3>
-        <div className={classnames(style['util-alert'])}>
+        <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       ALERT.dismissing.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
-                            <div className={classnames(item.className, style['alert-feature'])}>
+                            <div className={classnames(item.className, 'alert-feature')}>
                               羽扇纶巾，谈笑间，<strong>樯橹灰飞烟灭</strong>。
                               <button type="button" className="close" data-dismiss="alert">
                                 <span className="mark-close"></span>
@@ -307,7 +307,7 @@ export default class Alert extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDismissingCodeWithMark()
@@ -325,17 +325,17 @@ export default class Alert extends Component {
         <div className="divider divider-lg"></div>
         <h2>附加内容</h2>
         <p>警告框还可以包含其他HTML元素，如标题，段落和分隔符。</p>
-        <div className={classnames(style['util-alert'])}>
+        <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       ALERT.additional.map((item, index) => {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
-                            <div className={classnames(item.className, style['alert-feature'])}>
+                            <div className={classnames(item.className, 'alert-feature')}>
                               <h3 className="alert-heading">江城子 . 密州出猎</h3>
                               <p>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。 为报倾城随太守，亲射虎，看孙郎。 酒酣胸胆尚开张，鬓微霜，又何妨？持节云中，何日遣冯唐？ 会挽雕弓如满月，西北望，射天狼。</p>
                               <hr/>
@@ -347,7 +347,7 @@ export default class Alert extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createAdditionalCode()

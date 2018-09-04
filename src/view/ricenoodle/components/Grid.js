@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss';
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 export default class Grid extends Component {
 
@@ -103,11 +103,11 @@ export default class Grid extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>实例</h2>
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="container-fluid">
@@ -120,7 +120,7 @@ export default class Grid extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDefaultCode()
@@ -134,7 +134,7 @@ export default class Grid extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>参数</h2>
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
               <table className="table table-border table-striped">
@@ -207,11 +207,11 @@ export default class Grid extends Component {
         <p><code>Grid</code> 是用的 <code>flex</code> 进行布局，因此，很多 <a href="/ricenoodle/utilities/flex">Flex</a> 的类都可以配合使用。</p>
 
         <h3 className="mt-20">居中</h3>
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="container-fluid">
@@ -222,7 +222,7 @@ export default class Grid extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCenterCode()
@@ -238,11 +238,11 @@ export default class Grid extends Component {
         <h2>删除列内边距</h2>
         <p>每一列的左右都有 <code>15px</code> 的间隔，在 <code>.row</code> 上添加 <code>.no-gutters</code> 可以去掉这些间隔。</p>
 
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="container-fluid">
@@ -254,7 +254,7 @@ export default class Grid extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createNoGuttersCode()
@@ -270,11 +270,11 @@ export default class Grid extends Component {
         <h2>排序</h2>
         <p>使用 <code>.order-</code> 类来控制内容的可视顺序。 这些类是响应式的，因此您可以通过断点设置顺序（例如，。order-1.order-md-2）。 包括在所有五个网格层中支持1到12。</p>
 
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="container-fluid">
@@ -293,7 +293,7 @@ export default class Grid extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createOrderCode()
@@ -312,11 +312,11 @@ export default class Grid extends Component {
         <p>您可以通过两种方式偏移网格列：响应式 <code>.offset-</code> 网格类或者 <a href="/ricenoodle/utilities/space">Space</a>。 网格类的大小可以匹配列，而边距对于偏移宽度可变的快速布局更有用。</p>
         <p>使用 <code>.offset-md-*</code> 类向右移动列。 这些类将列的左边距增加 <code>*</code> 列。 例如，<code>.offset-md-4</code> 在四列上移动 <code>.col-md-4</code>。</p>
 
-        <div className={classnames(style['util-grid'])}>
+        <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="container-fluid">
@@ -335,7 +335,7 @@ export default class Grid extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createOffsetCode()

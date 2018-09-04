@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -126,11 +126,11 @@ export default class InputGroup extends Component {
 
         <h2>实例</h2>
         <p>在输入框的两侧放置一个附加组件或按钮。 请记住将 <code>&lt;label&gt;</code> 元素放在输入框组之外。</p>
-        <div className={classnames(style['util-inputgroup'])}>
+        <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       {
@@ -149,7 +149,7 @@ export default class InputGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -164,11 +164,11 @@ export default class InputGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>主题</h2>
         <p>Ricenoodle 提供了 <code>11</code> 种主题颜色。</p>
-        <div className={classnames(style['util-inputgroup'])}>
+        <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       {
@@ -189,7 +189,7 @@ export default class InputGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -203,11 +203,11 @@ export default class InputGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
-        <div className={classnames(style['util-inputgroup'])}>
+        <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       {
@@ -226,7 +226,7 @@ export default class InputGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -240,11 +240,11 @@ export default class InputGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>边框</h2>
-        <div className={classnames(style['util-inputgroup'])}>
+        <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       {
@@ -262,7 +262,7 @@ export default class InputGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createBorderCode('border')
@@ -276,11 +276,11 @@ export default class InputGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>下拉框</h2>
-        <div className={classnames(style['util-inputgroup'])}>
+        <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-4">
                       <div className="input-group">
@@ -301,7 +301,7 @@ export default class InputGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDropdownCode()

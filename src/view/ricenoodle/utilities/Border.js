@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const BORDER = {
   additive: [
@@ -93,20 +93,20 @@ export default class Border extends Component {
         <p>添加或者删除元素的边框，可以针对所有的边或者针对某一边。</p>
 
         <h3>添加</h3>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.additive.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('mb-10 mr-10 block-inline', style['border-feature'], item.className)}></div>
+                        <div key={index} className={classnames('mb-10 mr-10 block-inline', 'border-feature', item.className)}></div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('additive')
@@ -119,20 +119,20 @@ export default class Border extends Component {
         </div>
 
         <h3 className="mt-20">删除</h3>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.subtractive.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('border mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
+                        <div key={index} className={classnames('border mb-10 mr-10 block-inline', 'border-feature', item.className )}></div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('subtractive')
@@ -148,23 +148,23 @@ export default class Border extends Component {
 
         <h2>主题</h2>
         <p>边框工具类设有 <code>12</code> 种主题颜色。</p>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.theme.map((item, index) => {
                       return (
                         <div className="mb-10 mr-10 block-inline" key={index}>
                           <h6>{item.title}</h6>
-                          <div className={classnames(style['border-feature'], item.className)}></div>
+                          <div className={classnames('border-feature', item.className)}></div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -180,20 +180,20 @@ export default class Border extends Component {
 
         <h2>半径</h2>
         <p>为元素添加半径类，设置元素的角半径。</p>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.round.map((item, index) => {
                       return (
-                        <div key={index} className={classnames('mb-10 mr-10 block-inline', style['border-feature'], item.className )}></div>
+                        <div key={index} className={classnames('mb-10 mr-10 block-inline', 'border-feature', item.className )}></div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('round')
@@ -209,23 +209,23 @@ export default class Border extends Component {
 
         <h2>边框风格</h2>
         <p>为元素添加边框风格类，设置边框的风格。</p>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.style.map((item, index) => {
                       return (
                         <div key={index} className="mb-10 mr-10 block-inline">
                           <h6>{item.title}</h6>
-                          <div className={classnames(style['border-feature'], item.className)}></div>
+                          <div className={classnames('border-feature', item.className)}></div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('style')
@@ -241,23 +241,23 @@ export default class Border extends Component {
 
         <h2>边框宽度</h2>
         <p>为元素添加边框宽度类，设置边框的宽度。</p>
-        <div className={classnames(style['util-border'])}>
+        <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     BORDER.weight.map((item, index) => {
                       return (
                         <div key={index} className="mb-10 mr-10 block-inline">
                           <h6>{item.title}</h6>
-                          <div className={classnames(style['border-feature'], item.className)}></div>
+                          <div className={classnames('border-feature', item.className)}></div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('weight')

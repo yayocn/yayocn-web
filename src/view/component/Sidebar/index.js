@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
-import style from './style.scss';
+import './style.scss';
 
 export default class Sidebar extends Component {
   // BEGIN: Util
@@ -15,19 +15,19 @@ export default class Sidebar extends Component {
   render () {
     const { menu = [] } = this.props;
     return (
-      <div className={style.sidebar}>
+      <div className="sidebar">
         <ul>
           {
             menu.map((item) => {
               if (item.children && item.children.length > 0) {
-                return <li key={item.key} className={classnames(style['sidebar-submenu'])}>
-                  <Link to={item.link} className={classnames('block pv-10 ph-30', style['sidebar-item'])} dangerouslySetInnerHTML={{__html: item.title}}></Link>
+                return <li key={item.key} className={classnames('sidebar-submenu')} >
+                  <NavLink to={item.link} activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></NavLink>
                     <Fragment>
                       <ul>
                         {
                           item.children.map((submenu) => {
-                            return <li key={submenu.key} className={classnames(style['sidebar-item'])}>
-                              <Link to={submenu.link} className={classnames('block pv-10 ph-50 font-12')} dangerouslySetInnerHTML={{__html: submenu.title}}></Link>
+                            return <li key={submenu.key} className={classnames('sidebar-item')}>
+                              <NavLink to={submenu.link} activeClassName="active" className={classnames('block pv-10 ph-50 font-12')} dangerouslySetInnerHTML={{__html: submenu.title}}></NavLink>
                             </li>
                           })
                         }
@@ -35,8 +35,8 @@ export default class Sidebar extends Component {
                     </Fragment>
                 </li>
               } else {
-                return <li key={item.key} className={classnames(style['sidebar-item'])}>
-                  <Link to={item.link} className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></Link>
+                return <li key={item.key} className={classnames('sidebar-item')}>
+                  <NavLink to={item.link} exact activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></NavLink>
                 </li>
               }
             })

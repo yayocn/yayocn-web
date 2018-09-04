@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 export default class Media extends Component {
 
@@ -47,11 +47,11 @@ export default class Media extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
         <h2>实例</h2>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="media">
@@ -64,7 +64,7 @@ export default class Media extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -78,11 +78,11 @@ export default class Media extends Component {
 
         <div className="divider divider-lg"></div>
         <h3>嵌套</h3>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="media">
@@ -103,7 +103,7 @@ export default class Media extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createNestCode()

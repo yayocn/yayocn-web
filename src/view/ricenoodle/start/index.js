@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss';
+import '../../../../public/scss/common.scss';
 import { ricenoodle } from '../../../config/menu';
 
 const startMenu = ricenoodle.find((value) => value.key === 'start');
@@ -23,12 +23,12 @@ export default class Improve extends Component {
           <div className="col-lg-3 col-md-2 col-1">
             <h4>生产环境</h4>
             <p>编译并且压缩后的css、javascript文件。</p>
-            <a href="files/yyui-1.1.2.zip" className="btn btn-secondary-outline">下载 Ricenoodle</a>
+            <a href="files/yyui-1.1.2.zip" className="btn">下载 Ricenoodle</a>
           </div>
           <div className="col-lg-3 col-md-2 col-1">
             <h4>源码</h4>
             <p>Ricenoodle 的资源文件。</p>
-            <a href="files/yyui-1.1.2.zip" className="btn btn-secondary-outline">Source</a>
+            <a href="files/yyui-1.1.2.zip" className="btn">Source</a>
           </div>
         </div>
 
@@ -41,8 +41,8 @@ export default class Improve extends Component {
         <div>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames('mt-0', common['example-code'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('mt-0', 'example-code')}>
                   <Highlight>
                     &lt;link href="ricenoodle.min.css" rel="stylesheet"/&gt;<br/><br/>
                     &lt;script src="jquery.min.js"&gt;&lt;/script&gt;<br/>
@@ -60,8 +60,8 @@ export default class Improve extends Component {
         <div>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames('mt-0', common['example-code'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('mt-0', 'example-code')}>
                   <Highlight>
                     $ npm install ricenoodle
                   </Highlight>

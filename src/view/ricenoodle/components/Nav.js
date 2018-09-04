@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -165,11 +165,11 @@ export default class Nav extends Component {
 
         <h2>实例</h2>
         <p>导航共享通用标记和样式，从基本 <code>.nav</code> 类到活动和禁用状态。 交换修饰符类以在每种样式之间切换。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav">
@@ -189,7 +189,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -205,11 +205,11 @@ export default class Nav extends Component {
 
         <h2><code>nav</code> 标签</h2>
         <p>直接使用 <code>&lt;nav&gt;</code> 标签。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav">
@@ -221,7 +221,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createNavCode()
@@ -238,11 +238,11 @@ export default class Nav extends Component {
         <h2>居中</h2>
         <p><code>nav</code> 使用 <code>flex</code> 布局，因此可以使用 <code>.justify-content-center</code> 类使其居中。</p>
         <p>当然，也使用 <code>.justify-content-end</code> 类使其靠右。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav justify-content-center">
@@ -277,7 +277,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCenterCode()
@@ -294,11 +294,11 @@ export default class Nav extends Component {
         <h2>垂直</h2>
         <p>使用 <code>.flex-column</code> 类使其垂直显示。</p>
         <p>垂直显示的导航，最好使用 <code>&lt;nav&gt;</code>。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav flex-column">
@@ -310,7 +310,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createVerticalCode()
@@ -326,11 +326,11 @@ export default class Nav extends Component {
 
         <h2>胶囊样式</h2>
         <p>使用 <code>.nav-pills</code> 类使其变成胶囊的样式。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav nav-pills">
@@ -350,7 +350,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createPillCode()
@@ -366,11 +366,11 @@ export default class Nav extends Component {
 
         <h2>填充整行</h2>
         <p>使用 <code>.nav-fill</code> 使导航填充整行。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav nav-pills nav-fill">
@@ -390,7 +390,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFillCode()
@@ -406,11 +406,11 @@ export default class Nav extends Component {
 
         <h2>选项卡</h2>
         <p>从上面获取基本导航并添加 <code>.nav-tabs</code> 类以生成选项卡式界面。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -432,7 +432,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createTabCode()
@@ -451,11 +451,11 @@ export default class Nav extends Component {
 
         <h2>下拉导航</h2>
         <p>在导航系统中使用 <cdoe>dropdown</cdoe> 组件。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="nav nav-tabs">
@@ -482,7 +482,7 @@ export default class Nav extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDropdownCode()

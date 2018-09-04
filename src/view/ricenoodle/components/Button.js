@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const BUTTON = {
   theme: [
@@ -83,18 +83,18 @@ export default class Button extends Component {
 
         <h2>实例</h2>
         <p>Ricenoodle 提供了几种预设的按钮样式，每种样式都有其特定的意义。</p>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.theme.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <button type="button" className={classnames(item.className, style['button-feature'])}>
+                              <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
                             </div>
@@ -104,7 +104,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -119,18 +119,18 @@ export default class Button extends Component {
         <div className="divider divider-lg"></div>
         <h2>轮廓按钮</h2>
         <p>需要一个按钮，但不需要沉重的背景颜色？ 使用 <code>.btn-outline-*</code> 替换默认修改器类，以删除任何按钮上的所有背景图像和颜色。</p>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.outline.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <button type="button" className={classnames(item.className, style['button-feature'])}>
+                              <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
                             </div>
@@ -140,7 +140,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('outline')
@@ -154,18 +154,18 @@ export default class Button extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>锚点</h2>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.link.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <button type="button" className={classnames(item.className, style['button-feature'])}>
+                              <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
                             </div>
@@ -175,7 +175,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('link')
@@ -190,11 +190,11 @@ export default class Button extends Component {
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
         <p>需要更大或更小的按钮？ 添加 <code>.btn-lg | .btn-sm | .btn-hg</code> 以获得更多尺寸。</p>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="flex align-items-end">
@@ -202,7 +202,7 @@ export default class Button extends Component {
                           BUTTON.size.map((item, index) => {
                             return (
                               <div className="block-inline mb-10 mr-5" key={index} >
-                                <button type="button" className={classnames(item.className, style['button-feature'])}>
+                                <button type="button" className={classnames(item.className, 'button-feature')}>
                                   {item.title}
                                 </button>
                               </div>
@@ -213,7 +213,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -228,18 +228,18 @@ export default class Button extends Component {
         <div className="divider divider-lg"></div>
         <h2>半径</h2>
         <p>除了使用针对 <code>button</code> 的特殊类意外，也可以使用 <a href="/ricenoodle/utilities/border">Border</a> 工具类。</p>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.round.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <button type="button" className={classnames(item.className, style['button-feature'])}>
+                              <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
                             </div>
@@ -249,7 +249,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('round')
@@ -264,18 +264,18 @@ export default class Button extends Component {
         <div className="divider divider-lg"></div>
         <h2>块级按钮</h2>
         <p>块级按钮的宽度占真个父元素的宽度。</p>
-        <div className={classnames(style['util-button'])}>
+        <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-6">
                       {
                         BUTTON.block.map((item, index) => {
                           return (
                             <div className="mb-10 mr-5" key={index} >
-                              <button type="button" className={classnames(item.className, style['button-feature'])}>
+                              <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
                             </div>
@@ -285,7 +285,7 @@ export default class Button extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('block')

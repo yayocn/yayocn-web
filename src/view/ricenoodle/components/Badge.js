@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -95,18 +95,18 @@ export default class Badge extends Component {
 
         <h2>主题</h2>
         <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BADGE.theme.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index} >
-                              <span className={classnames(item.className, style['badge-feature'])}>
+                              <span className={classnames(item.className, 'badge-feature')}>
                                 {item.title}
                               </span>
                             </div>
@@ -116,7 +116,7 @@ export default class Badge extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -131,18 +131,18 @@ export default class Badge extends Component {
         <div className="divider divider-lg"></div>
         <h2>锚点</h2>
         <p>在 <code>&lt;a&gt;</code> 上使用 <code>badge</code>。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BADGE.link.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index}>
-                              <a href={ANCHOR} className={classnames(item.className, style['badge-feature'])}>
+                              <a href={ANCHOR} className={classnames(item.className, 'badge-feature')}>
                                 {item.title}
                               </a>
                             </div>
@@ -152,7 +152,7 @@ export default class Badge extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createLinkCode()
@@ -168,11 +168,11 @@ export default class Badge extends Component {
         <h2>胶囊</h2>
         <p>使用 <code>.badge-pill</code> 类使便签显示成胶囊样式。也可以使用 <code>.border-round-circle</code>。</p>
 
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
 
@@ -181,7 +181,7 @@ export default class Badge extends Component {
                       BADGE.pill.map((item, index) => {
                         return (
                           <div className="block-inline mb-10 mr-5" key={index} >
-                            <span className={classnames(item.className, style['badge-feature'])}>
+                            <span className={classnames(item.className, 'badge-feature')}>
                               {item.title}
                             </span>
                           </div>
@@ -190,7 +190,7 @@ export default class Badge extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('pill')

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const FORM = {
   formControlSize: [
@@ -348,11 +348,11 @@ export default class Form extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <form>
@@ -373,7 +373,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormCode()
@@ -391,11 +391,11 @@ export default class Form extends Component {
         <p>重置 <code>&lt;input&gt; &lt;select&gt; &lt;textarea&gt;</code> 等元素的样式。</p>
 
         <h3><code>.form-control</code></h3>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <form>
@@ -432,7 +432,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormControlCode()
@@ -445,11 +445,11 @@ export default class Form extends Component {
         </div>
 
         <h3 className="mt-20">尺寸</h3>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -462,7 +462,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormControlSizeCode()
@@ -475,11 +475,11 @@ export default class Form extends Component {
         </div>
 
         <h3 className="mt-20">输入状态</h3>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -492,7 +492,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormControlSituationCode()
@@ -505,18 +505,18 @@ export default class Form extends Component {
         </div>
 
         <h3 className="mt-20">禁用</h3>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <input type="text" className="form-control" disabled={true} placeholder="Ricenoodle"/>
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     &lt;input type="text" className="form-control" disabled  placeholder="Ricenoodle"/>
                   </Highlight>
@@ -529,11 +529,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>表单组</h2>
         <p>使用 <code>.form-group-*</code> 时, 会对子节点中的 <code>.form-control</code> 进行预设。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -549,7 +549,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormGroupCode()
@@ -564,11 +564,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>复选框</h2>
         <p>复选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -584,7 +584,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode()
@@ -598,11 +598,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">行内复选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -618,7 +618,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode('checkboxInline')
@@ -632,11 +632,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">禁用状态</h3>
         <p>额外添加 <code>.disabled</code> 类。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -652,7 +652,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode('checkboxDisabled', true)
@@ -665,11 +665,11 @@ export default class Form extends Component {
         </div>
 
         <h3 className="mt-20">开关</h3>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -685,7 +685,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode('checkboxSwitch')
@@ -699,11 +699,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">尺寸</h3>
         <p>开关尺寸。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="flex align-items-end">
@@ -721,7 +721,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode('checkboxSwitchSize')
@@ -735,11 +735,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">开关禁用</h3>
         <p>额外添加 <code>.disabled</code> 类。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="flex align-items-end">
@@ -757,7 +757,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCheckboxCode('checkboxSwitchDisabled', true)
@@ -772,11 +772,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>单选框</h2>
         <p>单选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -792,7 +792,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createRadioCode()
@@ -806,11 +806,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">行内单选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -826,7 +826,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createRadioCode('radioInline')
@@ -840,11 +840,11 @@ export default class Form extends Component {
 
         <h3 className="mt-20">单选框禁用</h3>
         <p>添加 <code>.disabled</code> 类。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -860,7 +860,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createRadioCode('radioDisabled', true)
@@ -875,11 +875,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>文件上传</h2>
         <p>文件上传对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -895,7 +895,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFileCode()
@@ -910,11 +910,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>水平表单</h2>
         <p>结合 <code>.form-hz</code> 和 <code>.form-group</code> 使用，创建水平排列的表单。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       {
@@ -941,7 +941,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createHorizontalCode()
@@ -956,11 +956,11 @@ export default class Form extends Component {
         <div className="divider divider-lg"></div>
         <h2>行表单</h2>
         <p>使用<code>.form-inline</code>，创建行表单。</p>
-        <div className={classnames(style['util-form'])}>
+        <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -984,7 +984,7 @@ export default class Form extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createInlineCode()

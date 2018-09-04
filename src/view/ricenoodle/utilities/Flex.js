@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 import { find } from 'lodash';
 
 const FLEX = {
@@ -107,7 +107,7 @@ export default class Flex extends Component {
 
         <h2>方向</h2>
         <p>使用方向类在Flex容器中设置主轴的方向。在大多数情况下，可以省略水平类（<code>.flex-row</code>），因为浏览器默认为行。 但是，也可能会遇到需要显式设置此值的情况（如响应式布局）。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-12">
               {
@@ -115,21 +115,21 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-10">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
                               this.createNumArray(4).map((o) => {
                                 return (
-                                  <div className={classnames(style['flex-item'])} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item')} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createCode('direction', item.key)
@@ -149,7 +149,7 @@ export default class Flex extends Component {
         <h2>换行</h2>
         <p>更改Flex项目在Flex容器中的换行方式。选择不换行（浏览器默认设置）<code>.flex-nowrap</code>，换行 <code>.flex-wrap</code>，
           或换行反转 <code>.flex-wrap-reverse</code>。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-8">
               {
@@ -157,21 +157,21 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-10">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
                               this.createNumArray(12).map((o) => {
                                 return (
-                                  <div className={classnames(style['flex-item'])} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item')} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createCode('wrap', item.key)
@@ -190,7 +190,7 @@ export default class Flex extends Component {
         <div className="divider divider-lg"></div>
         <h2>主轴对齐</h2>
         <p>在弹性布局容器上使用主轴对齐类来更改主轴上的flex项目的对齐方式。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-12">
               {
@@ -198,21 +198,21 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-20">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
                               this.createNumArray(4).map((o) => {
                                 return (
-                                  <div className={classnames(style['flex-item'])} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item')} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createCode('justifyContent', item.key)
@@ -231,7 +231,7 @@ export default class Flex extends Component {
         <div className="divider divider-lg"></div>
         <h2>交叉轴对齐</h2>
         <p>在弹性布局容器上使用交叉轴对齐类来更改交叉轴上的flex项的对齐方式。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-12">
               {
@@ -243,21 +243,21 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
-                          <div className={classnames(style['aligin-item'], item.className)}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
+                          <div className={classnames('aligin-item', item.className)}>
                             {
                               this.createNumArray(4).map((o) => {
                                 return (
-                                  <div className={classnames(style['flex-item'])} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item')} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createCode('alignItems', item.key)
@@ -276,7 +276,7 @@ export default class Flex extends Component {
         <div className="divider divider-lg"></div>
         <h2>多轴对齐</h2>
         <p>使用弹性布局容器上的多轴对齐类将flex项目在十字轴上对齐。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-12">
               {
@@ -288,21 +288,21 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames('bg-light', common['example-view'])}>
-                          <div className={classnames(style['aligin-content'], item.className)}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('bg-light', 'example-view')}>
+                          <div className={classnames('aligin-content', item.className)}>
                             {
                               this.createNumArray(9).map((o) => {
                                 return (
-                                  <div className={classnames(style['flex-item'])} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item')} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createCode('alignContent', item.key)
@@ -321,7 +321,7 @@ export default class Flex extends Component {
         <div className="divider divider-lg"></div>
         <h2>特殊对齐</h2>
         <p>在弹性布局项目上使用特殊对齐类可以单独更改它们在十字轴上的对齐方式。</p>
-        <div className={classnames(style['util-flex'])}>
+        <div className={classnames('util-flex')}>
           <div className="row">
             <div className="col-12">
               {
@@ -333,21 +333,21 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className={classnames('flex')}>
                             {
                               this.createNumArray(4).map((o, childIndex) => {
                                 return (
-                                  <div className={classnames(style['flex-item'], { [item.className]: childIndex === 0 })} key={o}>
-                                    <p className={classnames(style['item-text'])}>{o}th</p>
+                                  <div className={classnames('flex-item', { [item.className]: childIndex === 0 })} key={o}>
+                                    <p className={classnames('item-text')}>{o}th</p>
                                   </div>
                                 )
                               })
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createItemCode('alignSelf', item.key)

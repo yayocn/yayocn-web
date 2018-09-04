@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const TEXT = {
   theme: [
@@ -70,11 +70,11 @@ export default class Text extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>主题</h2>
-        <div className={classnames(style['util-text'])}>
+        <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     TEXT.theme.map((item, index) => {
                       return (
@@ -86,7 +86,7 @@ export default class Text extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -100,11 +100,11 @@ export default class Text extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>对齐</h2>
-        <div className={classnames(style['util-text'])}>
+        <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     TEXT.alignment.map((item, index) => {
                       return (
@@ -115,7 +115,7 @@ export default class Text extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('alignment')
@@ -129,11 +129,11 @@ export default class Text extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>换行</h2>
-        <div className={classnames(style['util-text'])}>
+        <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     TEXT.wrap.map((item, index) => {
                       return (
@@ -144,7 +144,7 @@ export default class Text extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('wrap')
@@ -158,11 +158,11 @@ export default class Text extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>变形</h2>
-        <div className={classnames(style['util-text'])}>
+        <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     TEXT.transform.map((item, index) => {
                       return (
@@ -173,7 +173,7 @@ export default class Text extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('transform')
@@ -187,11 +187,11 @@ export default class Text extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>字体</h2>
-        <div className={classnames(style['util-text'])}>
+        <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     TEXT.font.map((item, index) => {
                       return (
@@ -202,7 +202,7 @@ export default class Text extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('font')

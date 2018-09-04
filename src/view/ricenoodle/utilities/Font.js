@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const FONT = {
   size: (function(){
@@ -63,11 +63,11 @@ export default class Font extends Component {
         <p>Ricenoodle 提供了 <code>12px ~ 20px</code> 的固定字体尺寸，和基于父元素 <code>1 ~ 10</code> 倍的字体尺寸。</p>
 
         <h3 className="mt-20">固定尺寸</h3>
-        <div className={classnames(style['util-font'])}>
+        <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     FONT.size.map((item, index) => {
                       return (
@@ -78,7 +78,7 @@ export default class Font extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -92,11 +92,11 @@ export default class Font extends Component {
 
         <h3 className="mt-20">成倍尺寸</h3>
         <p>使用 em 作为单位，基于父元素放大字体，Ricenoodle 提供了 <code>1x ~ 10x</code>。</p>
-        <div className={classnames(style['util-font'])}>
+        <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <h6>以下实例是以 <code>14px</code> 作为基准。</h6>
                   {
                     FONT.multiple.map((item, index) => {
@@ -108,7 +108,7 @@ export default class Font extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('multiple')
@@ -123,11 +123,11 @@ export default class Font extends Component {
         <div className="divider divider-lg"></div>
         <h2>权重</h2>
         <p>使用权重类快速设置文字的权重。</p>
-        <div className={classnames(style['util-font'])}>
+        <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     FONT.weight.map((item, index) => {
                       return (
@@ -138,7 +138,7 @@ export default class Font extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('weight')

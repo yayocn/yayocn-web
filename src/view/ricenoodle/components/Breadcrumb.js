@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 export default class Breadcrumb extends Component {
 
@@ -37,11 +37,11 @@ export default class Breadcrumb extends Component {
 
         <h2>实例</h2>
         <p>一般为最后一项添加 <code>.active</code> 类，且不需要 <code>&lt;a&gt;</code>。</p>
-        <div className={classnames(style['util-breadcrumb'])}>
+        <div className={classnames('util-breadcrumb')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
@@ -52,7 +52,7 @@ export default class Breadcrumb extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('situation')
@@ -68,11 +68,11 @@ export default class Breadcrumb extends Component {
 
         <h2>禁用项</h2>
         <p>添加 <code>.disabled</code> 类设置禁用项，且不需要 <code>&lt;a&gt;</code>。</p>
-        <div className={classnames(style['util-breadcrumb'])}>
+        <div className={classnames('util-breadcrumb')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
@@ -83,7 +83,7 @@ export default class Breadcrumb extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDisabledCode()

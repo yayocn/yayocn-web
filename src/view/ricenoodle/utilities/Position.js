@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss';
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 import { find } from 'lodash';
 
 const POSITION = {
@@ -69,14 +69,14 @@ export default class Position extends Component {
         <h2>种类</h2>
         <p>Ricenoodle 提供了 <code>static, relative, absolute, fixed, sticky</code> 几种类型。</p>
         <p className="alert alert-warning"><code>sticky</code>需要注意浏览器以及版本。</p>
-        <div className={classnames(style['util-position'])}>
+        <div className={classnames('util-position')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
 
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight copyBtn={false}>
                     {
                       this.createCode('type')
@@ -91,7 +91,7 @@ export default class Position extends Component {
         <div className="divider divider-lg"></div>
         <h2>位置</h2>
         <p>快速设置位置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
-        <div className={classnames(style['util-position'])}>
+        <div className={classnames('util-position')}>
           <div className="row">
             <div className="col-12">
               {
@@ -99,17 +99,17 @@ export default class Position extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-20">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
-                          <div className={classnames('bg-light pt-relative', style['position-view-wrap'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
+                          <div className={classnames('bg-light pt-relative', 'position-view-wrap')}>
                             {
                               item.key === 'full'
                                 ? <div className={classnames('bg-dark', item.className)}></div>
-                                : <div className={classnames('bg-dark', style['position-item'], item.className)}></div>
+                                : <div className={classnames('bg-dark', 'position-item', item.className)}></div>
                             }
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createSeparatedCode('position', item.key)

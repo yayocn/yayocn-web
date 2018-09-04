@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const VIEW = {
   display: [
@@ -78,23 +78,23 @@ export default class View extends Component {
 
         <h2>显示类型</h2>
         <p>通过设置 <code>display</code> 属性来控制显示的类型。</p>
-        <div className={classnames(style['util-view'])}>
+        <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     VIEW.display.map((item, index) => {
                       return (
                         <div className={classnames('mb-20 text-white')} key={index} >
-                          <div className={classnames('border w-50 text-center', item.className, style['view-item'])}>{item.title}</div>
-                          <div className={classnames('border w-50 text-center', item.className, style['view-item'])}>{item.title}</div>
+                          <div className={classnames('border w-50 text-center', item.className, 'view-item')}>{item.title}</div>
+                          <div className={classnames('border w-50 text-center', item.className, 'view-item')}>{item.title}</div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight copyBtn={false}>
                     {
                       this.createCode('display')
@@ -109,11 +109,11 @@ export default class View extends Component {
         <div className="divider divider-lg"></div>
         <h2>Hidden</h2>
         <p>通过添加 <code>hidden</code> 属性或者 <code>.hidden</code> 类来控制隐藏元素，此时元素没有高度和宽度。</p>
-        <div className={classnames(style['util-view'])}>
+        <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames('mt-0', common['example-code'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('mt-0', 'example-code')}>
                   <Highlight copyBtn={false}>
                     {
                       this.createHiddenCode('hidden')
@@ -128,22 +128,22 @@ export default class View extends Component {
         <div className="divider divider-lg"></div>
         <h2>Visibility</h2>
         <p>通过添加 <code>.visible | .invisible</code> 类来控制隐藏元素，此时元素有高度和宽度，效果和 <code>.opacity-10 | .opacity-0</code> 一样。</p>
-        <div className={classnames(style['util-view'])}>
+        <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     VIEW.visibility.map((item, index) => {
                       return (
                         <div className={classnames('mb-20 border text-white')} key={index} >
-                          <div className={classnames('text-center', item.className, style['view-item'])}>{item.title}</div>
+                          <div className={classnames('text-center', item.className, 'view-item')}>{item.title}</div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight copyBtn={false}>
                     {
                       this.createCode('visibility')
@@ -158,22 +158,22 @@ export default class View extends Component {
         <div className="divider divider-lg"></div>
         <h2>不透明度</h2>
         <p>通过添加 <code>.opacity-[x]</code> 类来控制元素的不透明度。</p>
-        <div className={classnames(style['util-view'])}>
+        <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     VIEW.opacity.map((item, index) => {
                       return (
                         <div className={classnames('mb-10 border text-white')} key={index} >
-                          <div className={classnames('text-center', item.className, style['view-item'])}>{item.title}</div>
+                          <div className={classnames('text-center', item.className, 'view-item')}>{item.title}</div>
                         </div>
                       );
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight copyBtn={false}>
                     {
                       this.createCode('opacity')

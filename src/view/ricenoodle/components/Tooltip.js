@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const TOOLTIP = {
   default: [
@@ -60,14 +60,14 @@ export default class Tooltip extends Component {
         </ul>
 
         <h3 className="mt-20">初始化</h3>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-tooltip')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
 
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       `$(function () {
@@ -85,11 +85,11 @@ export default class Tooltip extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-tooltip')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -106,7 +106,7 @@ export default class Tooltip extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -121,11 +121,11 @@ export default class Tooltip extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>位置</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-tooltip')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12 pt-relative" style={{ height: '100px'}}>
                       <div className="pt-absolute pt-center text-center">
@@ -144,7 +144,7 @@ export default class Tooltip extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('direction')

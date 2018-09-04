@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
-import style from './style.scss';
+import './style.scss';
 
 export default class Gate extends Component {
   render () {
     return (
       <Fragment>
-        <header className={classnames('p-20 flex justify-content-center align-items-end', style.header)}>
+        <header className={classnames('p-20 flex justify-content-center align-items-end', 'header')}>
           <div className="nav-left font-2x mr-50">
             <ul className="nav">
               <li className="nav-item">
@@ -14,7 +14,7 @@ export default class Gate extends Component {
               </li>
             </ul>
           </div>
-          <div className={classnames('border', style.logo)}>
+          <div className={classnames('border', 'logo')}>
             <p className="pt-absolute pt-center text-center">LOGO</p>
           </div>
           <div className="nav-left font-2x ml-50">

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const DIVIDER = {
   default: [
@@ -68,11 +68,11 @@ export default class Divider extends Component {
 
         <h2>实例</h2>
         <p><code>.divider</code> 分割组件用于分割上下文。</p>
-        <div className={classnames(style['util-divider'])}>
+        <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -80,7 +80,7 @@ export default class Divider extends Component {
                           return (
                             <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
-                              <div className={classnames(item.className, style['divider-feature'])}></div>
+                              <div className={classnames(item.className, 'divider-feature')}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
                             </div>
                           );
@@ -89,7 +89,7 @@ export default class Divider extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -104,11 +104,11 @@ export default class Divider extends Component {
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
         <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用 <a href="/ricenoodle/utilities/space">Space</a> 来控制。</p>
-        <div className={classnames(style['util-divider'])}>
+        <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -116,7 +116,7 @@ export default class Divider extends Component {
                           return (
                             <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
-                              <div className={classnames(item.className, style['divider-feature'])}></div>
+                              <div className={classnames(item.className, 'divider-feature')}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
                             </div>
                           );
@@ -125,7 +125,7 @@ export default class Divider extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -140,11 +140,11 @@ export default class Divider extends Component {
         <div className="divider divider-lg"></div>
         <h2>权重</h2>
         <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用 <a href="/ricenoodle/utilities/border">Border</a> 来控制。</p>
-        <div className={classnames(style['util-divider'])}>
+        <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -152,7 +152,7 @@ export default class Divider extends Component {
                           return (
                             <div className="ph-20 border mb-10" key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
-                              <div className={classnames(item.className, style['divider-feature'])}></div>
+                              <div className={classnames(item.className, 'divider-feature')}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
                             </div>
                           );
@@ -161,7 +161,7 @@ export default class Divider extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('weight')
@@ -176,11 +176,11 @@ export default class Divider extends Component {
         <div className="divider divider-lg"></div>
         <h2>主题</h2>
         <p>结合 <a href="/ricenoodle/utilities/border">Border theme</a> ，可以生成多重主题颜色。</p>
-        <div className={classnames(style['util-divider'])}>
+        <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -188,7 +188,7 @@ export default class Divider extends Component {
                           return (
                             <div className={classnames("ph-20 border mb-10", {'text-white bg-dark': item.key === 'white'})} key={index} >
                               <p>醉里挑灯看剑，梦回吹角连营。 八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。</p>
-                              <div className={classnames(item.className, style['divider-feature'])}></div>
+                              <div className={classnames(item.className, 'divider-feature')}></div>
                               <p>马作的卢飞快，弓如霹雳弦惊。 了却君王天下事，赢得生前身后名。可怜白发生。</p>
                             </div>
                           );
@@ -197,7 +197,7 @@ export default class Divider extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')

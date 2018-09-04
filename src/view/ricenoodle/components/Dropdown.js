@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -268,11 +268,11 @@ export default class Dropdown extends Component {
 
         <h2>实例</h2>
         <p>下拉菜单由控制按钮和菜单列表两部分组成。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -294,7 +294,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -309,11 +309,11 @@ export default class Dropdown extends Component {
         <div className="divider divider-lg"></div>
         <h2>主题</h2>
         <p>可以结合 <a href="/ricenoodle/button">Button</a> 对 toggle button 进行设置。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -335,7 +335,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createSituationCode()
@@ -350,11 +350,11 @@ export default class Dropdown extends Component {
         <div className="divider divider-lg"></div>
         <h2>组合</h2>
         <p>可以通过 <code>.btn-group</code> 将按钮和下拉菜单组合使用。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="btn-group">
@@ -372,7 +372,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createGroupCode()
@@ -387,11 +387,11 @@ export default class Dropdown extends Component {
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
         <p>通过设置 <code>.dropdown-toggle</code> 来控制下拉菜单的尺寸。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="flex align-items-end">
@@ -415,7 +415,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -430,11 +430,11 @@ export default class Dropdown extends Component {
         <div className="divider divider-lg"></div>
         <h2>位置</h2>
         <p>通过添加 <code>.dropup | .dropright | .dropdown | .dropleft</code> 类设置菜单的位置。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12 pt-relative" style={{ height: '200px'}}>
                       <div className="pt-absolute pt-center text-center">
@@ -458,7 +458,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createPositionCode()
@@ -474,11 +474,11 @@ export default class Dropdown extends Component {
         <h2>菜单</h2>
         <h3 className="mt-20">激活状态</h3>
         <p>在<code>.dropdown-item</code> 上添加 <code>.active</code> 激活该项。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -491,7 +491,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createActiveCode()
@@ -505,11 +505,11 @@ export default class Dropdown extends Component {
 
         <h3 className="mt-20">禁用状态</h3>
         <p>在<code>.dropdown-item</code> 上添加 <code>.disabled</code> 激活该项。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -522,7 +522,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDisabledCode()
@@ -536,11 +536,11 @@ export default class Dropdown extends Component {
 
         <h3 className="mt-20">对齐</h3>
         <p>下拉菜单默认是左对齐，添加 <code>.dropdown-menu-right</code> 设置为右对齐。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="btn-group">
@@ -556,7 +556,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createAliginCode()
@@ -569,11 +569,11 @@ export default class Dropdown extends Component {
         </div>
 
         <h3 className="mt-20">子标题</h3>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -587,7 +587,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createHeaderCode()
@@ -600,11 +600,11 @@ export default class Dropdown extends Component {
         </div>
 
         <h3 className="mt-20">分割线</h3>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -618,7 +618,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDividerCode()
@@ -631,11 +631,11 @@ export default class Dropdown extends Component {
         </div>
 
         <h3 className="mt-20">文本内容</h3>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -647,7 +647,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createTextCode()
@@ -660,11 +660,11 @@ export default class Dropdown extends Component {
         </div>
 
         <h3 className="mt-20">表单</h3>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="pt-relative">
@@ -694,7 +694,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormCode()
@@ -708,11 +708,11 @@ export default class Dropdown extends Component {
 
         <h3 className="mt-20">偏移</h3>
         <p>通过设置 <code>.data-offset</code> 设置菜单相对于 <code>.dropdown-toggle</code> 的偏移位置。</p>
-        <div className={classnames(style['util-dropdown'])}>
+        <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="dropdown">
@@ -728,7 +728,7 @@ export default class Dropdown extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createOffsetCode()

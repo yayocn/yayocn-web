@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const BACKGROUND = {
   theme: [
@@ -51,25 +51,25 @@ export default class Background extends Component {
 
         <h2>主题</h2>
         <p>背景工具类设有 <code>12</code> 种主题颜色。</p>
-        <div className={classnames(style['util-bg'])}>
+        <div className={classnames('util-bg')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       BACKGROUND.theme.map((item, index) => {
                         return (
                           <div className="col-4 mb-10" key={index} >
                             <h6>{item.title}</h6>
-                            <div className={classnames(item.className, style['bg-feature'])}></div>
+                            <div className={classnames(item.className, 'bg-feature')}></div>
                           </div>
                         );
                       })
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')

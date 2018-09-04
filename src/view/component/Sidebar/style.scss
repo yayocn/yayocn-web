@@ -1,27 +1,42 @@
 @import "../../../../public/scss/variable";
 
+%hover-focus {
+  color: $cyan;
+  code {
+    color: $cyan;
+  }
+}
+
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: $header-height;
   left: 0;
-  bottom: 0;
   padding-top: $sidebar-padding;
   padding-bottom: $sidebar-padding;
   width: $sidebar-width;
-  box-shadow: 0 0 5px 0 #ddd;
-  overflow: auto;
+  border-right: 1px solid lighten($cyan, 10%);
 
   .sidebar-item {
     list-style: none;
 
-    &:active,
-    &.active {
-      background-color: lighten($cyan, 55%);
-      border-right: solid 3px $cyan;
-    }
-
     small {
       margin-left: 10px;
+    }
+
+    .active {
+      background-color: lighten($cyan, 55%) !important;
+      border-right: solid 3px $cyan !important;
+      @extend %hover-focus;
+    }
+  }
+
+  .sidebar-submenu {
+    ul {
+      display: none;
+    }
+
+    a.active + ul {
+      display: block;
     }
   }
 
@@ -29,12 +44,9 @@
     text-decoration: none;
     color: $dark;
 
+    &.active,
     &:hover {
-      color: $cyan;
-
-      code {
-        color: $cyan;
-      }
+      @extend %hover-focus;
     }
   }
 }

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const TABLE = {
   default: [
@@ -115,11 +115,11 @@ export default class Table extends Component {
 
         <h2>实例</h2>
         <p>为表格添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。</p>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -170,7 +170,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -185,11 +185,11 @@ export default class Table extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>紧凑型表格</h2>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -240,7 +240,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('small')
@@ -255,11 +255,11 @@ export default class Table extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>条纹表格</h2>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -310,7 +310,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('striped')
@@ -325,11 +325,11 @@ export default class Table extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>带边框的表格</h2>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -380,7 +380,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('border')
@@ -395,11 +395,11 @@ export default class Table extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>Hover</h2>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -450,7 +450,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('hover')
@@ -465,11 +465,11 @@ export default class Table extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>暗色表格</h2>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -520,7 +520,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('dark')
@@ -536,11 +536,11 @@ export default class Table extends Component {
 
         <h2>行状态</h2>
         <p>在 <code>&lt;tr&gt;</code> 上添加 <code>.row- [active | primary | ...]</code> 等类设置行状态。</p>
-        <div className={classnames(style['util-table'])}>
+        <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <table className="table table-hover">
@@ -575,7 +575,7 @@ export default class Table extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createSituationCode()

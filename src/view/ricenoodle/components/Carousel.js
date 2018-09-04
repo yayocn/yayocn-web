@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss';
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 import imgSlide1 from '../../../../public/image/slide1.jpg';
 import imgSlide2 from '../../../../public/image/slide2.jpg';
@@ -69,11 +69,11 @@ export default class Carousel extends Component {
         <h2>实例</h2>
         <p>轮播图不会自动标准化幻灯片尺寸。 因此，可能需要使用其他类或自定义样式来适当调整内容大小。</p>
         <p>轮播图中除了主体 <code>.carousel-inner</code> 外，其他部分都可以自定义。虽然轮播支持 <code>prev | next </code> 控件和指示器，但它们并未明确要求。 根据需要添加和自定义。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-8 col-12">
                       <div id="carouselExample1" className="carousel slide" data-ride="carousel">
@@ -117,7 +117,7 @@ export default class Carousel extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -132,11 +132,11 @@ export default class Carousel extends Component {
         <div className="divider divider-lg"></div>
         <h2>淡入淡出</h2>
         <p>将 <code>.carousel-fade</code> 添加到轮播图中，以使用淡入淡出过渡方式。</p>
-        <div className={classnames(style['util-badge'])}>
+        <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-8 col-12">
                       <div id="carouselExample2" className="carousel slide carousel-fade" data-ride="carousel">
@@ -180,7 +180,7 @@ export default class Carousel extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('carousel-fade')

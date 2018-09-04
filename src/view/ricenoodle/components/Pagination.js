@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -81,11 +81,11 @@ export default class Pagination extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav>
@@ -101,7 +101,7 @@ export default class Pagination extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -116,11 +116,11 @@ export default class Pagination extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>带边框的分页</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <nav>
@@ -136,7 +136,7 @@ export default class Pagination extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('border')
@@ -151,11 +151,11 @@ export default class Pagination extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>尺寸</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -177,7 +177,7 @@ export default class Pagination extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -192,11 +192,11 @@ export default class Pagination extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>主题</h2>
-        <div className={classnames(style['util-pagination'])}>
+        <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -220,7 +220,7 @@ export default class Pagination extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')

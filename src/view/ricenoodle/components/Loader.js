@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const LOADER = {
   bar: [
@@ -90,11 +90,11 @@ export default class Loader extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>Bar</h2>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-md-6 col-12">
                       {
@@ -115,7 +115,7 @@ export default class Loader extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('bar')
@@ -128,11 +128,11 @@ export default class Loader extends Component {
         </div>
 
         <h3 className="mt-20">主题</h3>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       LOADER.barTheme.map((item, index) => {
@@ -151,7 +151,7 @@ export default class Loader extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('barTheme')
@@ -164,11 +164,11 @@ export default class Loader extends Component {
         </div>
 
         <h3 className="mt-20">尺寸</h3>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       LOADER.barSize.map((item, index) => {
@@ -187,7 +187,7 @@ export default class Loader extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('barSize')
@@ -202,11 +202,11 @@ export default class Loader extends Component {
         <div className="divider divider-lg"></div>
 
         <h2>Roll</h2>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-3 col-md-6 col-12">
                       {
@@ -227,7 +227,7 @@ export default class Loader extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('roll')
@@ -240,11 +240,11 @@ export default class Loader extends Component {
         </div>
 
         <h3 className="mt-20">主题</h3>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       LOADER.rollSituation.map((item, index) => {
@@ -263,7 +263,7 @@ export default class Loader extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('rollSituation')
@@ -276,11 +276,11 @@ export default class Loader extends Component {
         </div>
 
         <h3 className="mt-20">尺寸</h3>
-        <div className={classnames(style['util-loader'])}>
+        <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       LOADER.rollSize.map((item, index) => {
@@ -299,7 +299,7 @@ export default class Loader extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('rollSize')

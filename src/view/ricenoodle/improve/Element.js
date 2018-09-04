@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss'
+import '../style.scss';
 
 const ELEMENT = {
   head: [
@@ -134,11 +134,11 @@ export default class Element extends Component {
 
         <h2>Headings</h2>
         <p>重置所有标题元素。删除了它们的顶部外边距，底部有 <code>7.5px</code> 的下边距。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -151,7 +151,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createHeadingCode()
@@ -166,11 +166,11 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>水平分割线</h2>
         <p>重置了 <code>&lt;hr/&gt;</code> 元素，上下均有 <code>15px</code> 的外边距。也可以使用 <a href="/ricenoodle/components/divider">Divider</a> 代替。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <h3>沁园春 · 雪</h3>
@@ -179,7 +179,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createHrCode()
@@ -194,18 +194,18 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>&lt;small&gt; 元素</h2>
         <p>设置字体大小为父元素的 <code>60%</code>。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <h3>牛顿第一定律：<small>任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。</small></h3>
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     &lt;h1&gt;牛顿第一定律：&lt;small&gt;任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。&lt;/small&gt;&lt;/h1&gt;
                   </Highlight>
@@ -218,18 +218,18 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>&lt;mark&gt; 元素</h2>
         <p>垂直方向和水平方向分别有 <code>2px 3px</code> 的内边距，设置背景颜色为 <code>#ffff00</code>。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       《静夜思》的作者是 <mark>李白</mark>。
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     《静夜思》的作者是 &lt;mark>李白&lt;/mark>。
                   </Highlight>
@@ -242,11 +242,11 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>&lt;address&gt; 元素</h2>
         <p>重置地址元素。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <address>
@@ -258,7 +258,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createAddressCode()
@@ -273,11 +273,11 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>&lt;blockquote&gt; 元素</h2>
         <p>重置引用元素的样式。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <blockquote>
@@ -287,7 +287,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createBlockquoteCode('')
@@ -301,11 +301,11 @@ export default class Element extends Component {
 
         <h3 className="mt-20">右侧引用</h3>
         <p>添加 <code>.blockquote-right</code>，使引用居于右侧。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <blockquote className="blockquote-right">
@@ -315,7 +315,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createBlockquoteCode('blockquote-right')
@@ -330,11 +330,11 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>&lt;dl&gt; 元素</h2>
         <p>重置定义列表样式。结合 <a href="/ricenoodle/components/grid">栅格系统</a> 可以轻松制作说明表格。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <dl className="row">
@@ -359,7 +359,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDlCode()
@@ -374,11 +374,11 @@ export default class Element extends Component {
         <div className="divider divider-lg"></div>
         <h2>禁止缩放</h2>
         <p>针对 <code>&lt;textarea&gt;</code> 元素，使其不能变换尺寸。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <textarea className="size-dead" name="" id="" cols="50" rows="5"></textarea>
@@ -386,7 +386,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     &lt;textarea className="size-dead" name="" id="" cols="30" rows="10">&lt;/textarea>
                   </Highlight>
@@ -403,11 +403,11 @@ export default class Element extends Component {
 
         <h3 className="mt-20">内联列表</h3>
         <p>列表的所有项展示在同一行。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ul className="list-inline">
@@ -420,7 +420,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createListInlineCode()
@@ -434,11 +434,11 @@ export default class Element extends Component {
 
         <h3 className="mt-20">无样式列表</h3>
         <p>清除 <code>ul, ol</code> 的 <code>list-style</code>。</p>
-        <div className={classnames(style['util-code'])}>
+        <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <ol className="list-bare">
@@ -451,7 +451,7 @@ export default class Element extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createListBareCode()

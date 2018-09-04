@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
+import '../../../../public/scss/common.scss';
 
 export default class Space extends Component {
 
@@ -47,8 +47,8 @@ export default class Space extends Component {
         <p><code>[property][side]-[size]</code></p>
 
         <h3><code>property</code></h3>
-        <div className={classnames(common['feature-example'])}>
-          <div className={classnames(common['example-view'])}>
+        <div className={classnames('feature-example')}>
+          <div className={classnames('example-view')}>
             <div className="ph-30">
               <ul className="mb-0">
                 <li><code>m</code> : <code>margin</code></li>
@@ -59,8 +59,8 @@ export default class Space extends Component {
         </div>
 
         <h3 className="mt-10"><code>side</code></h3>
-        <div className={classnames(common['feature-example'])}>
-          <div className={classnames(common['example-view'])}>
+        <div className={classnames('feature-example')}>
+          <div className={classnames('example-view')}>
             <div className="ph-30">
               <ul className="mb-0">
                 <li><code>null</code> : <code>[property]</code> 后面直接跟 <code>[size]</code>，对 <code>top, right, bottom, left</code> 均设置值。例如： <code>m-0 p-50</code></li>
@@ -76,8 +76,8 @@ export default class Space extends Component {
         </div>
 
         <h3 className="mt-10"><code>size</code></h3>
-        <div className={classnames(common['feature-example'])}>
-          <div className={classnames(common['example-view'])}>
+        <div className={classnames('feature-example')}>
+          <div className={classnames('example-view')}>
             <div className="ph-30">
               <ul className="mb-0">
                 <li><code>[0 ~ 20, 25, 30, 35, 40, 45, 50, auto]</code> : 设置 <code>margin | padding</code> 的值，单位是 <code>px</code>。</li>
@@ -88,8 +88,8 @@ export default class Space extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 className="mt-10">实例</h2>
-        <div className={classnames(common['feature-example'])}>
-          <div className={classnames('mt-0', common['example-code'])}>
+        <div className={classnames('feature-example')}>
+          <div className={classnames('mt-0', 'example-code')}>
             <Highlight>
               {
                 this.createExampleCode()

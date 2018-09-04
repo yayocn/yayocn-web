@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -124,11 +124,11 @@ export default class ListGroup extends Component {
 
         <h2>实例</h2>
         <p>最基本的列表组是一个无序列表，其中包含列表项和正确的类。 使用后面的选项或根据需要使用您自己的CSS构建它。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       {
@@ -145,7 +145,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -159,11 +159,11 @@ export default class ListGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h3 className="mt-20">激活</h3>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group">
@@ -174,7 +174,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createActiveCode()
@@ -188,11 +188,11 @@ export default class ListGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h3 className="mt-20">禁用</h3>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group">
@@ -203,7 +203,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDisabledCode()
@@ -218,11 +218,11 @@ export default class ListGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>无外边框</h2>
         <p>添加 <code>.list-group-flush</code> 以删除最外层边框，以在父容器中边对边呈现列表组项。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       {
@@ -239,7 +239,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('flush')
@@ -254,11 +254,11 @@ export default class ListGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>无边框</h2>
         <p>添加 <code>.list-group-noborder</code> 以删除所有边框。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       {
@@ -275,7 +275,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('noborder')
@@ -290,11 +290,11 @@ export default class ListGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>链接</h2>
         <p>在 <code>.list-group-item</code> 中使用 <code>&lt;a&gt;</code> 标签。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group">
@@ -305,7 +305,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createAnchorCode()
@@ -320,11 +320,11 @@ export default class ListGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>主题</h2>
         <p>使用情景类为列表设置不同的主题。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       LISTGROUP.situation.map((item, index) => {
@@ -339,7 +339,7 @@ export default class ListGroup extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createSituationCode()
@@ -354,11 +354,11 @@ export default class ListGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>内容</h2>
         <p>添加 <code>.list-group-item-heading .list-group-item-text</code> 等类为标题和主内容设置样式。</p>
-        <div className={classnames(style['util-listgroup'])}>
+        <div className={classnames('util-listgroup')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group list-group-primary">
@@ -372,7 +372,7 @@ export default class ListGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createContentCode()

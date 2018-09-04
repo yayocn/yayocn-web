@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 export default class Close extends Component {
 
@@ -25,18 +25,18 @@ export default class Close extends Component {
 
         <h2>图标</h2>
         <p>关闭图标默认是右浮动。</p>
-        <div className={classnames(style['util-bg'])}>
+        <div className={classnames('util-bg')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <span className="close fl">&times;</span>
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode()
@@ -50,11 +50,11 @@ export default class Close extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>按钮</h2>
-        <div className={classnames(style['util-bg'])}>
+        <div className={classnames('util-bg')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <button type="button" className="close fl">
@@ -63,7 +63,7 @@ export default class Close extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createBtnCode()

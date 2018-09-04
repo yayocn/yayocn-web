@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 import { find } from 'lodash';
 
 const SIZE = {
@@ -70,11 +70,11 @@ export default class Size extends Component {
 
         <h2>宽度</h2>
         <p>设置元素的宽度。</p>
-        <div className={classnames(style['util-size'])}>
+        <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     SIZE.width.map((item, index) => {
                       return (
@@ -85,7 +85,7 @@ export default class Size extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('width')
@@ -100,11 +100,11 @@ export default class Size extends Component {
         <div className="divider divider-lg"></div>
         <h2>高度</h2>
         <p>设置元素的高度。</p>
-        <div className={classnames(style['util-size'])}>
+        <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       SIZE.height.map((item, index) => {
@@ -119,7 +119,7 @@ export default class Size extends Component {
                     }
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('height')
@@ -134,7 +134,7 @@ export default class Size extends Component {
         <div className="divider divider-lg"></div>
         <h2>最大宽高</h2>
         <p>设置元素的最大宽度和高度。</p>
-        <div className={classnames(style['util-size'])}>
+        <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
               {
@@ -142,15 +142,15 @@ export default class Size extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-20">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className="bg-light">
                             <div className={classnames('bg-muted p-20', item.className, { 'block-inline': item.key === 'height' })}>
                               <p className="font-4x text-white">max-{item.key} = 100%</p>
                             </div>
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createItemCode('max', item.key)
@@ -169,11 +169,11 @@ export default class Size extends Component {
         <div className="divider divider-lg"></div>
         <h2>视口高度</h2>
         <p>将当前窗口的高度设置为元素高度。</p>
-        <div className={classnames(style['util-size'])}>
+        <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   {
                     SIZE.full.map((item, index) => {
                       return (
@@ -186,7 +186,7 @@ export default class Size extends Component {
                     })
                   }
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('full')

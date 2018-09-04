@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 import { find } from 'lodash';
 
 const SHADOW = {
@@ -39,7 +39,7 @@ export default class Shadow extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>阴影</h2>
-        <div className={classnames(style['util-shadow'])}>
+        <div className={classnames('util-shadow')}>
           <div className="row">
             <div className="col-12">
               {
@@ -47,15 +47,15 @@ export default class Shadow extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-20">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className="row">
                             <div className="col-4 mb-10">
-                              <div className={classnames('border bg-light', item.className, style['shadow-feature'])}></div>
+                              <div className={classnames('border bg-light', item.className, 'shadow-feature')}></div>
                             </div>
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createItemCode('visibility', item.key)
@@ -74,7 +74,7 @@ export default class Shadow extends Component {
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
         <p>设置阴影尺寸。</p>
-        <div className={classnames(style['util-shadow'])}>
+        <div className={classnames('util-shadow')}>
           <div className="row">
             <div className="col-12">
               {
@@ -82,15 +82,15 @@ export default class Shadow extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 className="mt-20">{item.title}</h3>
-                      <div className={classnames(common['feature-example'])}>
-                        <div className={classnames(common['example-view'])}>
+                      <div className={classnames('feature-example')}>
+                        <div className={classnames('example-view')}>
                           <div className="row">
                             <div className="col-4 mb-10">
-                              <div className={classnames('border bg-light', item.className, style['shadow-feature'])}></div>
+                              <div className={classnames('border bg-light', item.className, 'shadow-feature')}></div>
                             </div>
                           </div>
                         </div>
-                        <div className={classnames(common['example-code'])}>
+                        <div className={classnames('example-code')}>
                           <Highlight>
                             {
                               this.createItemCode('size', item.key)

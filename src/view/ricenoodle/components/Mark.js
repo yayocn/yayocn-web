@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const MARK = {
   close: [
@@ -48,11 +48,11 @@ export default class Mark extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2><code>mark-close</code></h2>
-        <div className={classnames(style['util-mark'])}>
+        <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -65,7 +65,7 @@ export default class Mark extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('close')
@@ -80,11 +80,11 @@ export default class Mark extends Component {
         <div className="divider divider-lg"></div>
 
         <h2><code>mark-ok</code></h2>
-        <div className={classnames(style['util-mark'])}>
+        <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -97,7 +97,7 @@ export default class Mark extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('ok')
@@ -112,11 +112,11 @@ export default class Mark extends Component {
         <div className="divider divider-lg"></div>
 
         <h2><code>mark-arrow-left2</code></h2>
-        <div className={classnames(style['util-mark'])}>
+        <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -129,7 +129,7 @@ export default class Mark extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('arrowLeft2')
@@ -144,11 +144,11 @@ export default class Mark extends Component {
         <div className="divider divider-lg"></div>
 
         <h2><code>mark-arrow-right2</code></h2>
-        <div className={classnames(style['util-mark'])}>
+        <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -161,7 +161,7 @@ export default class Mark extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('arrowRight2')

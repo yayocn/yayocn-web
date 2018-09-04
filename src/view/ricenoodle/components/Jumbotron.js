@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const JUMBOTRON = {
   default: [
@@ -74,11 +74,11 @@ export default class Jumbotron extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-jumbotron'])}>
+        <div className={classnames('util-jumbotron')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -99,7 +99,7 @@ export default class Jumbotron extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -115,11 +115,11 @@ export default class Jumbotron extends Component {
 
         <h2>响应式</h2>
         <p>添加了 <code>.jumbotron-fluid</code> 后，就可以在组件内部使用栅格系统了。</p>
-        <div className={classnames(style['util-jumbotron'])}>
+        <div className={classnames('util-jumbotron')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
@@ -142,7 +142,7 @@ export default class Jumbotron extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createResponsiveCode()

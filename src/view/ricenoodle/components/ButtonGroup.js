@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 // eslint-disable-next-line
 const ANCHOR = 'javascript:;';
@@ -87,18 +87,18 @@ export default class ButtonGroup extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-button-group'])}>
+        <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTONGROUP.default.map((item, index) => {
                           return (
                             <div className="mb-10" key={index} >
-                              <div className={classnames(item.className, style['button-group-feature'])}>
+                              <div className={classnames(item.className, 'button-group-feature')}>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
@@ -110,7 +110,7 @@ export default class ButtonGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('default')
@@ -125,18 +125,18 @@ export default class ButtonGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>尺寸</h2>
         <p>不要将按钮大小调整类应用于组中的每个按钮，只需将 <code>.btn-group-*</code> 添加到每个组。</p>
-        <div className={classnames(style['util-button-group'])}>
+        <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTONGROUP.size.map((item, index) => {
                           return (
                             <div className="mb-10" key={index} >
-                              <div className={classnames(item.className, style['button-group-feature'])}>
+                              <div className={classnames(item.className, 'button-group-feature')}>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
@@ -148,7 +148,7 @@ export default class ButtonGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('size')
@@ -163,18 +163,18 @@ export default class ButtonGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>按钮组块</h2>
         <p>按钮组块将占满父元素的宽度。</p>
-        <div className={classnames(style['util-button-group'])}>
+        <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTONGROUP.block.map((item, index) => {
                           return (
                             <div className="w-50 mb-10" key={index} >
-                              <div className={classnames(item.className, style['button-group-feature'])}>
+                              <div className={classnames(item.className, 'button-group-feature')}>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
@@ -186,7 +186,7 @@ export default class ButtonGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('block')
@@ -200,18 +200,18 @@ export default class ButtonGroup extends Component {
 
         <div className="divider divider-lg"></div>
         <h2>嵌套下拉框</h2>
-        <div className={classnames(style['util-button-group'])}>
+        <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTONGROUP.dropdown.map((item, index) => {
                           return (
                             <div className="mb-10" key={index} >
-                              <div className={classnames(item.className, style['button-group-feature'])}>
+                              <div className={classnames(item.className, 'button-group-feature')}>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <div className="dropdown">
@@ -232,7 +232,7 @@ export default class ButtonGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createDropdownCode()
@@ -247,18 +247,18 @@ export default class ButtonGroup extends Component {
         <div className="divider divider-lg"></div>
         <h2>垂直按钮组</h2>
         <p>使一组按钮垂直堆叠而不是水平堆叠。 此处不支持拆分按钮下拉菜单。</p>
-        <div className={classnames(style['util-button-group'])}>
+        <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTONGROUP.vt.map((item, index) => {
                           return (
                             <div className="mb-10" key={index} >
-                              <div className={classnames(item.className, style['button-group-feature'])}>
+                              <div className={classnames(item.className, 'button-group-feature')}>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
                                 <button type="button" className="btn btn-secondary">Button</button>
@@ -270,7 +270,7 @@ export default class ButtonGroup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('vt')

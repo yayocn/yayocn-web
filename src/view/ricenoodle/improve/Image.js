@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss';
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 import img1 from '../../../../public/image/slide1.jpg';
 import img2 from '../../../../public/image/slide2.jpg';
@@ -61,18 +61,18 @@ export default class Image extends Component {
 
         <h2>响应式</h2>
         <p>图像通过 <code>.img-fluid</code> 进行响应，最大宽度：<code>100%</code>。</p>
-        <div className={classnames(style['util-image'])}>
+        <div className={classnames('util-image')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <img src={img1} alt="" className="img-fluid"/>
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('fluid')
@@ -88,18 +88,18 @@ export default class Image extends Component {
 
         <h2>缩略图</h2>
         <p>在 <code>.img-fluid</code> 的基础上，增加了一些样式，比如边框和内边距。</p>
-        <div className={classnames(style['util-image'])}>
+        <div className={classnames('util-image')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <img src={img2} alt="" className="img-thumbnail"/>
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('thumbnail')
@@ -115,11 +115,11 @@ export default class Image extends Component {
 
         <h2>&lt;figure&gt; 元素</h2>
         <p><code>&lt;figure&gt;</code>元素结合了图片和图片说明。</p>
-        <div className={classnames(style['util-image'])}>
+        <div className={classnames('util-image')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-4 col-12">
                       <figure className="figure">
@@ -129,7 +129,7 @@ export default class Image extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFigureCode()
@@ -145,11 +145,11 @@ export default class Image extends Component {
 
         <h2>扩展</h2>
         <p>结合其他的类对图片进行增强，例如 <code>.border-round</code>。</p>
-        <div className={classnames(style['util-image'])}>
+        <div className={classnames('util-image')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="row">
@@ -166,7 +166,7 @@ export default class Image extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('extro')

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 export default class Modal extends Component {
 
@@ -77,11 +77,11 @@ export default class Modal extends Component {
         <h2 className="mt-20">实例</h2>
 
         <h3 className="mt-20">模态框内容</h3>
-        <div className={classnames(style['util-modal'])}>
+        <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <div className="modal pt-relative" tabIndex="-1" style={{ display: 'block'}}>
@@ -106,7 +106,7 @@ export default class Modal extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createContentCode()
@@ -120,11 +120,11 @@ export default class Modal extends Component {
 
         <h3 className="mt-20">控制模态框</h3>
         <p>单击下面的按钮切换工作模式演示。 它将从页面顶部向下滑动并淡入。</p>
-        <div className={classnames(style['util-modal'])}>
+        <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <button type="button" className="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
@@ -153,7 +153,7 @@ export default class Modal extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createControlCode()
@@ -167,11 +167,11 @@ export default class Modal extends Component {
 
         <h3 className="mt-20">滚动条模态框</h3>
         <p>当模态对于用户的视口或设备变得太长时，它们会独立于页面本身滚动。</p>
-        <div className={classnames(style['util-modal'])}>
+        <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <button type="button" className="btn btn-secondary" data-toggle="modal" data-target="#exampleModalLong">
@@ -200,7 +200,7 @@ export default class Modal extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createControlCode()
@@ -214,11 +214,11 @@ export default class Modal extends Component {
 
         <h3 className="mt-20">居中模态框</h3>
         <p>将 <code>.modal-dialog-centered</code> 添加到 <code>.modal-dialog</code> 以垂直居中模式。</p>
-        <div className={classnames(style['util-modal'])}>
+        <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <button type="button" className="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -247,7 +247,7 @@ export default class Modal extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createControlCode('modal-dialog-centered')
@@ -261,11 +261,11 @@ export default class Modal extends Component {
 
         <h3 className="mt-20">尺寸</h3>
         <p>将 <code>.modal-lg</code> 或 <code>.modal-sm</code> 添加到 <code>.modal-dialog</code> 以更改模态框尺寸。</p>
-        <div className={classnames(style['util-modal'])}>
+        <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       <button type="button" className="btn btn-secondary mr-20" data-toggle="modal" data-target="#exampleModalLarge">
@@ -318,7 +318,7 @@ export default class Modal extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createControlCode('modal-lg')

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageWrapper from '../../component/PageWrapper';
 import Highlight from '../../component/Highlight';
 import classnames from 'classnames';
-import common from '../../../../public/scss/common.scss'
-import style from '../style.scss';
+import '../../../../public/scss/common.scss';
+import '../style.scss';
 
 const ELF = {
   theme: [
@@ -71,11 +71,11 @@ export default class Breadcrumb extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2>实例</h2>
-        <div className={classnames(style['util-elf'])}>
+        <div className={classnames('util-elf')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-lg-6 col-12">
                       <form className="form-hz">
@@ -96,7 +96,7 @@ export default class Breadcrumb extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createFormCode()
@@ -111,18 +111,18 @@ export default class Breadcrumb extends Component {
         <div className="divider divider-lg"></div>
         <h2>主题</h2>
         <p>Ricenoodle 提供了 <code>11</code> 种主题颜色。</p>
-        <div className={classnames(style['util-elf'])}>
+        <div className={classnames('util-elf')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         ELF.theme.map((item, index) => {
                           return (
                             <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})} key={index}>
-                              <span className={classnames(item.className, style['elf-feature'])} key={index} >
+                              <span className={classnames(item.className, 'elf-feature')} key={index} >
                                 {item.title}
                               </span>
                             </div>
@@ -132,7 +132,7 @@ export default class Breadcrumb extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('theme')
@@ -147,18 +147,18 @@ export default class Breadcrumb extends Component {
         <div className="divider divider-lg"></div>
         <h2>位置</h2>
         <p>通过后缀 <code>-prev</code> 可以将小图标放在文字前面。</p>
-        <div className={classnames(style['util-elf'])}>
+        <div className={classnames('util-elf')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames(common['feature-example'])}>
-                <div className={classnames(common['example-view'])}>
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         ELF.position.map((item, index) => {
                           return (
                             <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})} key={index} >
-                              <span className={classnames(item.className, style['elf-feature'])}>
+                              <span className={classnames(item.className, 'elf-feature')}>
                                 {item.title}
                               </span>
                             </div>
@@ -168,7 +168,7 @@ export default class Breadcrumb extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={classnames(common['example-code'])}>
+                <div className={classnames('example-code')}>
                   <Highlight>
                     {
                       this.createCode('position')
