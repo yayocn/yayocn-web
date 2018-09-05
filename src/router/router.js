@@ -1,11 +1,11 @@
 import {
   Gate,
   Ricenoodle,
-  Start,
-  Improve,
-  Code,
-  Element,
-  Image,
+} from '../view';
+import { Start } from '../view/ricenoodle/containers/start';
+import { Improve, Code, Element, Image } from '../view/ricenoodle/containers/improve';
+
+import {
   Utilities,
   Background,
   Border,
@@ -19,6 +19,9 @@ import {
   Space,
   Text,
   View,
+} from '../view/ricenoodle/containers/utilities';
+
+import {
   Components,
   Alert,
   Badge,
@@ -49,7 +52,7 @@ import {
   Scrollspy,
   Table,
   Tooltip,
-} from '../view';
+} from '../view/ricenoodle/containers/components';
 
 const router = [
   {

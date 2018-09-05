@@ -1,0 +1,52 @@
+$header-height: 52px;
+
+$sidebar-width: 300px;
+$sidebar-padding: 20px;
+$sidebar-item-padding-y: 5px;
+$sidebar-item-padding-x: 12px;
+
+// Colors
+//
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$black:    #000 !default;
+
+$gray-dark:         $gray-800;
+$gray:              $gray-600;
+$gray-light:        $gray-500;
+$gray-lighter:      $gray-200;
+$gray-lightest:     $gray-100;
+
+$light:             $gray-300;
+$muted:             $gray-600;
+$transparent:       transparent !default;
+$dark:              $gray-900;
+
+$brand-primary:     $blue;
+$brand-secondary:   #375A7F !default;
+$brand-info:        #14adea !default;
+$brand-success:     #2EC6A0 !default;
+$brand-warning:     $yellow;
+$brand-danger:      $red;
+
+$submenu-width: $sidebar-width / 2;

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PageHeader from '../PageHeader';
 import PageBody from '../PageBody';
-import { ricenoodle } from '../../../config/menu';
+import { ricenoodle } from '../../../constants/menu';
 
 export default class PageWapper extends Component {
   render () {

@@ -1,5 +1,12 @@
-@import "../../../../public/scss/variable";
+@import "../../common/scss/_variable";
 
 .app-content {
   margin-left: $sidebar-width;
+  border-left: 1px solid lighten($cyan, 10%);
+}
+
+@media screen and (min-width: 768px) {
+  .app-content {
+    padding-right: $submenu-width + 30px !important;
+  }
 }

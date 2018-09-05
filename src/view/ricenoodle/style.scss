@@ -1,6 +1,14 @@
 // Utilities
 //
 
+h2::before {
+  display: block;
+  height: 6rem;
+  margin-top: -6rem;
+  visibility: hidden;
+  content: "";
+}
+
 $bg-height: 100px;
 .util-bg {
   .bg-feature {
