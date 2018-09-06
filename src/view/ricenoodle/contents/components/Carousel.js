@@ -59,13 +59,13 @@ export default class Carousel extends Component {
         <p className="font-2x font-100">轮播图组件，用于循环播放元素图像或文本幻灯片。</p>
 
         <div className="divider divider-bold divider-lg"></div>
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
         </ul>
 
         <div className="divider divider-lg"></div>
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>轮播图不会自动标准化幻灯片尺寸。 因此，可能需要使用其他类或自定义样式来适当调整内容大小。</p>
         <p>轮播图中除了主体 <code>.carousel-inner</code> 外，其他部分都可以自定义。虽然轮播支持 <code>prev | next </code> 控件和指示器，但它们并未明确要求。 根据需要添加和自定义。</p>
         <div className={classnames('util-badge')}>
@@ -129,7 +129,7 @@ export default class Carousel extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>淡入淡出</h2>
+        <h2 id="fade">淡入淡出</h2>
         <p>将 <code>.carousel-fade</code> 添加到轮播图中，以使用淡入淡出过渡方式。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -192,8 +192,8 @@ export default class Carousel extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h4>事件</h4>
-        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/carousel/#usage" target="_blank" rel="noopener noreferrer">Bootstrap carousel</a></p>
+        <h2 id="event">事件</h2>
+        <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/carousel/#usage" target="_blank" rel="noopener noreferrer">Bootstrap carousel</a>。</p>
       </Fragment>
     );
   }

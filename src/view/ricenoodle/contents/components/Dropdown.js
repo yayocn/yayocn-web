@@ -254,7 +254,7 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <p>使用下拉菜单组件，你需要：</p>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code>。</li>
@@ -265,7 +265,7 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>下拉菜单由控制按钮和菜单列表两部分组成。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -306,7 +306,7 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>可以结合 <a href="/ricenoodle/button">Button</a> 对 toggle button 进行设置。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -347,7 +347,7 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>组合</h2>
+        <h2 id="group">组合</h2>
         <p>可以通过 <code>.btn-group</code> 将按钮和下拉菜单组合使用。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -384,7 +384,7 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p>通过设置 <code>.dropdown-toggle</code> 来控制下拉菜单的尺寸。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -427,7 +427,7 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>位置</h2>
+        <h2 id="position">位置</h2>
         <p>通过添加 <code>.dropup | .dropright | .dropdown | .dropleft</code> 类设置菜单的位置。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -470,8 +470,8 @@ export default class Dropdown extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>菜单</h2>
-        <h3 className="mt-20">激活状态</h3>
+        <h2 id="menu">菜单</h2>
+        <h3 id="menu_active" className="mt-20">激活状态</h3>
         <p>在<code>.dropdown-item</code> 上添加 <code>.active</code> 激活该项。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -502,7 +502,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">禁用状态</h3>
+        <h3 id="menu_disabled" className="mt-20">禁用状态</h3>
         <p>在<code>.dropdown-item</code> 上添加 <code>.disabled</code> 激活该项。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -533,7 +533,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">对齐</h3>
+        <h3 id="menu_align" className="mt-20">对齐</h3>
         <p>下拉菜单默认是左对齐，添加 <code>.dropdown-menu-right</code> 设置为右对齐。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -567,7 +567,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">子标题</h3>
+        <h3 id="menu_subtitle" className="mt-20">子标题</h3>
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
@@ -598,7 +598,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">分割线</h3>
+        <h3 id="menu_divider" className="mt-20">分割线</h3>
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
@@ -629,7 +629,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">文本内容</h3>
+        <h3 id="menu_text" className="mt-20">文本内容</h3>
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
@@ -658,7 +658,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">表单</h3>
+        <h3 id="menu_form" className="mt-20">表单</h3>
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
@@ -705,7 +705,7 @@ export default class Dropdown extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">偏移</h3>
+        <h3 id="menu_offset" className="mt-20">偏移</h3>
         <p>通过设置 <code>.data-offset</code> 设置菜单相对于 <code>.dropdown-toggle</code> 的偏移位置。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
@@ -740,7 +740,7 @@ export default class Dropdown extends Component {
         </div>
         
         <div className="divider divider-lg"></div>
-        <h2>事件</h2>
+        <h2 id="event">事件</h2>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/dropdowns/#usage" target="_blank" rel="noopener noreferrer">Bootstrap dropdown</a>。</p>
       </Fragment>
     );

@@ -66,14 +66,14 @@ export default class Pagination extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>Popover 依靠第三方库 <a href="https://popper.js.org/" target="_blank" rel="noopener noreferrer">Popper.js</a> 进行定位。
             你必须在 <code>ricenoodle.js</code> 之前包含 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" target="_blank" rel="noopener noreferrer">popper.min.js</a>，以便弹出窗口工作！</li>
           <li>出于性能原因，工具提示是可配置的，因此必须自己初始化它们。</li>
         </ul>
 
-        <h3 className="mt-20">初始化</h3>
+        <h3 id="prepare_init" className="mt-20">初始化</h3>
         <div className={classnames('util-popover')}>
           <div className="row">
             <div className="col-12">
@@ -96,7 +96,7 @@ export default class Pagination extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">使用 <code>container</code> 参数</h3>
+        <h3 id="prepare_container" className="mt-20">使用 <code>container</code> 参数</h3>
         <div className={classnames('util-popover')}>
           <div className="row">
             <div className="col-12">
@@ -123,7 +123,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-popover')}>
           <div className="row">
             <div className="col-12">
@@ -161,7 +161,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>方向</h2>
+        <h2 id="direction">方向</h2>
         <div className={classnames('util-popover')}>
           <div className="row">
             <div className="col-12">
@@ -201,7 +201,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>失去焦点消失</h2>
+        <h2 id="focus">失去焦点消失</h2>
         <div className={classnames('util-popover')}>
           <div className="row">
             <div className="col-12">
@@ -231,7 +231,7 @@ export default class Pagination extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>事件</h2>
+        <h2 id="event">事件</h2>
         <p>参考<a className="btn btn-link" href="https://getbootstrap.com/docs/4.1/components/popovers/#usage" target="_blank" rel="noopener noreferrer">Bootstrap popover</a>。</p>
       </Fragment>
     );

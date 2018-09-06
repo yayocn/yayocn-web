@@ -298,7 +298,7 @@ export default class Element extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">右侧引用</h3>
+        <h3 id="blockquote_right" className="mt-20">右侧引用</h3>
         <p>添加 <code>.blockquote-right</code>，使引用居于右侧。</p>
         <div className={classnames('util-element')}>
           <div className="row">
@@ -400,7 +400,7 @@ export default class Element extends Component {
         <p>所有列表： <code>&lt;ul&gt;</code>，<code>&lt;ol&gt;</code> 和 <code>&lt;dl&gt;</code>， 已删除其上外边距，下外边距设置为 <code>1rem</code>。
           嵌套使用时，没有下外边距。</p>
 
-        <h3 className="mt-20">内联列表</h3>
+        <h3 id="list_inline" className="mt-20">内联列表</h3>
         <p>列表的所有项展示在同一行。</p>
         <div className={classnames('util-element')}>
           <div className="row">
@@ -431,7 +431,7 @@ export default class Element extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">无样式列表</h3>
+        <h3 id="list_bare" className="mt-20">无样式列表</h3>
         <p>清除 <code>ul, ol</code> 的 <code>list-style</code>。</p>
         <div className={classnames('util-element')}>
           <div className="row">

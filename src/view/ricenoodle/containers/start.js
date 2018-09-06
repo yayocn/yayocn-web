@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import Container from './Container';
+import submenu from '../constants/submenu';
 import StartContent from '../contents/start';
-
-const startSubmenu = [
-  { key: 'download', title: '下载' },
-  { key: 'use', title: '使用' },
-]
 
 export class Start extends Component {
   render () {
     return (
-      <Container submenu={startSubmenu}>
+      <Container submenu={submenu.start}>
         <StartContent/>
       </Container>
     )

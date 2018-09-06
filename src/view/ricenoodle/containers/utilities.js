@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Container from './Container';
+import submenu from '../constants/submenu';
 
 import UtilitiesContent from '../contents/utilities';
 import BackgroundContent from '../contents/utilities/Background';
@@ -18,7 +19,7 @@ import ViewContent from '../contents/utilities/View';
 export class Utilities extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.utilities}>
         <UtilitiesContent/>
       </Container>
     )
@@ -28,7 +29,7 @@ export class Utilities extends Component {
 export class Background extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.background}>
         <BackgroundContent/>
       </Container>
     )
@@ -38,7 +39,7 @@ export class Background extends Component {
 export class Border extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.border}>
         <BorderContent/>
       </Container>
     )
@@ -48,7 +49,7 @@ export class Border extends Component {
 export class Close extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.close}>
         <CloseContent/>
       </Container>
     )
@@ -58,7 +59,7 @@ export class Close extends Component {
 export class Flex extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.flex}>
         <FlexContent/>
       </Container>
     )
@@ -68,7 +69,7 @@ export class Flex extends Component {
 export class Float extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.float}>
         <FloatContent/>
       </Container>
     )
@@ -78,7 +79,7 @@ export class Float extends Component {
 export class Font extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.font}>
         <FontContent/>
       </Container>
     )
@@ -88,7 +89,7 @@ export class Font extends Component {
 export class Position extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.position}>
         <PositionContent/>
       </Container>
     )
@@ -98,7 +99,7 @@ export class Position extends Component {
 export class Shadow extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.shadow}>
         <ShadowContent/>
       </Container>
     )
@@ -108,7 +109,7 @@ export class Shadow extends Component {
 export class Size extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.size}>
         <SizeContent/>
       </Container>
     )
@@ -118,7 +119,7 @@ export class Size extends Component {
 export class Space extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.space}>
         <SpaceContent/>
       </Container>
     )
@@ -128,7 +129,7 @@ export class Space extends Component {
 export class Text extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.text}>
         <TextContent/>
       </Container>
     )
@@ -138,7 +139,7 @@ export class Text extends Component {
 export class View extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.view}>
         <ViewContent/>
       </Container>
     )

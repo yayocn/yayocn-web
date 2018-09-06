@@ -46,7 +46,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2><code>mark-close</code></h2>
+        <h2 id="close"><code>mark-close</code></h2>
         <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
@@ -78,7 +78,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2><code>mark-ok</code></h2>
+        <h2 id="ok"><code>mark-ok</code></h2>
         <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
@@ -110,7 +110,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2><code>mark-arrow-left2</code></h2>
+        <h2 id="arrow_left2"><code>mark-arrow-left2</code></h2>
         <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">
@@ -142,7 +142,7 @@ export default class Mark extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2><code>mark-arrow-right2</code></h2>
+        <h2 id="arrow_right2"><code>mark-arrow-right2</code></h2>
         <div className={classnames('util-mark')}>
           <div className="row">
             <div className="col-12">

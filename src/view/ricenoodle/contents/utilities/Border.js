@@ -88,10 +88,10 @@ export default class Border extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>边框</h2>
+        <h2 id="border">边框</h2>
         <p>添加或者删除元素的边框，可以针对所有的边或者针对某一边。</p>
 
-        <h3>添加</h3>
+        <h3 id="border_additive">添加</h3>
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
@@ -117,7 +117,7 @@ export default class Border extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">删除</h3>
+        <h3 id="border_subtractive" className="mt-20">删除</h3>
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
@@ -145,7 +145,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>边框工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames('util-border')}>
           <div className="row">
@@ -177,7 +177,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>半径</h2>
+        <h2 id="radius">半径</h2>
         <p>为元素添加半径类，设置元素的角半径。</p>
         <div className={classnames('util-border')}>
           <div className="row">
@@ -206,7 +206,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>边框风格</h2>
+        <h2 id="style">边框风格</h2>
         <p>为元素添加边框风格类，设置边框的风格。</p>
         <div className={classnames('util-border')}>
           <div className="row">
@@ -238,7 +238,7 @@ export default class Border extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>边框宽度</h2>
+        <h2 id="width">边框宽度</h2>
         <p>为元素添加边框宽度类，设置边框的宽度。</p>
         <div className={classnames('util-border')}>
           <div className="row">

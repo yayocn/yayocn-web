@@ -64,7 +64,7 @@ export default class Modal extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>模态使用HTML，CSS和JavaScript构建。 它们位于文档对象的顶层，会从 <code>&lt;body&gt;</code> 中删除滚动，以便模式内容滚动。</li>
           <li>单击模态遮罩层将自动关闭模态。</li>
@@ -73,9 +73,9 @@ export default class Modal extends Component {
         </ul>
 
         <div className="divider divider-lg"></div>
-        <h2 className="mt-20">实例</h2>
+        <h2 id="example" className="mt-20">实例</h2>
 
-        <h3 className="mt-20">模态框内容</h3>
+        <h3 id="example_content" className="mt-20">内容</h3>
         <div className={classnames('util-modal')}>
           <div className="row">
             <div className="col-12">
@@ -117,7 +117,7 @@ export default class Modal extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">控制模态框</h3>
+        <h3 id="example_control" className="mt-20">控制</h3>
         <p>单击下面的按钮切换工作模式演示。 它将从页面顶部向下滑动并淡入。</p>
         <div className={classnames('util-modal')}>
           <div className="row">
@@ -164,7 +164,7 @@ export default class Modal extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">滚动条模态框</h3>
+        <h3 id="example_scroll" className="mt-20">滚动条</h3>
         <p>当模态对于用户的视口或设备变得太长时，它们会独立于页面本身滚动。</p>
         <div className={classnames('util-modal')}>
           <div className="row">
@@ -211,7 +211,7 @@ export default class Modal extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">居中模态框</h3>
+        <h3 id="example_center" className="mt-20">居中</h3>
         <p>将 <code>.modal-dialog-centered</code> 添加到 <code>.modal-dialog</code> 以垂直居中模式。</p>
         <div className={classnames('util-modal')}>
           <div className="row">
@@ -258,7 +258,7 @@ export default class Modal extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">尺寸</h3>
+        <h3 id="example_size" className="mt-20">尺寸</h3>
         <p>将 <code>.modal-lg</code> 或 <code>.modal-sm</code> 添加到 <code>.modal-dialog</code> 以更改模态框尺寸。</p>
         <div className={classnames('util-modal')}>
           <div className="row">
@@ -330,7 +330,7 @@ export default class Modal extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>事件</h2>
+        <h2 id="event">事件</h2>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/modal/#usage"  target="_blank" rel="noopener noreferrer">Bootstrap modal</a>。</p>
       </Fragment>
     );

@@ -65,7 +65,7 @@ export default class Position extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>种类</h2>
+        <h2 id="type">种类</h2>
         <p>Ricenoodle 提供了 <code>static, relative, absolute, fixed, sticky</code> 几种类型。</p>
         <p className="alert alert-warning"><code>sticky</code>需要注意浏览器以及版本。</p>
         <div className={classnames('util-position')}>
@@ -88,7 +88,7 @@ export default class Position extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>位置</h2>
+        <h2 id="position">位置</h2>
         <p>快速设置位置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
         <div className={classnames('util-position')}>
           <div className="row">
@@ -97,7 +97,7 @@ export default class Position extends Component {
                 POSITION.position.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`position_${item.key}`} className="mt-20">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className={classnames('bg-light pt-relative', 'position-view-wrap')}>

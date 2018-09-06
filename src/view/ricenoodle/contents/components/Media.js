@@ -45,7 +45,7 @@ export default class Media extends Component {
         <p className="font-2x font-100">这是一个抽象的样式，用以构建不同类型的组件，这些组件都具有在文本内容的左或右侧对齐的图片。</p>
 
         <div className="divider divider-bold divider-lg"></div>
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
@@ -76,7 +76,7 @@ export default class Media extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h3>嵌套</h3>
+        <h3 id="nest">嵌套</h3>
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">

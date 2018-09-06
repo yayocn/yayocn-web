@@ -72,7 +72,7 @@ export default class Jumbotron extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-jumbotron')}>
           <div className="row">
             <div className="col-12">
@@ -112,7 +112,7 @@ export default class Jumbotron extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>响应式</h2>
+        <h2 id="fluid">响应式</h2>
         <p>添加了 <code>.jumbotron-fluid</code> 后，就可以在组件内部使用栅格系统了。</p>
         <div className={classnames('util-jumbotron')}>
           <div className="row">

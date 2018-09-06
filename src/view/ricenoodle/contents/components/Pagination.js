@@ -79,7 +79,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
@@ -114,7 +114,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>带边框的分页</h2>
+        <h2 id="border">带边框的分页</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
@@ -149,7 +149,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
@@ -190,7 +190,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">

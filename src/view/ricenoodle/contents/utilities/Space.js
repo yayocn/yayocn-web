@@ -42,7 +42,7 @@ export default class Space extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>格式</h2>
+        <h2 id="format">格式</h2>
         <p><code>[property][side]-[size]</code></p>
 
         <h3><code>property</code></h3>
@@ -86,7 +86,7 @@ export default class Space extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2 className="mt-10">实例</h2>
+        <h2 id="example" className="mt-10">实例</h2>
         <div className={classnames('feature-example')}>
           <div className={classnames('mt-0', 'example-code')}>
             <Highlight>

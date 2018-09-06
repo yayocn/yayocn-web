@@ -171,7 +171,7 @@ export default class Alert extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
         <div className={classnames('util-alert')}>
           <div className="row">
@@ -205,7 +205,7 @@ export default class Alert extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>锚点</h2>
+        <h2 id="link_color">锚点</h2>
         <p>使用 <code>.alert-link</code> 类快速设置 <code>alert</code> 中的锚点样式。</p>
         <div className={classnames('util-alert')}>
           <div className="row">
@@ -239,7 +239,7 @@ export default class Alert extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>可关闭的警告框</h2>
+        <h2 id="dismissing">可关闭的警告框</h2>
         <p>要实现 <code>alert</code> 的销毁，需要：</p>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
@@ -248,7 +248,7 @@ export default class Alert extends Component {
           <li>添加一个属性包含了 <code>class="close" data-dismiss="alert"</code> 的销毁按钮。</li>
         </ul>
 
-        <h3 className="mt-20">使用 <code>&amp;time;</code></h3>
+        <h3 id="use_code" className="mt-20">使用 <code>&amp;time;</code></h3>
         <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
@@ -283,7 +283,7 @@ export default class Alert extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">使用 <code>.mark-close</code></h3>
+        <h3 id="use_mark" className="mt-20">使用 <code>.mark-close</code></h3>
         <div className={classnames('util-alert')}>
           <div className="row">
             <div className="col-12">
@@ -318,11 +318,11 @@ export default class Alert extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">事件</h3>
+        <h3 id="event" className="mt-20">事件</h3>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/alerts/#javascript-behavior" target="_blank" rel="noopener noreferrer">Bootstrap alert</a>。</p>
 
         <div className="divider divider-lg"></div>
-        <h2>附加内容</h2>
+        <h2 id="additional">附加内容</h2>
         <p>警告框还可以包含其他HTML元素，如标题，段落和分隔符。</p>
         <div className={classnames('util-alert')}>
           <div className="row">

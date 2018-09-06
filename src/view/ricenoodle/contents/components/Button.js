@@ -80,7 +80,7 @@ export default class Button extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供了几种预设的按钮样式，每种样式都有其特定的意义。</p>
         <div className={classnames('util-button')}>
           <div className="row">
@@ -116,7 +116,7 @@ export default class Button extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>轮廓按钮</h2>
+        <h2 id="outline">轮廓按钮</h2>
         <p>需要一个按钮，但不需要沉重的背景颜色？ 使用 <code>.btn-outline-*</code> 替换默认修改器类，以删除任何按钮上的所有背景图像和颜色。</p>
         <div className={classnames('util-button')}>
           <div className="row">
@@ -152,7 +152,7 @@ export default class Button extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>锚点</h2>
+        <h2 id="link">锚点</h2>
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
@@ -187,7 +187,7 @@ export default class Button extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p>需要更大或更小的按钮？ 添加 <code>.btn-lg | .btn-sm | .btn-hg</code> 以获得更多尺寸。</p>
         <div className={classnames('util-button')}>
           <div className="row">
@@ -225,7 +225,7 @@ export default class Button extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>半径</h2>
+        <h2 id="round">半径</h2>
         <p>除了使用针对 <code>button</code> 的特殊类意外，也可以使用 <a href="/ricenoodle/utilities/border">Border</a> 工具类。</p>
         <div className={classnames('util-button')}>
           <div className="row">
@@ -261,7 +261,7 @@ export default class Button extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>块级按钮</h2>
+        <h2 id="block">块级按钮</h2>
         <p>块级按钮的宽度占真个父元素的宽度。</p>
         <div className={classnames('util-button')}>
           <div className="row">

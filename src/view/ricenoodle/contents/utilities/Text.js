@@ -68,7 +68,7 @@ export default class Text extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
@@ -98,7 +98,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>对齐</h2>
+        <h2 id="alignment">对齐</h2>
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
@@ -127,7 +127,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>换行</h2>
+        <h2 id="wrap">换行</h2>
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
@@ -156,7 +156,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>变形</h2>
+        <h2 id="transform">变形</h2>
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
@@ -185,7 +185,7 @@ export default class Text extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>字体</h2>
+        <h2 id="font">字体</h2>
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">

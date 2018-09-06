@@ -4,12 +4,15 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 
+// eslint-disable-next-line
+const ANCHOR = 'javascript:;';
+
 export default class Breadcrumb extends Component {
 
   createCode = () => {
     let code = `<ul class="breadcrumb">
-  <li><a href="/">Home</a></li>
-  <li><a href="/">Dashborad</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Dashborad</a></li>
   <li class="active">Active</li>
 </ul>`;
 
@@ -18,7 +21,7 @@ export default class Breadcrumb extends Component {
 
   createDisabledCode = () => {
     let code = `<ul className="breadcrumb">
-  <li><a href="/">Home</a></li>
+  <li><a href="#">Home</a></li>
   <li className="disabled">Dashborad</li>
   <li className="active">Active</li>
 </ul>`;
@@ -34,7 +37,7 @@ export default class Breadcrumb extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>一般为最后一项添加 <code>.active</code> 类，且不需要 <code>&lt;a&gt;</code>。</p>
         <div className={classnames('util-breadcrumb')}>
           <div className="row">
@@ -44,8 +47,8 @@ export default class Breadcrumb extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Dashborad</a></li>
+                        <li><a href={ANCHOR}>Home</a></li>
+                        <li><a href={ANCHOR}>Dashborad</a></li>
                         <li className="active">Active</li>
                       </ul>
                     </div>
@@ -65,7 +68,7 @@ export default class Breadcrumb extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>禁用项</h2>
+        <h2 id="disabled">禁用项</h2>
         <p>添加 <code>.disabled</code> 类设置禁用项，且不需要 <code>&lt;a&gt;</code>。</p>
         <div className={classnames('util-breadcrumb')}>
           <div className="row">
@@ -75,7 +78,7 @@ export default class Breadcrumb extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
-                        <li><a href="/">Home</a></li>
+                        <li><a href={ANCHOR}>Home</a></li>
                         <li className="disabled">Dashborad</li>
                         <li className="active">Active</li>
                       </ul>

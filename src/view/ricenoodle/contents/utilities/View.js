@@ -75,7 +75,7 @@ export default class View extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>显示类型</h2>
+        <h2 id="display">显示类型</h2>
         <p>通过设置 <code>display</code> 属性来控制显示的类型。</p>
         <div className={classnames('util-view')}>
           <div className="row">
@@ -106,7 +106,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>Hidden</h2>
+        <h2 id="hidden">Hidden</h2>
         <p>通过添加 <code>hidden</code> 属性或者 <code>.hidden</code> 类来控制隐藏元素，此时元素没有高度和宽度。</p>
         <div className={classnames('util-view')}>
           <div className="row">
@@ -125,7 +125,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>Visibility</h2>
+        <h2 id="visibility">Visibility</h2>
         <p>通过添加 <code>.visible | .invisible</code> 类来控制隐藏元素，此时元素有高度和宽度，效果和 <code>.opacity-10 | .opacity-0</code> 一样。</p>
         <div className={classnames('util-view')}>
           <div className="row">
@@ -155,7 +155,7 @@ export default class View extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>不透明度</h2>
+        <h2 id="opacity">不透明度</h2>
         <p>通过添加 <code>.opacity-[x]</code> 类来控制元素的不透明度。</p>
         <div className={classnames('util-view')}>
           <div className="row">

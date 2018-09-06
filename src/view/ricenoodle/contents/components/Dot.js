@@ -51,7 +51,7 @@ export default class Dot extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>在定义好的情况下，圆点组件可以用来代替文字说明。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -86,7 +86,7 @@ export default class Dot extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供了<code>11</code> 中主题颜色。</p>
         <div className={classnames('util-badge')}>
           <div className="row">

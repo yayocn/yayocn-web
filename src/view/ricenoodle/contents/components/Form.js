@@ -346,7 +346,7 @@ export default class Form extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -386,10 +386,10 @@ export default class Form extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>用户输入</h2>
+        <h2 id="input">用户输入</h2>
         <p>重置 <code>&lt;input&gt; &lt;select&gt; &lt;textarea&gt;</code> 等元素的样式。</p>
 
-        <h3><code>.form-control</code></h3>
+        <h3 id="input_control"><code>.form-control</code></h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -443,7 +443,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">尺寸</h3>
+        <h3 id="input_size" className="mt-20">尺寸</h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -473,7 +473,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">输入状态</h3>
+        <h3 id="input_state" className="mt-20">输入状态</h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -503,7 +503,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">禁用</h3>
+        <h3 id="input_disabled" className="mt-20">禁用</h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -526,42 +526,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>表单组</h2>
-        <p>使用 <code>.form-group-*</code> 时, 会对子节点中的 <code>.form-control</code> 进行预设。</p>
-        <div className={classnames('util-form')}>
-          <div className="row">
-            <div className="col-12">
-              <div className={classnames('feature-example')}>
-                <div className={classnames('example-view')}>
-                  <div className="row">
-                    <div className="col-lg-4 col-12">
-                      {
-                        FORM.formGroup.map((item, index) => {
-                          return (
-                            <div className={classnames(item.className, 'mb-10')} key={index}>
-                              <label>{item.title}</label>
-                              <input type="text" className="form-control" placeholder={item.title}/>
-                            </div>
-                          );
-                        })
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createFormGroupCode()
-                    }
-                  </Highlight>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="divider divider-lg"></div>
-        <h2>复选框</h2>
+        <h2 id="checkbox">复选框</h2>
         <p>复选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -595,7 +560,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">行内复选框</h3>
+        <h3 id="checkbox_inline" className="mt-20">行内复选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -629,7 +594,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">禁用状态</h3>
+        <h3 id="checkbox_disabled" className="mt-20">禁用状态</h3>
         <p>额外添加 <code>.disabled</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -663,7 +628,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">开关</h3>
+        <h3 id="checkbox_switch" className="mt-20">开关</h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -696,8 +661,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">尺寸</h3>
-        <p>开关尺寸。</p>
+        <h3 id="checkbox_switch_size" className="mt-20">开关尺寸</h3>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
@@ -732,7 +696,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">开关禁用</h3>
+        <h3 id="checkbox_switch_disabled" className="mt-20">开关禁用</h3>
         <p>额外添加 <code>.disabled</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -769,7 +733,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>单选框</h2>
+        <h2 id="radio">单选框</h2>
         <p>单选框对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -803,7 +767,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">行内单选框</h3>
+        <h3 id="radio_inline" className="mt-20">行内单选框</h3>
         <p>额外添加 <code>.inline</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -837,7 +801,7 @@ export default class Form extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">单选框禁用</h3>
+        <h3 id="radio_disabled" className="mt-20">禁用状态</h3>
         <p>添加 <code>.disabled</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -872,7 +836,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>文件上传</h2>
+        <h2 id="file">文件上传</h2>
         <p>文件上传对结构要求很严，<code>label</code> 需要紧跟着 <code>input</code>。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -907,7 +871,42 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>水平表单</h2>
+        <h2 id="group">表单组</h2>
+        <p>使用 <code>.form-group-*</code> 时, 会对子节点中的 <code>.form-control</code> 进行预设。</p>
+        <div className={classnames('util-form')}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames('feature-example')}>
+                <div className={classnames('example-view')}>
+                  <div className="row">
+                    <div className="col-lg-4 col-12">
+                      {
+                        FORM.formGroup.map((item, index) => {
+                          return (
+                            <div className={classnames(item.className, 'mb-10')} key={index}>
+                              <label>{item.title}</label>
+                              <input type="text" className="form-control" placeholder={item.title}/>
+                            </div>
+                          );
+                        })
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className={classnames('example-code')}>
+                  <Highlight>
+                    {
+                      this.createFormGroupCode()
+                    }
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2 id="form_hz">水平表单</h2>
         <p>结合 <code>.form-hz</code> 和 <code>.form-group</code> 使用，创建水平排列的表单。</p>
         <div className={classnames('util-form')}>
           <div className="row">
@@ -953,7 +952,7 @@ export default class Form extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>行表单</h2>
+        <h2 id="form_inline">行表单</h2>
         <p>使用<code>.form-inline</code>，创建行表单。</p>
         <div className={classnames('util-form')}>
           <div className="row">

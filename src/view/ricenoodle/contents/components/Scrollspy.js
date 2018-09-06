@@ -80,7 +80,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
           <li>Scrollspy 需要在 <code>position: relative;</code> 的环境下工作，因此在监听元素上添加 <code>.pt-relative</code> 类，通常是 <code>&lt;body&gt;</code> 元素。</li>
@@ -90,7 +90,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>导航条</h2>
+        <h2 id="navbar">导航条</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
@@ -173,7 +173,7 @@ export default class Pagination extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>列表</h2>
+        <h2 id="list">列表</h2>
         <div className={classnames('util-pagination')}>
           <div className="row">
             <div className="col-12">
@@ -248,7 +248,7 @@ export default class Pagination extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>事件</h2>
+        <h2 id="event">事件</h2>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/scrollspy/#usage" target="_blank" rel="noopener noreferrer">Bootstrap scrollspy</a>。</p>
       </Fragment>
     );

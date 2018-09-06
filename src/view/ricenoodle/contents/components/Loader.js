@@ -88,7 +88,7 @@ export default class Loader extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>Bar</h2>
+        <h2 id="bar">Bar</h2>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
@@ -126,7 +126,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">主题</h3>
+        <h3 id="bar_theme" className="mt-20">主题</h3>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
@@ -162,7 +162,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">尺寸</h3>
+        <h3 id="bar_size" className="mt-20">尺寸</h3>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
@@ -200,7 +200,7 @@ export default class Loader extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>Roll</h2>
+        <h2 id="roll">Roll</h2>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
@@ -238,7 +238,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">主题</h3>
+        <h3 id="roll_theme" className="mt-20">主题</h3>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">
@@ -274,7 +274,7 @@ export default class Loader extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">尺寸</h3>
+        <h3 id="roll_size" className="mt-20">尺寸</h3>
         <div className={classnames('util-loader')}>
           <div className="row">
             <div className="col-12">

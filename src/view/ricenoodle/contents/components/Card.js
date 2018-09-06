@@ -284,7 +284,7 @@ export default class Card extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="default">实例</h2>
         <p>卡片采用尽可能少的标记和样式构建，但仍然能够提供大量的控制和定制。 它们采用弹性盒子构建，可轻松对齐并与其他组件完美混合。
           默认情况下它们没有边距，因此请根据需要使用 <a href="/ricenoodle/utilities/space">Space</a>。</p>
         <div className={classnames('util-card')}>
@@ -322,7 +322,7 @@ export default class Card extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>图片</h2>
+        <h2 id="image">图片</h2>
         <p><code>.card-img-top img-fluid</code> 将图像放在卡片的顶部。 使用 <code>.card-text</code> 可以将文本添加到卡中。
           <code>.card-text</code> 中的文本也可以使用标准HTML标记进行样式设置。</p>
         <div className={classnames('util-card')}>
@@ -356,7 +356,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>锚点</h2>
+        <h2 id="link">锚点</h2>
         <p>通过添加 <code>.card-link</code> 到 <code>&lt;a&gt;</code> 元素，添加链接并将它们彼此相邻放置。</p>
         <div className={classnames('util-card')}>
           <div className="row">
@@ -388,7 +388,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>头部和底部</h2>
+        <h2 id="head_foot">头部和底部</h2>
         <p>在卡中添加可选的页眉和页脚。</p>
         <div className={classnames('util-card')}>
           <div className="row">
@@ -426,7 +426,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>通过 <a href="/ricenoodle/utilities/background">Background</a>，<a href="/ricenoodle/utilities/text">Text</a>，<a href="/ricenoodle/utilities/border">Border</a>  等工具类的组合，形成主题。</p>
         <div className={classnames('util-card')}>
           <div className="row">
@@ -464,7 +464,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>卡片组</h2>
+        <h2 id="group">卡片组</h2>
         <p>使用卡片组将卡片呈现为具有相等宽度和高度列的单个附加元素。卡片组用的弹性布局，实现均匀的尺寸。</p>
         <div className={classnames('util-card')}>
           <div className="row">
@@ -526,7 +526,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>分开的卡片组</h2>
+        <h2 id="deck">分开的卡片组</h2>
         <p>显示一组相同宽度和高度的卡片，它们之间没有相互连接。</p>
         <div className={classnames('util-card')}>
           <div className="row">
@@ -595,7 +595,7 @@ export default class Card extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>自动分列的卡片组</h2>
+        <h2 id="column">自动分列的卡片组</h2>
         <p>通过将卡片包装在 <code>.card-columns</code> 中，可以将卡片组织成类似砖墙的列。卡片使用CSS列属性而不是弹性盒子，以便更容易对齐。 卡从上到下，从左到右排序。</p>
         <p>重点！卡列的数目可能会有所不同。 为了防止卡片跨列，我们必须将它们设置为显示：<code>inline-block</code>。</p>
         <div className={classnames('util-card')}>

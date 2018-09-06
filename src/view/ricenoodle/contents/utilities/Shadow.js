@@ -7,12 +7,12 @@ import { find } from 'lodash';
 
 const SHADOW = {
   visibility: [
-    { title: '添加', key: 'shadow', subTitle: '', className: 'shadow', },
-    { title: '刪除', key: 'noneShadow', subTitle: '', className: 'shadow-none', },
+    { title: '显示', key: 'shadow', subTitle: '', className: 'shadow', },
+    { title: '清除', key: 'none', subTitle: '', className: 'shadow-none', },
   ],
   size: [
-    { title: 'Small', key: 'smallShadow', subTitle: '', className: 'shadow shadow-sm', },
-    { title: 'Large', key: 'largeShadow', subTitle: '', className: 'shadow shadow-lg', },
+    { title: 'Small', key: 'small', subTitle: '', className: 'shadow shadow-sm', },
+    { title: 'Large', key: 'large', subTitle: '', className: 'shadow shadow-lg', },
   ]
 };
 
@@ -37,7 +37,7 @@ export default class Shadow extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>阴影</h2>
+        <h2 id="visibility">阴影</h2>
         <div className={classnames('util-shadow')}>
           <div className="row">
             <div className="col-12">
@@ -45,7 +45,7 @@ export default class Shadow extends Component {
                 SHADOW.visibility.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`visibility_${item.key}`} className="mt-20">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className="row">
@@ -71,7 +71,7 @@ export default class Shadow extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p>设置阴影尺寸。</p>
         <div className={classnames('util-shadow')}>
           <div className="row">
@@ -80,7 +80,7 @@ export default class Shadow extends Component {
                 SHADOW.size.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`size_${item.key}`} className="mt-20">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className="row">

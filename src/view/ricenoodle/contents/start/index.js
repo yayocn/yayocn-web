@@ -36,7 +36,7 @@ export default class Improve extends Component {
         <h2 id="use">使用</h2>
         <p>Ricenoodle 有多种使用方式。</p>
 
-        <h3>使用本地文件</h3>
+        <h3 id="use_local">使用本地文件</h3>
         <div>
           <div className="row">
             <div className="col-12">
@@ -54,7 +54,7 @@ export default class Improve extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">NPM</h3>
+        <h3 id="use_npm" className="mt-20">NPM</h3>
         <p>通过 <code>npm</code> 安装 <code>Ricenoodle</code>：</p>
         <div>
           <div className="row">

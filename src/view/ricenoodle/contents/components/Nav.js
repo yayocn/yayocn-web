@@ -162,7 +162,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>导航共享通用标记和样式，从基本 <code>.nav</code> 类到活动和禁用状态。 交换修饰符类以在每种样式之间切换。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -202,7 +202,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2><code>nav</code> 标签</h2>
+        <h2 id="nav"><code>nav</code> 标签</h2>
         <p>直接使用 <code>&lt;nav&gt;</code> 标签。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -234,7 +234,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>居中</h2>
+        <h2 id="center">居中</h2>
         <p><code>nav</code> 使用 <code>flex</code> 布局，因此可以使用 <code>.justify-content-center</code> 类使其居中。</p>
         <p>当然，也使用 <code>.justify-content-end</code> 类使其靠右。</p>
         <div className={classnames('util-badge')}>
@@ -290,7 +290,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>垂直</h2>
+        <h2 id="vt">垂直</h2>
         <p>使用 <code>.flex-column</code> 类使其垂直显示。</p>
         <p>垂直显示的导航，最好使用 <code>&lt;nav&gt;</code>。</p>
         <div className={classnames('util-badge')}>
@@ -323,7 +323,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>胶囊样式</h2>
+        <h2 id="pill">胶囊样式</h2>
         <p>使用 <code>.nav-pills</code> 类使其变成胶囊的样式。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -363,7 +363,7 @@ export default class Nav extends Component {
         
         <div className="divider divider-lg"></div>
 
-        <h2>填充整行</h2>
+        <h2 id="row">填充整行</h2>
         <p>使用 <code>.nav-fill</code> 使导航填充整行。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -403,7 +403,7 @@ export default class Nav extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>选项卡</h2>
+        <h2 id="tab">选项卡</h2>
         <p>从上面获取基本导航并添加 <code>.nav-tabs</code> 类以生成选项卡式界面。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -443,12 +443,12 @@ export default class Nav extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">事件</h3>
+        <h3 id="tab_event" className="mt-20">事件</h3>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/navs/#methods">Bootstrap tabs</a>。</p>
 
         <div className="divider divider-lg"></div>
 
-        <h2>下拉导航</h2>
+        <h2 id="dropdown">下拉导航</h2>
         <p>在导航系统中使用 <cdoe>dropdown</cdoe> 组件。</p>
         <div className={classnames('util-badge')}>
           <div className="row">

@@ -8,16 +8,9 @@ const COLLAPSE = {
   default: [
     { title: 'Divider', key: '', subTitle: '', className: 'collapse', },
   ],
-  size: [
-    { title: '大间距', key: '', subTitle: '', className: 'collapse collapse-lg', },
-    { title: '小间距', key: '', subTitle: '', className: 'collapse collapse-sm', },
-  ],
-  weight: [
-    { title: 'Divider', key: '', subTitle: '', className: 'collapse collapse-bold', },
-  ],
 };
 
-export default class Divider extends Component {
+export default class Collapse extends Component {
 
   createCode = (target) => {
     return `<p>
@@ -40,13 +33,13 @@ export default class Divider extends Component {
         <p className="font-2x font-100">使用折叠组件切换项目中内容的可见性。</p>
 
         <div className="collapse collapse-bold collapse-lg"></div>
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>
         </ul>
 
         <div className="divider divider-lg"></div>
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>单击下面的按钮以通过类更改显示和隐藏另一个元素：</p>
         <ul className="ph-30">
           <li><code>.collapse</code> 隐藏内容。</li>
@@ -95,7 +88,7 @@ export default class Divider extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>事件</h2>
+        <h2 id="event">事件</h2>
         <p>参考 <a href="https://getbootstrap.com/docs/4.1/components/collapse/#usage" target="_black" rel="noopener noreferrer">Bootstrap collapse</a>。</p>
       </Fragment>
     );

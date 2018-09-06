@@ -65,7 +65,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p><code>.divider</code> 分割组件用于分割上下文。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
@@ -101,7 +101,7 @@ export default class Divider extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用 <a href="/ricenoodle/utilities/space">Space</a> 来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
@@ -137,7 +137,7 @@ export default class Divider extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>权重</h2>
+        <h2 id="weight">权重</h2>
         <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用 <a href="/ricenoodle/utilities/border">Border</a> 来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
@@ -173,7 +173,7 @@ export default class Divider extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>结合 <a href="/ricenoodle/utilities/border">Border theme</a> ，可以生成多重主题颜色。</p>
         <div className={classnames('util-divider')}>
           <div className="row">

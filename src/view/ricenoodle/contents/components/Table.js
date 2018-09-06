@@ -112,7 +112,7 @@ export default class Table extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>为表格添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。</p>
         <div className={classnames('util-table')}>
           <div className="row">
@@ -183,7 +183,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>紧凑型表格</h2>
+        <h2 id="small">紧凑型表格</h2>
         <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
@@ -253,7 +253,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>条纹表格</h2>
+        <h2 id="striped">条纹表格</h2>
         <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
@@ -323,7 +323,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>带边框的表格</h2>
+        <h2 id="border">带边框的表格</h2>
         <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
@@ -393,7 +393,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>Hover</h2>
+        <h2 id="hover">Hover</h2>
         <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
@@ -463,7 +463,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>暗色表格</h2>
+        <h2 id="dark">暗色表格</h2>
         <div className={classnames('util-table')}>
           <div className="row">
             <div className="col-12">
@@ -533,7 +533,7 @@ export default class Table extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>行状态</h2>
+        <h2 id="row">行状态</h2>
         <p>在 <code>&lt;tr&gt;</code> 上添加 <code>.row- [active | primary | ...]</code> 等类设置行状态。</p>
         <div className={classnames('util-table')}>
           <div className="row">

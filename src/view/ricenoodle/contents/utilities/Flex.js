@@ -8,33 +8,33 @@ import { find } from 'lodash';
 const FLEX = {
   direction: [
     { title: '水平向右', key: 'row', subTitle: '', className: 'flex flex-row', },
-    { title: '水平向左', key:'rowReverse', subTitle: '', className: 'flex flex-row-reverse', },
+    { title: '水平向左', key:'row_reverse', subTitle: '', className: 'flex flex-row-reverse', },
     { title: '垂直向下', key:'column', subTitle: '', className: 'flex flex-column', },
-    { title: '垂直向上', key:'columnReverse', subTitle: '', className: 'flex flex-column-reverse', },
+    { title: '垂直向上', key:'column_reverse', subTitle: '', className: 'flex flex-column-reverse', },
   ],
   wrap: [
     { title: '不换行', key: 'nowrap', subTitle: '', className: 'flex flex-nowrap', },
     { title: '换行', key:'wrap', subTitle: '', className: 'flex flex-wrap', },
-    { title: '换行反转', key:'wrapReverse', subTitle: '', className: 'flex flex-wrap-reverse', },
+    { title: '换行反转', key:'reverse', subTitle: '', className: 'flex flex-wrap-reverse', },
   ],
   justifyContent: [
     { title: 'Start', key: 'start', subTitle: '', className: 'flex justify-content-start', },
     { title: 'End', key: 'end', subTitle: '', className: 'flex justify-content-end', },
-    { title: 'center', key: 'center', subTitle: '', className: 'flex justify-content-center', },
+    { title: 'Center', key: 'center', subTitle: '', className: 'flex justify-content-center', },
     { title: 'Between', key: 'between', subTitle: '', className: 'flex justify-content-between', },
     { title: 'Around', key: 'around', subTitle: '', className: 'flex justify-content-around', },
   ],
   alignItems: [
     { title: 'Start', key: 'start', subTitle: '', className: 'flex align-items-start', },
     { title: 'End', key: 'end', subTitle: '', className: 'flex align-items-end', },
-    { title: 'center', key: 'center', subTitle: '', className: 'flex align-items-center', },
+    { title: 'Center', key: 'center', subTitle: '', className: 'flex align-items-center', },
     { title: 'Baseline', key: 'baseline', subTitle: '项目的第一行文字的基线对齐，注意与 end 的区别。', className: 'flex align-items-baseline', },
     { title: 'Stretch', key: 'stretch', subTitle: '', className: 'flex align-items-stretch', },
   ],
   alignContent: [
     { title: 'Start', key: 'start', subTitle: '', className: 'flex flex-wrap align-content-start', },
     { title: 'End', key: 'end', subTitle: '', className: 'flex flex-wrap align-content-end', },
-    { title: 'center', key: 'center', subTitle: '', className: 'flex flex-wrap align-content-center', },
+    { title: 'Center', key: 'center', subTitle: '', className: 'flex flex-wrap align-content-center', },
     { title: 'Between', key: 'between', subTitle: '', className: 'flex flex-wrap align-content-between', },
     { title: 'Around', key: 'around', subTitle: '', className: 'flex flex-wrap align-content-around', },
     { title: 'Stretch', key: 'stretch', subTitle: '', className: 'flex flex-wrap align-content-stretch', },
@@ -104,7 +104,7 @@ export default class Flex extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>方向</h2>
+        <h2 id="direction">方向</h2>
         <p>使用方向类在Flex容器中设置主轴的方向。在大多数情况下，可以省略水平类（<code>.flex-row</code>），因为浏览器默认为行。 但是，也可能会遇到需要显式设置此值的情况（如响应式布局）。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
@@ -113,7 +113,7 @@ export default class Flex extends Component {
                 FLEX.direction.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-10">{item.title}</h3>
+                      <h3 id={`direction_${item.key}`} className="mt-10">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
@@ -145,7 +145,7 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>换行</h2>
+        <h2 id="wrap">换行</h2>
         <p>更改Flex项目在Flex容器中的换行方式。选择不换行（浏览器默认设置）<code>.flex-nowrap</code>，换行 <code>.flex-wrap</code>，
           或换行反转 <code>.flex-wrap-reverse</code>。</p>
         <div className={classnames('util-flex')}>
@@ -155,7 +155,7 @@ export default class Flex extends Component {
                 FLEX.wrap.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-10">{item.title}</h3>
+                      <h3 id={`wrap_${item.key}`} className="mt-10">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
@@ -187,7 +187,7 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主轴对齐</h2>
+        <h2 id="justify">主轴对齐</h2>
         <p>在弹性布局容器上使用主轴对齐类来更改主轴上的flex项目的对齐方式。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
@@ -196,7 +196,7 @@ export default class Flex extends Component {
                 FLEX.justifyContent.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`justify_${item.key}`} className="mt-20">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
@@ -228,7 +228,7 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>交叉轴对齐</h2>
+        <h2 id="align_items">交叉轴对齐</h2>
         <p>在弹性布局容器上使用交叉轴对齐类来更改交叉轴上的flex项的对齐方式。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
@@ -237,7 +237,7 @@ export default class Flex extends Component {
                 FLEX.alignItems.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`align_items_${item.key}`} className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle
@@ -273,7 +273,7 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>多轴对齐</h2>
+        <h2 id="align_content">多轴对齐</h2>
         <p>使用弹性布局容器上的多轴对齐类将flex项目在十字轴上对齐。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
@@ -282,7 +282,7 @@ export default class Flex extends Component {
                 FLEX.alignContent.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`align_content_${item.key}`} className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle
@@ -318,7 +318,7 @@ export default class Flex extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>特殊对齐</h2>
+        <h2 id="align_self">特殊对齐</h2>
         <p>在弹性布局项目上使用特殊对齐类可以单独更改它们在十字轴上的对齐方式。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
@@ -327,7 +327,7 @@ export default class Flex extends Component {
                 FLEX.alignSelf.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`align_self_${item.key}`} className="mt-20">{item.title}</h3>
                       {
                         item.subTitle &&
                         item.subTitle

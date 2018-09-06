@@ -1,10 +1,11 @@
 // Utilities
 //
 
-h2::before {
+h2::before,
+h3::before {
   display: block;
-  height: 6rem;
-  margin-top: -6rem;
+  height: 5rem;
+  margin-top: -5rem;
   visibility: hidden;
   content: "";
 }

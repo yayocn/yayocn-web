@@ -7,25 +7,25 @@ import { find } from 'lodash';
 
 const SIZE = {
   width: [
-    { title: '25%', key: '', subTitle: '', className: 'w-25', },
-    { title: '50%', key: '', subTitle: '', className: 'w-50', },
-    { title: '75%', key: '', subTitle: '', className: 'w-75', },
-    { title: '100%', key: '', subTitle: '', className: 'w-100', },
-    { title: 'auto', key: '', subTitle: '', className: 'w-auto', },
+    { title: '25%', key: '25', subTitle: '', className: 'w-25', },
+    { title: '50%', key: '50', subTitle: '', className: 'w-50', },
+    { title: '75%', key: '75', subTitle: '', className: 'w-75', },
+    { title: '100%', key: '100', subTitle: '', className: 'w-100', },
+    { title: 'auto', key: 'auto', subTitle: '', className: 'w-auto', },
   ],
   height: [
-    { title: '25%', key: '', subTitle: '', className: 'h-25', },
-    { title: '50%', key: '', subTitle: '', className: 'h-50', },
-    { title: '75%', key: '', subTitle: '', className: 'h-75', },
-    { title: '100%', key: '', subTitle: '', className: 'h-100', },
-    { title: 'auto', key: '', subTitle: '', className: 'h-auto', },
+    { title: '25%', key: '25', subTitle: '', className: 'h-25', },
+    { title: '50%', key: '50', subTitle: '', className: 'h-50', },
+    { title: '75%', key: '75', subTitle: '', className: 'h-75', },
+    { title: '100%', key: '100', subTitle: '', className: 'h-100', },
+    { title: 'auto', key: 'auto', subTitle: '', className: 'h-auto', },
   ],
   max: [
     { title: '最大宽度', key: 'width', subTitle: '', className: 'mw-100', },
     { title: '最大高度', key: 'height', subTitle: '', className: 'mh-100', },
   ],
   full: [
-    { title: '填充', key: '', subTitle: '', className: 'h-full-window', },
+    { title: '填充', key: 'full', subTitle: '', className: 'h-full-window', },
   ]
 };
 
@@ -67,7 +67,7 @@ export default class Size extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>宽度</h2>
+        <h2 id="width">宽度</h2>
         <p>设置元素的宽度。</p>
         <div className={classnames('util-size')}>
           <div className="row">
@@ -97,7 +97,7 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>高度</h2>
+        <h2 id="height">高度</h2>
         <p>设置元素的高度。</p>
         <div className={classnames('util-size')}>
           <div className="row">
@@ -131,7 +131,7 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>最大宽高</h2>
+        <h2 id="max">最大宽高</h2>
         <p>设置元素的最大宽度和高度。</p>
         <div className={classnames('util-size')}>
           <div className="row">
@@ -140,7 +140,7 @@ export default class Size extends Component {
                 SIZE.max.map((item, index) => {
                   return (
                     <Fragment key={index}>
-                      <h3 className="mt-20">{item.title}</h3>
+                      <h3 id={`max_${item.key}`} className="mt-20">{item.title}</h3>
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className="bg-light">
@@ -166,7 +166,7 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>视口高度</h2>
+        <h2 id="full">视口高度</h2>
         <p>将当前窗口的高度设置为元素高度。</p>
         <div className={classnames('util-size')}>
           <div className="row">

@@ -67,7 +67,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
@@ -101,7 +101,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>进度</h2>
+        <h2 id="progress">&lt;progress&gt; 标签</h2>
         <p>使用 <code>&lt;progress&gt;</code> 不同显示进度百分比，没有动画效果，在不同浏览器的效果也不一致，不推荐使用。</p>
         <div className={classnames('util-progress')}>
           <div className="row">
@@ -132,7 +132,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
@@ -168,7 +168,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>条纹</h2>
+        <h2 id="striped">条纹</h2>
         <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
@@ -202,7 +202,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>动画</h2>
+        <h2 id="animation">动画</h2>
         <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">
@@ -236,7 +236,7 @@ export default class Progress extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>分段</h2>
+        <h2 id="chunk">分段</h2>
         <div className={classnames('util-progress')}>
           <div className="row">
             <div className="col-12">

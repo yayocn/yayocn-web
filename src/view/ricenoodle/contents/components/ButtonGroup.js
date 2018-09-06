@@ -85,7 +85,7 @@ export default class ButtonGroup extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="default">实例</h2>
         <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
@@ -122,7 +122,7 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p>不要将按钮大小调整类应用于组中的每个按钮，只需将 <code>.btn-group-*</code> 添加到每个组。</p>
         <div className={classnames('util-button-group')}>
           <div className="row">
@@ -160,7 +160,7 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>按钮组块</h2>
+        <h2 id="block">按钮组块</h2>
         <p>按钮组块将占满父元素的宽度。</p>
         <div className={classnames('util-button-group')}>
           <div className="row">
@@ -198,7 +198,7 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>嵌套下拉框</h2>
+        <h2 id="dropdown">嵌套下拉框</h2>
         <div className={classnames('util-button-group')}>
           <div className="row">
             <div className="col-12">
@@ -244,7 +244,7 @@ export default class ButtonGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>垂直按钮组</h2>
+        <h2 id="vt">垂直按钮组</h2>
         <p>使一组按钮垂直堆叠而不是水平堆叠。 此处不支持拆分按钮下拉菜单。</p>
         <div className={classnames('util-button-group')}>
           <div className="row">

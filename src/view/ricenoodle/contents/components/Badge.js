@@ -92,7 +92,7 @@ export default class Badge extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供 <code>11</code> 种主题。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -128,7 +128,7 @@ export default class Badge extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>锚点</h2>
+        <h2 id="link">锚点</h2>
         <p>在 <code>&lt;a&gt;</code> 上使用 <code>badge</code>。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
@@ -164,7 +164,7 @@ export default class Badge extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>胶囊</h2>
+        <h2 id="pill">胶囊</h2>
         <p>使用 <code>.badge-pill</code> 类使便签显示成胶囊样式。也可以使用 <code>.border-round-circle</code>。</p>
 
         <div className={classnames('util-badge')}>

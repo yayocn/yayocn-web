@@ -73,7 +73,7 @@ export default class Navbar extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>前奏</h2>
+        <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>导航栏需要使用 <code>.navbar-expand [-sm | -md | -lg | -xl]</code> 包装 <code>.navbar</code> 以进行响应式折叠和颜色方案类。</li>
           <li>导航栏默认使流布局，将其放在 <code>.container .container-fluid</code> 中限制其宽度。</li>
@@ -82,7 +82,7 @@ export default class Navbar extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>Navbars内置了对少数子组件的支持。 根据需要选择以下内容：</p>
         <ul className="ph-30">
           <li><code>.navbar-brand</code> 用于公司，产品，项目等的名字或者logo。</li>
@@ -150,7 +150,7 @@ export default class Navbar extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>主题分 <code>.nav-light</code> 和 <code>.nav-dark</code>, 在此基础上添加 <code>.bg- [ primary | secondary | ...]</code>。</p>
         <div className={classnames('util-navbar')}>
           <div className="row">
@@ -247,7 +247,7 @@ export default class Navbar extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>展开</h2>
+        <h2 id="expand">展开</h2>
         <p>有时您希望使用折叠插件触发页面上其他位置的隐藏内容。 因为我们的插件适用于 <code>id</code> 和数据目标匹配，所以很容易完成！</p>
         <div className={classnames('util-navbar')}>
           <div className="row">

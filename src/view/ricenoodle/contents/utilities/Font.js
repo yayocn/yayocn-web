@@ -5,7 +5,7 @@ import '../../../common/scss/common.scss';
 import '../../style.scss';
 
 const FONT = {
-  size: (function(){
+  stable: (function(){
     let arr = [];
     for (let i = 12; i <= 20; i++) {
       arr.push(`font-${i}`);
@@ -58,17 +58,17 @@ export default class Font extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <p>Ricenoodle 提供了 <code>12px ~ 20px</code> 的固定字体尺寸，和基于父元素 <code>1 ~ 10</code> 倍的字体尺寸。</p>
 
-        <h3 className="mt-20">固定尺寸</h3>
+        <h3 id="size_stable" className="mt-20">固定尺寸</h3>
         <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   {
-                    FONT.size.map((item, index) => {
+                    FONT.stable.map((item, index) => {
                       return (
                         <p className={item} key={index} >
                           This is {item} class font size.
@@ -80,7 +80,7 @@ export default class Font extends Component {
                 <div className={classnames('example-code')}>
                   <Highlight>
                     {
-                      this.createCode('size')
+                      this.createCode('stable')
                     }
                   </Highlight>
                 </div>
@@ -89,7 +89,7 @@ export default class Font extends Component {
           </div>
         </div>
 
-        <h3 className="mt-20">成倍尺寸</h3>
+        <h3 id="size_multiple" className="mt-20">成倍尺寸</h3>
         <p>使用 em 作为单位，基于父元素放大字体，Ricenoodle 提供了 <code>1x ~ 10x</code>。</p>
         <div className={classnames('util-font')}>
           <div className="row">
@@ -120,7 +120,7 @@ export default class Font extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>权重</h2>
+        <h2 id="weight">权重</h2>
         <p>使用权重类快速设置文字的权重。</p>
         <div className={classnames('util-font')}>
           <div className="row">

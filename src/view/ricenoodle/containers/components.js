@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Container from './Container';
+import submenu from '../constants/submenu';
 
 import ComponentContent from '../contents/components';
 import AlertContent from '../contents/components/Alert';
@@ -35,7 +36,7 @@ import TooltipContent from '../contents/components/Tooltip';
 export class Components extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.components}>
         <ComponentContent/>
       </Container>
     )
@@ -45,7 +46,7 @@ export class Components extends Component {
 export class Alert extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.alert}>
         <AlertContent/>
       </Container>
     )
@@ -55,7 +56,7 @@ export class Alert extends Component {
 export class Badge extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.badge}>
         <BadgeContent/>
       </Container>
     )
@@ -65,7 +66,7 @@ export class Badge extends Component {
 export class Breadcrumb extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.breadcrumb}>
         <BreadcrumbContent/>
       </Container>
     )
@@ -75,7 +76,7 @@ export class Breadcrumb extends Component {
 export class Button extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.button}>
         <ButtonContent/>
       </Container>
     )
@@ -85,7 +86,7 @@ export class Button extends Component {
 export class ButtonGroup extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.buttonGroup}>
         <ButtonGroupContent/>
       </Container>
     )
@@ -95,7 +96,7 @@ export class ButtonGroup extends Component {
 export class Card extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.card}>
         <CardContent/>
       </Container>
     )
@@ -105,7 +106,7 @@ export class Card extends Component {
 export class Carousel extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.carousel}>
         <CarouselContent/>
       </Container>
     )
@@ -115,7 +116,7 @@ export class Carousel extends Component {
 export class Collapse extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.collapse}>
         <CollapseContent/>
       </Container>
     )
@@ -125,7 +126,7 @@ export class Collapse extends Component {
 export class Divider extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.divider}>
         <DividerContent/>
       </Container>
     )
@@ -135,7 +136,7 @@ export class Divider extends Component {
 export class Dot extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.dot}>
         <DotContent/>
       </Container>
     )
@@ -145,7 +146,7 @@ export class Dot extends Component {
 export class Dropdown extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.dropdown}>
         <DropdownContent/>
       </Container>
     )
@@ -155,7 +156,7 @@ export class Dropdown extends Component {
 export class Elf extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.elf}>
         <ElfContent/>
       </Container>
     )
@@ -165,7 +166,7 @@ export class Elf extends Component {
 export class Form extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.form}>
         <FormContent/>
       </Container>
     )
@@ -175,7 +176,7 @@ export class Form extends Component {
 export class Grid extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.grid}>
         <GridContent/>
       </Container>
     )
@@ -185,7 +186,7 @@ export class Grid extends Component {
 export class InputGroup extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.inputGroup}>
         <InputGroupContent/>
       </Container>
     )
@@ -195,7 +196,7 @@ export class InputGroup extends Component {
 export class Jumbotron extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.jumbotron}>
         <JumbotronContent/>
       </Container>
     )
@@ -205,7 +206,7 @@ export class Jumbotron extends Component {
 export class ListGroup extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.listGroup}>
         <ListGroupContent/>
       </Container>
     )
@@ -215,7 +216,7 @@ export class ListGroup extends Component {
 export class Loader extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.loader}>
         <LoaderContent/>
       </Container>
     )
@@ -225,7 +226,7 @@ export class Loader extends Component {
 export class Mark extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.mark}>
         <MarkContent/>
       </Container>
     )
@@ -235,7 +236,7 @@ export class Mark extends Component {
 export class Media extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.media}>
         <MediaContent/>
       </Container>
     )
@@ -245,7 +246,7 @@ export class Media extends Component {
 export class Modal extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.modal}>
         <ModalContent/>
       </Container>
     )
@@ -255,7 +256,7 @@ export class Modal extends Component {
 export class Nav extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.nav}>
         <NavContent/>
       </Container>
     )
@@ -265,7 +266,7 @@ export class Nav extends Component {
 export class Navbar extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.navbar}>
         <NavbarContent/>
       </Container>
     )
@@ -275,7 +276,7 @@ export class Navbar extends Component {
 export class Pagination extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.pagination}>
         <PaginationContent/>
       </Container>
     )
@@ -285,7 +286,7 @@ export class Pagination extends Component {
 export class Popover extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.popover}>
         <PopoverContent/>
       </Container>
     )
@@ -295,7 +296,7 @@ export class Popover extends Component {
 export class Progress extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.progress}>
         <ProgressContent/>
       </Container>
     )
@@ -305,7 +306,7 @@ export class Progress extends Component {
 export class Scrollspy extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.scrollspy}>
         <ScrollspyContent/>
       </Container>
     )
@@ -315,7 +316,7 @@ export class Scrollspy extends Component {
 export class Table extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.table}>
         <TableContent/>
       </Container>
     )
@@ -325,7 +326,7 @@ export class Table extends Component {
 export class Tooltip extends Component {
   render () {
     return (
-      <Container>
+      <Container submenu={submenu.tooltip}>
         <TooltipContent/>
       </Container>
     )

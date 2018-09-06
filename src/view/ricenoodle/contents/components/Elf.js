@@ -69,7 +69,7 @@ export default class Breadcrumb extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <div className={classnames('util-elf')}>
           <div className="row">
             <div className="col-12">
@@ -108,7 +108,7 @@ export default class Breadcrumb extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供了 <code>11</code> 种主题颜色。</p>
         <div className={classnames('util-elf')}>
           <div className="row">
@@ -144,7 +144,7 @@ export default class Breadcrumb extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>位置</h2>
+        <h2 id="position">位置</h2>
         <p>通过后缀 <code>-prev</code> 可以将小图标放在文字前面。</p>
         <div className={classnames('util-elf')}>
           <div className="row">

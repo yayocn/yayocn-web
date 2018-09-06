@@ -123,7 +123,7 @@ export default class InputGroup extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>实例</h2>
+        <h2 id="example">实例</h2>
         <p>在输入框的两侧放置一个附加组件或按钮。 请记住将 <code>&lt;label&gt;</code> 元素放在输入框组之外。</p>
         <div className={classnames('util-inputgroup')}>
           <div className="row">
@@ -161,7 +161,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>Ricenoodle 提供了 <code>11</code> 种主题颜色。</p>
         <div className={classnames('util-inputgroup')}>
           <div className="row">
@@ -201,7 +201,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>尺寸</h2>
+        <h2 id="size">尺寸</h2>
         <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
@@ -238,7 +238,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>边框</h2>
+        <h2 id="border">边框</h2>
         <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">
@@ -274,7 +274,7 @@ export default class InputGroup extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2>下拉框</h2>
+        <h2 id="dropdown">下拉框</h2>
         <div className={classnames('util-inputgroup')}>
           <div className="row">
             <div className="col-12">

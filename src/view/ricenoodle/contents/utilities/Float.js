@@ -41,7 +41,7 @@ export default class Float extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>设置浮动</h2>
+        <h2 id="float">设置浮动</h2>
         <p>通过浮动类切换浮动。</p>
         <div className={classnames('util-float')}>
           <div className="row">
@@ -70,7 +70,7 @@ export default class Float extends Component {
 
         <div className="divider divider-lg"></div>
 
-        <h2>清除浮动</h2>
+        <h2 id="clearfix">清除浮动</h2>
         <p><code>.clearfix</code> 可以单独使用，使浮动元素不影响到其他排版正常的元素；也可以作用于浮动元素的父元素，使父元素的高度不会塌陷。</p>
         <div className={classnames('util-float')}>
           <div className="row">
