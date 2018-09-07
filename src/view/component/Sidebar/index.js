@@ -4,18 +4,33 @@ import classnames from 'classnames';
 import './style.scss';
 
 export default class Sidebar extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      sidebarOpened: false,
+    }
+  }
   // BEGIN: Util
   //
 
-
+  toggle = () => {
+    const { sidebarOpened } = this.state;
+    this.setState({ sidebarOpened: !sidebarOpened });
+  }
 
   //
   // END: Util
 
   render () {
     const { menu = [] } = this.props;
+    const { sidebarOpened } = this.state;
     return (
-      <div className="sidebar">
+      <div className={classnames('sidebar', { 'on': sidebarOpened })}>
+        <div className="toggle">
+          <button className={classnames('btn border-0 pt-0', { 'hidden': sidebarOpened })} onClick={this.toggle}><span className="mark-arrow-right2 font-2x"></span></button>
+          <button className={classnames('btn border-0 pt-0 bg-dark text-white', { 'hidden': !sidebarOpened })} onClick={this.toggle}><span className="mark-arrow-left2 font-2x"></span></button>
+        </div>
         <ul>
           {
             menu.map((item) => {
