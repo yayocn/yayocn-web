@@ -7,6 +7,10 @@ import '../../style.scss';
 import imgSlide1 from '../../../common/image/slide1.jpg';
 import imgSlide2 from '../../../common/image/slide2.jpg';
 import imgSlide3 from '../../../common/image/slide3.jpg';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'carousel');
 
 export default class Carousel extends Component {
 
@@ -55,8 +59,8 @@ export default class Carousel extends Component {
   render () {
     return (
       <Fragment>
-        <h1>轮播图 <code>Carousel</code></h1>
-        <p className="font-2x font-100">轮播图组件，用于循环播放元素图像或文本幻灯片。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
         <h2 id="prepare">前奏</h2>

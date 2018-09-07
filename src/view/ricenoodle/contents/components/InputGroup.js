@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'inputGroup');
 
 const INPUTGROUP = {
   default: [
@@ -118,8 +120,8 @@ export default class InputGroup extends Component {
   render () {
     return (
       <Fragment>
-        <h1>输入框组 <code>Input group</code></h1>
-        <p className="font-2x font-100">通过在文本输入，自定义选择和自定义文件输入的任一侧添加文本，按钮或按钮组，轻松扩展表单控件。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -289,9 +291,9 @@ export default class InputGroup extends Component {
                               Dropdown
                             </button>
                             <div className="dropdown-menu">
-                              <a className="dropdown-item" href={ANCHOR}>Action</a>
-                              <a className="dropdown-item disabled" href={ANCHOR}>Another action</a>
-                              <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                              <a className="dropdown-item" href={NO_LINK}>Action</a>
+                              <a className="dropdown-item disabled" href={NO_LINK}>Another action</a>
+                              <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                             </div>
                           </div>
                         </div>

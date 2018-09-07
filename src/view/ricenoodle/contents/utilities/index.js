@@ -1,14 +1,38 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const thumbnails = menu.children;
 
 export default class Index extends Component {
   render () {
     return (
       <Fragment>
-        <div>
-          <h1>工具类 <code>Utilities</code></h1>
-          <p className="font-2x font-100">工具类提供了一系列轻量的类，它们往往只提供了一个具体的样式。
-            在使用过程中，通过它们不同的组合，可以实现一些复杂的样式。</p>
-        </div>
+        <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
+        <p className="font-2x font-100"  dangerouslySetInnerHTML={{__html: menu.info}}></p>
+
+        <div className="divider divider-lg divider-bold"></div>
+
+        <h2 className="mb-20">目录</h2>
+        <table className="table table-border">
+          <colgroup>
+            <col width="20%"></col>
+            <col width="80%"></col>
+          </colgroup>
+          <tbody>
+          {
+            thumbnails.map((item) => {
+              return (
+                <tr key={item.key}>
+                  <td><Link to={item.link} className="text-dark" dangerouslySetInnerHTML={{ __html: item.title }}></Link></td>
+                  <td dangerouslySetInnerHTML={{ __html: item.info }}></td>
+                </tr>
+              )
+            })
+          }
+          </tbody>
+        </table>
       </Fragment>
     );
   }

@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'button');
 
 const BUTTON = {
   theme: [
@@ -75,8 +79,8 @@ export default class Button extends Component {
   render () {
     return (
       <Fragment>
-        <h1>按钮 <code>Button</code></h1>
-        <p className="font-2x font-100">将 Ricenoodle 的自定义按钮用于表单，对话框等中的操作，并支持多种大小，状态等。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

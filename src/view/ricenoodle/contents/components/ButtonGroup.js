@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'buttonGroup');
 
 const BUTTONGROUP = {
   default: [
@@ -80,8 +82,8 @@ export default class ButtonGroup extends Component {
   render () {
     return (
       <Fragment>
-        <h1>按钮组 <code>Button group</code></h1>
-        <p className="font-2x font-100">使用按钮组将一系列按钮组合在一条线上。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -218,9 +220,9 @@ export default class ButtonGroup extends Component {
                                     Dropdown
                                   </button>
                                   <div className="dropdown-menu">
-                                    <a className="dropdown-item" href={ANCHOR}>Action</a>
-                                    <a className="dropdown-item" href={ANCHOR}>Another action</a>
-                                    <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                                    <a className="dropdown-item" href={NO_LINK}>Action</a>
+                                    <a className="dropdown-item" href={NO_LINK}>Another action</a>
+                                    <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                                   </div>
                                 </div>
                               </div>

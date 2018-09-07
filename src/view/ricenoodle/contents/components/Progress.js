@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'progress');
 
 const PROGRESS = {
   default: [
@@ -62,8 +66,8 @@ export default class Progress extends Component {
   render () {
     return (
       <Fragment>
-        <h1>进度条 <code>Progress</code></h1>
-        <p className="font-2x font-100">自定义进度条，支持堆叠条，动画背景和文本标签。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

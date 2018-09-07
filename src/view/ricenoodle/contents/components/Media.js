@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'media');
 
 export default class Media extends Component {
 
@@ -41,8 +45,8 @@ export default class Media extends Component {
   render () {
     return (
       <Fragment>
-        <h1>媒体对象 <code>Media</code></h1>
-        <p className="font-2x font-100">这是一个抽象的样式，用以构建不同类型的组件，这些组件都具有在文本内容的左或右侧对齐的图片。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
         <h2 id="example">实例</h2>

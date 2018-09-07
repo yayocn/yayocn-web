@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'breadcrumb');
 
 export default class Breadcrumb extends Component {
 
@@ -32,8 +34,8 @@ export default class Breadcrumb extends Component {
   render () {
     return (
       <Fragment>
-        <h1>面包屑导航 <code>Breadcrumb</code></h1>
-        <p className="font-2x font-100">指示当前页面在导航层次结构中的位置，该位置通过 CSS 自动添加分隔符。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -47,8 +49,8 @@ export default class Breadcrumb extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
-                        <li><a href={ANCHOR}>Home</a></li>
-                        <li><a href={ANCHOR}>Dashborad</a></li>
+                        <li><a href={NO_LINK}>Home</a></li>
+                        <li><a href={NO_LINK}>Dashborad</a></li>
                         <li className="active">Active</li>
                       </ul>
                     </div>
@@ -78,7 +80,7 @@ export default class Breadcrumb extends Component {
                   <div className="row">
                     <div className="col-12">
                       <ul className="breadcrumb">
-                        <li><a href={ANCHOR}>Home</a></li>
+                        <li><a href={NO_LINK}>Home</a></li>
                         <li className="disabled">Dashborad</li>
                         <li className="active">Active</li>
                       </ul>

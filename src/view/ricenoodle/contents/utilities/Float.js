@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'float');
 
 const FLOAT = {
   additive: [
@@ -36,8 +40,8 @@ export default class Float extends Component {
   render () {
     return (
       <Fragment>
-        <h1>浮动 <code>Float</code></h1>
-        <p className="font-2x font-100">使用浮动类，在任何元素上切换浮动。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

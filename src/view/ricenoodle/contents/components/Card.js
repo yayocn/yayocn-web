@@ -4,8 +4,12 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import cardImg from '../../../common/image/slide2.jpg';
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'card');
+
 const CARD = {
   default: [
     { title: 'Primary', key: '', subTitle: '', className: 'card', },
@@ -279,8 +283,8 @@ export default class Card extends Component {
   render () {
     return (
       <Fragment>
-        <h1>卡片 <code>Card</code></h1>
-        <p className="font-2x font-100">Ricenoodle 的卡片提供灵活且可扩展的内容容器，具有多种变体和选项。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -302,7 +306,7 @@ export default class Card extends Component {
                           <h5 className="card-title">满江红</h5>
                           <h6 className="card-subtitle text-muted">岳飞</h6>
                           <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
-                          <a href={ANCHOR} className="btn btn-secondary">了解更多</a>
+                          <a href={NO_LINK} className="btn btn-secondary">了解更多</a>
                         </div>
                       </div>
                     </div>
@@ -369,7 +373,7 @@ export default class Card extends Component {
                         <div className="card-body">
                           <h5 className="card-title">满江红</h5>
                           <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
-                          <a href={ANCHOR} className="card-link">了解更多</a>
+                          <a href={NO_LINK} className="card-link">了解更多</a>
                         </div>
                       </div>
                     </div>
@@ -404,7 +408,7 @@ export default class Card extends Component {
                         <div className="card-body">
                           <h5 className="card-title">满江红</h5>
                           <p className="card-text">怒发冲冠，凭栏处，潇潇雨歇。 抬望眼，仰天长啸，壮怀激烈。 三十功名尘与土，八千里路云和月。 莫等闲，白了少年头，空悲切。</p>
-                          <a href={ANCHOR} className="btn btn-secondary">了解更多</a>
+                          <a href={NO_LINK} className="btn btn-secondary">了解更多</a>
                         </div>
                         <div className="card-footer text-muted">
                           《唐诗宋词》

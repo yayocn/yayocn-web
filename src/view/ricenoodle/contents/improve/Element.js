@@ -3,7 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss'
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
 
+const menu = ricenoodle.find((value) => value.key === 'improve');
+const config = menu.children.find((value) => value.key === 'element');
 const ELEMENT = {
   head: [
     { title: 'h1', key: 'h1', subTitle: '', className: 'h1', },
@@ -126,8 +129,8 @@ export default class Element extends Component {
   render () {
     return (
       <Fragment>
-        <h1>元素样式增强 <code>Element</code></h1>
-        <p className="font-2x font-100">Ricenoodle 为部分元素的样式进行了更改和增强。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

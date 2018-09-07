@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'table');
 
 const TABLE = {
   default: [
@@ -107,8 +111,8 @@ export default class Table extends Component {
   render () {
     return (
       <Fragment>
-        <h1>表格 <code>Table</code></h1>
-        <p className="font-2x font-100">表格适用于数据的展示。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

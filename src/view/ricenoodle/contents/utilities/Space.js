@@ -2,6 +2,10 @@ import React, { Component, Fragment } from 'react';
 import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'space');
 
 export default class Space extends Component {
 
@@ -37,8 +41,8 @@ export default class Space extends Component {
   render () {
     return (
       <Fragment>
-        <h1>间距 <code>Space</code></h1>
-        <p className="font-2x font-100">Ricenoodle 包含各种快速响应边距和填充实用类，以修改元素的外观。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

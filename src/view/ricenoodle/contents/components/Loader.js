@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'loader');
 
 const LOADER = {
   bar: [
@@ -83,8 +87,8 @@ export default class Loader extends Component {
   render () {
     return (
       <Fragment>
-        <h1>加载 <code>Loader</code></h1>
-        <p className="font-2x font-100">用来显示加载状态，显示为 <code>windows10</code> 的加载样式。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'collapse');
 
 const COLLAPSE = {
   default: [
@@ -29,8 +33,8 @@ export default class Collapse extends Component {
   render () {
     return (
       <Fragment>
-        <h1>折叠 <code>Collapse</code></h1>
-        <p className="font-2x font-100">使用折叠组件切换项目中内容的可见性。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="collapse collapse-bold collapse-lg"></div>
         <h2 id="prepare">前奏</h2>

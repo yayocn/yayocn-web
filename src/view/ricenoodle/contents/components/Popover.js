@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'popover');
 
 const POPOVER = {
   default: [
@@ -61,8 +65,8 @@ export default class Pagination extends Component {
   render () {
     return (
       <Fragment>
-        <h1>弹出框 <code>Popover</code></h1>
-        <p className="font-2x font-100">为任意元素添加一小块浮层。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

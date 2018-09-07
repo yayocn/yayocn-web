@@ -8,7 +8,7 @@ export const ricenoodle = [
   },
   {
     title: '样式增强 <small><code>Improve</code></small>',
-    info: '在这一部分，Ricenoodle 重置了一些常用元素的样式，并额外添加了一些针对性很强的 CSS 类。',
+    info: '在这一部分，Ricenoodle 重置了一些常用元素的样式，并额外添加了一些针对特定元素的 CSS 类。',
     icon: '',
     key: 'improve',
     link: '/ricenoodle/improve',

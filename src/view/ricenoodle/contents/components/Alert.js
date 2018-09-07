@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'alert');
 
 const ALERT = {
   theme: [
@@ -166,8 +168,8 @@ export default class Alert extends Component {
   render () {
     return (
       <Fragment>
-        <h1>警告框 <code>Alert</code></h1>
-        <p className="font-2x font-100">使用少量可用且灵活的警报消息为用户操作提供上下文反馈消息。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -218,7 +220,7 @@ export default class Alert extends Component {
                         return (
                           <div className="col-lg-6 col-12 mb-10" key={index}>
                             <div className={classnames(item.className, 'alert-feature')}>
-                              大江东去，浪淘尽，<a href={ANCHOR} className="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
+                              大江东去，浪淘尽，<a href={NO_LINK} className="alert-link">千古风流人物</a>。故垒西边，人道是，三国周郎赤壁。
                             </div>
                           </div>
                         );

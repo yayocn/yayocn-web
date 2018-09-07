@@ -4,16 +4,14 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import { ricenoodle } from '../../../../constants/menu';
 
-const startMenu = ricenoodle.find((value) => value.key === 'start');
+const menu = ricenoodle.find((value) => value.key === 'start');
 
 export default class Improve extends Component {
   render () {
     return (
       <Fragment>
-        <h1 dangerouslySetInnerHTML={{__html: startMenu.title}}></h1>
-        <p className="font-2x font-100">
-          Ricenoodle，快而美的轻量级前端框架。
-        </p>
+        <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
+        <p className="font-2x font-100"  dangerouslySetInnerHTML={{__html: menu.info}}></p>
 
         <div className="divider divider-lg divider-bold"></div>
 

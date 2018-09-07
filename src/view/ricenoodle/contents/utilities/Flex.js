@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { find } from 'lodash';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'flex');
 
 const FLEX = {
   direction: [
@@ -90,8 +94,9 @@ export default class Flex extends Component {
   render () {
     return (
       <Fragment>
-        <h1>弹性布局 <code>Flex</code></h1>
-        <p className="font-2x font-100">使用全套响应式弹性布局类快速管理网格列，导航，组件等的布局，对齐和大小调整。 对于更复杂的实现，可能需要自定义 CSS。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
+
         <div className="alert alert-warning">
           <dl className="row mb-0">
             <dt className="col-lg-2 col-md-3 col-4">主轴，交叉轴</dt>

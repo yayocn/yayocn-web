@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'tooltip');
 
 const TOOLTIP = {
   default: [
@@ -46,8 +50,8 @@ export default class Tooltip extends Component {
   render () {
     return (
       <Fragment>
-        <h1>提示框 <code>Tooltip</code></h1>
-        <p className="font-2x font-100">采用 CSS3 制作动画，用 <code>data-</code> 存储相关数据。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

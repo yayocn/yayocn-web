@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'modal');
 
 export default class Modal extends Component {
 
@@ -59,8 +63,8 @@ export default class Modal extends Component {
   render () {
     return (
       <Fragment>
-        <h1>模态框 <code>Modal</code></h1>
-        <p className="font-2x font-100">用户通知或完全自定义内容的对话框。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

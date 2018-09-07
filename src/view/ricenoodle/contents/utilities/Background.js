@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'background');
 
 const BACKGROUND = {
   theme: [
@@ -43,8 +47,8 @@ export default class Background extends Component {
   render () {
     return (
       <Fragment>
-        <h1>背景 <code>Background</code></h1>
-        <p className="font-2x font-100">使用背景工具类快速设置元素的背景颜色。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

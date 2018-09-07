@@ -1,41 +1,40 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { ricenoodle } from '../../../../constants/menu';
 
-const thumbnails = ricenoodle.find((value) => value.key === 'improve').children;
+const menu = ricenoodle.find((value) => value.key === 'improve');
+const thumbnails = menu.children;
 
 export default class Improve extends Component {
   render () {
     return (
       <Fragment>
         <div>
-          <h1>样式增强 <code>Improve</code></h1>
-          <p className="font-2x font-100">
-            在这一部分，Ricenoodle 重置了一些常用元素的样式，并额外添加了一些针对性很强的 CSS 类。
-          </p>
+          <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
+          <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: menu.info}}></p>
         </div>
 
         <div className="divider divider-lg divider-bold"></div>
 
-        <div className="container-fluid">
-          <div className="row">
-            <div className="card-group">
-              {
-                thumbnails.map((item) => {
-                  return (
-                    <div className="card" key={item.key}>
-                      <div className="card-header">
-                        {item.title}
-                      </div>
-                      <div className="card-body">
-                        <p className="card-text">{item.info}</p>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
-          </div>
-        </div>
+        <h2 className="mb-20">目录</h2>
+        <table className="table table-border">
+          <colgroup>
+            <col width="20%"></col>
+            <col width="80%"></col>
+          </colgroup>
+          <tbody>
+          {
+            thumbnails.map((item) => {
+              return (
+                <tr key={item.key}>
+                  <td><Link to={item.link} className="text-dark" dangerouslySetInnerHTML={{ __html: item.title }}></Link></td>
+                  <td dangerouslySetInnerHTML={{ __html: item.info }}></td>
+                </tr>
+              )
+            })
+          }
+          </tbody>
+        </table>
       </Fragment>
     );
   }

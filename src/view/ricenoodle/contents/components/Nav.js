@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'nav');
 
 export default class Nav extends Component {
 
@@ -157,8 +159,8 @@ export default class Nav extends Component {
   render () {
     return (
       <Fragment>
-        <h1>导航 <code>Nav</code></h1>
-        <p className="font-2x font-100">使用导航组件快速跳转到目标地址。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -173,16 +175,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -212,10 +214,10 @@ export default class Nav extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav">
-                        <a className="nav-link active" href={ANCHOR}>Active</a>
-                        <a className="nav-link" href={ANCHOR}>Link</a>
-                        <a className="nav-link" href={ANCHOR}>Link</a>
-                        <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                        <a className="nav-link active" href={NO_LINK}>Active</a>
+                        <a className="nav-link" href={NO_LINK}>Link</a>
+                        <a className="nav-link" href={NO_LINK}>Link</a>
+                        <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                       </nav>
                     </div>
                   </div>
@@ -246,31 +248,31 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav justify-content-center">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
 
                       <ul className="nav justify-content-end mt-20">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -301,10 +303,10 @@ export default class Nav extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="nav flex-column">
-                        <a className="nav-link active" href={ANCHOR}>Active</a>
-                        <a className="nav-link" href={ANCHOR}>Link</a>
-                        <a className="nav-link" href={ANCHOR}>Link</a>
-                        <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                        <a className="nav-link active" href={NO_LINK}>Active</a>
+                        <a className="nav-link" href={NO_LINK}>Link</a>
+                        <a className="nav-link" href={NO_LINK}>Link</a>
+                        <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                       </nav>
                     </div>
                   </div>
@@ -334,16 +336,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-pills">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -374,16 +376,16 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-pills nav-fill">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Longer nav link</a>
+                          <a className="nav-link" href={NO_LINK}>Longer nav link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
                     </div>
@@ -449,7 +451,7 @@ export default class Nav extends Component {
         <div className="divider divider-lg"></div>
 
         <h2 id="dropdown">下拉导航</h2>
-        <p>在导航系统中使用 <cdoe>dropdown</cdoe> 组件。</p>
+        <p>在导航系统中使用 <code>dropdown</code> 组件。</p>
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
@@ -459,23 +461,23 @@ export default class Nav extends Component {
                     <div className="col-12">
                       <ul className="nav nav-tabs">
                         <li className="nav-item">
-                          <a className="nav-link active" href={ANCHOR}>Active</a>
+                          <a className="nav-link active" href={NO_LINK}>Active</a>
                         </li>
                         <li className="nav-item dropdown">
-                          <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={ANCHOR} role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                          <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={NO_LINK} role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                           <div className="dropdown-menu">
-                            <a className="dropdown-item" href={ANCHOR}>Action</a>
-                            <a className="dropdown-item" href={ANCHOR}>Another action</a>
-                            <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                            <a className="dropdown-item" href={NO_LINK}>Action</a>
+                            <a className="dropdown-item" href={NO_LINK}>Another action</a>
+                            <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href={ANCHOR}>Separated link</a>
+                            <a className="dropdown-item" href={NO_LINK}>Separated link</a>
                           </div>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link" href={ANCHOR}>Link</a>
+                          <a className="nav-link" href={NO_LINK}>Link</a>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                          <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                         </li>
                       </ul>
                     </div>

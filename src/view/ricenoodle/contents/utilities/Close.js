@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'close');
 
 export default class Close extends Component {
 
@@ -17,8 +21,8 @@ export default class Close extends Component {
   render () {
     return (
       <Fragment>
-        <h1>关闭图标 <code>Close icon</code></h1>
-        <p className="font-2x font-100">使用通用关闭图标来消除模态框和警报框等内容。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

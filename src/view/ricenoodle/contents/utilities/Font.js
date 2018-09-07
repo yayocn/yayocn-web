@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'font');
 
 const FONT = {
   stable: (function(){
@@ -53,8 +57,8 @@ export default class Font extends Component {
   render () {
     return (
       <Fragment>
-        <h1>字体 <code>Font</code></h1>
-        <p className="font-2x font-100">使用字体类快速设置文本的尺寸，权重等。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

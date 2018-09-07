@@ -3,9 +3,12 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'scrollspy');
+
 
 export default class Pagination extends Component {
 
@@ -75,8 +78,8 @@ export default class Pagination extends Component {
   render () {
     return (
       <Fragment>
-        <h1>滚动监听 <code>Scrollspy</code></h1>
-        <p className="font-2x font-100">根据滚动位置自动更新导航，以指示视口中当前处于活动状态的链接。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -99,7 +102,7 @@ export default class Pagination extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav id="navbar-example2" className="navbar navbar-light bg-light">
-                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
+                        <a className="navbar-brand" href={NO_LINK}>Navbar</a>
                         <ul className="nav nav-pills">
                           <li className="nav-item">
                             <a className="nav-link active" href="#fat">定风波·三月七日</a>
@@ -108,7 +111,7 @@ export default class Pagination extends Component {
                             <a className="nav-link" href="#mdo">念奴娇·赤壁怀古</a>
                           </li>
                           <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={ANCHOR}>更多</a>
+                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href={NO_LINK}>更多</a>
                             <div className="dropdown-menu">
                               <a className="dropdown-item" href="#one">水调歌头·丙辰中秋</a>
                               <a className="dropdown-item" href="#two">江城子.密州出猎</a>

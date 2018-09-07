@@ -1,13 +1,38 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const thumbnails = menu.children;
 
 export default class Index extends Component {
   render () {
     return (
       <Fragment>
-        <div>
-          <h1>组件 <code>Component</code></h1>
-          <p className="font-2x font-100">无数可复用的组件，包括下拉菜单、导航、警告框、弹出框等更多功能。</p>
-        </div>
+        <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
+        <p className="font-2x font-100"  dangerouslySetInnerHTML={{__html: menu.info}}></p>
+
+        <div className="divider divider-lg divider-bold"></div>
+
+        <h2 className="mb-20">目录</h2>
+        <table className="table table-border">
+          <colgroup>
+            <col width="20%"></col>
+            <col width="80%"></col>
+          </colgroup>
+          <tbody>
+          {
+            thumbnails.map((item) => {
+              return (
+                <tr key={item.key}>
+                  <td><Link to={item.link} className="text-dark" dangerouslySetInnerHTML={{ __html: item.title }}></Link></td>
+                  <td dangerouslySetInnerHTML={{ __html: item.info }}></td>
+                </tr>
+              )
+            })
+          }
+          </tbody>
+        </table>
       </Fragment>
     );
   }

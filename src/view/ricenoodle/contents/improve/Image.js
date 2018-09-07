@@ -8,6 +8,11 @@ import img1 from '../../../common/image/slide1.jpg';
 import img2 from '../../../common/image/slide2.jpg';
 import img3 from '../../../common/image/slide3.jpg';
 
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'improve');
+const config = menu.children.find((value) => value.key === 'image');
+
 const IMAGE = {
   fluid: [
     { title: 'Primary', key: '', subTitle: '', className: 'img-fluid' },
@@ -53,8 +58,8 @@ export default class Image extends Component {
   render () {
     return (
       <Fragment>
-        <h1>图片 <code>Image</code></h1>
-        <p className="font-2x font-100">为图片添加轻量类，统一图片的样式，增加响应式图片，使其不会超过父元素。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

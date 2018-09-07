@@ -3,9 +3,12 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'badge');
+
 const BADGE = {
   theme: [
     { title: 'Primary', key: '', subTitle: '', className: 'badge badge-primary', },
@@ -87,8 +90,8 @@ export default class Badge extends Component {
   render () {
     return (
       <Fragment>
-        <h1>便签 <code>Badge</code></h1>
-        <p className="font-2x font-100">便签组件可以用来计数或者包裹标签。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -141,7 +144,7 @@ export default class Badge extends Component {
                         BADGE.link.map((item, index) => {
                           return (
                             <div className="block-inline mb-10 mr-5" key={index}>
-                              <a href={ANCHOR} className={classnames(item.className, 'badge-feature')}>
+                              <a href={NO_LINK} className={classnames(item.className, 'badge-feature')}>
                                 {item.title}
                               </a>
                             </div>

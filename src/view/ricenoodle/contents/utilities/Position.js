@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { find } from 'lodash';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'position');
 
 const POSITION = {
   type: [
@@ -60,8 +64,8 @@ export default class Position extends Component {
   render () {
     return (
       <Fragment>
-        <h1>定位 <code>Position</code></h1>
-        <p className="font-2x font-100">使用定位类快速配置元素的位置。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

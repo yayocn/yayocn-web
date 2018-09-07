@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'grid');
 
 export default class Grid extends Component {
 
@@ -78,8 +82,8 @@ export default class Grid extends Component {
   render () {
     return (
       <Fragment>
-        <h1>栅格系统 <code>Grid</code></h1>
-        <p className="font-2x font-100">栅格系统对于布局尤其是响应式来说至关重要，它随着屏幕或者窗口视口的大小自动调整。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

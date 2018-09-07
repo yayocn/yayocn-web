@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'jumbotron');
 
 const JUMBOTRON = {
   default: [
@@ -67,8 +71,8 @@ export default class Jumbotron extends Component {
   render () {
     return (
       <Fragment>
-        <h1>大屏幕 <code>Jumbotron</code></h1>
-        <p className="font-2x font-100">轻巧，灵活的大屏幕组件，用于展示醒目的内容。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

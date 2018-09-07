@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'pagination');
 
 const PANINATION = {
   default: [
@@ -74,8 +76,8 @@ export default class Pagination extends Component {
   render () {
     return (
       <Fragment>
-        <h1>分页 <code>Pagination</code></h1>
-        <p className="font-2x font-100">对多条数据进行分页。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -89,12 +91,12 @@ export default class Pagination extends Component {
                     <div className="col-12">
                       <nav>
                         <ul className="pagination">
-                          <li className="active"><a href={ANCHOR}>&laquo;</a></li>
-                          <li><a href={ANCHOR}>1</a></li>
-                          <li className="disabled"><a href={ANCHOR}>2</a></li>
-                          <li><a href={ANCHOR}>3</a></li>
-                          <li><a href={ANCHOR}>4</a></li>
-                          <li><a href={ANCHOR}>&raquo;</a></li>
+                          <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                          <li><a href={NO_LINK}>1</a></li>
+                          <li className="disabled"><a href={NO_LINK}>2</a></li>
+                          <li><a href={NO_LINK}>3</a></li>
+                          <li><a href={NO_LINK}>4</a></li>
+                          <li><a href={NO_LINK}>&raquo;</a></li>
                         </ul>
                       </nav>
                     </div>
@@ -124,12 +126,12 @@ export default class Pagination extends Component {
                     <div className="col-12">
                       <nav>
                         <ul className="pagination pagination-border">
-                          <li className="active"><a href={ANCHOR}>&laquo;</a></li>
-                          <li><a href={ANCHOR}>1</a></li>
-                          <li className="disabled"><a href={ANCHOR}>2</a></li>
-                          <li><a href={ANCHOR}>3</a></li>
-                          <li><a href={ANCHOR}>4</a></li>
-                          <li><a href={ANCHOR}>&raquo;</a></li>
+                          <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                          <li><a href={NO_LINK}>1</a></li>
+                          <li className="disabled"><a href={NO_LINK}>2</a></li>
+                          <li><a href={NO_LINK}>3</a></li>
+                          <li><a href={NO_LINK}>4</a></li>
+                          <li><a href={NO_LINK}>&raquo;</a></li>
                         </ul>
                       </nav>
                     </div>
@@ -162,12 +164,12 @@ export default class Pagination extends Component {
                           return (
                             <nav key={index}>
                               <ul className={classnames(item.className)} key={index}>
-                                <li className="active"><a href={ANCHOR}>&laquo;</a></li>
-                                <li><a href={ANCHOR}>1</a></li>
-                                <li className="disabled"><a href={ANCHOR}>2</a></li>
-                                <li><a href={ANCHOR}>3</a></li>
-                                <li><a href={ANCHOR}>4</a></li>
-                                <li><a href={ANCHOR}>&raquo;</a></li>
+                                <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                                <li><a href={NO_LINK}>1</a></li>
+                                <li className="disabled"><a href={NO_LINK}>2</a></li>
+                                <li><a href={NO_LINK}>3</a></li>
+                                <li><a href={NO_LINK}>4</a></li>
+                                <li><a href={NO_LINK}>&raquo;</a></li>
                               </ul>
                             </nav> 
                           )
@@ -204,12 +206,12 @@ export default class Pagination extends Component {
                             <div key={index} className={classnames('ph-20', {'bg-dark': item.key === 'white'})}>
                               <nav>
                                 <ul className={classnames(item.className)}>
-                                  <li className="active"><a href={ANCHOR}>&laquo;</a></li>
-                                  <li><a href={ANCHOR}>1</a></li>
-                                  <li className="disabled"><a href={ANCHOR}>2</a></li>
-                                  <li><a href={ANCHOR}>3</a></li>
-                                  <li><a href={ANCHOR}>4</a></li>
-                                  <li><a href={ANCHOR}>&raquo;</a></li>
+                                  <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                                  <li><a href={NO_LINK}>1</a></li>
+                                  <li className="disabled"><a href={NO_LINK}>2</a></li>
+                                  <li><a href={NO_LINK}>3</a></li>
+                                  <li><a href={NO_LINK}>4</a></li>
+                                  <li><a href={NO_LINK}>&raquo;</a></li>
                                 </ul>
                               </nav>
                             </div>

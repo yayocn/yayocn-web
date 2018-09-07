@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'text');
 
 const TEXT = {
   theme: [
@@ -63,8 +67,8 @@ export default class Text extends Component {
   render () {
     return (
       <Fragment>
-        <h1>文本 <code>Text</code></h1>
-        <p className="font-2x font-100"><code>Text</code> 类可以快速设置文字的颜色，对齐方式，换行方式等。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

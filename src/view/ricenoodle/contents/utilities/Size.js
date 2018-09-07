@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { find } from 'lodash';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'size');
 
 const SIZE = {
   width: [
@@ -62,8 +66,8 @@ export default class Size extends Component {
   render () {
     return (
       <Fragment>
-        <h1>尺寸 <code>Size</code></h1>
-        <p className="font-2x font-100">使用元素尺寸类轻松设置元素的宽和高（相对于其父元素）。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

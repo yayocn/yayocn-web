@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'elf');
 
 const ELF = {
   theme: [
@@ -64,8 +68,8 @@ export default class Breadcrumb extends Component {
   render () {
     return (
       <Fragment>
-        <h1>精灵 <code>Elf</code></h1>
-        <p className="font-2x font-100">精灵组件，用于对 <code>form</code> 表单的必填项，重点项等进行增强。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

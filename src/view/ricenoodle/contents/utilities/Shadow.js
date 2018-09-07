@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { find } from 'lodash';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'shadow');
 
 const SHADOW = {
   visibility: [
@@ -32,8 +36,8 @@ export default class Shadow extends Component {
   render () {
     return (
       <Fragment>
-        <h1>阴影 <code>Shadow</code></h1>
-        <p className="font-2x font-100">使用阴影类添加或者刪除元素阴影。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'listGroup');
 
 const LISTGROUP = {
   default: [
@@ -116,8 +118,8 @@ export default class ListGroup extends Component {
   render () {
     return (
       <Fragment>
-        <h1>列表组 <code>List group</code></h1>
-        <p className="font-2x font-100">列表组是用于显示一系列内容的灵活且功能强大的组件。 修改并扩展它们以支持其中的任何内容。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -297,9 +299,9 @@ export default class ListGroup extends Component {
                   <div className="row">
                     <div className="col-3">
                       <ul className="list-group">
-                        <li className="list-group-item"><a href={ANCHOR}>百度</a></li>
-                        <li className="list-group-item"><a href={ANCHOR}>阿里</a></li>
-                        <li className="list-group-item"><a href={ANCHOR}>腾讯</a></li>
+                        <li className="list-group-item"><a href={NO_LINK}>百度</a></li>
+                        <li className="list-group-item"><a href={NO_LINK}>阿里</a></li>
+                        <li className="list-group-item"><a href={NO_LINK}>腾讯</a></li>
                       </ul>
                     </div>
                   </div>

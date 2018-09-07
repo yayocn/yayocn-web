@@ -3,9 +3,11 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { NO_LINK } from '../../constants/const';
+import { ricenoodle } from '../../../../constants/menu';
 
-// eslint-disable-next-line
-const ANCHOR = 'javascript:;';
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'navbar');
 
 export default class Navbar extends Component {
 
@@ -68,8 +70,8 @@ export default class Navbar extends Component {
   render () {
     return (
       <Fragment>
-        <h1>导航条 <code>Navbar</code></h1>
-        <p className="font-2x font-100">Ricenoodle 的响应式导航，包括对品牌，导航等的支持，包括对折叠插件的支持。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
@@ -99,7 +101,7 @@ export default class Navbar extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
+                        <a className="navbar-brand" href={NO_LINK}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -107,24 +109,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href={ANCHOR}>Home</a>
+                              <a className="nav-link" href={NO_LINK}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href={ANCHOR}>Link</a>
+                              <a className="nav-link" href={NO_LINK}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={NO_LINK} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href={ANCHOR}>Action</a>
-                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                                <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                              <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">
@@ -160,7 +162,7 @@ export default class Navbar extends Component {
                   <div className="row">
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
+                        <a className="navbar-brand" href={NO_LINK}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -168,24 +170,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href={ANCHOR}>Home</a>
+                              <a className="nav-link" href={NO_LINK}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href={ANCHOR}>Link</a>
+                              <a className="nav-link" href={NO_LINK}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={NO_LINK} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href={ANCHOR}>Action</a>
-                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                                <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                              <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">
@@ -196,7 +198,7 @@ export default class Navbar extends Component {
                       </nav>
 
                       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-20">
-                        <a className="navbar-brand" href={ANCHOR}>Navbar</a>
+                        <a className="navbar-brand" href={NO_LINK}>Navbar</a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                           <span className="navbar-toggler-icon"></span>
                         </button>
@@ -204,24 +206,24 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                              <a className="nav-link" href={ANCHOR}>Home</a>
+                              <a className="nav-link" href={NO_LINK}>Home</a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href={ANCHOR}>Link</a>
+                              <a className="nav-link" href={NO_LINK}>Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                              <a className="nav-link dropdown-toggle" href={ANCHOR} id="navbarDropdown" data-toggle="dropdown">
+                              <a className="nav-link dropdown-toggle" href={NO_LINK} id="navbarDropdown" data-toggle="dropdown">
                                 Dropdown
                               </a>
                               <div className="dropdown-menu">
-                                <a className="dropdown-item" href={ANCHOR}>Action</a>
-                                <a className="dropdown-item" href={ANCHOR}>Another action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Action</a>
+                                <a className="dropdown-item" href={NO_LINK}>Another action</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href={ANCHOR}>Something else here</a>
+                                <a className="dropdown-item" href={NO_LINK}>Something else here</a>
                               </div>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link disabled" href={ANCHOR}>Disabled</a>
+                              <a className="nav-link disabled" href={NO_LINK}>Disabled</a>
                             </li>
                           </ul>
                           <form className="form-inline mv-5">

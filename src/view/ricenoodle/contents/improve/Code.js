@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'improve');
+const config = menu.children.find((value) => value.key === 'code');
 
 export default class Code extends Component {
 
@@ -32,8 +36,8 @@ export default class Code extends Component {
   render () {
     return (
       <Fragment>
-        <h1>编码 <code>Code</code></h1>
-        <p className="font-2x font-100">为内联元素和编码块元素预设样式。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

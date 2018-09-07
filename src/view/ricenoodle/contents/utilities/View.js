@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'utilities');
+const config = menu.children.find((value) => value.key === 'view');
 
 const VIEW = {
   display: [
@@ -60,18 +64,11 @@ export default class View extends Component {
     return code;
   }
 
-  createVisibleCode = () => {
-    let code = ``;
-    code += `<div class="visible"> ... </div>
-<div class="invisible"> ... </div>`
-    return code;
-  }
-
   render () {
     return (
       <Fragment>
-        <h1>视图 <code>View</code></h1>
-        <p className="font-2x font-1000"><code>View</code> 类可以快速设置元素的 <code>display | visibility | opacity</code> 等属性。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 

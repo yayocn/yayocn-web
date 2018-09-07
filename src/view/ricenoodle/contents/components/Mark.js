@@ -3,6 +3,10 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
+import { ricenoodle } from '../../../../constants/menu';
+
+const menu = ricenoodle.find((value) => value.key === 'components');
+const config = menu.children.find((value) => value.key === 'mark');
 
 const MARK = {
   close: [
@@ -41,8 +45,8 @@ export default class Mark extends Component {
   render () {
     return (
       <Fragment>
-        <h1>标记 <code>Mark</code></h1>
-        <p className="font-2x font-100">常用的 <code>html</code> 的转义字符。</p>
+        <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
+        <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
         <div className="divider divider-bold divider-lg"></div>
 
