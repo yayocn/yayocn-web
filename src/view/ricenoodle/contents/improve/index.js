@@ -27,7 +27,7 @@ export default class Improve extends Component {
             thumbnails.map((item) => {
               return (
                 <tr key={item.key}>
-                  <td><Link to={item.link} className="text-dark" dangerouslySetInnerHTML={{ __html: item.title }}></Link></td>
+                  <td><Link to={item.link} className="text-dark text-nowrap" dangerouslySetInnerHTML={{ __html: item.title }}></Link></td>
                   <td dangerouslySetInnerHTML={{ __html: item.info }}></td>
                 </tr>
               )

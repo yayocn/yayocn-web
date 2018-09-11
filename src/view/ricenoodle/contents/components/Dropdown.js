@@ -320,7 +320,7 @@ export default class Dropdown extends Component {
                       {
                         DROPDOWN.theme.map((item, index) => {
                           return(
-                            <div className="dropdown block-inline mr-5" key={index}>
+                            <div className="dropdown block-inline mr-5 mb-5" key={index}>
                               <button className={classnames(item.className, 'dropdown-toggle')} type="button" data-toggle="dropdown">
                                 Dropdown
                               </button>

@@ -53,7 +53,7 @@ export default class Shadow extends Component {
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className="row">
-                            <div className="col-4 mb-10">
+                            <div className="col-lg-4 col-md-6 col-12 mb-10">
                               <div className={classnames('border bg-light', item.className, 'shadow-feature')}></div>
                             </div>
                           </div>
@@ -88,7 +88,7 @@ export default class Shadow extends Component {
                       <div className={classnames('feature-example')}>
                         <div className={classnames('example-view')}>
                           <div className="row">
-                            <div className="col-4 mb-10">
+                            <div className="col-lg-4 col-md-6 col-12 mb-10">
                               <div className={classnames('border bg-light', item.className, 'shadow-feature')}></div>
                             </div>
                           </div>

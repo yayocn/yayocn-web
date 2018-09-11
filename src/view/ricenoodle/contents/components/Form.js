@@ -357,7 +357,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       <form>
                         <div className="form-group">
                           <label htmlFor="exampleInputEmail1">Email address</label>
@@ -400,7 +400,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       <form>
                         <div className="form-group">
                           <label htmlFor="exampleInputEmail2">Email address</label>
@@ -454,7 +454,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.formControlSize.map((item, index) => {
                           return (
@@ -484,7 +484,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.formControlTheme.map((item, index) => {
                           return (
@@ -514,7 +514,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       <input type="text" className="form-control" disabled={true} placeholder="Ricenoodle"/>
                     </div>
                   </div>
@@ -538,7 +538,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.checkbox.map((item, index) => {
                           return (
@@ -745,7 +745,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.radio.map((item, index) => {
                           return (
@@ -848,7 +848,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.file.map((item, index) => {
                           return (
@@ -883,7 +883,7 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.formGroup.map((item, index) => {
                           return (
@@ -918,21 +918,21 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
+                    <div className="col-lg-6 col-12">
                       {
                         FORM.horizontal.map((item, index) => {
                           return (
                             <form className={classnames(item.className)} key={index}>
                               <div className="form-group">
-                                <label className="col-3 form-control-label">User Name</label>
-                                <div className="col-9">
+                                <label className="col-lg-3 form-control-label">User Name</label>
+                                <div className="col-lg-9">
                                   <input type="text" className="form-control" placeholder="enter user name"/>
                                 </div>
                               </div>
 
                               <div className="form-group">
-                                <label className="col-3 form-control-label">password</label>
-                                <div className="col-9">
+                                <label className="col-lg-3 form-control-label">password</label>
+                                <div className="col-lg-9">
                                   <input type="password" className="form-control" placeholder="enter password"/>
                                 </div>
                               </div>

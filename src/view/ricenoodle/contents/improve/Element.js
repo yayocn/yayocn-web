@@ -383,8 +383,8 @@ export default class Element extends Component {
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
-                      <textarea className="size-dead" name="" id="" cols="50" rows="5"></textarea>
-                      <textarea className="ml-10" name="" id="" cols="50" rows="5"></textarea>
+                      <textarea className="size-dead mr-10" name="" id="" cols="50" rows="5"></textarea>
+                      <textarea name="" id="" cols="50" rows="5"></textarea>
                     </div>
                   </div>
                 </div>

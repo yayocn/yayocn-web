@@ -111,7 +111,7 @@ export default class Text extends Component {
                   {
                     TEXT.alignment.map((item, index) => {
                       return (
-                        <div className={classnames('mb-10 w-50')} key={index} >
+                        <div className={classnames('mb-10')} key={index} >
                           <p className={classnames(item.className)}>{item.subTitle}</p>
                         </div>
                       );
@@ -140,7 +140,7 @@ export default class Text extends Component {
                   {
                     TEXT.wrap.map((item, index) => {
                       return (
-                        <div className={classnames('mb-10 w-25 bg-light')} key={index} >
+                        <div className={classnames('mb-10 w-75 bg-light')} key={index} >
                           <p className={classnames(item.className)}>{item.subTitle}</p>
                         </div>
                       );

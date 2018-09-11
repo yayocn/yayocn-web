@@ -102,11 +102,11 @@ export default class Navbar extends Component {
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href={NO_LINK}>Navbar</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_1">
                           <span className="navbar-toggler-icon"></span>
                         </button>
 
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent_1">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
                               <a className="nav-link" href={NO_LINK}>Home</a>
@@ -163,11 +163,11 @@ export default class Navbar extends Component {
                     <div className="col-12">
                       <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <a className="navbar-brand" href={NO_LINK}>Navbar</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_2">
                           <span className="navbar-toggler-icon"></span>
                         </button>
 
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent_2">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
                               <a className="nav-link" href={NO_LINK}>Home</a>
@@ -199,11 +199,11 @@ export default class Navbar extends Component {
 
                       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mt-20">
                         <a className="navbar-brand" href={NO_LINK}>Navbar</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent_3">
                           <span className="navbar-toggler-icon"></span>
                         </button>
 
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent_3">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
                               <a className="nav-link" href={NO_LINK}>Home</a>

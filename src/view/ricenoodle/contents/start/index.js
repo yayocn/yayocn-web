@@ -16,16 +16,22 @@ export default class Improve extends Component {
         <div className="divider divider-lg divider-bold"></div>
 
         <h2 id="download">下载</h2>
+        <p>当前版本 <code>v1.0.2</code></p>
         <div className="row">
-          <div className="col-lg-3 col-md-2 col-1">
+          <div className="col-lg-4 col-md-6 col-12 mt-20">
             <h4>生产环境</h4>
             <p>编译并且压缩后的css、javascript文件。</p>
-            <a href="files/yyui-1.1.2.zip" className="btn">下载 Ricenoodle</a>
+            <a href="public/ricenoodle/ricenoodle-1.0.2.zip" className="btn">下载 Ricenoodle</a>
           </div>
-          <div className="col-lg-3 col-md-2 col-1">
+          <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>源码</h4>
             <p>Ricenoodle 的资源文件。</p>
-            <a href="files/yyui-1.1.2.zip" className="btn">Source</a>
+            <a href="public/ricenoodle/ricenoodle-source-1.0.2.zip" className="btn">Source</a>
+          </div>
+          <div className="col-lg-3 col-md-6 col-12 mt-20">
+            <h4>Github</h4>
+            <p>Ricenoodle 代码库。</p>
+            <a href="https://github.com/yayocn/ricenoodle" target="_blank" rel="noopener noreferrer" className="btn">Github</a>
           </div>
         </div>
 

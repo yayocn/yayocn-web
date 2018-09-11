@@ -440,7 +440,7 @@ export default class Card extends Component {
                   <div className="row">
                     {
                       CARD.theme.map((item, index) => {
-                        return <div className="col-lg-3 col-md-4 col-sm-2 col-1 mb-10" key={index}>
+                        return <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-10" key={index}>
                           <div className={classnames(item.className)}>
                             <div className="card-header">
                               诗词鉴赏

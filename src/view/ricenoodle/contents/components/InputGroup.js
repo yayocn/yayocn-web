@@ -133,7 +133,7 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-4">
+                    <div className="col-lg-6 col-12">
                       {
                         INPUTGROUP.default.map((item, index) => {
                           return (
@@ -171,7 +171,7 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-4">
+                    <div className="col-lg-4 col-12">
                       {
                         INPUTGROUP.theme.map((item, index) => {
                           return (
@@ -210,7 +210,7 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-4">
+                    <div className="col-lg-4 col-12">
                       {
                         INPUTGROUP.size.map((item, index) => {
                           return (
@@ -247,7 +247,7 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-4">
+                    <div className="col-lg-4 col-12">
                       {
                         INPUTGROUP.border.map((item, index) => {
                           return (
@@ -283,7 +283,7 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-4">
+                    <div className="col-lg-4 col-12">
                       <div className="input-group">
                         <div className="input-group-btn">
                           <div className="dropdown">

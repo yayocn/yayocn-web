@@ -36,7 +36,7 @@ export default class Collapse extends Component {
         <h1 dangerouslySetInnerHTML={{__html: config.title}}></h1>
         <p className="font-2x font-100" dangerouslySetInnerHTML={{__html: config.info}}></p>
 
-        <div className="collapse collapse-bold collapse-lg"></div>
+        <div className="divider divider-bold divider-lg"></div>
         <h2 id="prepare">前奏</h2>
         <ul className="ph-30">
           <li>引入 <code>jquery.js</code> & <code>ricenoodle.js</code>。</li>

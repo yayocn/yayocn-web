@@ -131,7 +131,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       {
                         LISTGROUP.default.map((item, index) => {
                           return (
@@ -166,7 +166,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       <ul className="list-group">
                         <li className="list-group-item active">百度</li>
                         <li className="list-group-item">阿里</li>
@@ -195,7 +195,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       <ul className="list-group">
                         <li className="list-group-item disabled">百度</li>
                         <li className="list-group-item">阿里</li>
@@ -225,7 +225,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       {
                         LISTGROUP.flush.map((item, index) => {
                           return (
@@ -261,7 +261,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       {
                         LISTGROUP.noborder.map((item, index) => {
                           return (
@@ -297,7 +297,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       <ul className="list-group">
                         <li className="list-group-item"><a href={NO_LINK}>百度</a></li>
                         <li className="list-group-item"><a href={NO_LINK}>阿里</a></li>
@@ -330,7 +330,7 @@ export default class ListGroup extends Component {
                     {
                       LISTGROUP.situation.map((item, index) => {
                         return (
-                          <ul className={classnames(item.className, 'col-3 mb-20')} key={index}>
+                          <ul className={classnames(item.className, 'col-lg-3 col-md-6 col-12 mb-20')} key={index}>
                             <li className="list-group-item active">百度</li>
                             <li className="list-group-item disabled">阿里</li>
                             <li className="list-group-item ">腾讯</li>
@@ -361,7 +361,7 @@ export default class ListGroup extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6 col-12">
                       <ul className="list-group list-group-primary">
                         <li className="list-group-item active">
                           <h4 className="list-group-item-heading">百度</h4>

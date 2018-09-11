@@ -155,7 +155,7 @@ export default class Flex extends Component {
           或换行反转 <code>.flex-wrap-reverse</code>。</p>
         <div className={classnames('util-flex')}>
           <div className="row">
-            <div className="col-8">
+            <div className="col-lg-8 col-12">
               {
                 FLEX.wrap.map((item, index) => {
                   return (
