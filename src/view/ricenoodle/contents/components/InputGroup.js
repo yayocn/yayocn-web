@@ -3,7 +3,7 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
-import { NO_LINK } from '../../constants/const';
+import { NO_LINK } from '../../../../constants/const';
 import { ricenoodle } from '../../../../constants/menu';
 
 const menu = ricenoodle.find((value) => value.key === 'components');

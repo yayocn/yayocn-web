@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
-import copyText2Clipboard from 'copy-text-to-clipboard';
+import copyText2Clipboard from '../CopyText2Clipboard';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 
