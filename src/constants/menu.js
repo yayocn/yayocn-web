@@ -1,7 +1,7 @@
 export const ricenoodle = [
   {
     title: '开始 <small><code>Start</code></small>',
-    info: 'Ricenoodle，快而美的轻量级前端框架。',
+    info: '开始使用 Ricenoodle。',
     icon: '',
     key: 'start',
     link: '/ricenoodle/start',

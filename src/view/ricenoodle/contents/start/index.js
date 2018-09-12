@@ -73,12 +73,6 @@ export default class Improve extends Component {
             </div>
           </div>
         </div>
-
-        <div className="divider divider-lg divider-bold"></div>
-        <div className="text-muted mt-20">
-          <p>Designed by @kelp and built by @yayo. Wellcome to feedback at github, and we will make it better.</p>
-          <p>当前版本 <a href="https://github.com/yayocn/ricenoodle" className="text-web">v1.0.2</a></p>
-        </div>
       </Fragment>
     );
   }

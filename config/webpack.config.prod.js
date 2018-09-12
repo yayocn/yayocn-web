@@ -13,7 +13,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -234,10 +234,11 @@ module.exports = {
           {
             test: /\.scss$/,
             use: [
-              // fallback to style-loader in development
-              MiniCssExtractPlugin.loader,
-              "css-loader",
-              "sass-loader"
+              "style-loader", // creates style nodes from JS strings
+              // "css-loader",
+              { loader: 'css-loader' }, // translates CSS into CommonJS
+              'postcss-loader',
+              "sass-loader", // compiles Sass to CSS
             ]
           },
         ],
@@ -340,12 +341,12 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].[hash].css",
-      chunkFilename: "[id].[hash].css"
-    }),
+    // new MiniCssExtractPlugin({
+    //   // Options similar to the same options in webpackOptions.output
+    //   // both options are optional
+    //   filename: "[name].[hash].css",
+    //   chunkFilename: "[id].[hash].css"
+    // }),
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
