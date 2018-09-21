@@ -1,7 +1,11 @@
 import {
   Gate,
   Ricenoodle,
+  Aboutme,
 } from '../view';
+
+
+
 import { Start } from '../view/ricenoodle/containers/start';
 import { Improve, Code, Element, Image } from '../view/ricenoodle/containers/improve';
 
@@ -304,6 +308,11 @@ const router = [
     path: '/ricenoodle/components/tooltip',
     exact: true,
     component: Tooltip,
+  },
+  {
+    path: '/aboutme',
+    exact: true,
+    component: Aboutme,
   },
 ];
 

@@ -44,12 +44,12 @@ const FLEX = {
     { title: 'Stretch', key: 'stretch', subTitle: '', className: 'flex flex-wrap align-content-stretch', },
   ],
   alignSelf: [
-    { title: 'Auto', key: 'auto', subTitle: '', className: 'align-self-auto', },
-    { title: 'Start', key: 'start', subTitle: '', className: 'align-self-start', },
-    { title: 'End', key: 'end', subTitle: '', className: 'flex align-self-end', },
-    { title: 'Center', key: 'center', subTitle: '', className: 'align-self-center', },
-    { title: 'Baseline', key: 'baseline', subTitle: '', className: 'align-self-baseline', },
-    { title: 'Stretch', key: 'stretch', subTitle: '', className: 'align-self-stretch', },
+    { title: 'Auto', key: 'auto', subTitle: '', className: 'align-aboutme-auto', },
+    { title: 'Start', key: 'start', subTitle: '', className: 'align-aboutme-start', },
+    { title: 'End', key: 'end', subTitle: '', className: 'flex align-aboutme-end', },
+    { title: 'Center', key: 'center', subTitle: '', className: 'align-aboutme-center', },
+    { title: 'Baseline', key: 'baseline', subTitle: '', className: 'align-aboutme-baseline', },
+    { title: 'Stretch', key: 'stretch', subTitle: '', className: 'align-aboutme-stretch', },
   ]
 };
 

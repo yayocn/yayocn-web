@@ -39,7 +39,7 @@ export default class Gate extends Component {
     const { time, week, year, period } = this.state;
 
     return (
-      <div className="wrap">
+      <div className="gate-wrap">
         <header className={classnames('p-20 flex justify-content-center align-items-end', 'header')}>
           <div className="nav-left font-3x w-50">
             <ul className="nav flex-row-reverse">
