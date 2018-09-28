@@ -5,23 +5,23 @@ $background-list: (
   1: $bg1,
 );
 
-.aboutme-wrap {
-  color: #fff;
-  font-size: 50px;
-
-  .feature {
-
-    img {
-      display: inline-block;
-      width: 150px;
-      height: 150px;
-      vertical-align: middle;
-    }
-  }
-
-  @each $i, $value in $background-list {
-    .feature:nth-child(#{$i}) {
-      background-image: $value;
-    }
-  }
-}
+//.aboutme-wrap {
+//  color: #fff;
+//  font-size: 50px;
+//
+//  .feature {
+//
+//    img {
+//      display: inline-block;
+//      width: 150px;
+//      height: 150px;
+//      vertical-align: middle;
+//    }
+//  }
+//
+//  @each $i, $value in $background-list {
+//    .feature:nth-child(#{$i}) {
+//      background-image: $value;
+//    }
+//  }
+//}
