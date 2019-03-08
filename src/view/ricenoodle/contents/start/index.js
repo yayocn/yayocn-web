@@ -77,7 +77,7 @@ export default class Improve extends Component {
 
         <h3 id="use_require" className="mt-20">按需加载</h3>
         <p>Ricenoodle 对每一个模块都进行了分离，可以各取所需。</p>
-        <p>对组件而言，需要额外导入 <code>ricenoodle.normalize..css</code>，而工具类则不需要。</p>
+        <p>对组件而言，需要额外导入 <code>ricenoodle.normalize.css</code>，而工具类则不需要。</p>
         <div>
           <div className="row">
             <div className="col-12">

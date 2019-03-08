@@ -21,16 +21,6 @@ const DIVIDER = {
   ],
   theme: [
     { title: '', key: '', subTitle: '', className: 'divider divider-bold border-primary', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-secondary', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-success', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-info', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-warning', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-danger', },
-    { title: '', key: 'white', subTitle: '', className: 'divider divider-bold border-white bg-dark', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-light', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-muted', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-dark', },
-    { title: '', key: '', subTitle: '', className: 'divider divider-bold border-black', },
   ]
 };
 
@@ -106,7 +96,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="size">尺寸</h2>
-        <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用 <a href="/ricenoodle/utilities/space">Space</a> 来控制。</p>
+        <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用<a href="/ricenoodle/utilities/space">间距</a>来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
@@ -142,7 +132,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="weight">权重</h2>
-        <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用 <a href="/ricenoodle/utilities/border">Border</a> 来控制。</p>
+        <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用<a href="/ricenoodle/utilities/border#width">边框宽度</a>来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
@@ -178,7 +168,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="theme">主题</h2>
-        <p>结合 <a href="/ricenoodle/utilities/border">Border theme</a> ，可以生成多重主题颜色。</p>
+        <p>结合<a href="/ricenoodle/utilities/border#theme">边框主题</a>，可以生成多重主题颜色。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">

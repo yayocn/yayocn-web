@@ -11,6 +11,7 @@ export default class Index extends Component {
       <Fragment>
         <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
         <p className="font-2x font-100"  dangerouslySetInnerHTML={{__html: menu.info}}></p>
+        <p className="alert alert-light">组件如果要单独使用，需要先引入 <code>ricenoodle.normalize.css</code> 和相关的 <code>js</code> 文件。</p>
 
         <div className="divider divider-lg divider-bold"></div>
 

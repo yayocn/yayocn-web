@@ -25,16 +25,6 @@ const ALERT = {
   ],
   linkColor: [
     { title: 'Primary', key: '', subTitle: '', className: 'alert alert-primary', },
-    { title: 'Secondary', key: '', subTitle: '', className: 'alert alert-secondary', },
-    { title: 'Success', key: '', subTitle: '', className: 'alert alert-success', },
-    { title: 'Info', key: '', subTitle: '', className: 'alert alert-info', },
-    { title: 'Warning', key: '', subTitle: '', className: 'alert alert-warning', },
-    { title: 'Danger', key: '', subTitle: '', className: 'alert alert-danger', },
-    { title: 'White', key: '', subTitle: '', className: 'alert alert-white', },
-    { title: 'Light', key: '', subTitle: '', className: 'alert alert-light', },
-    { title: 'Muted', key: '', subTitle: '', className: 'alert alert-muted', },
-    { title: 'Dark', key: '', subTitle: '', className: 'alert alert-dark', },
-    { title: 'Black', key: '', subTitle: '', className: 'alert alert-black', },
   ],
   dismissing: [
     { title: 'Dismissing', key: '', subTitle: '', className: 'alert alert-success alert-dismissible fade show', },
@@ -184,22 +174,23 @@ export default class Alert extends Component {
                     {
                       ALERT.theme.map((item, index) => {
                         return (
-                          <div className="col-lg-6 col-12" key={index} >
-                            <div className={classnames(item.className, 'alert-feature')}>
-                              莫听穿林打叶声，何妨吟啸且徐行。 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
+                          <div className="col-lg-6 col-12 mb-10 pb-5" key={index} >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className={classnames(item.className, 'alert-feature')}>
+                                  莫听穿林打叶声，何妨吟啸且徐行。 竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
+                                </div>
+
+                                <Highlight>
+                                  &lt;div class="{item.className}"&gt;...&lt;/div&gt;
+                                </Highlight>
+                              </div>
                             </div>
                           </div>
                         );
                       })
                     }
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
