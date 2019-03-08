@@ -22,10 +22,6 @@
   .sidebar-item {
     list-style: none;
 
-    small {
-      margin-left: 10px;
-    }
-
     .active {
       background-color: lighten($cyan, 55%) !important;
       border-right: solid 3px $cyan !important;
@@ -51,6 +47,10 @@
     &:hover {
       @extend %hover-focus;
     }
+  }
+
+  small {
+    margin-left: 10px;
   }
 }
 

@@ -63,13 +63,18 @@ export default class Font extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2 id="size">尺寸</h2>
-        <p>Ricenoodle 提供了 <code>12px ~ 20px</code> 的固定字体尺寸，和基于父元素 <code>1 ~ 10</code> 倍的字体尺寸。</p>
+        <p>Ricenoodle 提供了3中种类型的尺寸</p>
+        <ul className="pl-18">
+          <li><code>10px ~ 30px</code> 的固定尺寸。</li>
+          <li>基于父元素 <code>1 ~ 10</code> 倍的字体尺寸。</li>
+          <li>基于视口宽度或高度的尺寸。</li>
+        </ul>
 
         <h3 id="size_stable" className="mt-20">固定尺寸</h3>
         <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     FONT.stable.map((item, index) => {
@@ -98,7 +103,7 @@ export default class Font extends Component {
         <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <h6>以下实例是以 <code>14px</code> 作为基准。</h6>
                   {
@@ -123,13 +128,42 @@ export default class Font extends Component {
           </div>
         </div>
 
+        <h3 id="size_viewpoint" className="mt-20">视口尺寸</h3>
+        <p>以 <code>vw, vh</code> 为单位，提供了 <code>[1-10] * 10(vw|vh)</code> 的尺寸。 如：</p>
+        <ul className="pl-18">
+          <li><code>font-vw-1</code> 代表了 <code>font-size: 10vw !important;</code>。</li>
+          <li><code>font-vh-10</code> 代表了 <code>font-size: 100vh !important;</code>。</li>
+        </ul>
+
+        <div className={classnames('util-font')}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames('feature-example shadow')}>
+                <div className={classnames('example-view')}>
+                  <div>
+                    <p className={classnames('font-vw-1 mv-0')}>Hello!</p>
+                    <p className={classnames('font-vh-1 mv-0')}>Hello!</p>
+                  </div>
+                </div>
+                <div className={classnames('example-code')}>
+                  <Highlight>
+                    &lt;p class="font-vw-1">Hello!&lt;/p>
+                    <br/><br/>
+                    &lt;p class="font-vh-1">Hello!&lt;/p>
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="divider divider-lg"></div>
         <h2 id="weight">权重</h2>
         <p>使用权重类快速设置文字的权重。</p>
         <div className={classnames('util-font')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     FONT.weight.map((item, index) => {

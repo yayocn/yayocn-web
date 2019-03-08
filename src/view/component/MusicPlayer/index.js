@@ -63,7 +63,7 @@ export default class MusicPlayer extends Component {
 
           <div className="controller">
             <div className="flex flex-wrap">
-              <div className="controller-btn-group flex-inline align-items-center">
+              <div className="controller-btn-group inline-flex align-items-center">
                 <span className="font-2x iconfont icon-shangyishou" role="button"></span>
                 <span className="font-2x iconfont icon-bofang mh-20" role="button"></span>
                 <span className="font-2x iconfont icon-xiayishou" role="button"></span>
@@ -73,7 +73,7 @@ export default class MusicPlayer extends Component {
                 <Progress value="30"/>
               </div>
 
-              <div className="controller-vol  flex-inline align-items-center">
+              <div className="controller-vol  inline-flex align-items-center">
                 <span className="font-2x iconfont icon-yinliangzhong" role="button"></span>
 
                 <div className="vol-progress ml-10" style={{ flexGrow: 2 }}>

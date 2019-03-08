@@ -1,4 +1,4 @@
-import { isString, filter } from 'lodash';
+import { isString } from 'lodash';
 
 export const context = `
 const readline = require('readline');
@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 
 rl.on('line', (line) => {
     console.log('Line from file:', line);
-});
+});          
 `;
 
 const createByline = (text, split) => {
@@ -18,7 +18,6 @@ const createByline = (text, split) => {
   if (isString(text)) {
     result = text.split(split);
   }
-  console.log(result)
   return result;
 }
 

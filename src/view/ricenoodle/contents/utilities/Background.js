@@ -57,27 +57,21 @@ export default class Background extends Component {
         <div className={classnames('util-bg')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     {
                       BACKGROUND.theme.map((item, index) => {
                         return (
-                          <div className="col-4 mb-10" key={index} >
-                            <h6>{item.title}</h6>
+                          <div className="col-3 p-5" key={index} >
                             <div className={classnames(item.className, 'bg-feature')}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
                           </div>
                         );
                       })
                     }
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

@@ -19,20 +19,29 @@ export default class Space extends Component {
   margin-top: 0 !important;   
 }
 
-.mt-1 {
-  margin: 1px !important;   
+.mr-1 {
+  margin-right: 1px !important;   
+}
+
+.mb-minus-1 {
+  margin-bottom: -1px !important;   
+}
+
+.mh-auto {
+  margin-left: auto !important;   
+  margin-right: auto !important;   
 }
 
 .p-0 {
-  pading: 0 !important;
+  padding: 0 !important;
 }
 
 .pt-0 {
   padding-top: 0 !important;   
 }
 
-.pt-1 {
-  padding: 1px !important;   
+.pr-1 {
+  padding-right: 1px !important;   
 }`;
 
    return code;
@@ -47,7 +56,7 @@ export default class Space extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2 id="format">格式</h2>
-        <p><code>[property][side]-[size]</code></p>
+        <p><code>[property][side]-[type]-[size]</code></p>
 
         <h3><code>property</code></h3>
         <div className={classnames('feature-example')}>
@@ -66,7 +75,7 @@ export default class Space extends Component {
           <div className={classnames('example-view')}>
             <div className="ph-30">
               <ul className="mb-0">
-                <li><code>null</code> : <code>[property]</code> 后面直接跟 <code>[size]</code>，对 <code>top, right, bottom, left</code> 均设置值。例如： <code>m-0 p-50</code></li>
+                <li><code>无</code> : <code>[property]</code> 后面直接跟 <code>[size]</code>，同时设置4个方向的值。例如： <code>m-0 p-50</code></li>
                 <li><code>t</code> : 指 <code>top</code>，  对应 <code>margin-top</code> 或 <code>padding-top</code></li>
                 <li><code>r</code> : 指 <code>right</code>，对应 <code>margin-right</code> 或 <code>padding-right</code></li>
                 <li><code>b</code> : 指 <code>bottom</code>，对应 <code>margin-bottom</code> 或 <code>padding-bottom</code></li>
@@ -78,12 +87,24 @@ export default class Space extends Component {
           </div>
         </div>
 
+        <h3><code>type</code></h3>
+        <div className={classnames('feature-example')}>
+          <div className={classnames('example-view')}>
+            <div className="ph-30">
+              <ul className="mb-0">
+                <li><code>无</code> : 将值设为正数，如 <code>mt-1</code> 指 <code>margin-top: 1px !important;</code></li>
+                <li><code>minus</code> : 将值设为复数，如 <code>mt-minus-1</code> 指 <code>margin-top: -1px !important;</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <h3 className="mt-10"><code>size</code></h3>
         <div className={classnames('feature-example')}>
           <div className={classnames('example-view')}>
             <div className="ph-30">
               <ul className="mb-0">
-                <li><code>[0 ~ 20, 25, 30, 35, 40, 45, 50, auto]</code> : 设置 <code>margin | padding</code> 的值，单位是 <code>px</code>。</li>
+                <li><code>[auto, 0 ~ 50]</code> : 设置 <code>margin | padding</code> 的值，单位是 <code>px</code>。</li>
               </ul>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default class PageBody extends Component {
   render () {
     const { children } = this.props;
     return (
-      <div className={classnames('app-body')} ref={node => this.node = node}>
+      <div className={classnames('app-body h-vh-100')} ref={node => this.node = node}>
         {children}
       </div>
     );

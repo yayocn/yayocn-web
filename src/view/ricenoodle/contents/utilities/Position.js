@@ -21,11 +21,10 @@ const POSITION = {
     { title: '水平居中', key: 'hc', subTitle: '', className: 'pt-hc', },
     { title: '垂直居中', key: 'vc', subTitle: '', className: 'pt-absolute pt-vc', },
     { title: '水平垂直居中', key: 'center', subTitle: '', className: 'pt-absolute pt-center', },
-    { title: '居于顶部', key: 'top', subTitle: '', className: 'pt-absolute pt-top', },
-    { title: '居于右侧', key: 'right', subTitle: '', className: 'pt-absolute pt-right', },
-    { title: '居于底部', key: 'bottom', subTitle: '', className: 'pt-absolute pt-bottom', },
-    { title: '居于左侧', key: 'left', subTitle: '', className: 'pt-absolute pt-left', },
     { title: '填充', key: 'full', subTitle: '', className: 'pt-absolute pt-full', },
+  ],
+  distance: [
+    { title: '距离', key: 'distance', subTitle: '', className: 'pt-relative top-10 left-10', },
   ]
 };
 
@@ -75,7 +74,7 @@ export default class Position extends Component {
         <div className={classnames('util-position')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
 
                 </div>
@@ -94,6 +93,7 @@ export default class Position extends Component {
         <div className="divider divider-lg"></div>
         <h2 id="position">位置</h2>
         <p>快速设置位置时，需要元素的 <code>position</code> 值为 <code>absolute | fixed </code>（水平居中除外）。</p>
+        <p className="alert alert-warning">注意，别忘了设置父元素的 <code>position</code>。</p>
         <div className={classnames('util-position')}>
           <div className="row">
             <div className="col-12">
@@ -102,7 +102,7 @@ export default class Position extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`position_${item.key}`} className="mt-20">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={classnames('bg-light pt-relative', 'position-view-wrap')}>
                             {
@@ -124,6 +124,37 @@ export default class Position extends Component {
                   );
                 })
               }
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2 id="distance">距离</h2>
+        <p>快速设置 <code>top | right | bottom | left</code> 的值，值为 <code>0 ~ 30px</code>。</p>
+        <p className="alert alert-warning">注意，别忘了设置父元素的 <code>position</code>。</p>
+        <div className={classnames('util-position')}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames('feature-example shadow')}>
+                <div className={classnames('example-view')}>
+                  {
+                    POSITION.distance.map((item, index) => {
+                      return (
+                        <div className={classnames('bg-light pt-relative', 'position-view-wrap')} key={index}>
+                          <div className={classnames('bg-dark', 'position-item', item.className)}></div>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+                <div className={classnames('example-code')}>
+                  <Highlight>
+                    {
+                      this.createCode('distance')
+                    }
+                  </Highlight>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default class Float extends Component {
         <div className={classnames('util-float')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('clearfix', 'example-view')}>
                   {
                     FLOAT.additive.map((item, index) => {
@@ -79,7 +79,7 @@ export default class Float extends Component {
         <div className={classnames('util-float')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="clearfix bg-light">
                     <div className={classnames('fl bg-dark text-white', 'float-item')}>浮动元素</div>

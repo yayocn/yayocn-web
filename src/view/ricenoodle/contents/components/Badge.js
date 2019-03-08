@@ -100,14 +100,14 @@ export default class Badge extends Component {
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BADGE.theme.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <span className={classnames(item.className, 'badge-feature')}>
                                 {item.title}
                               </span>
@@ -136,14 +136,14 @@ export default class Badge extends Component {
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BADGE.link.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index}>
+                            <div className="inline-block mb-10 mr-5" key={index}>
                               <a href={NO_LINK} className={classnames(item.className, 'badge-feature')}>
                                 {item.title}
                               </a>
@@ -173,7 +173,7 @@ export default class Badge extends Component {
         <div className={classnames('util-badge')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -182,7 +182,7 @@ export default class Badge extends Component {
                     {
                       BADGE.pill.map((item, index) => {
                         return (
-                          <div className="block-inline mb-10 mr-5" key={index} >
+                          <div className="inline-block mb-10 mr-5" key={index} >
                             <span className={classnames(item.className, 'badge-feature')}>
                               {item.title}
                             </span>

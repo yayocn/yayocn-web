@@ -76,25 +76,20 @@ export default class Text extends Component {
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    TEXT.theme.map((item, index) => {
-                      return (
-                        <div className={classnames('p-5', {'bg-dark text-white': item.title === 'White'})} key={index} >
-                          <h6>{item.title}</h6>
-                          <p className={item.className}>李白乘舟将欲行，忽闻岸上踏歌声。<a className={classnames(item.className)}>桃花潭水深千尺，不及汪伦送我情。</a></p>
-                        </div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('theme')
+                      TEXT.theme.map((item, index) => {
+                        return (
+                          <div className={classnames('col-6 p-5')} key={index} >
+                            <p className={item.className}>月落乌啼霜满天，江枫渔火对愁眠。<a className={classnames(item.className)}></a></p>
+                            <code className="block pt-relative top-3">&#9998; {item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,12 +101,12 @@ export default class Text extends Component {
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     TEXT.alignment.map((item, index) => {
                       return (
-                        <div className={classnames('mb-10')} key={index} >
+                        <div className={classnames('mb-10 w-30')} key={index} >
                           <p className={classnames(item.className)}>{item.subTitle}</p>
                         </div>
                       );
@@ -135,12 +130,12 @@ export default class Text extends Component {
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     TEXT.wrap.map((item, index) => {
                       return (
-                        <div className={classnames('mb-10 w-75 bg-light')} key={index} >
+                        <div className={classnames('mb-10 w-30 bg-light')} key={index} >
                           <p className={classnames(item.className)}>{item.subTitle}</p>
                         </div>
                       );
@@ -164,7 +159,7 @@ export default class Text extends Component {
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     TEXT.transform.map((item, index) => {
@@ -193,7 +188,7 @@ export default class Text extends Component {
         <div className={classnames('util-text')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     TEXT.font.map((item, index) => {

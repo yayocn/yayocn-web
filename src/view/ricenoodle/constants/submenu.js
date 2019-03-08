@@ -1,7 +1,7 @@
 const submenu = {
   start: [
     { key: 'download', title: '下载', },
-    { key: 'use', title: '使用', children: [{ key: 'use_local', title: '使用本地文件' }, { key: 'use_npm', title: 'NPM' }] },
+    { key: 'use', title: '使用', children: [{ key: 'use_local', title: '使用本地文件' }, { key: 'use_npm', title: 'NPM' }, { key: 'use_require', title: '按需加载' }, { key: 'use_dependence', title: '依赖加载' }] },
   ],
   code: [
     { key: 'code', title: '内联编码' },
@@ -53,12 +53,13 @@ const submenu = {
     { key: 'clearfix', title: '清除浮动' },
   ],
   font: [
-    { key: 'size', title: '尺寸', children: [{ key: 'size_stable', title: '固定尺寸' }, { key: 'size_multiple', title: '成倍尺寸' }] },
+    { key: 'size', title: '尺寸', children: [{ key: 'size_stable', title: '固定尺寸' }, { key: 'size_multiple', title: '成倍尺寸' }, { key: 'size_viewpoint', title: '视口尺寸' }] },
     { key: 'weight', title: '权重'},
   ],
   position: [
     { key: 'type', title: '种类',},
     { key: 'position', title: '位置', children: [{ key: 'position_hc', title: '水平居中' }, { key: 'position_vc', title: '垂直居中' }, { key: 'position_center', title: '水平垂直居中' }, { key: 'position_top', title: '居于顶部' }, { key: 'position_right', title: '居于右侧' }, { key: 'position_bottom', title: '居于底部' }, { key: 'position_left', title: '居于左侧' }, { key: 'position_full', title: '填充' }] },
+    { key: 'distance', title: '距离',},
   ],
   shadow: [
     { key: 'visibility', title: '阴影', children: [{ key: 'visibility_shadow', title: '显示' }, { key: 'visibility_none', title: '清除' }] },
@@ -67,8 +68,7 @@ const submenu = {
   size: [
     { key: 'width', title: '宽度' },
     { key: 'height', title: '高度' },
-    { key: 'max', title: '最大值', children: [{ key: 'max_width', title: '最大宽度' }, { key: 'max_height', title: '最大高度' }] },
-    { key: 'full', title: '视口高度' },
+    { key: 'viewport', title: '视口宽度和高度' },
   ],
   space: [
     { key: 'format', title: '格式' },

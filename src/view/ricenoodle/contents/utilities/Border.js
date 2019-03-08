@@ -17,11 +17,11 @@ const BORDER = {
     { title: 'Left', subTitle: '', className: 'border-left', },
   ],
   subtractive: [
-    { title: 'All', subTitle: '', className: 'border border-0', },
-    { title: 'Top', subTitle: '', className: 'border border-top-0', },
-    { title: 'Right', subTitle: '', className: 'border border-right-0', },
-    { title: 'Bottom', subTitle: '', className: 'border border-bottom-0', },
-    { title: 'Left', subTitle: '', className: 'border border-left-0', },
+    { title: 'All', subTitle: '', className: 'border-0', },
+    { title: 'Top', subTitle: '', className: 'border-top-0', },
+    { title: 'Right', subTitle: '', className: 'border-right-0', },
+    { title: 'Bottom', subTitle: '', className: 'border-bottom-0', },
+    { title: 'Left', subTitle: '', className: 'border-left-0', },
   ],
   theme: [
     { title: 'Primary', subTitle: '', className: 'border border-primary', },
@@ -38,13 +38,18 @@ const BORDER = {
     { title: 'Transparent', subTitle: '', className: 'border border-transparent', },
   ],
   round: [
-    { title: '', subTitle: '', className: 'border border-round', },
     { title: '', subTitle: '', className: 'border border-round-0', },
     { title: '', subTitle: '', className: 'border border-round-circle', },
+    { title: '', subTitle: '', className: 'border border-round-ellipse', },
+    { title: '', subTitle: '', className: 'border border-round', },
     { title: '', subTitle: '', className: 'border border-round-top', },
     { title: '', subTitle: '', className: 'border border-round-right', },
     { title: '', subTitle: '', className: 'border border-round-bottom', },
     { title: '', subTitle: '', className: 'border border-round-left', },
+    { title: '', subTitle: '', className: 'border border-round-top-left', },
+    { title: '', subTitle: '', className: 'border border-round-top-right', },
+    { title: '', subTitle: '', className: 'border border-round-bottom-left', },
+    { title: '', subTitle: '', className: 'border border-round-bottom-right', },
   ],
   style: [
     { title: 'Solid', subTitle: '', className: 'border border-solid', },
@@ -99,22 +104,21 @@ export default class Border extends Component {
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.additive.map((item, index) => {
-                      return (
-                        <div key={index} className={classnames('mb-10 mr-10 block-inline', 'border-feature', item.className)}></div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('additive')
+                      BORDER.additive.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames('border-feature', item.className)}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -125,22 +129,21 @@ export default class Border extends Component {
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.subtractive.map((item, index) => {
-                      return (
-                        <div key={index} className={classnames('border mb-10 mr-10 block-inline', 'border-feature', item.className )}></div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('subtractive')
+                      BORDER.subtractive.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames(item.className, 'border-feature border')}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,25 +157,21 @@ export default class Border extends Component {
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.theme.map((item, index) => {
-                      return (
-                        <div className="mb-10 mr-10 block-inline" key={index}>
-                          <h6>{item.title}</h6>
-                          <div className={classnames('border-feature', item.className)}></div>
-                        </div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('theme')
+                      BORDER.theme.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames('border border-feature', item.className)}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,22 +185,21 @@ export default class Border extends Component {
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.round.map((item, index) => {
-                      return (
-                        <div key={index} className={classnames('mb-10 mr-10 block-inline', 'border-feature', item.className )}></div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('round')
+                      BORDER.round.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames('border-feature', item.className)}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -215,25 +213,21 @@ export default class Border extends Component {
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.style.map((item, index) => {
-                      return (
-                        <div key={index} className="mb-10 mr-10 block-inline">
-                          <h6>{item.title}</h6>
-                          <div className={classnames('border-feature', item.className)}></div>
-                        </div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('style')
+                      BORDER.style.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames('border-feature', item.className)}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -243,29 +237,25 @@ export default class Border extends Component {
         <div className="divider divider-lg"></div>
 
         <h2 id="width">边框宽度</h2>
-        <p>为元素添加边框宽度类，设置边框的宽度。</p>
+        <p>为元素添加边框宽度类，设置边框的宽度，<code>1px ~ 10px</code>。</p>
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
-                  {
-                    BORDER.weight.map((item, index) => {
-                      return (
-                        <div key={index} className="mb-10 mr-10 block-inline">
-                          <h6>{item.title}</h6>
-                          <div className={classnames('border-feature', item.className)}></div>
-                        </div>
-                      );
-                    })
-                  }
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
+                  <div className="row">
                     {
-                      this.createCode('weight')
+                      BORDER.weight.map((item, index) => {
+                        return (
+                          <div className="col-3 p-5" key={index}>
+                            <div className={classnames('border-feature', item.className)}></div>
+                            <code className="block text-center pt-relative top-3">&#9998;</code>
+                            <code className="block text-center">{item.className}</code>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>

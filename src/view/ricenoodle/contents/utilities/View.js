@@ -11,10 +11,10 @@ const config = menu.children.find((value) => value.key === 'view');
 const VIEW = {
   display: [
     { title: 'inline', key: 'inline', subTitle: '', className: 'inline', },
-    { title: 'Flex', key: 'flex', subTitle: '', className: 'flex', },
-    { title: 'Flex inline', key: 'flexInline', subTitle: '', className: 'flex-inline', },
-    { title: 'Block', key: 'block', subTitle: '', className: 'block', },
-    { title: 'Block inline', key: 'blockInline', subTitle: '', className: 'block-inline', },
+    { title: 'flex', key: 'flex', subTitle: '', className: 'flex', },
+    { title: 'inline-flex', key: 'flexInline', subTitle: '', className: 'inline-flex', },
+    { title: 'block', key: 'block', subTitle: '', className: 'block', },
+    { title: 'inline-block', key: 'blockInline', subTitle: '', className: 'inline-block', },
   ],
   hidden: [
     { title: 'Hidden', key: 'hidden', subTitle: '', className: 'hidden', },
@@ -60,6 +60,7 @@ export default class View extends Component {
   createHiddenCode = () => {
     let code = ``;
     code += `<div class="hidden"> ... </div>
+
 <div hidden> ... </div>`
     return code;
   }
@@ -77,7 +78,7 @@ export default class View extends Component {
         <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     VIEW.display.map((item, index) => {
@@ -108,7 +109,7 @@ export default class View extends Component {
         <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('mt-0', 'example-code')}>
                   <Highlight copyBtn={false}>
                     {
@@ -127,7 +128,7 @@ export default class View extends Component {
         <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     VIEW.visibility.map((item, index) => {
@@ -157,7 +158,7 @@ export default class View extends Component {
         <div className={classnames('util-view')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     VIEW.opacity.map((item, index) => {

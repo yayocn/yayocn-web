@@ -139,7 +139,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -171,7 +171,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -199,7 +199,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -223,7 +223,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -247,7 +247,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -278,7 +278,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -306,7 +306,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -335,7 +335,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -379,7 +379,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -408,7 +408,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -439,7 +439,7 @@ export default class Element extends Component {
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">

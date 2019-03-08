@@ -119,7 +119,7 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`direction_${item.key}`} className="mt-10">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
@@ -161,7 +161,7 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`wrap_${item.key}`} className="mt-10">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
@@ -202,7 +202,7 @@ export default class Flex extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`justify_${item.key}`} className="mt-20">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={item.className}>
                             {
@@ -247,7 +247,7 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={classnames('aligin-item', item.className)}>
                             {
@@ -292,7 +292,7 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('bg-light', 'example-view')}>
                           <div className={classnames('aligin-content', item.className)}>
                             {
@@ -337,7 +337,7 @@ export default class Flex extends Component {
                         item.subTitle &&
                         item.subTitle
                       }
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className={classnames('flex')}>
                             {

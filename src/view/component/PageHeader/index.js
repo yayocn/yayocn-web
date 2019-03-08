@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class PageHeader extends Component {
   render () {
     return (
-      <header className="pt-fixed pt-top w-100">
+      <header className="pt-fixed top-0 w-100">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/">LOGO</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">

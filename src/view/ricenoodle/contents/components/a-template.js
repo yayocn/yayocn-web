@@ -60,7 +60,7 @@ export default class Pagination extends Component {
                       {
                         PAGINATION.situation.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <span className={classnames(item.className, style['pagination-feature'])}>
                                 {item.title}
                               </span>

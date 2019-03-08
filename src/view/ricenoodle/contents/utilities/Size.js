@@ -24,12 +24,9 @@ const SIZE = {
     { title: '100%', key: '100', subTitle: '', className: 'h-100', },
     { title: 'auto', key: 'auto', subTitle: '', className: 'h-auto', },
   ],
-  max: [
-    { title: '最大宽度', key: 'width', subTitle: '', className: 'mw-100', },
-    { title: '最大高度', key: 'height', subTitle: '', className: 'mh-100', },
-  ],
-  full: [
-    { title: '填充', key: 'full', subTitle: '', className: 'h-full-window', },
+  viewport: [
+    { title: '25%', key: '25', subTitle: '', className: 'w-vw-25', },
+    { title: '50%', key: '25', subTitle: '', className: 'h-vh-25', },
   ]
 };
 
@@ -72,11 +69,41 @@ export default class Size extends Component {
         <div className="divider divider-bold divider-lg"></div>
 
         <h2 id="width">宽度</h2>
-        <p>设置元素的宽度。</p>
+        <p>设置元素的宽度，最大宽度，最小宽度。</p>
+        <p>以 <code>5</code> 为基数，设置 <code>5 * [0-20]</code> 的值。如：</p>
+        <ul className="pl-18">
+          <li>
+            宽度：以 <code>w-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-0</code></li>
+              <li><code>w-5</code></li>
+              <li><code>...</code></li>
+              <li><code>w-100</code></li>
+              <li>此外，还有特殊的自动宽度 <code>w-auto</code>。</li>
+            </ul>
+          </li>
+          <li>
+            最大宽度：以 <code>w-max-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-max-0</code></li>
+              <li><code>w-max-5</code></li>
+              <li><code>...</code></li>
+              <li><code>w-max-100</code></li>
+            </ul>
+          </li>
+          <li>最小宽度：以 <code>w-min-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-min-0</code></li>
+              <li><code>w-min-5</code></li>
+              <li><code>...</code></li>
+              <li><code>w-min-100</code></li>
+            </ul>
+          </li>
+        </ul>
         <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
                     SIZE.width.map((item, index) => {
@@ -102,11 +129,38 @@ export default class Size extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="height">高度</h2>
-        <p>设置元素的高度。</p>
+        <p>设置元素的高度，最大高度，最小高度。</p>
+        <p>以 <code>5</code> 为基数，设置 <code>5 * [0-20]</code> 的值。如：</p>
+        <ul className="pl-18">
+          <li>高度：以 <code>h-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-0</code></li>
+              <li><code>h-5</code></li>
+              <li><code>...</code></li>
+              <li><code>h-100</code></li>
+              <li>此外，还有特殊的自动宽度 <code>h-auto</code>。</li>
+            </ul>
+          </li>
+          <li>最大高度：以 <code>h-max-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-max-0</code></li>
+              <li><code>h-max-5</code></li>
+              <li><code>...</code></li>
+              <li><code>h-max-100</code></li>
+            </ul>
+          </li>
+          <li>最小高度：以 <code>h-min-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-min-0</code></li>
+              <li><code>h-min-5</code></li>
+              <li><code>...</code></li>
+              <li><code>h-min-100</code></li>
+            </ul></li>
+        </ul>
         <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     {
@@ -135,54 +189,70 @@ export default class Size extends Component {
         </div>
 
         <div className="divider divider-lg"></div>
-        <h2 id="max">最大宽高</h2>
-        <p>设置元素的最大宽度和高度。</p>
+        <h2 id="viewport">视口宽度和高度</h2>
+        <p>以 <code>vw, vh</code> 为单位，设置宽度，最大宽度，最小宽度，高度，最大高度以及最小高度。</p>
+        <p>以 <code>25</code> 为基数，设置 <code>25 * [1-4]</code> 的值。如：</p>
+        <ul className="pl-18">
+          <li>宽度：以 <code>w-vw-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-vw-25</code></li>
+              <li><code>w-vw-50</code></li>
+              <li><code>w-vw-75</code></li>
+              <li><code>w-vw-100</code></li>
+            </ul>
+          </li>
+          <li>最大宽度：以 <code>w-vw-max-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-vw-max-25</code></li>
+              <li><code>w-vw-max-50</code></li>
+              <li><code>w-vw-max-75</code></li>
+              <li><code>w-vw-max-100</code></li>
+            </ul>
+          </li>
+          <li>最小宽度：以 <code>w-vw-min-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>w-vw-min-25</code></li>
+              <li><code>w-vw-min-50</code></li>
+              <li><code>w-vw-min-75</code></li>
+              <li><code>w-vw-min-100</code></li>
+            </ul>
+          </li>
+          <li>高度：以 <code>h-vh-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-vh-25</code></li>
+              <li><code>h-vh-50</code></li>
+              <li><code>h-vh-75</code></li>
+              <li><code>h-vh-100</code></li>
+            </ul>
+          </li>
+          <li>最大高度：以 <code>h-vh-max-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-vh-max-25</code></li>
+              <li><code>h-vh-max-50</code></li>
+              <li><code>h-vh-max-75</code></li>
+              <li><code>h-vh-max-100</code></li>
+            </ul>
+          </li>
+          <li>最小高度：以 <code>h-vh-min-</code> 为前缀：
+            <ul className="pl-18">
+              <li><code>h-vh-min-25</code></li>
+              <li><code>h-vh-min-50</code></li>
+              <li><code>h-vh-min-75</code></li>
+              <li><code>h-vh-min-100</code></li>
+            </ul>
+          </li>
+        </ul>
         <div className={classnames('util-size')}>
           <div className="row">
             <div className="col-12">
-              {
-                SIZE.max.map((item, index) => {
-                  return (
-                    <Fragment key={index}>
-                      <h3 id={`max_${item.key}`} className="mt-20">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
-                        <div className={classnames('example-view')}>
-                          <div className="bg-light">
-                            <div className={classnames('bg-muted p-20', item.className, { 'block-inline': item.key === 'height' })}>
-                              <p className="font-4x text-white">max-{item.key} = 100%</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={classnames('example-code')}>
-                          <Highlight>
-                            {
-                              this.createItemCode('max', item.key)
-                            }
-                          </Highlight>
-                        </div>
-                      </div>
-                    </Fragment>
-                  );
-                })
-              }
-            </div>
-          </div>
-        </div>
-
-        <div className="divider divider-lg"></div>
-        <h2 id="full">视口高度</h2>
-        <p>将当前窗口的高度设置为元素高度。</p>
-        <div className={classnames('util-size')}>
-          <div className="row">
-            <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   {
-                    SIZE.full.map((item, index) => {
+                    SIZE.viewport.map((item, index) => {
                       return (
-                        <div className="bg-light" key={index}>
+                        <div className="mb-10" key={index}>
                           <div className={classnames('bg-dark text-white p-15 w-50 pt-relative', item.className)}>
-                            <p className="text-center pt-absolute pt-center font-3x">元素高度始终和视口高度保持一致。</p>
+                            <p className="text-center pt-center font-2x">{item.className}</p>
                           </div>
                         </div>
                       );
@@ -192,7 +262,7 @@ export default class Size extends Component {
                 <div className={classnames('example-code')}>
                   <Highlight>
                     {
-                      this.createCode('full')
+                      this.createCode('viewport')
                     }
                   </Highlight>
                 </div>

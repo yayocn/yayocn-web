@@ -263,7 +263,7 @@ export default class Dropdown extends Component {
           <li>引入 <code>popper.js</code>。</li>
           <li>引入 <code>ricenoodle.js</code>。</li>
         </ul>
-        <p><code>dropdown</code> 的外层元素是 <code>block</code>，可以添加 <code>.block-inline</code> 进行更改。</p>
+        <p><code>dropdown</code> 的外层元素是 <code>block</code>，可以添加 <code>.inline-block</code> 进行更改。</p>
 
         <div className="divider divider-lg"></div>
 
@@ -272,7 +272,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -313,14 +313,14 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         DROPDOWN.theme.map((item, index) => {
                           return(
-                            <div className="dropdown block-inline mr-5 mb-5" key={index}>
+                            <div className="dropdown inline-block mr-5 mb-5" key={index}>
                               <button className={classnames(item.className, 'dropdown-toggle')} type="button" data-toggle="dropdown">
                                 Dropdown
                               </button>
@@ -354,7 +354,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -391,7 +391,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -434,7 +434,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12 pt-relative" style={{ height: '200px'}}>
@@ -478,7 +478,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -509,7 +509,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -540,7 +540,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -573,7 +573,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -604,7 +604,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -635,7 +635,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -664,7 +664,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -712,7 +712,7 @@ export default class Dropdown extends Component {
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">

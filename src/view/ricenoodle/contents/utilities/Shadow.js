@@ -12,7 +12,7 @@ const config = menu.children.find((value) => value.key === 'shadow');
 const SHADOW = {
   visibility: [
     { title: '显示', key: 'shadow', subTitle: '', className: 'shadow', },
-    { title: '清除', key: 'none', subTitle: '', className: 'shadow-none', },
+    { title: '清除', key: 'none', subTitle: '', className: 'shadow-0', },
   ],
   size: [
     { title: 'Small', key: 'small', subTitle: '', className: 'shadow shadow-sm', },
@@ -50,7 +50,7 @@ export default class Shadow extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`visibility_${item.key}`} className="mt-20">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className="row">
                             <div className="col-lg-4 col-md-6 col-12 mb-10">
@@ -85,7 +85,7 @@ export default class Shadow extends Component {
                   return (
                     <Fragment key={index}>
                       <h3 id={`size_${item.key}`} className="mt-20">{item.title}</h3>
-                      <div className={classnames('feature-example')}>
+                      <div className={classnames('feature-example shadow')}>
                         <div className={classnames('example-view')}>
                           <div className="row">
                             <div className="col-lg-4 col-md-6 col-12 mb-10">

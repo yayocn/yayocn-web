@@ -89,14 +89,14 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.theme.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
@@ -125,14 +125,14 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.outline.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
@@ -160,14 +160,14 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.link.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
@@ -196,7 +196,7 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
@@ -204,7 +204,7 @@ export default class Button extends Component {
                         {
                           BUTTON.size.map((item, index) => {
                             return (
-                              <div className="block-inline mb-10 mr-5" key={index} >
+                              <div className="inline-block mb-10 mr-5" key={index} >
                                 <button type="button" className={classnames(item.className, 'button-feature')}>
                                   {item.title}
                                 </button>
@@ -234,14 +234,14 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
                       {
                         BUTTON.round.map((item, index) => {
                           return (
-                            <div className="block-inline mb-10 mr-5" key={index} >
+                            <div className="inline-block mb-10 mr-5" key={index} >
                               <button type="button" className={classnames(item.className, 'button-feature')}>
                                 {item.title}
                               </button>
@@ -270,7 +270,7 @@ export default class Button extends Component {
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
-              <div className={classnames('feature-example')}>
+              <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-6">
