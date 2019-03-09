@@ -190,7 +190,7 @@ export default class Modal extends Component {
                                 <span>&times;</span>
                               </button>
                             </div>
-                            <div className="modal-body" style={{height: '1000px'}}>
+                            <div className="modal-body" style={{height: '1500px'}}>
                               当年万里觅封侯。匹马戍梁州。 关河梦断何处，尘暗旧貂裘。 胡未灭，鬓先秋。泪空流。 此生谁料，心在天山，身老沧洲。
                             </div>
                             <div className="modal-footer">

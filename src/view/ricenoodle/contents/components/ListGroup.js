@@ -329,23 +329,27 @@ export default class ListGroup extends Component {
                   <div className="row">
                     {
                       LISTGROUP.situation.map((item, index) => {
+                        const highlightCode = `<ul class="${item.className}">
+  <li class="list-group-item active">百度</li>
+  <li class="list-group-item disabled">阿里</li>
+  <li class="list-group-item ">腾讯</li>
+</ul>`;
                         return (
-                          <ul className={classnames(item.className, 'col-lg-3 col-md-6 col-12 mb-20')} key={index}>
-                            <li className="list-group-item active">百度</li>
-                            <li className="list-group-item disabled">阿里</li>
-                            <li className="list-group-item ">腾讯</li>
-                          </ul>
+                          <div className={classnames('col-lg-6 col-12 p-5')} key={index}>
+                            <ul className={classnames(item.className, 'mb-10')}>
+                              <li className="list-group-item active">百度</li>
+                              <li className="list-group-item disabled">阿里</li>
+                              <li className="list-group-item">腾讯</li>
+                            </ul>
+
+                            <Highlight>
+                              {highlightCode}
+                            </Highlight>
+                          </div>
                         )
                       })
                     }
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createSituationCode()
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

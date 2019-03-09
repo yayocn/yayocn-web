@@ -11,6 +11,13 @@ const config = menu.children.find((value) => value.key === 'scrollspy');
 
 
 export default class Pagination extends Component {
+  componentDidMount () {
+    window.$('[data-spy="scroll"]').each(function () {
+      const self = window.$(this);
+      const target = self.data('target');
+      self.scrollspy({ target });
+    })
+  };
 
   createCode = () => {
     let code = `<nav id="navbar-example2" class="navbar navbar-light bg-light">
@@ -187,7 +194,7 @@ export default class Pagination extends Component {
                       <div className="row">
                         <div className="col-4">
                           <div id="list-example" className="list-group">
-                            <a className="list-group-item list-group-item-action" href="#list-item-1">定风波·三月七日</a>
+                            <a className="list-group-item list-group-item-action active" href="#list-item-1">定风波·三月七日</a>
                             <a className="list-group-item list-group-item-action" href="#list-item-2">念奴娇·赤壁怀古</a>
                             <a className="list-group-item list-group-item-action" href="#list-item-3">水调歌头·丙辰中秋</a>
                             <a className="list-group-item list-group-item-action active" href="#list-item-4">江城子.密州出猎</a>

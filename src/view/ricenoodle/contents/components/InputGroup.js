@@ -171,31 +171,35 @@ export default class InputGroup extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-4 col-12">
                       {
                         INPUTGROUP.theme.map((item, index) => {
+                          let highlightCode = `<div class="${item.className}">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control"/>
+  <div class="input-group-btn">
+    <button type="button" class="${item.btnClass}">confirm</button>
+  </div>
+</div>`;
                           return (
-                            <div className={classnames('p-10', {'bg-dark': item.key ==='white'})} key={index}>
-                              <div className={classnames(item.className)}>
-                                <span className="input-group-addon">$</span>
-                                <input type="text" className="form-control"/>
-                                <div className="input-group-btn">
-                                  <button type="button" className={item.btnClass}>confirm</button>
+                            <div className="col-lg-6 col-12" key={index}>
+                              <div className={classnames('p-10', {'bg-dark': item.key ==='white'})}>
+                                <div className={classnames(item.className)}>
+                                  <span className="input-group-addon">$</span>
+                                  <input type="text" className="form-control"/>
+                                  <div className="input-group-btn">
+                                    <button type="button" className={item.btnClass}>confirm</button>
+                                  </div>
                                 </div>
                               </div>
+
+                              <Highlight>
+                                {highlightCode}
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

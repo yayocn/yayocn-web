@@ -143,27 +143,27 @@ export default class Progress extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         PROGRESS.theme.map((item, index) => {
+                          const highlightCode = `<div class="${item.className}">
+  <div class="progress-value" style="width: ${item.width}">${item.width}</div>
+</div>`;
                           return (
-                            <div className={classnames('p-5', {'bg-dark': item.key === 'white'})} key={index} >
-                              <div className={classnames(item.className)}>
-                                <div className="progress-value" style={{ width: item.width }}>{item.width}</div>
+                            <div className="col-lg-6 col-12 p-5" key={index} >
+                              <div className={classnames('mb-10', {'bg-dark': item.key === 'white'})}>
+                                <div className={classnames(item.className)}>
+                                  <div className="progress-value" style={{ width: item.width }}>{item.width}</div>
+                                </div>
                               </div>
+
+                              <Highlight>
+                                {highlightCode}
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

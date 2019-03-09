@@ -521,7 +521,7 @@ export default class Form extends Component {
                 </div>
                 <div className={classnames('example-code')}>
                   <Highlight>
-                    &lt;input type="text" className="form-control" disabled  placeholder="Ricenoodle"/>
+                    &lt;input type="text" class="form-control" disabled  placeholder="Ricenoodle"/>
                   </Highlight>
                 </div>
               </div>
@@ -538,26 +538,26 @@ export default class Form extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-6 col-12">
-                      {
-                        FORM.checkbox.map((item, index) => {
-                          return (
-                            <div className={classnames(item.className)} key={index}>
+                    {
+                      FORM.checkbox.map((item, index) => {
+                        return (
+                          <div className="col-lg-6 col-12 p-5" key={index}>
+                            <div className={classnames(item.className)}>
                               <input id={'checkbox'+index} type="checkbox" name="checkbox"/>
                               <label htmlFor={'checkbox'+index}>{item.title}</label>
                             </div>
-                          );
-                        })
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCheckboxCode()
+
+                            <Highlight>
+                              &lt;div class="{item.className}"&gt; <br/>
+                                &nbsp;&nbsp;&lt;input id="checkbox-{index}" type="checkbox" name="name"/&gt; <br/>
+                                &nbsp;&nbsp;&lt;label for="checkbox-{index}"&gt;{item.title}&lt;/label&gt; <br/>
+                              &lt;/div&gt;
+                            </Highlight>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>
@@ -572,26 +572,26 @@ export default class Form extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         FORM.checkboxInline.map((item, index) => {
                           return (
-                            <div className={classnames(item.className)} key={index}>
-                              <input id={'checkbox-inline'+index} type="checkbox" name="checkbox"/>
-                              <label htmlFor={'checkbox-inline'+index}>{item.title}</label>
+                            <div className="col-lg-6 col-12 p-5" key={index}>
+                              <div className={classnames(item.className, 'mb-5')}>
+                                <input id={'checkbox-inline'+index} type="checkbox" name="checkbox"/>
+                                <label htmlFor={'checkbox-inline'+index}>{item.title}</label>
+                              </div>
+
+                              <Highlight>
+                                &lt;div class="{item.className}"&gt; <br/>
+                                &nbsp;&nbsp;&lt;input id="checkbox-{index}" type="checkbox" name="name"/&gt; <br/>
+                                &nbsp;&nbsp;&lt;label for="checkbox-{index}"&gt;{item.title}&lt;/label&gt; <br/>
+                                &lt;/div&gt;
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCheckboxCode('checkboxInline')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
@@ -633,32 +633,33 @@ export default class Form extends Component {
         </div>
 
         <h3 id="checkbox_switch" className="mt-20">开关</h3>
+        <p>直接使用 <code>.checkbox-switch</code> 类。</p>
         <div className={classnames('util-form')}>
           <div className="row">
             <div className="col-12">
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         FORM.checkboxSwitch.map((item, index) => {
                           return (
-                            <div className={classnames(item.className, 'mr-10')} key={index}>
-                              <input id={'checkbox-switch-'+index} type="checkbox" defaultChecked />
-                              <label htmlFor={'checkbox-switch-'+index}>Check</label>
+                            <div className="col-lg-6 col-12 p-5" key={index}>
+                              <div className={classnames(item.className, 'mr-10')}>
+                                <input id={'checkbox-switch-'+index} type="checkbox" defaultChecked />
+                                <label htmlFor={'checkbox-switch-'+index}>Check</label>
+                              </div>
+
+                              <Highlight>
+                                &lt;div class="{item.className}"&gt;<br/>
+                                &nbsp;&nbsp;&lt;input id="checkbox-{index}" type="checkbox" name="name"/&gt;<br/>
+                                &nbsp;&nbsp;&lt;label for="checkbox-{index}"&gt;{item.title}&lt;/label&gt;<br/>
+                                &lt;/div&gt;
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCheckboxCode('checkboxSwitch')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
@@ -745,26 +746,26 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-6 col-12">
                       {
                         FORM.radio.map((item, index) => {
                           return (
-                            <div className={classnames(item.className)} key={index}>
-                              <input id={'radio'+index} type="radio" name="radio"/>
-                              <label htmlFor={'radio'+index}>{item.title}</label>
+                            <div className="col-lg-6 col-12 p-5" key={index}>
+                              <div className={classnames(item.className)}>
+                                <input id={'radio'+index} type="radio" name="radio"/>
+                                <label htmlFor={'radio'+index}>{item.title}</label>
+                              </div>
+
+                              <Highlight>
+                                &lt;div class="{item.className}"&gt; <br/>
+                                &nbsp;&nbsp;&lt;input id="radio-{index}" type="radio" name="name"/&gt; <br/>
+                                &nbsp;&nbsp;&lt;label for="radio-{index}"&gt;{item.title}&lt;/label&gt; <br/>
+                                &lt;/div&gt;
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createRadioCode()
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
@@ -779,26 +780,26 @@ export default class Form extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         FORM.radioInline.map((item, index) => {
                           return (
-                            <div className={classnames(item.className)} key={index}>
-                              <input id={'radio-inline'+index} type="radio" name="radio"/>
-                              <label htmlFor={'radio-inline'+index}>{item.title}</label>
+                            <div className="col-lg-6 col-12 p-5" key={index}>
+                              <div className={classnames(item.className)}>
+                                <input id={'radio-inline'+index} type="radio" name="radio"/>
+                                <label htmlFor={'radio-inline'+index}>{item.title}</label>
+                              </div>
+
+                              <Highlight>
+                                &lt;div class="{item.className}"&gt; <br/>
+                                &nbsp;&nbsp;&lt;input id="radio-{index}" type="radio" name="name"/&gt; <br/>
+                                &nbsp;&nbsp;&lt;label for="radio-{index}"&gt;{item.title}&lt;/label&gt; <br/>
+                                &lt;/div&gt;
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createRadioCode('radioInline')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

@@ -21,6 +21,10 @@ const POPOVER = {
 };
 
 export default class Pagination extends Component {
+  componentDidMount () {
+    window.$('[data-toggle="tooltip"]').tooltip();
+    window.$('[data-toggle="popover"]').popover();
+  };
 
   createCode = (target) => {
     const data = POPOVER[target];

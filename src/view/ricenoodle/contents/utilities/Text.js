@@ -83,7 +83,7 @@ export default class Text extends Component {
                       TEXT.theme.map((item, index) => {
                         return (
                           <div className={classnames('col-6 p-5')} key={index} >
-                            <p className={item.className}>月落乌啼霜满天，江枫渔火对愁眠。<a className={classnames(item.className)}></a></p>
+                            <p className={item.className}>月落乌啼霜满天，江枫渔火对愁眠。</p>
                             <code className="block pt-relative top-3">&#9998; {item.className}</code>
                           </div>
                         );

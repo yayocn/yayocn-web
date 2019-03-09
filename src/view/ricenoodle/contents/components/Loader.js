@@ -99,7 +99,7 @@ export default class Loader extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-md-6 col-12">
+                    <div className="col-12">
                       {
                         LOADER.bar.map((item, index) => {
                           return (
@@ -139,27 +139,31 @@ export default class Loader extends Component {
                   <div className="row">
                     {
                       LOADER.barTheme.map((item, index) => {
+                        const highlihgtCode = `<div class="${item.className}">
+  <span class="l-1"></span>
+  <span class="l-2"></span>
+  <span class="l-3"></span>
+  <span class="l-4"></span>
+  <span class="l-5"></span>
+</div>`;
                         return (
-                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-3 col-md-6 col-12")} key={index}>
-                            <div className={item.className}>
+                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-6 col-12")} key={index}>
+                            <div className={classnames(item.className, 'mb-10')}>
                               <span className="l-1"></span>
                               <span className="l-2"></span>
                               <span className="l-3"></span>
                               <span className="l-4"></span>
                               <span className="l-5"></span>
                             </div>
+
+                            <Highlight>
+                              {highlihgtCode}
+                            </Highlight>
                           </div>
                         );
                       })
                     }
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('barTheme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
@@ -176,7 +180,7 @@ export default class Loader extends Component {
                     {
                       LOADER.barSize.map((item, index) => {
                         return (
-                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-3 col-md-6 col-12")} key={index}>
+                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-4 col-md-6 col-12")} key={index}>
                             <div className={item.className}>
                               <span className="l-1"></span>
                               <span className="l-2"></span>
@@ -211,7 +215,7 @@ export default class Loader extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-lg-3 col-md-6 col-12">
+                    <div className="col-12">
                       {
                         LOADER.roll.map((item, index) => {
                           return (
@@ -251,27 +255,33 @@ export default class Loader extends Component {
                   <div className="row">
                     {
                       LOADER.rollSituation.map((item, index) => {
+                        const highlihgtCode = `<div class="${item.className}">
+  <span class="l-1"></span>
+  <span class="l-2"></span>
+  <span class="l-3"></span>
+  <span class="l-4"></span>
+  <span class="l-5"></span>
+</div>`;
                         return (
-                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-3 col-md-6 col-12")} key={index}>
-                            <div className={item.className}>
-                              <span className="l-1"></span>
-                              <span className="l-2"></span>
-                              <span className="l-3"></span>
-                              <span className="l-4"></span>
-                              <span className="l-5"></span>
+                          <div className="col-lg-6 col-12" key={index}>
+                            <div className={classnames(item.wrapClass, "loader-wrap p-20")}>
+                              <div className={item.className}>
+                                <span className="l-1"></span>
+                                <span className="l-2"></span>
+                                <span className="l-3"></span>
+                                <span className="l-4"></span>
+                                <span className="l-5"></span>
+                              </div>
                             </div>
+
+                            <Highlight>
+                              {highlihgtCode}
+                            </Highlight>
                           </div>
                         );
                       })
                     }
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('rollSituation')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>
@@ -288,7 +298,7 @@ export default class Loader extends Component {
                     {
                       LOADER.rollSize.map((item, index) => {
                         return (
-                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-3 col-md-6 col-12")} key={index}>
+                          <div className={classnames(item.wrapClass, "loader-wrap p-20 col-lg-4 col-md-6 col-12")} key={index}>
                             <div className={item.className}>
                               <span className="l-1"></span>
                               <span className="l-2"></span>

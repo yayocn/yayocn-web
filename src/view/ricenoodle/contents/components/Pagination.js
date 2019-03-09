@@ -44,29 +44,25 @@ export default class Pagination extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<nav>
-  <ul class="${item.className}">
-    <li class="active"><a href=#>&laquo;</a></li>
-    <li><a href=#>1</a></li>
-    <li class="disabled"><a href=#>2</a></li>
-    <li><a href=#>3</a></li>
-    <li><a href=#>4</a></li>
-    <li><a href=#>&raquo;</a></li>
-  </ul>
-</nav>
+        code += `<ul class="${item.className}">
+  <li class="active"><a href=#>&laquo;</a></li>
+  <li><a href=#>1</a></li>
+  <li class="disabled"><a href=#>2</a></li>
+  <li><a href=#>3</a></li>
+  <li><a href=#>4</a></li>
+  <li><a href=#>&raquo;</a></li>
+</ul>
       
 `;
       } else {
-        code += `<nav>
-  <ul class="${item.className}">
-    <li class="active"><a href=#>&laquo;</a></li>
-    <li><a href=#>1</a></li>
-    <li class="disabled"><a href=#>2</a></li>
-    <li><a href=#>3</a></li>
-    <li><a href=#>4</a></li>
-    <li><a href=#>&raquo;</a></li>
-  </ul>
-</nav>`;
+        code += `<ul class="${item.className}">
+  <li class="active"><a href=#>&laquo;</a></li>
+  <li><a href=#>1</a></li>
+  <li class="disabled"><a href=#>2</a></li>
+  <li><a href=#>3</a></li>
+  <li><a href=#>4</a></li>
+  <li><a href=#>&raquo;</a></li>
+</ul>`;
       }
     })
 
@@ -89,16 +85,14 @@ export default class Pagination extends Component {
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
-                      <nav>
-                        <ul className="pagination">
-                          <li className="active"><a href={NO_LINK}>&laquo;</a></li>
-                          <li><a href={NO_LINK}>1</a></li>
-                          <li className="disabled"><a href={NO_LINK}>2</a></li>
-                          <li><a href={NO_LINK}>3</a></li>
-                          <li><a href={NO_LINK}>4</a></li>
-                          <li><a href={NO_LINK}>&raquo;</a></li>
-                        </ul>
-                      </nav>
+                      <ul className="pagination">
+                        <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                        <li><a href={NO_LINK}>1</a></li>
+                        <li className="disabled"><a href={NO_LINK}>2</a></li>
+                        <li><a href={NO_LINK}>3</a></li>
+                        <li><a href={NO_LINK}>4</a></li>
+                        <li><a href={NO_LINK}>&raquo;</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -124,16 +118,14 @@ export default class Pagination extends Component {
                 <div className={classnames('example-view')}>
                   <div className="row">
                     <div className="col-12">
-                      <nav>
-                        <ul className="pagination pagination-border">
-                          <li className="active"><a href={NO_LINK}>&laquo;</a></li>
-                          <li><a href={NO_LINK}>1</a></li>
-                          <li className="disabled"><a href={NO_LINK}>2</a></li>
-                          <li><a href={NO_LINK}>3</a></li>
-                          <li><a href={NO_LINK}>4</a></li>
-                          <li><a href={NO_LINK}>&raquo;</a></li>
-                        </ul>
-                      </nav>
+                      <ul className="pagination pagination-border">
+                        <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                        <li><a href={NO_LINK}>1</a></li>
+                        <li className="disabled"><a href={NO_LINK}>2</a></li>
+                        <li><a href={NO_LINK}>3</a></li>
+                        <li><a href={NO_LINK}>4</a></li>
+                        <li><a href={NO_LINK}>&raquo;</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -162,16 +154,14 @@ export default class Pagination extends Component {
                       {
                         PANINATION.size.map((item, index) => {
                           return (
-                            <nav key={index}>
-                              <ul className={classnames(item.className)} key={index}>
-                                <li className="active"><a href={NO_LINK}>&laquo;</a></li>
-                                <li><a href={NO_LINK}>1</a></li>
-                                <li className="disabled"><a href={NO_LINK}>2</a></li>
-                                <li><a href={NO_LINK}>3</a></li>
-                                <li><a href={NO_LINK}>4</a></li>
-                                <li><a href={NO_LINK}>&raquo;</a></li>
-                              </ul>
-                            </nav> 
+                            <ul className={classnames(item.className)} key={index}>
+                              <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                              <li><a href={NO_LINK}>1</a></li>
+                              <li className="disabled"><a href={NO_LINK}>2</a></li>
+                              <li><a href={NO_LINK}>3</a></li>
+                              <li><a href={NO_LINK}>4</a></li>
+                              <li><a href={NO_LINK}>&raquo;</a></li>
+                            </ul>
                           )
                         })
                       }
@@ -199,34 +189,37 @@ export default class Pagination extends Component {
               <div className={classnames('feature-example')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         PANINATION.theme.map((item, index) => {
+                          const highlightCode = `<ul class="${item.className}">
+  <li class="active"><a href=#>&laquo;</a></li>
+  <li><a href=#>1</a></li>
+  <li class="disabled"><a href=#>2</a></li>
+  <li><a href=#>3</a></li>
+  <li><a href=#>4</a></li>
+  <li><a href=#>&raquo;</a></li>
+</ul>`;
                           return (
-                            <div key={index} className={classnames('ph-20', {'bg-dark': item.key === 'white'})}>
-                              <nav>
-                                <ul className={classnames(item.className)}>
-                                  <li className="active"><a href={NO_LINK}>&laquo;</a></li>
-                                  <li><a href={NO_LINK}>1</a></li>
-                                  <li className="disabled"><a href={NO_LINK}>2</a></li>
-                                  <li><a href={NO_LINK}>3</a></li>
-                                  <li><a href={NO_LINK}>4</a></li>
-                                  <li><a href={NO_LINK}>&raquo;</a></li>
-                                </ul>
-                              </nav>
+                            <div className="col-6 p-5" key={index}>
+                              <div className={classnames('ph-20', {'bg-dark': item.key === 'white'})}>
+                                  <ul className={classnames(item.className)}>
+                                    <li className="active"><a href={NO_LINK}>&laquo;</a></li>
+                                    <li><a href={NO_LINK}>1</a></li>
+                                    <li className="disabled"><a href={NO_LINK}>2</a></li>
+                                    <li><a href={NO_LINK}>3</a></li>
+                                    <li><a href={NO_LINK}>4</a></li>
+                                    <li><a href={NO_LINK}>&raquo;</a></li>
+                                  </ul>
+                              </div>
+
+                              <Highlight>
+                                {highlightCode}
+                              </Highlight>
                             </div>
                           )
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

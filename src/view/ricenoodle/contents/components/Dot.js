@@ -36,11 +36,11 @@ export default class Dot extends Component {
     const len = data.length;
     data.forEach((item, index) => {
       if (index !== len - 1) {
-        code += `<p><span class="${item.className}"></span>：${item.subTitle}</p>
+        code += `<p><span class="${item.className}"></span> ${item.subTitle}</p>
       
 `;
       } else {
-        code += `<p><span class="${item.className}"></span>：${item.subTitle}</p>`;
+        code += `<p><span class="${item.className}"></span> ${item.subTitle}</p>`;
       }
     })
 
@@ -68,7 +68,7 @@ export default class Dot extends Component {
                         DOT.default.map((item, index) => {
                           return (
                             <p className="" key={index} >
-                              <span className={classnames(item.className, 'badge-feature')}></span>：{item.subTitle}
+                              <span className={classnames(item.className, 'badge-feature')}></span> {item.subTitle}
                             </p>
                           );
                         })
@@ -98,25 +98,22 @@ export default class Dot extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
-                      {
-                        DOT.theme.map((item, index) => {
-                          return (
-                            <p className={classnames('p-5', { 'bg-dark text-white': item.title === 'White' })} key={index} >
-                              <span className={classnames(item.className, 'badge-feature')}></span>：{item.subTitle}
-                            </p>
-                          );
-                        })
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
                     {
-                      this.createCode('theme')
+                      DOT.theme.map((item, index) => {
+                        return (
+                          <div className="col-6 p-5" key={index}>
+                            <p className={classnames('p-5', { 'bg-dark text-white': item.title === 'White' })} key={index} >
+                              <span className={classnames(item.className, 'badge-feature')}></span> {item.subTitle}
+                            </p>
+
+                            <Highlight>
+                              &lt;span class="{item.className}"&gt;&lt;/span&gt;
+                            </Highlight>
+                          </div>
+                        );
+                      })
                     }
-                  </Highlight>
+                  </div>
                 </div>
               </div>
             </div>

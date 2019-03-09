@@ -21,6 +21,10 @@ const TOOLTIP = {
 };
 
 export default class Tooltip extends Component {
+  componentDidMount () {
+    window.$('[data-toggle="tooltip"]').tooltip();
+    window.$('[data-toggle="popover"]').popover();
+  };
 
   createCode = (target) => {
     const data = TOOLTIP[target];

@@ -120,27 +120,23 @@ export default class Breadcrumb extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div className="row">
-                    <div className="col-12">
                       {
                         ELF.theme.map((item, index) => {
                           return (
-                            <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})} key={index}>
-                              <span className={classnames(item.className, 'elf-feature')} key={index} >
-                                {item.title}
-                              </span>
+                            <div className="col-6 p-5" key={index}>
+                              <div className={classnames('ph-10 pv-5', {'bg-dark text-white': item.title === 'White'})}>
+                                <span className={classnames(item.className, 'elf-feature')} key={index} >
+                                  {item.title}
+                                </span>
+                              </div>
+                              <Highlight>
+                                &lt;span class="{item.className}"&gt;{item.title}&lt;/span&gt;
+                              </Highlight>
                             </div>
                           );
                         })
                       }
-                    </div>
                   </div>
-                </div>
-                <div className={classnames('example-code')}>
-                  <Highlight>
-                    {
-                      this.createCode('theme')
-                    }
-                  </Highlight>
                 </div>
               </div>
             </div>

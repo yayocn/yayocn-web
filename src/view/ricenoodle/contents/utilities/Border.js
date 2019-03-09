@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
