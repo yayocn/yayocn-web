@@ -1,16 +1,18 @@
 @import "../common/scss/variable";
 .gate-wrap {
-  min-height: 100vh;
+  min-width: 996px;
+  min-height: 600px;
+  overflow: hidden;
   background-image: linear-gradient(135deg, rgba(186,67,168,0.38) 0%,rgba(233,79,205,0.17) 61%,rgba(234,79,206,0.19) 62%,rgba(83,123,173,0.8) 100%),
                     linear-gradient(135deg, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
 }
 
 .header {
-  height: 55vh;
+  height: 50vh;
   box-shadow: 0 0 5px 0 #ddd;
 
   + div {
-    height: 45vh;
+    height: 50vh;
   }
 
   .logo {

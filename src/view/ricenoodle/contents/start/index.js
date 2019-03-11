@@ -3,10 +3,20 @@ import Highlight from '../../../component/Highlight';
 import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import { ricenoodle } from '../../../../constants/menu';
+import { RICENOODLE_VERSION as ricenoodleVersion } from '../../../../constants/const';
 
 const menu = ricenoodle.find((value) => value.key === 'start');
+const ricenoodleDownloadUrl = `public/ricenoodle/ricenoodle-${ricenoodleVersion}.zip`;
 
 export default class Improve extends Component {
+  componentDIdMount () {
+    window.$('[data-spy="scroll"]').each(function () {
+      const self = window.$(this);
+      const target = self.data('target');
+      self.scrollspy({ target });
+    })
+  }
+
   render () {
     return (
       <Fragment>
@@ -17,12 +27,12 @@ export default class Improve extends Component {
         <div className="divider divider-lg divider-bold"></div>
 
         <h2 id="download">下载</h2>
-        <p>当前版本 <code>v1.1.0</code></p>
+        <p>当前版本 <code>{ricenoodleVersion}</code></p>
         <div className="row">
           <div className="col-lg-4 col-md-6 col-12 mt-20">
             <h4>生产环境</h4>
             <p>编译并且压缩后的css、javascript文件。</p>
-            <a href="public/ricenoodle/ricenoodle-1.0.2.zip" className="btn">下载 Ricenoodle</a>
+            <a href={ricenoodleDownloadUrl} className="btn">下载 Ricenoodle</a>
           </div>
           <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>源码</h4>

@@ -5,6 +5,9 @@ import './style.scss';
 import response1 from '../common/image/response1.jpg';
 import noodle1 from '../common/image/noodle1.png';
 import select1 from '../common/image/select1.jpg';
+import focus1 from '../common/image/focus.jpg';
+
+import { RICENOODLE_VERSION as ricenoodleVersion } from '../../constants/const';
 
 export default class Ricenoodle extends Component {
   render () {
@@ -12,7 +15,7 @@ export default class Ricenoodle extends Component {
       <Container>
         <div className="jumbotron bg-white">
           <div className="container">
-            <h1 className="font-6x">Ricenoodle <small className="font-20"><code>v1.0.2</code></small></h1>
+            <h1 className="font-6x">Ricenoodle <small className="font-20"><code>{ricenoodleVersion}</code></small></h1>
             <h2>简而快的前端框架</h2>
             <div className="divider divider-lg"></div>
             <div className="text-center">
@@ -43,10 +46,18 @@ export default class Ricenoodle extends Component {
           <p className="font-20 text-muted">Ricenoodle 除了提供整个css样式外，还将栅格系统，工具类单独分离了出来，可以根据需要选择性的引入文件。</p>
         </div>
 
+        <div className="divider mv-50"></div>
+
+        <div className="text-center">
+          <img src={focus1} className="img-fluid mh-auto mv-0 w-20" alt=""/>
+          <h3 className="mv-50">重中之重</h3>
+          <p className="font-20 text-muted">Ricenoodle 中的组件部分，有很多其他的框架能够替代。强烈推荐使用工具类，它提供了很多常用的，短小精悍的 class，方便对元素进行快速的样式叠加，而不用去制作专属的 class 或者行内样式。</p>
+        </div>
+
         <div className="divider divider-lg divider-bold"></div>
         <div className="text-muted mt-20">
-          <p>Designed by @kelp and built by @yayo. Wellcome to feedback at github, and we will make it better.</p>
-          <p>当前版本 <a href="https://github.com/yayocn/ricenoodle" className="text-web">v1.0.2</a></p>
+          <p>如果有任何疑问或者额外需求，欢迎在 <a href="https://github.com/yayocn/ricenoodle/issues" className="text-web" target="_blank">github</a> 上留言反馈。</p>
+          <p>当前版本 {ricenoodleVersion}</p>
         </div>
       </Container>
     );

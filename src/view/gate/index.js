@@ -51,7 +51,7 @@ export default class Gate extends Component {
           <div className="nav-right font-3x w-50">
             <ul className="nav">
               <li className="nav-item">
-                <a className="nav-link" href="/aboutme">It's me</a>
+                <a className="nav-link text-nowrap" href="/aboutme">It's me</a>
               </li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ export default class Gate extends Component {
           <div className="row">
             <div className="col-12 text-white text-center">
               <p className="mt-0 mb-0 font-300" style={{ fontSize: '1200%'}}>{ time }</p>
-              <p className="mt-0 font-20 font-100 pt-relative" style={{ top: '-40px' }}>{ week } week of { year}</p>
+              <p className="mt-0 font-20 font-100 pt-relative" style={{ top: '-40px' }}>{ week } week. { year}</p>
               <p className="mt-0 mb-0 font-5x font-300 text-capitalize pt-relative" style={{ top: '-40px' }}>good { period }, my friend.</p>
             </div>
           </div>
