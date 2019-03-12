@@ -6210,8 +6210,9 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
 ricenoodle@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ricenoodle/-/ricenoodle-1.0.2.tgz#44b705982bc43b7048a54aa24a2f5b2bc62a29e1"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ricenoodle/-/ricenoodle-1.1.0.tgz#1f93489a64c1395f6e77e5bec414eba5ecaa1e66"
+  integrity sha512-kzt1piHZEjwGIgza79UpWFTPtkKDDu2/1z3B09qvwLSsVTzuM6wbe2Kq4J2PfGlyO9rIpL0TLmvUZNNKdfEQAQ==
 
 right-align@^0.1.1:
   version "0.1.3"
