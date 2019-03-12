@@ -56,7 +56,7 @@ export default class Ricenoodle extends Component {
 
         <div className="divider divider-lg divider-bold"></div>
         <div className="text-muted mt-20">
-          <p>如果有任何疑问或者额外需求，欢迎在 <a href="https://github.com/yayocn/ricenoodle/issues" className="text-web" target="_blank">github</a> 上留言反馈。</p>
+          <p>如果有任何疑问或者额外需求，欢迎在 <a href="https://github.com/yayocn/ricenoodle/issues" rel="noopener noreferrer" className="text-web" target="_blank">github</a> 上留言反馈。</p>
           <p>当前版本 {ricenoodleVersion}</p>
         </div>
       </Container>

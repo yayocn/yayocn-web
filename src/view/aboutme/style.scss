@@ -25,3 +25,63 @@ $background-list: (
 //    }
 //  }
 //}
+
+$bg-list: (
+  bg1: #0a2d41,
+  bg2: #386b6e,
+  bg3: #72a38d,
+  bg4: #9bc19c,
+  bg5: #bed994,
+  bg6: #dada94,
+  bg7: #fff,
+);
+
+.aboutme-wrap {
+  .feature {
+
+  }
+
+  @each $name, $value in $bg-list {
+    .feature-#{$name} {
+      background-color: $value;
+    }
+  }
+
+  .time-bar {
+    transform: rotateZ(-10deg) translateY(0px);
+  }
+
+  .time-bar-triangle {
+    width: 60px;
+    height: 46px;
+    border-top: 46px solid transparent;
+    border-left: 80px solid #fff;
+    border-bottom: 0;
+  }
+
+  .experience-item {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+
+    &:nth-child(odd) {
+      text-align: right;
+      padding-left: 200px;
+
+      .media,
+      ul {
+        text-align: left;
+      }
+    }
+
+    &:nth-child(even) {
+      text-align: left;
+      padding-right: 200px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
