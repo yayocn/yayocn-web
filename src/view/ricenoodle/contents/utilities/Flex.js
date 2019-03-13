@@ -50,6 +50,12 @@ const FLEX = {
     { title: 'Center', key: 'center', subTitle: '', className: 'align-aboutme-center', },
     { title: 'Baseline', key: 'baseline', subTitle: '', className: 'align-aboutme-baseline', },
     { title: 'Stretch', key: 'stretch', subTitle: '', className: 'align-aboutme-stretch', },
+  ],
+  order: [
+    { title: 'Order', key: 'auto', subTitle: '', className: '', },
+  ],
+  flexGrow: [
+    { title: 'Flex-grow', key: 'auto', subTitle: '', className: 'flex-grow-2', },
   ]
 };
 
@@ -363,6 +369,65 @@ export default class Flex extends Component {
                   );
                 })
               }
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2 id="order">排序</h2>
+        <p>定义项目的排列顺序，数值越小，排列越靠前。</p>
+        <div className={classnames('util-flex')}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames('feature-example shadow')}>
+                <div className={classnames('example-view')}>
+                  <div className={classnames('flex text-white')}>
+                    <div className={classnames('flex-item order-2')}>1th</div>
+                    <div className={classnames('flex-item order-4')}>2th</div>
+                    <div className={classnames('flex-item order-1')}>3th</div>
+                    <div className={classnames('flex-item order-3')}>4th</div>
+                  </div>
+                </div>
+                <div className={classnames('example-code')}>
+                  <Highlight>
+                    &lt;div class="flex'"&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="order-2'"&gt;1th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="order-4'"&gt;2th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="order-1'"&gt;3th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="order-3'"&gt;4th&lt;/div&gt;<br/>
+                    &lt;/div&gt;
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider divider-lg"></div>
+        <h2 id="flex_grow">放大比例</h2>
+        <p>定义项目的放大比例。默认为 <code>0</code>，即如果存在剩余空间，也不放大。</p>
+        <p>如果所有项目的 <code>flex-grow</code> 属性都为 <code>1</code>，则它们将等分剩余空间（如果有的话）。如果一个项目的 <code>flex-grow</code> 属性为 <code>2</code>，其他项目都为 <code>1</code>，则前者占据的剩余空间将比其他项多一倍。</p>
+        <div className={classnames('util-flex')}>
+          <div className="row">
+            <div className="col-12">
+              <div className={classnames('feature-example shadow')}>
+                <div className={classnames('example-view')}>
+                  <div className={classnames('flex text-white')}>
+                    <div className={classnames('flex-item')}>1th</div>
+                    <div className={classnames('flex-item flex-grow-2')}>2th</div>
+                    <div className={classnames('flex-item')}>3th</div>
+                  </div>
+                </div>
+                <div className={classnames('example-code')}>
+                  <Highlight>
+                    &lt;div class="flex'"&gt;<br/>
+                    &nbsp;&nbsp;&lt;div&gt;1th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="flex-grow-2'"&gt;2th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div&gt;3th&lt;/div&gt;<br/>
+                    &lt;/div&gt;
+                  </Highlight>
+                </div>
+              </div>
             </div>
           </div>
         </div>

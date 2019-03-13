@@ -47,6 +47,8 @@ const submenu = {
     { key: 'align_items', title: '交叉轴对齐', children: [{ key: 'align_items_start', title: 'Start' }, { key: 'align_items_end', title: 'End' }, { key: 'align_items_center', title: 'Center' }, { key: 'align_items_baseline', title: 'Baseline' }, { key: 'align_items_stretch', title: 'Stretch' }] },
     { key: 'align_content', title: '多轴对齐', children: [{ key: 'align_content_start', title: 'Start' }, { key: 'align_content_end', title: 'End' }, { key: 'align_content_center', title: 'Center' }, { key: 'align_content_between', title: 'Between' }, { key: 'align_content_around', title: 'Around' }, { key: 'align_content_stretch', title: 'Stretch' }] },
     { key: 'align_self', title: '特殊对齐', children: [{ key: 'align_self_auto', title: 'Auto' }, { key: 'align_self_start', title: 'Start' }, { key: 'align_self_end', title: 'End' }, { key: 'align_self_center', title: 'Center' }, { key: 'align_self_baseline', title: 'Baseline' }, { key: 'align_self_stretch', title: 'Stretch' }] },
+    { key: 'order', title: '排序' },
+    { key: 'flex_grow', title: '放大比例' },
   ],
   float: [
     { key: 'float', title: '设置浮动' },

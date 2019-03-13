@@ -129,10 +129,10 @@ export default class Font extends Component {
         </div>
 
         <h3 id="size_viewpoint" className="mt-20">视口尺寸</h3>
-        <p>以 <code>vw, vh</code> 为单位，提供了 <code>[1-10] * 10(vw|vh)</code> 的尺寸。 如：</p>
+        <p>以 <code>vw, vh</code> 为单位，提供了 <code>[1-10] (vw|vh)</code> 的尺寸。 如：</p>
         <ul className="pl-18">
-          <li><code>font-vw-1</code> 代表了 <code>font-size: 10vw !important;</code>。</li>
-          <li><code>font-vh-10</code> 代表了 <code>font-size: 100vh !important;</code>。</li>
+          <li><code>font-vw-1</code> 代表了 <code>font-size: 1vw !important;</code>。</li>
+          <li><code>font-vh-1</code> 代表了 <code>font-size: 1vh !important;</code>。</li>
         </ul>
 
         <div className={classnames('util-font')}>
@@ -141,15 +141,15 @@ export default class Font extends Component {
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('example-view')}>
                   <div>
-                    <p className={classnames('font-vw-1 mv-0')}>Hello!</p>
-                    <p className={classnames('font-vh-1 mv-0')}>Hello!</p>
+                    <p className={classnames('font-vw-10 mv-0')}>Hello!</p>
+                    <p className={classnames('font-vh-10 mv-0')}>Hello!</p>
                   </div>
                 </div>
                 <div className={classnames('example-code')}>
                   <Highlight>
-                    &lt;p class="font-vw-1">Hello!&lt;/p>
+                    &lt;p class="font-vw-10">Hello!&lt;/p>
                     <br/><br/>
-                    &lt;p class="font-vh-1">Hello!&lt;/p>
+                    &lt;p class="font-vh-10">Hello!&lt;/p>
                   </Highlight>
                 </div>
               </div>

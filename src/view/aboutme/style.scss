@@ -58,4 +58,30 @@ $bg-list: (
     border-left: 80px solid #fff;
     border-bottom: 0;
   }
+
+  .experience-item {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+
+    &:nth-child(odd) {
+      text-align: right;
+      padding-left: 200px;
+
+      .media,
+      ul {
+        text-align: left;
+      }
+    }
+
+    &:nth-child(even) {
+      text-align: left;
+      padding-right: 200px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
 }

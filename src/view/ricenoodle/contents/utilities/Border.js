@@ -60,10 +60,10 @@ const BORDER = {
     { title: '2px', subTitle: '', className: 'border border-2', },
     { title: '3px', subTitle: '', className: 'border border-3', },
     { title: '4px', subTitle: '', className: 'border border-4', },
-    { title: '5px', subTitle: '', className: 'border border-5', },
-    { title: '6px', subTitle: '', className: 'border border-6', },
-    { title: '7px', subTitle: '', className: 'border border-7', },
-    { title: '8px', subTitle: '', className: 'border border-8', },
+    { title: '5px', subTitle: '', className: 'border-top border-top-5', },
+    { title: '6px', subTitle: '', className: 'border-right border-right-6', },
+    { title: '7px', subTitle: '', className: 'border-bottom border-bottom-7', },
+    { title: '8px', subTitle: '', className: 'border-left border-left-8', },
     { title: '9px', subTitle: '', className: 'border border-9', },
     { title: '10px', subTitle: '', className: 'border border-10', },
   ]
@@ -237,6 +237,7 @@ export default class Border extends Component {
 
         <h2 id="width">边框宽度</h2>
         <p>为元素添加边框宽度类，设置边框的宽度，<code>1px ~ 10px</code>。</p>
+        <p className="text-info">这种方式会对盒子四边都设置边框，如果你不想这样做，可以使用只针对某一边的类，例如 <code>.border-top-1</code>。</p>
         <div className={classnames('util-border')}>
           <div className="row">
             <div className="col-12">
