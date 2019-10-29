@@ -6,7 +6,7 @@ export default class Submenu extends Component {
   render () {
     const { menu = [] } = this.props;
     return (
-      <div className="submenu h-vh-max-75">
+      <div className="submenu h-vh-max-80">
         <ul className="m-0">
           {
             menu.map((item) => {

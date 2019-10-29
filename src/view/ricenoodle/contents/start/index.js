@@ -6,7 +6,6 @@ import { ricenoodle } from '../../../../constants/menu';
 import { RICENOODLE_VERSION as ricenoodleVersion } from '../../../../constants/const';
 
 const menu = ricenoodle.find((value) => value.key === 'start');
-const ricenoodleDownloadUrl = `public/ricenoodle/ricenoodle-${ricenoodleVersion}.zip`;
 
 export default class Improve extends Component {
   componentDIdMount () {
@@ -22,7 +21,7 @@ export default class Improve extends Component {
       <Fragment>
         <h1 dangerouslySetInnerHTML={{__html: menu.title}}></h1>
         <p className="font-2x font-100"  dangerouslySetInnerHTML={{__html: menu.info}}></p>
-        <p className="font-20 font-100">强烈建议使用工具类，组件部分很多其他的框架做得更好，而工具类是对一些常用的样式进行补充，能够进行快速设置，权重很高，可以轻松覆盖其他样式。</p>
+        <p className="font-20 font-100">重要的事情需要反复的说：强烈建议使用工具类，组件部分很多其他的框架做得更好，而工具类是对一些常用的样式进行补充，能够进行快速设置，权重很高，可以轻松覆盖其他样式。</p>
 
         <div className="divider divider-lg divider-bold"></div>
 
@@ -32,12 +31,12 @@ export default class Improve extends Component {
           <div className="col-lg-4 col-md-6 col-12 mt-20">
             <h4>生产环境</h4>
             <p>编译并且压缩后的css、javascript文件。</p>
-            <a href={ricenoodleDownloadUrl} className="btn">下载 Ricenoodle</a>
+            <a href='/public/files/ricenoodle/ricenoodle-1.0.2.zip' className="btn">下载 Ricenoodle</a>
           </div>
           <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>源码</h4>
             <p>Ricenoodle 的资源文件。</p>
-            <a href="public/ricenoodle/ricenoodle-source-1.0.2.zip" className="btn">Source</a>
+            <a href="/public/files/ricenoodle/ricenoodle-source-1.0.2.zip" className="btn">Source</a>
           </div>
           <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>Github</h4>
@@ -57,7 +56,7 @@ export default class Improve extends Component {
             <div className="col-12">
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('mt-0', 'example-code')}>
-                  <Highlight>
+                  <Highlight copyBtn={false}>
                     &lt;link href="ricenoodle.min.css" rel="stylesheet"/&gt;<br/><br/>
                     &lt;script src="jquery.min.js"&gt;&lt;/script&gt;<br/>
                     &lt;script src="popper.min.js"&gt;&lt;/script&gt;<br/>
@@ -76,7 +75,7 @@ export default class Improve extends Component {
             <div className="col-12">
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('mt-0', 'example-code')}>
-                  <Highlight>
+                  <Highlight copyBtn={false}>
                     $ npm install ricenoodle
                   </Highlight>
                 </div>
@@ -93,7 +92,7 @@ export default class Improve extends Component {
             <div className="col-12">
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('mt-0', 'example-code')}>
-                  <Highlight>
+                  <Highlight copyBtn={false}>
                     &lt;link href="ricenoodle.normallize.css" rel="stylesheet"/&gt;<br/>
                     &lt;link href="ricenoodle.alert.css" rel="stylesheet"/&gt;<br/>
                     &lt;link href="ricenoodle.button.css" rel="stylesheet"/&gt;<br/>
@@ -111,7 +110,7 @@ export default class Improve extends Component {
             <div className="col-12">
               <div className={classnames('feature-example shadow')}>
                 <div className={classnames('mt-0', 'example-code')}>
-                  <Highlight>
+                  <Highlight copyBtn={false}>
                     &lt;link href="ricenoodle.button.css" rel="stylesheet"/&gt;<br/>
                     &lt;link href="ricenoodle.buttongroup.css" rel="stylesheet"/&gt;<br/>
                   </Highlight>

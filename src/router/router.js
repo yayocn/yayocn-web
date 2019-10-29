@@ -1,7 +1,7 @@
 import {
   Gate,
   Ricenoodle,
-  Aboutme,
+  // Aboutme,
 } from '../view';
 
 
@@ -309,11 +309,11 @@ const router = [
     exact: true,
     component: Tooltip,
   },
-  {
-    path: '/aboutme',
-    exact: true,
-    component: Aboutme,
-  },
+  // {
+  //   path: '/aboutme',
+  //   exact: true,
+  //   component: Aboutme,
+  // },
 ];
 
 export default router;

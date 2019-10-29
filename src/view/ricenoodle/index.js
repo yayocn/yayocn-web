@@ -16,7 +16,7 @@ export default class Ricenoodle extends Component {
         <div className="jumbotron bg-white">
           <div className="container">
             <h1 className="font-6x">Ricenoodle <small className="font-20"><code>{ricenoodleVersion}</code></small></h1>
-            <h2>简而快的前端框架</h2>
+            <h2>简洁、快速的前端框架</h2>
             <div className="divider divider-lg"></div>
             <div className="text-center">
               <a className="btn btn-hg" href="/ricenoodle/start">开始</a>
@@ -35,7 +35,7 @@ export default class Ricenoodle extends Component {
         <div className="text-center">
           <img src={noodle1} className="img-fluid mh-auto mv-0 w-25" alt=""/>
           <h3 className="mv-50">极简 快速</h3>
-          <p className="font-20 text-muted">就像绵阳米粉一样，Ricenoodle 讲究的是简洁快速。它包含了很多极简的工具类，它们可以一起协作解决一些重复性的问题。</p>
+          <p className="font-20 text-muted">绵阳米粉，点菜到吃到嘴里只需要一分钟，无需等待，美味依然。就像绵阳米粉一样，Ricenoodle 讲究的是简洁快速。它包含了很多极简的工具类，它们可以一起协作解决一些重复性的问题。</p>
         </div>
 
         <div className="divider mv-50"></div>
@@ -56,7 +56,8 @@ export default class Ricenoodle extends Component {
 
         <div className="divider divider-lg divider-bold"></div>
         <div className="text-muted mt-20">
-          <p>如果有任何疑问或者额外需求，欢迎在 <a href="https://github.com/yayocn/ricenoodle/issues" rel="noopener noreferrer" className="text-web" target="_blank">github</a> 上留言反馈。</p>
+          <p>部分组件参考的是 <code>Bootstrap 4</code>，感谢 Bootstrap 提供了源码。</p>
+          <p>如果有任何疑问或者建议，欢迎在 <a href="https://github.com/yayocn/ricenoodle/issues" rel="noopener noreferrer" className="text-web" target="_blank">github</a> 上留言反馈。</p>
           <p>当前版本 {ricenoodleVersion}</p>
         </div>
       </Container>
