@@ -5,6 +5,7 @@ import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { NO_LINK } from '../../../../constants/const';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'dropdown');
@@ -309,7 +310,7 @@ export default class Dropdown extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="theme">主题</h2>
-        <p>可以结合 <a href="/ricenoodle/button">Button</a> 对 toggle button 进行设置。</p>
+        <p>可以结合 <Link to={'/ricenoodle/button'}>Button</Link> 对 toggle button 进行设置。</p>
         <div className={classnames('util-dropdown')}>
           <div className="row">
             <div className="col-12">

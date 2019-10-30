@@ -51,7 +51,7 @@ export default class Background extends Component {
 
         <div className="divider divider-bold divider-lg"></div>
 
-        <h2>主题</h2>
+        <h2 id="theme">主题</h2>
         <p>背景工具类设有 <code>12</code> 种主题颜色。</p>
         <div className={classnames('util-bg')}>
           <div className="row">

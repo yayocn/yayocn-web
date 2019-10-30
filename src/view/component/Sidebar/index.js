@@ -36,13 +36,13 @@ export default class Sidebar extends Component {
             menu.map((item) => {
               if (item.children && item.children.length > 0) {
                 return <li key={item.key} className={classnames('sidebar-submenu')} >
-                  <NavLink to={item.link} activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></NavLink>
+                  <NavLink to={item.link} activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}} replace></NavLink>
                     <Fragment>
                       <ul>
                         {
                           item.children.map((submenu) => {
                             return <li key={submenu.key} className={classnames('sidebar-item')}>
-                              <NavLink to={submenu.link} activeClassName="active" className={classnames('block pv-10 ph-50 font-12')} dangerouslySetInnerHTML={{__html: submenu.title}}></NavLink>
+                              <NavLink to={submenu.link} activeClassName="active" className={classnames('block pv-10 ph-50 font-12')} dangerouslySetInnerHTML={{__html: submenu.title}} replace></NavLink>
                             </li>
                           })
                         }
@@ -51,7 +51,7 @@ export default class Sidebar extends Component {
                 </li>
               } else {
                 return <li key={item.key} className={classnames('sidebar-item')}>
-                  <NavLink to={item.link} exact activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}}></NavLink>
+                  <NavLink to={item.link} exact activeClassName="active" className={classnames('block pv-10 ph-30')} dangerouslySetInnerHTML={{__html: item.title}} replace></NavLink>
                 </li>
               }
             })

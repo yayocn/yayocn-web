@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Container from './containers/Container';
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 import response1 from '../common/image/response1.jpg';
 import noodle1 from '../common/image/noodle1.png';
@@ -19,7 +20,7 @@ export default class Ricenoodle extends Component {
             <h2>简洁、快速的前端框架</h2>
             <div className="divider divider-lg"></div>
             <div className="text-center">
-              <a className="btn btn-hg" href="/ricenoodle/start">开始</a>
+              <Link className='btn btn-hg' to={'/ricenoodle/start'}>开始</Link>
             </div>
           </div>
         </div>

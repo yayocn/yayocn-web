@@ -6,6 +6,7 @@ import '../../style.scss';
 import cardImg from '../../../common/image/slide2.jpg';
 import { NO_LINK } from '../../../../constants/const';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'card');
@@ -290,7 +291,7 @@ export default class Card extends Component {
 
         <h2 id="default">实例</h2>
         <p>卡片采用尽可能少的标记和样式构建，但仍然能够提供大量的控制和定制。 它们采用弹性盒子构建，可轻松对齐并与其他组件完美混合。
-          默认情况下它们没有边距，因此请根据需要使用 <a href="/ricenoodle/utilities/space">Space</a>。</p>
+          默认情况下它们没有边距，因此请根据需要使用 <Link to={'/ricenoodle/utilities/space'}>Space</Link>。</p>
         <div className={classnames('util-card')}>
           <div className="row">
             <div className="col-12">
@@ -431,7 +432,7 @@ export default class Card extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="theme">主题</h2>
-        <p>通过 <a href="/ricenoodle/utilities/background">Background</a>，<a href="/ricenoodle/utilities/text">Text</a>，<a href="/ricenoodle/utilities/border">Border</a>  等工具类的组合，形成主题。</p>
+        <p>通过 <Link to={'/ricenoodle/utilities/background'}>Background</Link>，<Link to={'/ricenoodle/utilities/text'}>Text</Link>，<Link to={'/ricenoodle/utilities/border'}>Border</Link>  等工具类的组合，形成主题。</p>
         <div className={classnames('util-card')}>
           <div className="row">
             <div className="col-12">

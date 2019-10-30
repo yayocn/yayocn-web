@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 import './style.scss';
 import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
@@ -71,14 +72,14 @@ export default class Gate extends Component {
             <div className="nav-left font-3x w-50">
               <ul className="nav flex-row-reverse">
                 <li className="nav-item">
-                  <a className="nav-link" href="/ricenoodle">Ricenoodle</a>
+                  <Link className="nav-link" to='/ricenoodle' replace>Ricenoodle</Link>
                 </li>
               </ul>
             </div>
             <div className="nav-right font-3x w-50">
               <ul className="nav">
                 <li className="nav-item">
-                  <a className="nav-link text-nowrap">Coding...</a>
+                  <Link className="nav-link" to='/' replace>Coming soon</Link>
                 </li>
               </ul>
             </div>

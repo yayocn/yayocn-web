@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'divider');
@@ -96,7 +97,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="size">尺寸</h2>
-        <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用<a href="/ricenoodle/utilities/space">间距</a>来控制。</p>
+        <p><code>.divider-lg .divider-sm</code> 设置分割的间距，也可以用<Link to={'/ricenoodle/utilities/space'}>间距</Link>来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
@@ -132,7 +133,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="weight">权重</h2>
-        <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用<a href="/ricenoodle/utilities/border#width">边框宽度</a>来控制。</p>
+        <p><code>.divider-bold</code> 设置比较粗的分割线，也可以用<Link to={'/ricenoodle/utilities/border#width'}>边框宽度</Link>来控制。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">
@@ -168,7 +169,7 @@ export default class Divider extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="theme">主题</h2>
-        <p>结合<a href="/ricenoodle/utilities/border#theme">边框主题</a>，可以生成多重主题颜色。</p>
+        <p>结合<Link to={'/ricenoodle/utilities/border#theme'}>边框主题</Link>，可以生成多重主题颜色。</p>
         <div className={classnames('util-divider')}>
           <div className="row">
             <div className="col-12">

@@ -5,6 +5,7 @@ import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { NO_LINK } from '../../../../constants/const';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'navbar');
@@ -79,7 +80,7 @@ export default class Navbar extends Component {
         <ul className="ph-30">
           <li>导航栏需要使用 <code>.navbar-expand [-sm | -md | -lg | -xl]</code> 包装 <code>.navbar</code> 以进行响应式折叠和颜色方案类。</li>
           <li>导航栏默认使流布局，将其放在 <code>.container .container-fluid</code> 中限制其宽度。</li>
-          <li>使用我们的 <a href="/ricenoodle/utilities/space">Space</a> 和 <a href="/ricenoodle/utilities/flex">Flex</a> 来控制导航栏中的间距和对齐。</li>
+          <li>使用我们的 <Link to={'/ricenoodle/utilities/space'}>Space</Link> 和 <Link to={'/ricenoodle/utilities/flex'}>Flex</Link> 来控制导航栏中的间距和对齐。</li>
         </ul>
 
         <div className="divider divider-lg"></div>

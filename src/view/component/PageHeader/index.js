@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import './style.scss';
+import { Link } from 'react-router-dom';
 import logo from '../../common/image/logo-b.png';
 
 export default class PageHeader extends Component {
@@ -16,10 +17,10 @@ export default class PageHeader extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <Link className="nav-link" to={'/'} replace>Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/ricenoodle">Ricenoodle</a>
+                <Link className="nav-link" to={'/ricenoodle'} replace>Ricenoodle</Link>
               </li>
             </ul>
           </div>

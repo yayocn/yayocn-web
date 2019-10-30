@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss'
 import '../../style.scss';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'improve');
 const config = menu.children.find((value) => value.key === 'element');
@@ -167,7 +168,7 @@ export default class Element extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="hr">水平分割线</h2>
-        <p>重置了 <code>&lt;hr/&gt;</code> 元素，上下均有 <code>15px</code> 的外边距。也可以使用 <a href="/ricenoodle/components/divider">Divider</a> 代替。</p>
+        <p>重置了 <code>&lt;hr/&gt;</code> 元素，上下均有 <code>15px</code> 的外边距。也可以使用 <Link to={'/ricenoodle/components/divider'}>Divider</Link> 代替。</p>
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">
@@ -331,7 +332,7 @@ export default class Element extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="dl">&lt;dl&gt; 元素</h2>
-        <p>重置定义列表样式。结合 <a href="/ricenoodle/components/grid">栅格系统</a> 可以轻松制作说明表格。</p>
+        <p>重置定义列表样式。结合<Link to={'/ricenoodle/components/grid'}>栅格系统</Link>可以轻松制作说明表格。</p>
         <div className={classnames('util-element')}>
           <div className="row">
             <div className="col-12">

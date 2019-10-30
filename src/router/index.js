@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 import { Router, Switch, Route, Redirect } from 'react-router';
 import routers from './router';
 
-const browserHistory = createBrowserHistory();
+const hashHistory = createHashHistory();
 
 export default class CustomRouter extends Component {
   render () {
     return (
-      <Router history={browserHistory}>
+      <Router history={hashHistory}>
         <Switch>
           {
             routers.map((route, index) => {

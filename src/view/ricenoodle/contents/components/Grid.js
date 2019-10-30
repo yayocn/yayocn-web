@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'grid');
@@ -207,7 +208,7 @@ export default class Grid extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="flex">弹性布局</h2>
-        <p><code>Grid</code> 是用的 <code>flex</code> 进行布局，因此，很多 <a href="/ricenoodle/utilities/flex">Flex</a> 的类都可以配合使用。</p>
+        <p><code>Grid</code> 是用的 <code>flex</code> 进行布局，因此，很多 <Link to={'/ricenoodle/utilities/flex'}>Flex</Link> 的类都可以配合使用。</p>
         <div className={classnames('util-grid')}>
           <div className="row">
             <div className="col-12">
@@ -310,7 +311,7 @@ export default class Grid extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="offset">偏移量</h2>
-        <p>您可以通过两种方式偏移网格列：响应式 <code>.offset-</code> 网格类或者 <a href="/ricenoodle/utilities/space">Space</a>。 网格类的大小可以匹配列，而边距对于偏移宽度可变的快速布局更有用。</p>
+        <p>您可以通过两种方式偏移网格列：响应式 <code>.offset-</code> 网格类或者 <Link to={'/ricenoodle/utilities/space'}>Space</Link>。 网格类的大小可以匹配列，而边距对于偏移宽度可变的快速布局更有用。</p>
         <p>使用 <code>.offset-md-*</code> 类向右移动列。 这些类将列的左边距增加 <code>*</code> 列。 例如，<code>.offset-md-4</code> 在四列上移动 <code>.col-md-4</code>。</p>
 
         <div className={classnames('util-grid')}>

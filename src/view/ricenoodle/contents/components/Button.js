@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import '../../../common/scss/common.scss';
 import '../../style.scss';
 import { ricenoodle } from '../../../../constants/menu';
+import { Link } from 'react-router-dom';
 
 const menu = ricenoodle.find((value) => value.key === 'components');
 const config = menu.children.find((value) => value.key === 'button');
@@ -230,7 +231,7 @@ export default class Button extends Component {
 
         <div className="divider divider-lg"></div>
         <h2 id="round">半径</h2>
-        <p>除了使用针对 <code>button</code> 的特殊类意外，也可以使用 <a href="/ricenoodle/utilities/border">Border</a> 工具类。</p>
+        <p>除了使用针对 <code>button</code> 的特殊类意外，也可以使用 <Link to={'/ricenoodle/utilities/border'}>Border</Link> 工具类。</p>
         <div className={classnames('util-button')}>
           <div className="row">
             <div className="col-12">
