@@ -1,38 +1,77 @@
 @import "../common/scss/variable";
 .gate-wrap {
-  min-width: 996px;
-  min-height: 800px;
-  overflow: hidden;
+  min-height: 100vh;
   background-image: linear-gradient(135deg, rgba(186,67,168,0.38) 0%,rgba(233,79,205,0.17) 61%,rgba(234,79,206,0.19) 62%,rgba(83,123,173,0.8) 100%),
                     linear-gradient(135deg, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%);
+
+  .header {
+    .logo-wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .logo {
+      width: 10em;
+      height: 10em;
+    }
+
+    .nav a {
+      color: $white;
+
+      &:hover {
+        background-color: rgba(255,255,255,.1);
+      }
+    }
+  }
+
+  .nav-link {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .time {
+   font-size: 5em;
+  }
+
+  .week,
+  .day {
+    font-size: 16px;
+  }
+
+  .greeting {
+    font-size: 20px;
+  }
 }
 
-.header {
-  height: 40vh;
-  box-shadow: 0 0 5px 0 #ddd;
-
-  + div {
-    height: 60vh;
-  }
-
-  .logo {
-    width: 160px;
-    height: 160px;
-  }
-
-  .nav-left {
-    margin-right: 100px;
-  }
-
-  .nav-right {
-    margin-left: 100px;
-  }
-
-  .nav a {
-    color: $white;
-
-    &:hover {
-      background-color: rgba(255,255,255,.1);
+@media screen and (min-width: 768px) {
+  .gate-wrap {
+    .logo-wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
+
+    .nav-left .nav {
+      flex-direction: row-reverse;
+    }
+
+    .time {
+      font-size: 1200%;
+    }
+
+    .week,
+    .day {
+      font-size: 20px;
+    }
+
+    .greeting {
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 567px) {
+  .nav-left .nav {
+    flex-direction: row-reverse;
   }
 }

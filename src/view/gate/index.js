@@ -54,31 +54,31 @@ export default class Gate extends Component {
     const year = moment.format('YYYY');
     const goneDays = Math.ceil(( new Date() - new Date(new Date().getFullYear().toString()))/(24*60*60*1000))+1;
     const leftDays = Math.abs(moment.diff(`${year}-12-31`, 'day'));
-    this.setState({ day, goneDays, leftDays, week: `${week}th`, year });
+    this.setState({ day, goneDays, leftDays, week, year });
   }
 
   render () {
     const { time, goneDays, leftDays,  week, year, period } = this.state;
 
     return (
-      <div className="gate-wrap">
-        <header className={classnames('flex flex-column', 'header')}>
-          <div className={classnames('flex-grow-2 pt-relative')}>
-            <div className={classnames('logo pt-absolute pt-hc left-0 right-0 bottom-20')}>
+      <div className="container-fluid gate-wrap">
+        <header className={classnames('header')}>
+          <div className={classnames('logo-wrapper pt-relative')}>
+            <div className={classnames('logo pt-hc')}>
               <img className={classnames('img-fluid w-100')} src={logo} alt=""/>
             </div>
           </div>
-          <div className={classnames('p-20 flex justify-content-center align-items-end')}>
-            <div className="nav-left font-3x w-50">
-              <ul className="nav flex-row-reverse">
-                <li className="nav-item">
-                  <Link className="nav-link" to='/ricenoodle' replace>Ricenoodle</Link>
+          <div className={classnames('row')}>
+            <div className="nav-left col-6">
+              <ul className="nav text-center row">
+                <li className="nav-item col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                  <Link className="nav-link block" to='/ricenoodle' replace>Ricenoodle</Link>
                 </li>
               </ul>
             </div>
-            <div className="nav-right font-3x w-50">
+            <div className="col-6">
               <ul className="nav">
-                <li className="nav-item">
+                <li className="nav-item col-sm-6 col-md-4 col-lg-3 col-xl-2">
                   <Link className="nav-link" to='/' replace>Coming soon</Link>
                 </li>
               </ul>
@@ -89,10 +89,10 @@ export default class Gate extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 text-white text-center">
-              <p className="mt-0 mb-0 font-300" style={{ fontSize: '1200%'}}>{ time }</p>
-              <p className="mt-0 font-20 font-100 pt-relative" style={{ top: '-40px' }}>{ week } week, { year }.</p>
-              <p className="mt-0 font-20 font-100 pt-relative" style={{ top: '-40px' }}>{ goneDays } days have gone, only { leftDays } days left.</p>
-              <p className="mt-0 mb-0 font-5x font-300 text-capitalize pt-relative" style={{ top: '-40px' }}>good { period }, my friend.</p>
+              <p className="mt-20 mb-20 time">{ time }</p>
+              <p className="week"><span className={classnames('font-2x')}>{ week }</span>th week, <span className={classnames('font-2x')}>{ year }</span>.</p>
+              <p className="day"><span className={classnames('font-2x')}>{ goneDays }</span> days have gone, only <span className={classnames('font-3x')}>{ leftDays }</span> days left.</p>
+              <p className="greeting mt-50 text-capitalize">good { period }, my friend.</p>
             </div>
           </div>
         </div>
