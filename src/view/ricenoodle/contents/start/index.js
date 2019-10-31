@@ -31,12 +31,12 @@ export default class Improve extends Component {
           <div className="col-lg-4 col-md-6 col-12 mt-20">
             <h4>生产环境</h4>
             <p>编译并且压缩后的css、javascript文件。</p>
-            <a href='/public/files/ricenoodle/ricenoodle-1.0.2.zip' className="btn">下载 Ricenoodle</a>
+            <a href={`/files/ricenoodle/ricenoodle-${ricenoodleVersion}.zip`} className="btn">下载 Ricenoodle</a>
           </div>
           <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>源码</h4>
             <p>Ricenoodle 的资源文件。</p>
-            <a href="/public/files/ricenoodle/ricenoodle-source-1.0.2.zip" className="btn">Source</a>
+            <a href={`/files/ricenoodle/ricenoodle-source-${ricenoodleVersion}.zip`} className="btn">Source</a>
           </div>
           <div className="col-lg-3 col-md-6 col-12 mt-20">
             <h4>Github</h4>

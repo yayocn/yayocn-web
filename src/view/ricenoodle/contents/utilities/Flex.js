@@ -55,7 +55,7 @@ const FLEX = {
     { title: 'Order', key: 'auto', subTitle: '', className: '', },
   ],
   flexGrow: [
-    { title: 'Flex-grow', key: 'auto', subTitle: '', className: 'flex-grow-2', },
+    { title: 'Flex-grow', key: 'auto', subTitle: '', className: 'grow-2', },
   ]
 };
 
@@ -414,7 +414,7 @@ export default class Flex extends Component {
                 <div className={classnames('example-view')}>
                   <div className={classnames('flex text-white')}>
                     <div className={classnames('flex-item')}>1th</div>
-                    <div className={classnames('flex-item flex-grow-2')}>2th</div>
+                    <div className={classnames('flex-item grow-2')}>2th</div>
                     <div className={classnames('flex-item')}>3th</div>
                   </div>
                 </div>
@@ -422,7 +422,7 @@ export default class Flex extends Component {
                   <Highlight>
                     &lt;div class="flex'"&gt;<br/>
                     &nbsp;&nbsp;&lt;div&gt;1th&lt;/div&gt;<br/>
-                    &nbsp;&nbsp;&lt;div class="flex-grow-2'"&gt;2th&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="grow-2'"&gt;2th&lt;/div&gt;<br/>
                     &nbsp;&nbsp;&lt;div&gt;3th&lt;/div&gt;<br/>
                     &lt;/div&gt;
                   </Highlight>

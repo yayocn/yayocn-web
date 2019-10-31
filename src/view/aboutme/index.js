@@ -73,7 +73,7 @@ export default class Aboutme extends Component {
                       <p className="font-3x"><i className="fa fa-line-chart "></i> GROWTH</p>
 
                       <div className="time-bar flex">
-                        <div className="border-10 border-bottom border-white flex flex-grow-2">
+                        <div className="border-10 border-bottom border-white flex grow-2">
                           {
                             this.state.growth.map((item, index) => {
                               const width = Math.floor(100 / this.state.growth.length);

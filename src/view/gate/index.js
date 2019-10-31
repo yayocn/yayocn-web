@@ -19,17 +19,23 @@ export default class Gate extends Component {
       leftDays: '',
       week: '',
       year: '',
-      period: ''
+      period: '',
     };
   }
+
+  intervaler = null;
 
   componentWillMount () {
     this.setTodayInfo();
     this.setCurrentTime();
 
-    setInterval(() => {
+    this.intervaler = setInterval(() => {
       this.setCurrentTime();
-    }, 10000);
+    }, 1000);
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.intervaler);
   }
 
   setCurrentTime () {

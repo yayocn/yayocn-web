@@ -69,14 +69,14 @@ export default class MusicPlayer extends Component {
                 <span className="font-2x iconfont icon-xiayishou" role="button"></span>
               </div>
 
-              <div className="controller-progress mh-20 flex-grow-2">
+              <div className="controller-progress mh-20 grow-2">
                 <Progress value="30"/>
               </div>
 
               <div className="controller-vol  inline-flex align-items-center">
                 <span className="font-2x iconfont icon-yinliangzhong" role="button"></span>
 
-                <div className="vol-progress ml-10 flex-grow-2">
+                <div className="vol-progress ml-10 grow-2">
                   <Progress value="30"/>
                 </div>
               </div>
