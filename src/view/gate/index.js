@@ -67,7 +67,7 @@ export default class Gate extends Component {
     const { time, goneDays, leftDays,  week, year, period } = this.state;
 
     return (
-      <div className="container-fluid gate-wrap">
+      <div className="container-fluid gate-wrap flex flex-column">
         <header className={classnames('header')}>
           <div className={classnames('logo-wrapper pt-relative')}>
             <div className={classnames('logo pt-hc')}>
@@ -92,13 +92,21 @@ export default class Gate extends Component {
           </div>
         </header>
 
-        <div className="container-fluid">
+        <div className="container-fluid grow-2">
           <div className="row">
             <div className="col-12 text-white text-center">
               <p className="mt-20 mb-20 time">{ time }</p>
               <p className="week"><span className={classnames('font-2x')}>{ week }</span>th week, <span className={classnames('font-2x')}>{ year }</span>.</p>
               <p className="day"><span className={classnames('font-2x')}>{ goneDays }</span> days have gone, only <span className={classnames('font-3x')}>{ leftDays }</span> days left.</p>
               <p className="greeting mt-50 text-capitalize">good { period }, my friend.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-fluid pv-20">
+          <div className="row">
+            <div className="col-12 text-center">
+              <a href="http://www.beian.miit.gov.cn/" className="text-light font-12">蜀ICP备16016100号</a>
             </div>
           </div>
         </div>
