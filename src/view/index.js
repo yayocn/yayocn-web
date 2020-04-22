@@ -1,6 +1,6 @@
 import Gate from './gate';
 import Ricenoodle from './ricenoodle';
-import Aboutme from './aboutme';
+import Aboutme from './aboutme/zh';
 
 export {
   Gate,

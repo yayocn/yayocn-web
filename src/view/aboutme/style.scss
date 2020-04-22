@@ -26,14 +26,15 @@ $background-list: (
 //  }
 //}
 
+$bgBase: #0a2d41;
 $bg-list: (
-  bg1: #0a2d41,
-  bg2: #386b6e,
-  bg3: #72a38d,
-  bg4: #9bc19c,
-  bg5: #bed994,
-  bg6: #dada94,
-  bg7: #fff,
+  bg1: $bgBase,
+  bg2: darken($bgBase, 3),
+  bg3: lighten($bgBase, 3),
+  bg4: darken($bgBase, 4),
+  bg5: lighten($bgBase, 4),
+  bg6: darken($bgBase, 5),
+  bg7: lighten($bgBase, 5),
 );
 
 .aboutme-wrap {
@@ -48,7 +49,7 @@ $bg-list: (
   }
 
   .time-bar {
-    transform: rotateZ(-10deg) translateY(0px);
+    transform: rotateZ(-7deg) translateY(-20px);
   }
 
   .time-bar-triangle {
@@ -66,7 +67,6 @@ $bg-list: (
 
     &:nth-child(odd) {
       text-align: right;
-      padding-left: 200px;
 
       .media,
       ul {
@@ -76,7 +76,6 @@ $bg-list: (
 
     &:nth-child(even) {
       text-align: left;
-      padding-right: 200px;
     }
 
     &:last-child {
